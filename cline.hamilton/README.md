@@ -8,7 +8,7 @@
 
 ## Git
 
-- git status
+- git statuses
 - git clone [url]
 - git add .
 - git commit -m "[message]"
