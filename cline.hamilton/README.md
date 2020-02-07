@@ -8,7 +8,7 @@
 
 ## Git
 
-- git statsis
+- git status
 - git clone [url]
 - git add .
 - git commit -m "[message]"
