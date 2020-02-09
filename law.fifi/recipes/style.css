@@ -1,0 +1,46 @@
+body{
+	background-color: #333333;
+	font-family: 'Assistant', sans-serif;
+	color: #ffffff;
+}
+
+hr{
+	border-color: #706c61;
+    border-style: dotted none none;
+    border-width: 15px;
+    width: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+/*nav-bar CSS*/
+.nav-bar{
+	text-align: center;
+	font-weight: 900;
+	font-size: 2rem;
+	color: #e1f4f3;
+	margin:1rem 2rem;
+	border-bottom: 1.6px #e1f4f3 solid;
+}
+
+
+/* Recipe CSS */
+.recipe{
+	padding:2rem 5rem;
+}
+
+.dish-title{
+	text-align: center;
+	font-size: 1.8rem;
+	padding-bottom: 5rem;
+}
+.photo{
+	width: 400px;
+	margin: 2rem;
+	top: 30%;
+	left: 10%;
+}
+
+.photo img{
+	max-width: 100%;
+}
+
