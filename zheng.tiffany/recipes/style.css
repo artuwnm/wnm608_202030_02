@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #808080;
+}
+
+h1 {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: 300;
+	font-size: 2.5em;
+	letter-spacing: 0.05em;
+	text-align: left;
+}
+
+.site-header {
+	padding: 0;
+    width: 100%;
+}
+
+.banner-image {
+	background-image: url('images/tasty-banner.jpg');
+	background-size: contain;
+	height: 5em;
+}
+
+.wrapper {
+    overflow: hidden;
+    padding-left: 18px;
+    padding-right: 18px;
+    max-width: 1236px;
+    margin-left: auto;
+    margin-right: auto;
+}
