@@ -136,8 +136,19 @@ li {
 	margin: 0;
 }
 
-.large-photo {
-	width: 667px;
-	height: 500px;
-	position: relative;
+.container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.container figure img {
+	width: 500px;
+	height: 375px;
+}
+
+.container figure figcaption {
+	text-align: right;
+	font-weight: 300;
+	font-size: 0.75rem;
+	margin: 0.5rem 0;
 }
