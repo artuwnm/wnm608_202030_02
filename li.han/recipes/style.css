@@ -1,3 +1,8 @@
+h1{
+	font-family: 'Pacifico', cursive;
+	float: center;
+	text-align: center;
+}
 body{
-background-image: url(bbkk.png);
+background-image:url("bbkk.jpg");
 }
