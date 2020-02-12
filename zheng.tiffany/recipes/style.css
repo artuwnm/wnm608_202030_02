@@ -14,7 +14,7 @@ img {
 
 a {
 	font-weight: 700;
-    color: #808080;
+    color: #ff7979;
 }
 
 li {
@@ -127,6 +127,10 @@ li {
 	margin: 0.25rem 0 1rem 0;
 }
 
+.recipe-link a:hover {
+	color: #808080;
+}
+
 /* Recipe Step-by-Steps */
 
 .title {
@@ -151,4 +155,15 @@ li {
 	font-weight: 300;
 	font-size: 0.75rem;
 	margin: 0.5rem 0;
+}
+
+ol img {
+	width: 1000px;
+	height: 563px;
+	padding: 1em 0;
+}
+
+ol li {
+	width: 1000px;
+	padding-left: 0.5em;
 }
