@@ -1,5 +1,5 @@
 /*ELEMENTS*/
-*,*::before, *::after {
+*, *::before, *::after {
 	box-sizing: border-box;
 }
 :root{
@@ -50,4 +50,25 @@ a:hover{
 background-color:var(--color-neutral-dark);
 	color:var(--color-neutral-light);
 	line-height: var(--header-height);
+}
+.navbar h1 {
+	margin:0;
+	font-size:1em;
+}
+/*ATOMIC CLASSES*/
+
+.display-flex{
+display: flex;
+}
+.display-inline-flex{
+	display: inline-flex;
+}
+/* CARD */
+.card {
+	background-color:white;
+	padding:1em;
+	overflow:hidden;
+	position:relative;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
