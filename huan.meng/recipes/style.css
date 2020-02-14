@@ -1,0 +1,84 @@
+body{
+  font: 14px 'Open Sans', sans-serif;
+  color: #222;
+  text-align: center;
+}
+h1{color:#4dd7ff;
+
+}
+h2{color:#ee3e80;
+
+}
+h3{
+	color:#665544;
+	margin-bottom: 5px;
+	text-align:center;
+}
+#container{
+	max-width: 940px;
+	min-width: 720px;
+	margin:10px auto 10px auto;
+	padding:20px;
+	border:4px double #000;
+}
+ul{
+	width:570px;
+	padding:15px;
+	margin:0px auto 0px auto;
+	text-align:left;
+}
+li a{
+	color:black;
+	text-align: left;
+	margin:0px auto 0px auto;
+	}
+li.nav{
+	color:lightpink;
+	text-transform:uppercase;
+	border:white dotted; 1px;
+	font-family: 'Script';
+}
+.part-card1{	
+	width:570px;
+	padding:15px;
+	margin:0px auto 0px auto;
+	text-align:left;
+}
+.part-card2{	
+	width:570px;
+	padding:15px;
+	margin:0px auto 0px auto;
+	text-align:left;
+}
+#menu{
+	background-color: white;
+	list-style: none;
+	float:none;
+	overflow:hidden;
+	padding:20px;	
+}
+
+#Recipe1:hover{
+	background-color: pink;
+}
+#Recipe2:hover{
+	background-color: yellow;
+}
+#Recipe3:hover{
+	background-color: lightblue;
+}
+
+@media (min-width: 599px) {
+  .recipe-part1 {
+    width: 620px;
+  }
+}
+@media (min-width: 599px) {
+  .recipe-part2 {
+    width: 620px;
+  }
+@media (min-width: 599px) {
+  .recipe-part3 {
+    width: 620px;
+  }
+}

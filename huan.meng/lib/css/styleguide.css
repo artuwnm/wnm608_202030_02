@@ -1,0 +1,93 @@
+
+*,*::before,*::after{
+	box-sizing: border-box;
+}
+:root{
+    --color-neutral-dark: #9090a0;
+    --color-neutral-medium: #879eb1;
+    --color-neutral-light: #ffffff;
+
+    --header-height:3rem;
+	}
+
+body{
+	margin:0;
+	font-size:100%;
+	font-family:Heletica,Arial,sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family:Georgia,"Times New Roman?,serif;
+}
+a {
+	color: inherit;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+
+}
+
+
+
+
+
+
+
+/*SMALL CLASS*/
+
+.container{
+	max-width:1000px
+	margin-right:auto;
+	margin-left: auto;
+
+}
+
+/*COMPONENT CLASSES*/
+
+.navbar{ 
+	background-color: var(--color-neutral-dark);
+	color:var(--color-neutral-light);
+	line-height: var(--header-height);
+
+}
+
+/*ATOMIC CLASSES*/
+.display-flex{display: flex;}
+.display-inline-flex{display: inline-flex;}
+.display-block{display: inline-flex;}
+
+.nav ul{
+	list-style-type: : 
+}
+
+.card{
+	background-color: white;
+	padding:1 em;
+	overflow:hidden;
+	position:relative;
+	margin-top: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
