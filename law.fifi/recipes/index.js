@@ -22,4 +22,3 @@ $(function(){
       // $(".slideshow-captions-all div").eq(currentslidenumber).show().siblings().hide();
     };
     });
-

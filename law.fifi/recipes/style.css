@@ -66,7 +66,7 @@ footer{
 .icon{
 	width: 350px;
 	position: relative;
-	left: 105px;
+	left: 90px;
 }
 .icon img{
 	max-width: 100%;
@@ -130,11 +130,14 @@ footer{
 
 }
 .slideshow-images{
-	width: 5000px;
+	width: 500px;
 
 }
+.slideshow-images img{
+	max-width: 100%;
+}
 
-.prev, .next {
+/*.prev, .next {
 	cursor: pointer;
 	position: absolute;
 	top: 50%;
@@ -147,7 +150,7 @@ footer{
 	overflow: visible;
 	color: #f1fcfc;
 }
-.prev{
+.prev {
 	left: 0;
 	border-radius: 0px 10px 10px 0px;
 }
@@ -159,7 +162,7 @@ footer{
 	background-color: #40e0d0;
 	color: white;
 	transition: 0.4s ease;
-}
+}*/
 .ingredients-list, .steps-list{
 	position: absolute;
 	left: 5%;
@@ -173,6 +176,33 @@ footer{
 	top: 50%;
 
 }
+
+@media (max-width: 1280px) {
+
+	.icon{
+		left: 30px;
+	}
+	.nav-bar ul li{
+		font-size: 1.3rem;
+
+	}
+	.recipe{
+		padding: 2rem;
+	}
+	.dish-title{
+		width: 55%;
+	}
+	.slideshow-images{
+		width: 400px;
+	}
+	.slideshow-images img{
+		max-width: 100%;
+	}
+	.top-button{
+		left: 80%;
+	}
+	
+}
 @media (max-width: 1270px) {
 	.nav-bar ul{
 		display: none;
@@ -181,6 +211,7 @@ footer{
 	.icon{
 		width: 70%;
 		margin: 1rem auto;
+		left: 80px;
 	}
 
 	.dish-title{
@@ -193,21 +224,29 @@ footer{
 		position: static;
 	}
 	.wrap{
-		width: 50%;
-		margin: 20px auto 50px;
-		top: 0%;
-    	left: 0%;
-    	transform: translate(0%,0%);
+		width: 100%;
+		margin: 50px auto;
+		top: 0;
+    	/*left: 50%;*/
+    	/*transform: translate(0%,0%);*/
 	}
-
+	.slideshow-images{
+		width: 500px;
+		margin:20px auto;
+	}
+	.slideshow-images img{
+		max-width: 100%;
+	}
+	
 	.ingredients-list, .steps-list{
 		position: static;
 		margin: 20px auto;
 		max-width: 100%;
 	}
 	.top-button{
-		transform: translateY(-80%);
+		transform: translateY(-50%);
 		margin-bottom: 2rem;
+		left: 80%
 	}
 	.copyright{
 		width: 70%;
