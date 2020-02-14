@@ -1,0 +1,71 @@
+/*ELEMENT */
+
+*,*::before, *::after{
+	box-sizing: border-box;
+}
+
+:root{
+	--color-neutral-dark: #272b26;
+	--color-medium-dark: #7f877d;
+	--color-light-dark: #333;
+	--header-height:3rem;
+}
+
+body{
+	margin:0;
+	font-size: 100%;
+	font-family: Helvetica,Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+a{
+	color:inherit;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+
+
+
+
+
+/*SMALL CLASSES*/
+
+.container{
+	max-width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+
+
+
+/*component classes*/
+
+.navbar{
+	background-color: var(--color-neutral-dark);
+	color: var(--color-neutral-light);
+	line-height: var(--header-height);
+}
+
+
+
+
+
+
+
+
