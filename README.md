@@ -1,2 +1,7 @@
-# wnm608_202030_02
-WNM 608 2020 Spring 02
+#Fifi Law
+
+##Links
+
+- http://fifilaw.com
+- http://fifilaw.com/aau/wnm608/law.fifi
+- http://fifilaw.com/aau/wnm608/law.fifi/recipes/index.html
