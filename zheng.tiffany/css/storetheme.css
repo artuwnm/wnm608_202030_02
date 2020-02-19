@@ -1,0 +1,12 @@
+
+body {
+	background-color: #fff;
+	font-family: 'Muli', 'Open Sans', 'Segoe UI', sans-serif;
+}
+
+/* Component Classes */
+
+.navbar {
+	background-color: #fff;
+	color: var(--color-neutral-dark);
+}
