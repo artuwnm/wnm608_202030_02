@@ -182,7 +182,9 @@ button:hover {
 		box-shadow: -17px -20px 1px 3px #fcd0ba7a;
 
 	}
-
+	.round-border{
+		border-radius: 50%;
+	}
 
 
 
@@ -241,7 +243,11 @@ button:hover {
 		background-color: var(--color-neutral-medium);
 		color: var(--color-neutral-dark);
 	}
-
+	.btn.center{
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 
 
 /*CARD*/
@@ -297,7 +303,7 @@ button:hover {
 
 .tagline{
 	position: absolute;
-	top: 35%;
+	top: 40%;
 	padding: 1em;
 }
 
