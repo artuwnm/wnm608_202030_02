@@ -11,6 +11,7 @@
 
 	--header-height: 3.75rem;
 	--title-height: 3rem;
+	--body-height: 2rem;
 }
 
 body {
@@ -31,6 +32,10 @@ a {
 
 a:hover {
 	opacity: 50%;
+}
+
+li {
+	list-style: none;
 }
 
 /*Small Classes*/
@@ -75,6 +80,10 @@ a:hover {
 	justify-content: center;
 }
 
+.flex-justify-space-between {
+	justify-content: space-between;
+}
+
 
 /*Component Classes*/
 
@@ -117,7 +126,7 @@ a:hover {
 	position: relative;
 	background-color: var(--color-neutral-medium);
 	width: 100%;
-	height: 60vh;
+	height: 600px;
 }
 
 .hero__content {
@@ -159,6 +168,7 @@ a:hover {
 }
 
 .row__item {
+	position: relative;
 	width: 323px;
 	height: 300px;
 	margin-top: 1em;
@@ -167,6 +177,22 @@ a:hover {
 .row__item.light {
 	background-color: var(--color-neutral-light);
 }
+
+.row__item button {
+	border: none;
+	background-color: var(--color-neutral-medium);
+	color: var(--color-neutral-light);
+	position: absolute;
+	top: 75%;
+	left: 10%;
+	width: 30%;
+}
+
+.row__item button:hover {
+	opacity: 50%;
+	cursor: pointer;
+}
+
 
 /*Card Classes*/
 
@@ -222,13 +248,25 @@ a:hover {
 /* Footer */
 
 .site-footer {
-	padding-top: 3em;
+	background-color: var(--color-neutral-dark);
+	color: var(--color-neutral-light);
 	width: 100%;
+	height: 20%;
+	margin-top: 3em;
 }
 
-.site-footer p {
+.site-footer ul {
+	padding: 3em 7.5em 3em 0;
+}
+
+.site-footer ul li {
+	line-height: var(--body-height);
+}
+
+.footer__copyright {
 	text-align: center;
-	padding-bottom: 1.5em;
+	padding-bottom: 3em;
+	margin-bottom: 0;
 }
 
 
