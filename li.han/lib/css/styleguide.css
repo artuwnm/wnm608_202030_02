@@ -124,3 +124,14 @@ a:hover {
 	.card.flat {
 		padding:0;
 	}
+	
+/* VIEW WINDOW */
+
+.view-window {
+	height:100vh;
+	position:relative;
+	overflow:hidden;
+	background-size:cover;
+	background-position:center;
+	background-attachment: fixed;
+}
