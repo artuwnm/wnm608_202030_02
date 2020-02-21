@@ -10,3 +10,24 @@ body {
 	background-color: #fff;
 	color: var(--color-neutral-dark);
 }
+
+[class*='col-']>.card {
+	margin: 0;
+	width: 323px;
+	height: 300px;
+}
+
+.card button {
+	border: none;
+	background-color: var(--color-neutral-medium);
+	color: var(--color-neutral-light);
+	position: absolute;
+	top: 75%;
+	left: 10%;
+	width: 30%;
+}
+
+.card button:hover {
+	opacity: 50%;
+	cursor: pointer;
+}
