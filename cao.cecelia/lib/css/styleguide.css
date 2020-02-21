@@ -1,20 +1,21 @@
-/*ELEMENT */
+/* ELEMENT RESETS */
 
-*,*::before, *::after{
-	box-sizing: border-box;
+*, *::before, *::after {
+	box-sizing:border-box;
 }
 
-:root{
-	--color-neutral-dark: #272b26;
-	--color-medium-dark: #7f877d;
-	--color-light-dark: #333;
-	--header-height:3rem;
+:root {
+    --color-neutral-dark: #333;
+    --color-neutral-medium: #999;
+    --color-neutral-light: #ffffff;
+
+    --header-height:3rem;
 }
 
-body{
+body {
 	margin:0;
-	font-size: 100%;
-	font-family: Helvetica,Arial, sans-serif;
+	font-size:100%;
+	font-family: 'Lato', sans-serif;
 }
 
 h1,
@@ -22,50 +23,218 @@ h2,
 h3,
 h4,
 h5,
-h6{
-	font-family: Georgia, "Times New Roman", serif;
+h6 {
+	font-family: 'Lato', sans-serif;
+	font-family: 'Crimson Pro', serif;
 }
 
-a{
+a {
 	color:inherit;
-	font-weight: bold;
+	font-weight:bold;
 	text-decoration: none;
 }
-
-a:hover{
+a:hover {
 	text-decoration: underline;
 }
 
 
+/* SMALL CLASSES */
 
-
-
-
-/*SMALL CLASSES*/
-
-.container{
-	max-width: 1000px;
+.container {
+	max-width:1000px;
 	margin-right: auto;
 	margin-left: auto;
+	margin-top: 1%;
 }
 
 
+/* ATOMIC CLASSES */
+
+.display-flex { display:flex; }
+.display-inline-flex { display:inline-flex; }
+.display-block { display:block; }
+.display-inline-block { display:inline-block; }
+
+.flex-stretch { flex: 1 1 auto; }
+.flex-none { flex: none; }
+
+.flex-align-center { align-items:center; }
+.flex-justify-center { justify-content:center; }
 
 
 
+/* COMPONENT CLASSES */
 
-/*component classes*/
-
-.navbar{
-	background-color: var(--color-neutral-dark);
-	color: var(--color-neutral-light);
+.navbar {
+	background-color:var(--color-neutral-light);
+	color:var(--color-neutral-dark);
 	line-height: var(--header-height);
+	height: 8vh;
+}
+
+.navbar h1 {
+	margin:0;
+	font-size:1.5em;
+}
+.navbar a {
+	padding:0 1em;
+}
+
+
+.nav ul {
+	list-style-type:none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	font-family: 'Lato', sans-serif;
+	font-family: 'Crimson Pro', serif;
+}
+
+
+.trending{
+	text-align: center;
+	padding-top: 1.5em;
 }
 
 
 
+.explore{
+	background-color: var( --color-neutral-light);
+  color: black;
+  border: 0.1em solid var(--color-neutral-dark);
+  position: relative;
+  font-size: 1em;
+  padding:0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 50%;
+}
+
+.explore a:hover{
+	text-decoration: none;
+}
+
+.explore:hover {
+  background-color: var(--color-neutral-dark);
+  color: white;
+  text-decoration: none;
+}
+
+.card.shop p{
+	padding-bottom: 1em;
+}
+/* CARD */
+.card {
+	background-color:white;
+	padding:1em;
+	overflow:hidden;
+	position:relative;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+	.card>:first-child { margin-top:0; }
+	.card>:last-child { margin-bottom:0; }
+
+	.card.soft {
+    	box-shadow: 4px 4px 10px 10px rgba(39,43,38,0.1);
+		border-radius:0.3em;
+	}
+
+	.card.shop {
+    	box-shadow: 4px 4px 10px 10px rgba(39,43,38,0.1);
+		border-radius:0.3em;
+		padding-bottom: 3em;
+		text-align: center;
+	}
+
+	.card.dark {
+		background-color:var(--color-neutral-dark);
+		color:var(--color-neutral-light);
+	}
+	.card.medium {
+		background-color:var(--color-neutral-medium);
+	}
+
+	.card.flat {
+		padding:0;
+	}
+	
+
+
+/* VIEW WINDOW */
+
+.view-window {
+	height:80vh;
+	position:relative;
+	overflow:hidden;
+	background-size:cover;
+	background-position:center;
+	background-attachment: fixed;
+}
+
+.maintitle{
+	position: absolute;
+    top: 40%;
+}
+
+.maintitle h1{
+	font-size: 3em;
+	font-weight: bold;
+	display: inline-block;
+}
+
+.shopnow {
+  background-color: var( --color-neutral-light);
+  color: black;
+  border: 0.1em solid var(--color-neutral-dark);
+  position: absolute;
+  font-size: 1em;
+  padding:0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 5%;
+}
+
+.shopnow a:hover{
+	text-decoration: none;
+}
+
+.shopnow:hover {
+  background-color: var(--color-neutral-dark);
+  color: white;
+  text-decoration: none;
+}
+
+
+.footer{
+	height: 22vh;
+	background-color: var(--color-neutral-dark);
+}
+
+.footer h4{
+	padding-top: 1.5em;
+	padding-left: 2.5em;
+	color: var(--color-neutral-light);
+}
 
 
 
+.footerLinks {
+	color: var(--color-neutral-light);
+}
 
+.footerLinks ul{
+	list-style-type:none;
+	font-size: 0.8em;
+}
 
+.footerLinks li{
+	padding: 0.2em;
+}
+
+.copyright{
+	color: var(--color-neutral-light);
+	text-align: center;
+	font-size: 0.5em;
+}
