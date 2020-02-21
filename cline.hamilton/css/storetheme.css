@@ -8,4 +8,19 @@
 
 body {
 	background-color:var(--color-neutral-light);
+	padding-bottom:10em;
+}
+
+
+
+[class*='col-']>.card {
+	margin:0;
+	height:100%;
+}
+
+
+@media (max-width:1000px) {
+	.navbar .display-flex {
+		display:block;
+	}
 }
