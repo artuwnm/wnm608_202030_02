@@ -1,0 +1,15 @@
+h1, h2, h3, h4, h5, h6{
+	font-family: Roboto, Georiga, serif;
+}
+
+:root{
+
+	--color-neutral-dark:#7a440f;
+	--color-neutral-light:#ffe8d6;
+	--color-neutral-medium:#ff971d;
+
+}
+
+body{
+	background-color: #f9f6f7;
+}
