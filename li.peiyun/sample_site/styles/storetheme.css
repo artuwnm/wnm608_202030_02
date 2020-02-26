@@ -1,0 +1,14 @@
+:root {
+  --color-neutral-dark: #00b8e6;
+}
+
+
+h1{
+	font-family: 'Poiret One';
+	font-size: 30px;
+	text-align: center;
+	padding-top: 1em;
+}
+
+#navbar li a{
+}
