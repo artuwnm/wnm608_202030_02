@@ -1,18 +1,27 @@
 /* ELEMENT RESETS */
 
 *, *::before, *::after {
-	box-sizing:border-box;
+	box-sizing:inherit;
 }
 
 :root {
     --color-neutral-dark: #333;
     --color-neutral-medium: #999;
     --color-neutral-light: #ffffff;
+	
+
+	--color-main-light:blue;
+    --color-main-medium:blue;
+    --color-main-dark:blue;
+
+    --color-black:black;
+    --color-white:white;
 
     --header-height:3rem;
 }
 
 body {
+	box-sizing:border-box;
 	margin:0;
 	font-size:100%;
 	font-family: 'Lato', sans-serif;
@@ -37,6 +46,10 @@ a:hover {
 	text-decoration: underline;
 }
 
+code {
+	white-space:pre-wrap;
+	text-align:left;
+}
 
 /* SMALL CLASSES */
 
@@ -97,7 +110,6 @@ a:hover {
 }
 
 
-
 .explore{
 	background-color: var( --color-neutral-light);
   color: black;
@@ -123,6 +135,7 @@ a:hover {
 .card.shop p{
 	padding-bottom: 1em;
 }
+
 /* CARD */
 .card {
 	background-color:white;
