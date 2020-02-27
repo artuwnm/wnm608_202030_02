@@ -3,27 +3,100 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Landing Page</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="lib/css/styleguide.css">
-	<link rel="stylesheet" href="lib/css/storetheme.css">
 
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="stylesheet" href="lib/css/styleguide.css">
+	<link rel="stylesheet" href="lib/css/gridsystem.css">
+	<link rel="stylesheet" href="css/storetheme.css">
 </head>
 <body>
 <header class="navbar">
-	<h1>Store Page</h1>
-	<div class="container">
-	<nav class="nav">
-		<ul>
-			<li><a href="#">Link 1</a></li>
-			<li><a href="#">Link 2</a></li>
-			<li><a href="#">Link 3</a></li>
-		</ul>
-	</nav>
+	<div class="container display-flex">
+		<div class="flex-stretch">
+			<h1>Store Page</h1>
+		</div>
+		<nav class="nav flex-none">
+			<ul class="display-flex">
+				<li><a href="#">Link 1</a></li>
+				<li><a href="#">Link 2</a></li>
+				<li><a href="#">Link 3</a></li>
+			</ul>
+		</nav>
 	</div>
 </header>
+
+		<div class="view-window display-flex flex-align-center flex-justify-center" style="background-image: url(img/mountain01.jpg)">
+		</div>
 <div class="container">
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam cum sapiente impedit voluptates ducimus debitis dolorem, est deleniti vero qui sit eos, asperiores molestias ut dolorum? Velit sint quos quidem, sequi blanditiis perferendis repellendus alias ex odit, quam adipisci.</p>
-	<p>Vitae numquam, totam soluta, cupiditate assumenda voluptates vero minus quo, molestiae quos nam harum beatae nesciunt minima sapiente enim maxime modi laudantium. Et, veniam sapiente placeat, dolor laborum magnam quisquam ratione praesentium quia ea atque, mollitia nam tempore dicta! Nobis.</p>
+	<div class="grid gap">
+		<div class="col-6">
+			<div class="card soft">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, doloremque.</div>
+		</div>
+		<div class="col-6">
+			<div class="card soft">Cum porro, nesciunt aperiam, architecto ad at id magni deleniti!</div>
+		</div>
+	</div>
 </div>
+
+
+<!-- 			<div class="container">
+				<div class="card soft dark">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam cum sapiente impedit voluptates ducimus debitis dolorem, est deleniti vero qui sit eos, asperiores molestias ut dolorum? Velit sint quos quidem, sequi blanditiis perferendis repellendus alias ex odit, quam adipisci.</p>
+				<p>Vitae numquam, totam soluta, cupiditate assumenda voluptates vero minus quo, molestiae quos nam harum beatae nesciunt minima sapiente enim maxime modi laudantium. Et, veniam sapiente placeat, dolor laborum magnam quisquam ratione praesentium quia ea atque, mollitia nam tempore dicta! Nobis.</p>
+				</div>
+			</div> -->
+			<div class="container">
+				<div class="display-flex">
+					<div class="flex-stretch">
+						<div class="card soft">
+							<p>
+								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quae est necessitatibus, dignissimos, ipsa possimus soluta optio voluptatum iste quod esse veniam pariatur, eius nostrum ratione eligendi sequi excepturi rerum.</span>
+								<span>Earum ipsam suscipit quod sequi, dolor perspiciatis eaque, illo quia assumenda beatae aliquid. Totam, soluta at consequatur perspiciatis saepe, quas! Provident perspiciatis similique nostrum, pariatur impedit iure expedita quos sequi.</span>
+								<span>Nulla minus, cupiditate suscipit facilis. Iste velit distinctio quo veniam aperiam quae ipsum nemo ducimus accusamus consectetur asperiores, soluta, quod voluptatum cum laborum sunt temporibus maxime in. Quam, totam odio?</span>
+							</p>
+							<p>
+								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus aperiam, consectetur quidem! Placeat minus facere debitis et voluptatibus voluptatum laudantium aspernatur, asperiores quam distinctio modi sapiente obcaecati quos impedit repellat.</span>
+								<span>Ut deleniti eaque officiis sunt itaque animi ad quas tenetur harum assumenda modi, dignissimos explicabo magni delectus unde porro autem quibusdam aspernatur minima distinctio quo saepe aliquid, non natus magnam.</span>
+								<span>Cupiditate necessitatibus quae magni maxime fugit recusandae perferendis distinctio quas, iure numquam unde obcaecati voluptas nobis inventore consequatur vitae suscipit dolorem sequi? Quos ad corporis accusantium neque necessitatibus accusamus deleniti.</span>
+							</p>
+						</div>
+					</div>
+					<div class="flex-none"style="width:1em;">&nbsp;</div>
+					<div class="flex-stretch">
+						<div class="card soft">
+							<p>
+								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque illo ex corporis ea voluptatum saepe, tempora accusantium quisquam. Quisquam eveniet, rerum, officia quo saepe omnis. Totam beatae repudiandae eum optio?</span>
+								<span>Aperiam natus laudantium distinctio inventore, eum accusamus officia, ex, neque fuga ipsum cum temporibus. Voluptatem impedit aperiam porro atque dolores necessitatibus quam quisquam ad ex cum, earum magnam eius maiores?</span>
+								<span>Ipsam ad nam facere. Ab fuga aliquid quae, cumque eius ex a molestiae quod culpa laudantium beatae vel ipsum tenetur reiciendis voluptatum delectus esse numquam amet, deserunt voluptate, sapiente accusantium!</span>
+							</p>
+							<p>
+								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet non quisquam ab quo, ipsa ad officia quidem doloribus sunt blanditiis, illo est! Totam accusantium quas doloribus ab, reiciendis ducimus accusamus.</span>
+								<span>Explicabo eum reiciendis quaerat laboriosam aperiam illo, voluptatem ex magnam harum voluptate quam, illum similique neque, veniam placeat hic? Voluptatibus libero officiis, cupiditate omnis amet, quis consequuntur doloremque magni minus.</span>
+								<span>Eius, non vero optio sequi, expedita iusto nesciunt beatae consequuntur repellat sit saepe itaque ullam omnis ut at! Provident doloribus asperiores voluptatibus aliquam minima iste neque libero suscipit perspiciatis expedita?</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="card soft normal">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam cum sapiente impedit voluptates ducimus debitis dolorem, est deleniti vero qui sit eos, asperiores molestias ut dolorum? Velit sint quos quidem, sequi blanditiis perferendis repellendus alias ex odit, quam adipisci.</p>
+
+					<p>Vitae numquam, totam soluta, cupiditate assumenda voluptates vero minus quo, molestiae quos nam harum beatae nesciunt minima sapiente enim maxime modi laudantium. Et, veniam sapiente placeat, dolor laborum magnam quisquam ratione praesentium quia ea atque, mollitia nam tempore dicta! Nobis.</p>
+				</div>
+			</div>
+	<div class="footer">
+		<div class="container display-flex">
+			<div class="flex-stretch">
+				<!-- <div class="card soft medium"> -->
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam cum sapiente impedit voluptates ducimus debitis dolorem.</p>
+					<p>Vitae numquam, totam soluta, cupiditate assumenda voluptates vero minus quo, molestiae quos nam harum beatae nesciunt minima sapiente enim maxime modi laudantium. Et, veniam sapiente placeat, dolor laborum magnam quisquam ratione praesentium quia ea atque, mollitia nam tempore dicta! Nobis.</p>
+				<!-- </div> -->
+			 </div>
+		</div>
+	</div>
+
 </body>
 </html>
