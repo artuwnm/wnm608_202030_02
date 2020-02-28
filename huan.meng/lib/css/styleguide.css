@@ -117,12 +117,19 @@ a:hover {
 	padding:0;
 }
 
-.footer{ 
+.footer{
+	background-color: var(--color-neutral-medium);
+	color:var(--color-neutral-dark);
+	padding:1em;
+	overflow:hidden;
+	position:relative;
+	margin-top: 1em;
+	margin-bottom: 1em;
 	background-color: var(--color-neutral-medium);
 	color:var(--color-neutral-dark);
 	line-height: var(--header-height);
-
 }
+
 /*VIEW WINDOW*/
 
 .view-window{
