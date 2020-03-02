@@ -10,3 +10,7 @@
 body {
 	background-color:var(--color-neutral-light);
 }
+
+[class*='col-']>.card {
+	margin:0;
+}
