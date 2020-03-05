@@ -1,16 +1,31 @@
-  
+ 
 
 :root {
     --color-neutral-dark: #272b26;
     --color-neutral-medium: #7f877d;
     --color-neutral-light: #e6eae5;
+
+    --color-main-dark: #086603;
+    --color-main-medium: #23f41b;
+    --color-main-light: #d1ffbd;
 }
 
 
 body {
 	background-color:var(--color-neutral-light);
+	padding-bottom:10em;
 }
+
+
 
 [class*='col-']>.card {
 	margin:0;
+	height:100%;
+}
+
+
+@media (max-width:1000px) {
+	.navbar .display-flex {
+		display:block;
+	}
 }
