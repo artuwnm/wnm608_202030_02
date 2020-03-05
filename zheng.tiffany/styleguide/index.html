@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Style Guide</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../lib/css/styleguide.css">
+	<link rel="stylesheet" href="../lib/css/gridsystem.css">
+	<link rel="stylesheet" href="../css/storetheme.css">
+</head>
+<body>
+	
+	<header class="container">
+		<h1>CSS Style Guide</h1>
+	</header>
+
+	<div class="container">
+		<h2>Table of Contents</h2>
+		<ul>
+			<li><a href="#typography">Typography</a></li>
+			<ul>
+				<li><a href="#headings">Headings</a></li>
+				<li><a href="#paragraphs">Paragraphs</a></li>
+			</ul>
+			<li><a href="#navigations">Navigations</a></li>
+		</ul>
+	</div>
+
+	<section id="typography" class="container">
+		<h2>Typography</h2>
+
+		<div id="headings" class="card">
+			<h1>Heading 1</h1>
+			<h2>Heading 2</h2>
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+			<h5>Heading 5</h5>
+			<h6>Heading 6</h6>
+		</div>
+
+		<code>
+&lt;h1>Heading 1&lt;/h1>
+&lt;h2>Heading 2&lt;/h2>
+&lt;h3>Heading 3&lt;/h3>
+&lt;h4>Heading 4&lt;/h4>
+&lt;h5>Heading 5&lt;/h5>
+&lt;h6>Heading 6&lt;/h6>
+		</code>
+
+		<div id="paragraphs" class="card">
+			<h3>Paragraphs</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio unde, officia voluptate dolorum est, distinctio modi. Labore quis earum dolorem saepe. Dolore, quos repellat ad minima quod id vitae quam laudantium fuga maiores expedita voluptas consequatur ex dolorem facere minus!</p>
+			<p>Nulla ab corrupti mollitia provident delectus quas tempore commodi, pariatur dignissimos ratione eveniet cumque sint quasi. Recusandae, provident assumenda odio minima id a pariatur culpa rerum, magni exercitationem asperiores quas illum accusamus tempore totam ea! In pariatur vero similique neque.</p>
+			<p>Quisquam recusandae magni quis saepe labore dicta itaque minus esse tenetur minima, tempora rerum vero autem blanditiis. Quia quam vitae beatae sit voluptatum suscipit illo ab ipsum, alias explicabo incidunt pariatur consequuntur, aperiam ea fugit aliquid! Enim, atque eius incidunt.</p>
+		</div>
+	</section>
+
+	<section id="navigations" class="container">
+		<h2>Navigations</h2>
+	
+		<script>
+		const makeNav = (classes="") => {
+			const links = ["home","store","about"];
+			let ran = Math.floor(Math.random()*links.length);
+			return `
+			<div class="card soft">
+			<nav class="${classes}">
+				<ul>
+					${links.reduce((r,o,i)=>r+`<li ${i===ran?'class="active"':''}>
+						<a href="#">${o}</a>
+					</li>`,'')}
+					
+				</ul>
+			</nav>
+			</div>
+			`
+		}
+		</script>
+
+		<div class="card">
+			<h3>Basic Nav</h3>
+			<script>document.write(makeNav("nav"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Flex Nav</h3>
+			<script>document.write(makeNav("nav-flex"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Stretch Nav</h3>
+			<script>document.write(makeNav("nav-stretch"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Pills Nav</h3>
+			<script>document.write(makeNav("nav-pills"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Breadcrumbs Nav</h3>
+			<script>document.write(makeNav("nav-crumbs"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Material Tab Nav</h3>
+			<script>document.write(makeNav("nav-material"))</script>
+		</div>
+	</section>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<script>
+	$("[class*='nav'] a").on("click",function(e){
+		e.preventDefault();
+		$(this).parent().addClass("active")
+			.siblings().removeClass("active")
+	})
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -9,6 +9,10 @@
 	--color-neutral-medium: #999;
 	--color-neutral-light: #eee;
 
+	--color-main-dark: #034066;
+    --color-main-medium: #1ba2f4;
+    --color-main-light: #bde6ff;
+
 	--header-height: 3.75rem;
 	--title-height: 3rem;
 	--body-height: 2rem;
@@ -36,6 +40,14 @@ a:hover {
 
 li {
 	list-style: none;
+}
+
+code {
+	display: block;
+	padding: 1em;
+	white-space: pre-wrap;
+	background-color: var(--color-neutral-dark);
+	color: var(--color-neutral-light);
 }
 
 /*Small Classes*/
@@ -107,12 +119,100 @@ li {
 	padding: 0 1em;
 }
 
-.navbar ul {
+.navbar ul,
+.nav ul,
+.nav-flex ul,
+.nav-stretch ul,
+.nav-pills ul,
+.nav-crumbs ul,
+.nav-material ul {
 	list-style-type: none;
 	margin-top: 0;
 	margin-bottom: 0;
 	padding-left: 0;
 }
+
+	.nav-material a,
+	.nav-pills a,
+	.nav-stretch a,
+	.nav-flex a,
+	.nav a {
+		display: block;
+		padding: 0.2em 0.5em;
+		text-decoration: none;
+	}
+
+	.nav-pills a:hover,
+	.nav-stretch a:hover,
+	.nav-flex a:hover,
+	.nav a:hover {
+		background-color: var(--color-neutral-medium);
+		color: var(--color-neutral-light);
+	}
+
+	.nav-pills li.active a,
+	.nav-stretch li.active a,
+	.nav-flex li.active a,
+	.nav li.active a {
+		background-color: var(--color-neutral-light);
+	}
+
+	.nav-pills li.active a:hover,
+	.nav-stretch li.active a:hover,
+	.nav-flex li.active a:hover,
+	.nav li.active a:hover {
+		background-color: var(--color-neutral-dark);
+		color: var(--color-neutral-light);
+	}
+
+	.nav-material ul,
+	.nav-crumbs ul,
+	.nav-pills ul,
+	.nav-stretch ul,
+	.nav-flex ul {
+		display: flex;
+	}
+
+	.nav-material li,
+	.nav-stretch li {
+		flex: 1 1 auto;
+		text-align: center;
+	}
+
+	.nav-pills a {
+		border-radius: 2em;
+		padding: 0.5em 1em;
+	}
+
+	.nav-crumbs li:not(:first-child)::before {
+		content: '/';
+		margin: 0 0.5em;
+	}
+
+
+	.nav-material a {
+		position: relative;
+		line-height: var(--header-height);
+	}
+
+	.nav-material a:hover {
+		background-color: var(--color-neutral-light);
+	}
+
+	.nav-material a::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 0;
+		background-color: var(--color-main-medium);
+		transition: all 0.3s;
+	}
+
+	.nav-material li.active a::after {
+		height: 3px;
+	}
 
 .nav-bar__menu--ctas {
 	margin-left: auto;
@@ -153,11 +253,6 @@ li {
 	cursor: pointer;
 	background-color: var(--color-neutral-light);
 	color: var(--color-neutral-dark);
-}
-
-.featured-items h1 {
-	text-align: center;
-	padding-top: 1em;
 }
 
 /* Row Classes */
