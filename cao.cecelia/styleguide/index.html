@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Styleguide</title>
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="../lib/css/styleguide.css">
+	<link rel="stylesheet" href="../lib/css/gridsystem.css">
+	<link rel="stylesheet" href="../css/storetheme.css">
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Source+Sans+Pro&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+	<header class="container">
+		<div class="card">
+			<h1>CSS Style Guide</h1>
+		</div>
+	</header>
+
+	<div class="container">
+		<h2>Table of Contents</h2>
+
+		<ul>
+			<li><a href="#typography">Typography</a></li>
+			<ul>
+				<li><a href="#headings">Headings</a></li>
+				<li><a href="#paragraphs">Paragraphs</a></li>
+			</ul>
+			<li><a href="#images">Images</a></li>
+			<li><a href="#cards">Cards</a></li>
+			<li><a href="#viewwindow">View Window</a></li>
+			<li><a href="#navigations">Navigations</a></li>
+			<ul>
+				<li><a href="#navs">Navs</a></li>
+				<li><a href="#navbar">Navbar</a></li>
+			</ul>
+			<li><a href="#forms">Forms</a></li>
+			<li><a href="#tables">Tables</a></li>
+			<li><a href="#button">Button</a></li>
+			<li><a href="#grid">Grid System</a></li>
+			<li><a href="#flex">Flex System</a></li>
+		</ul>
+	</div>
+
+	<hr>
+
+	<section id="typography" class="container">
+		<h2>Typography</h2>
+
+		
+		<div class="card">
+			<h3 id="headings">Headings</h3>
+			<!-- h$*6>{Heading $} -->
+			<h1>Heading 1</h1>
+			<h2>Heading 2</h2>
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+			<h5>Heading 5</h5>
+			<h6>Heading 6</h6>
+		</div>
+
+		<code>
+&lt;h1>Heading 1&lt;/h1>
+&lt;h2>Heading 2&lt;/h2>
+&lt;h3>Heading 3&lt;/h3>
+&lt;h4>Heading 4&lt;/h4>
+&lt;h5>Heading 5&lt;/h5>
+&lt;h6>Heading 6&lt;/h6>
+		</code>
+
+
+		<div class="card">
+			<h3 id="paragraphs">Paragraphs</h3>
+			<!-- p*3>lorem40 -->
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum numquam, ullam quisquam maiores voluptas reiciendis libero temporibus esse nihil suscipit perspiciatis blanditiis error pariatur autem ea debitis aut vitae, aperiam quas. Odit ad laudantium, doloremque neque! Consequuntur, perspiciatis, modi.</p>
+			<p>Repellat aut voluptas sequi odio ipsa possimus, assumenda soluta ad cum excepturi eveniet aliquam deserunt quas, adipisci commodi? In iure, accusamus recusandae, earum commodi fugiat vero ullam et consequuntur temporibus alias repudiandae assumenda inventore, expedita nisi dolores, natus id voluptate.</p>
+			<p>Odio esse optio obcaecati excepturi fugiat omnis atque quae nesciunt a! Blanditiis nihil excepturi natus animi adipisci repellat praesentium voluptates ipsam quidem culpa cum, voluptas obcaecati, recusandae accusantium modi. Ipsam nemo inventore distinctio maxime impedit fugiat facere ducimus minus eius.</p>
+		</div>
+	</section>
+
+	<section id="images" class="container">
+		<h2>Images</h2>
+		<div class="card half">
+		<h3>Whole Image</h3>
+		<div class="view-window display-flex flex-align-center flex-justify-center" style="background-image:url(https://via.placeholder.com/500x100.png?text=shopping)">	
+		</div>
+		</div>
+		
+		
+		
+		<div class="card half">
+			<h3>Image Right</h3>
+		<div class="grid gap">
+			<div class="col-xs-12 col-xl-6">
+			<h3>Introduction</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore non quis similique, sit, doloremque hic excepturi dolorum odit explicabo mollitia?</p>
+			
+		</div>
+			<div class="col-xs-12 col-xl-6">
+			<div class="imagealign">
+			<img src="https://via.placeholder.com/500x400.png?text=shopping" align="right">	
+		</div>
+			</div>
+			</div>
+			</div>
+		
+		<div class="card half">
+		<h3>Image left</h3>
+		<div class="grid gap">
+			
+			<div class="col-xs-12 col-xl-6">
+			<div class="imagealign">
+			<img src="https://via.placeholder.com/500x400.png?text=shopping" align="left">	
+		</div>
+			</div>
+			<div class="col-xs-12 col-xl-6">
+			<h3>Introduction</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore non quis similique, sit, doloremque hic excepturi dolorum odit explicabo mollitia?</p>
+			
+		</div>
+			</div>
+			</div>
+		
+
+		
+
+	</section>
+	
+	<section id="cards" class="container">
+		<h2>Cards</h2>
+		<div class="card">
+			<h3>card soft</h3>
+			<div class="card soft">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo cupiditate quasi excepturi repellendus nostrum, minus enim itaque suscipit quaerat iste.</div>
+		</div>
+		<div class="card">
+			<h3>card half</h3>
+			<div class="card half">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi deleniti est repellat aspernatur quia voluptas laboriosam itaque ipsam magnam inventore.</div>
+		</div>
+		<div class="card">
+			<h3>card dark</h3>
+				<div class="card dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed maxime et a nostrum quisquam! Numquam dolore enim ex laborum facere.</div>
+		</div>
+		<div class="card">
+			<h3>card medium</h3>
+			<div class="card medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ullam, hic qui placeat odio temporibus atque aspernatur quae amet perferendis!</div>
+		</div>
+		<div class="card">
+			<h3>card flat</h3>
+			<div class="card flat">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos ipsa amet neque eius quia pariatur alias ex dolorum itaque temporibus.</div>
+		</div>
+	</section>
+
+	<section id="viewwindow" class="container">
+		<h2>View Window</h2>
+		<div class="card">
+			
+		</div>
+	</section>
+
+
+
+	<section id="navigations" class="container">
+		<h2>Navigations</h2>
+
+		<script>
+		const makeNav = (classes="") => {
+			const links = ["home","store","about"];
+			let ran = Math.floor(Math.random()*links.length);
+			return `
+			<div class="card soft">
+			<nav class="${classes}">
+				<ul>
+					${links.reduce((r,o,i)=>r+`<li ${i===ran?'class="active"':''}>
+						<a href="#">${o}</a>
+					</li>`,'')}
+					
+				</ul>
+			</nav>
+			</div>
+			`
+		}
+		</script>
+
+		<div class="card">
+			<h3>Basic Nav</h3>
+
+			<!-- nav.nav>ul>li*3>a[href=#]>{Link $} -->
+			<script>document.write(makeNav("nav"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Flex Nav</h3>
+
+			<script>document.write(makeNav("nav-flex"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Stretch Nav</h3>
+
+			<script>document.write(makeNav("nav-stretch"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Pills Nav</h3>
+
+			<script>document.write(makeNav("nav-pills"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Breadcrumb Nav</h3>
+
+			<script>document.write(makeNav("nav-crumbs"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Material Tab Nav</h3>
+
+			<script>document.write(makeNav("nav-material"))</script>
+		</div>
+	</section>
+
+	
+	<section id="forms" class="container">
+		<h2>Forms</h2>
+		<div class="card">
+			
+		</div>
+	</section>
+
+	<section id="tables" class="container">
+		<h2>Tables</h2>
+
+		<script>
+		// THIS IS JUST FOR EXAMPLES
+		const makeTable = (classes='') => {
+			const head = ["ID","Office","Name","Email","Phone"];
+			const body = [
+				["522","Hamilton Cline",	"hcline@academyart.edu",	"555-2424"],
+				["512","Fred McHale",		"fmchale@academyart.edu",	"555-2424"],
+				["522","Michael Catanzaro",	"jimmycats@academyart.edu",	"555-2424"],
+				["514","Andrea Pimentel",	"apimentel@academyart.edu",	"555-2424"],
+				["516","DC Scarpelli",		"dscarpelli@academyart.edu","555-2424"]
+			].sort(()=>Math.random()-.5);
+			return `
+			<div class="container">
+			<div class="card card-light">
+			<table class="${classes}">
+				<thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,"")}</tr></thead>
+				<tbody>${body.reduce((r,o,i)=>r+
+					`<tr>${
+						[i+1,...o].reduce((r,o)=>r+`<td>${o}</td>`,"")
+					}</tr>`
+				,"")}</tbody>
+			</table>
+			</div>
+			</div>
+			`;
+		}
+		</script>
+
+
+
+		<div class="card">
+			<h3>Basic Table</h3>
+
+			<script>document.write(makeTable("table"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Striped Table</h3>
+
+			<script>document.write(makeTable("table striped"))</script>
+		</div>
+	</section>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<script>
+	$("[class*='nav'] a").on("click",function(e){
+		e.preventDefault();
+		$(this).parent().addClass("active")
+			.siblings().removeClass("active")
+	})
+	</script>
+
+	<section id="button" class="container">
+		<h2>Button</h2>
+		<div class="card">
+			<h3>Link Button</h3>
+			<div class="card soft">
+			<a href="#" class="linkbutton">SHOP NOW</a>
+		</div>
+	</div>
+	</section>
+	
+	<section id="grid" class="container">
+		<h2>Grid System</h2>
+		<div class="card">
+			<div class="container">
+		<div class="grid gap">
+			<!-- .col-xs-6*2>.card.soft>lorem30 -->
+			<div class="col-xs-12 col-xl-4">
+				<div class="card half">
+					<img src="https://via.placeholder.com/200x200.png?text=stylebook">
+					<h2>Style One</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					
+					<!-- <div class="stylebookone">	 -->
+					
+				</div>
+			</div>
+			
+			<div class="col-xs-12 col-xl-4">
+				<div class="card half">
+					<img src="https://via.placeholder.com/200x200.png?text=stylebook">
+					<h2>Style Two</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+					<!-- <div class="stylebookone">	 -->
+					
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-xl-4">
+				<div class="card half">
+					<img src="https://via.placeholder.com/200x200.png?text=stylebook">
+					<h2>Style Three</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+					<!-- <div class="stylebookone">	 -->
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+		</div>
+	</section>
+
+	<section id="flex" class="container">
+		<h2>Flex System</h2>
+		<div class="card">
+			
+		</div>
+	</section>
+
+</body>
+</html>
