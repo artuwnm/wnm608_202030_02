@@ -185,7 +185,7 @@ footer p{
 		background-color: var(--color-neutral-light);
 		position: relative;
 		width: 100%;
-		z-index: 3;
+		z-index: 2;
 	}
 	.navbar.dropdown ul{
 		overflow: hidden;
