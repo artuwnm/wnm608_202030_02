@@ -20,25 +20,26 @@
 
 			<ul class="nav-list">
 				<li class="nav-item"><a href="#typography">Typography</a></li>
-				<ul>
+				<ul class="sub-nav">
 					<li class="nav-item"><a href="#headings">Headings</a></li>
 					<li class="nav-item"><a href="#paragraphs">Paragraphs</a></li>
 				</ul>
 				<li class="nav-item"><a href="#images">Images</a></li>
-				<ul>
+				<ul class="sub-nav">
 					<li class="nav-item"><a href="#images-decorations">Image Decorations</a>	</li>	
 					<li class="nav-item"><a href="#align-image">Image Alignment</a></li>
 				</ul>
 				<li class="nav-item" class="nav-item"><a href="#cards">Cards</a></li>
 				<li class="nav-item"><a href="#buttons">Buttons</a></li>
-				<li class="nav-item"><a href="#viewwindow">View Window</a></li>
+				
 				<li class="nav-item"><a href="#navigations">Navigations</a></li>
-				<ul>
+				<ul class="sub-nav">
 					<li class="nav-item"><a href="#navs">Navs</a></li>
 					<li class="nav-item"><a href="#navbar">Navbar</a></li>
 				</ul>
 				<li class="nav-item"><a href="#forms">Forms</a></li>
 				<li class="nav-item"><a href="#tables">Tables</a></li>
+				<li class="nav-item"><a href="#viewwindow">View Window</a></li>
 				<li class="nav-item"><a href="#grid">Grid System</a></li>
 				<li class="nav-item"><a href="#flex">Flex System</a></li>
 			</ul>
@@ -51,34 +52,7 @@
 				<h1>CSS Style Guide</h1>
 			</div>
 		</div>
-		<!-- <div class="container">
-		<h2>Table of Contents</h2>
 
-		<ul>
-			<li><a href="#typography">Typography</a></li>
-			<ul>
-				<li><a href="#headings">Headings</a></li>
-				<li><a href="#paragraphs">Paragraphs</a></li>
-			</ul>
-			<li><a href="#images">Images</a></li>
-			<ul>
-				<li><a href="#images-decorations">Image Decorations</a></li>
-				<li><a href="#align-image">Image Alignment</a></li>
-			</ul>
-			<li><a href="#cards">Cards</a></li>
-			<li><a href="#buttons">Buttons</a></li>
-			<li><a href="#viewwindow">View Window</a></li>
-			<li><a href="#navigations">Navigations</a></li>
-			<ul>
-				<li><a href="#navs">Navs</a></li>
-				<li><a href="#navbar">Navbar</a></li>
-			</ul>
-			<li><a href="#forms">Forms</a></li>
-			<li><a href="#tables">Tables</a></li>
-			<li><a href="#grid">Grid System</a></li>
-			<li><a href="#flex">Flex System</a></li>
-		</ul>
-	</div> -->
 	<section id="typography" class="container">
 		<h2>Typography</h2>
 		<div class="card">
@@ -179,11 +153,11 @@
 		<h2 id="buttons">Buttons</h2>
 			<div class="card">
 			
-					<h3 class="margin-bottom-2">Light button</h3>
+					<h3>Light button</h3>
 					
 					<a href="#" class="btn light">Click Me</a>
 
-					<h3 class="margin-top-2 margin-bottom-2">Dark button</h3>
+					<h3>Dark button</h3>
 					
 					<a href="#" class="btn dark">Click Me</a>
 
@@ -344,10 +318,19 @@
 				</div>
 			</div>
 		</div>
-
-
-
 	</section>
+
+	<section id="forms" class="container">
+		<h2>Forms</h2>
+		<div class="card">
+			<h3>Basic Forms</h3>
+			<form class="newsletter" action="">
+				<input type="text" placeholder="Input">
+				<button>Submit</button>
+			</form>
+		</div>
+	</section>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript" src="index.js"></script>
