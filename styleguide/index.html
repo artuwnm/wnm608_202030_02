@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="../lib/css/styleguide.css">
 	<link rel="stylesheet" href="../lib/css/gridsystem.css">
 	<link rel="stylesheet" href="../css/storetheme.css">
+
 </head>
 <body>
 
@@ -19,17 +20,15 @@
 	</header>
 
 	<div class="container">
-		<h2>Table of Contents</h2>
 
+		<h2>Table of Contents</h2>
+		<div class="card">
 		<ul>
 			<li><a href="#typography">Typography</a></li>
 			<ul>
 				<li><a href="#headings">Headings</a></li>
 				<li><a href="#paragraphs">Paragraphs</a></li>
 			</ul>
-			<li><a href="#images">Images</a></li>
-			<li><a href="#cards">Cards</a></li>
-			<li><a href="#viewwindow">View Window</a></li>
 			<li><a href="#navigations">Navigations</a></li>
 			<ul>
 				<li><a href="#navs">Navs</a></li>
@@ -37,9 +36,13 @@
 			</ul>
 			<li><a href="#tables">Tables</a></li>
 			<li><a href="#forms">Forms</a></li>
-			<li><a href="#checboxes">Checkboxes</a></li>
+			<li><a href="#checkboxes">Checkboxes</a></li>
+			<li><a href="#figuers">Figures</a></li>
 			<li><a href="#grid">Grid System</a></li>
 			<li><a href="#flex">Flex System</a></li>
+			<li><a href="#images">Images</a></li>
+			<li><a href="#cards">Cards</a></li>
+			<li><a href="#viewwindow">View Window</a></li>
 		</ul>
 	</div>
 
@@ -84,7 +87,7 @@
 
 		<script>
 		const makeNav = (classes="") => {
-			const links = ["home","store","about"];
+			const links = ["home","search","shop"];
 			let ran = Math.floor(Math.random()*links.length);
 			return `
 			<div class="card soft">
@@ -351,7 +354,7 @@
 
 
 
-	<section id="figures" class="container">
+	<section id="figuers" class="container">
 		<h2>Figures</h2>
 
 		<div class="card">

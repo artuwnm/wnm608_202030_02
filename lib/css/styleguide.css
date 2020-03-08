@@ -5,9 +5,9 @@
 }
 
 :root {
-    --color-neutral-dark: #333;
-    --color-neutral-medium: #999;
-    --color-neutral-light: #eee;
+    --color-neutral-dark: #DD6243;
+    --color-neutral-medium: #517761;
+    --color-neutral-light: #FCF6EF;
 
     --color-main-dark: #034066;
     --color-main-medium: #1ba2f4;
@@ -28,7 +28,8 @@ h3,
 h4,
 h5,
 h6 {
-	font-family:Georgia, "Times New Roman", serif;
+	font-family:Helvetica,Arial,sans-serif;
+	font-weight:400;
 }
 
 a {
@@ -59,6 +60,7 @@ code {
 	max-width:1000px;
 	margin-right: auto;
 	margin-left: auto;
+	border-radius: 25px;
 }
 
 .hidden { display:none; }
@@ -190,6 +192,7 @@ code {
 	position:relative;
 	margin-top: 1em;
 	margin-bottom: 1em;
+	border-radius: 10px;
 }
 
 	.card>:first-child { margin-top:0; }
