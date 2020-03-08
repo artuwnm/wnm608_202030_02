@@ -4,15 +4,13 @@
 	box-sizing:border-box;
 }
 
-:root {
+ :root {
     --color-neutral-dark: #333;
     --color-neutral-medium: #999;
     --color-neutral-light: #eee;
-
     --color-main-dark: #034066;
     --color-main-medium: #1ba2f4;
     --color-main-light: #bde6ff;
-
     --header-height:3rem;
 }
 
@@ -340,8 +338,6 @@ code {
 	outline:0;
 	padding:0 1em;
 }
-
-
 
 
 
