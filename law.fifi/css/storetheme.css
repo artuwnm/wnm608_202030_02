@@ -7,6 +7,7 @@ h1, h2, h3, h4, h5, h6{
 	--color-neutral-dark:#7a440f;
 	--color-neutral-light:#ffe8d6;
 	--color-neutral-medium:#ff971d;
+	--color-neutral-white:#f9f6f7;
 
 }
 
@@ -35,6 +36,16 @@ section>h2{
 }
 
 .product-figure figcaption{
+	padding: 0;
+}
+
+.product-figure figcaption h5{
+	font-size: 1em;
+	margin: 0.5em 0;
+}
+
+
+.product-figure.soft figcaption{
 	padding: 1em;
 
 }
@@ -47,7 +58,7 @@ section>h2{
 	.product-figure.overlay{
 		position: relative;
 		overflow: hidden;
-		border-radius: 1em;
+		border-radius: 0.2em;
 	
 	}
 	.product-figure.overlay figcaption{
@@ -56,16 +67,21 @@ section>h2{
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0,0,0,0.2);
+		background-color: rgba(250, 236, 201, 0.33);
 		transition: 0.3s all;
 		opacity: 0;
-		color: var(--color-neutral-light);
+		color: var(--color-neutral-dark);
+		cursor: pointer;
 	}
 	.product-figure.overlay figcaption h4{
 		display: block;
-		text-align: center;
-		text-transform: uppercase;
-		justify-content: center;
+    	text-align: center;
+    	text-transform: uppercase;
+    	justify-content: center;
+    	font-size: 2em;
+    	padding: 10% 0;
+    	height: 120px;
+    	line-height: 120px;
 		
 	}
 
