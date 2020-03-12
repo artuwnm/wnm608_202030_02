@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>CSS Style Guide</title>
+	<title>CSS Style Guide - Stylista</title>
 	<meta name="viewport" content="width=device-width">
 	<link href="https://fonts.googleapis.com/css?family=Elsie|Roboto:400,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../lib/css/styleguide.css">
@@ -12,9 +12,15 @@
 </head>
 <body>
 	
-	<header class="nav-bar__logo container">
-		<h1>Stylista</h1>
-		<h4 style="text-align: center;">CSS Style Guide</h4>
+	<header class="navbar">
+		<h1>CSS Style Guide</h1>
+		<nav class="container">
+			<ul class="nav-bar__menu nav-bar__menu--main display-flex">
+				<li>Stylista Store</li>
+				<li>Tiffany Zheng</li>
+				<li>WNM 608-02</li>
+			</ul>
+		</nav>
 	</header>
 
 	<div class="container">
@@ -93,14 +99,18 @@
 
 		<div class="card">
 			<h3>Dropdown Nav</h3>
-			<div class="nav-dropdown">
-				<button>Shop <span class="chevron bottom"></span></button>
-				<div class="dropdown-content">
-					<a href="#">All</a>
-					<a href="#">Women</a>
-					<a href="#">Men</a>
-				</div>
-			</div>
+			<ul>
+				<li>
+					<div class="nav-dropdown">
+						<button>Shop <span class="chevron bottom"></span></button>
+						<div class="dropdown-content">
+							<a href="#">All</a>
+							<a href="#">Women</a>
+							<a href="#">Men</a>
+						</div>
+					</div>
+				</li>
+			</ul>
 		</div>
 
 		<div class="card">
@@ -134,7 +144,6 @@
 		<h2 class="section-title">Tables</h2>
 
 		<script>
-		// THIS IS JUST FOR EXAMPLES
 		const makeTable = (classes='') => {
 			const head = ["ID","Office","Name","Email","Phone"];
 			const body = [
@@ -291,6 +300,41 @@
 				<img src="https://via.placeholder.com/300" alt="">
 				<figcaption>Product</figcaption>
 			</figure>
+		</div>
+		<h3>Products</h3>
+		<div class="featured-items container">
+			<div class="grid gap">
+				<div class="col-xs-12 col-md-6 col-lg-4">
+					<div class="card light">
+						<button><h3>+ <span>Shop Item</span></h3></button>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6 col-lg-4">
+					<div class="card light">
+						<button><h3>+ <span>Shop Item</span></h3></button>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6 col-lg-4">
+					<div class="card light">
+						<button><h3>+ <span>Shop Item</span></h3></button>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6 col-lg-4">
+					<div class="card light">
+						<button><h3>+ <span>Shop Item</span></h3></button>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6 col-lg-4">
+					<div class="card light">
+						<button><h3>+ <span>Shop Item</span></h3></button>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6 col-lg-4">
+					<div class="card light">
+						<button><h3>+ <span>Shop Item</span></h3></button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 

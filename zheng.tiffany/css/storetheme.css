@@ -44,35 +44,8 @@ h4, h5, h6 {
 	color: var(--color-neutral-dark);
 }
 
-.nav-bar__logo h1 {
-	color: var(--color-main-dark);
-	text-align: center;
-	letter-spacing: 0.025em;
-}
-
 [class*='col-']>.card {
 	margin: 0;
-	width: 323px;
-	height: 300px;
-}
-
-.featured-items .card button {
-	border: none;
-	background-color: var(--color-main-dark);
-	color: var(--color-neutral-dark);
-	position: absolute;
-	top: 75%;
-	left: 10%;
-	width: 30%;
-}
-
-.featured-items .card button:hover {
-	background-color: var(--color-main-light);
-	color: var(--color-neutral-medium);
-	cursor: pointer;
-}
-
-.featured-items h1 {
-	text-align: center;
-	padding-top: 1em;
+	width: 310px;
+	height: 518px;
 }
