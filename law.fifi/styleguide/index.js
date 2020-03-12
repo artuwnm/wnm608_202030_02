@@ -17,4 +17,24 @@ $(".accordion").click(function(){
 	}
 
 	
+});
+
+$(".hotdog-icon2").click(function(){
+
+	$(this).prev().toggleClass("hotdog2-active");
+});
+
+
+$(".hotdog-icon3").click(function(){
+
+	$(this).prev().toggleClass("hotdog3-active");
+});
+
+
+$(".image-picker .thumbstrip img").click(function(){
+	console.log("true");
+	
+	let newscr = $(this).attr("src");
+
+	$(this).closest(".image-picker").find(".main-image img").attr({src:newscr});
 })

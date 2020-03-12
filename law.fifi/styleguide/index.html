@@ -120,6 +120,36 @@
 			<code class="card code">class="image border"</code>
 
 			<img class="image border"src="https://via.placeholder.com/200?text=Placeholder" alt="">
+
+		</div>
+
+		<div class="card">
+				<h3>Image Picker</h3>
+
+			<code class="card code">
+&lt;div class="image-picker">
+	&lt;div class="main-image">
+		&lt;img src="https://via.placeholder.com/600?text=1" alt="">
+	&lt;/div>
+	&lt;div class="thumbstrip ">
+		&lt;img  src="https://via.placeholder.com/600?text=1" alt="">
+		&lt;img  src="https://via.placeholder.com/600?text=2" alt="">
+		&lt;img  src="https://via.placeholder.com/600?text=3" alt="">
+		&lt;img  src="https://via.placeholder.com/600?text=4" alt="">
+	&lt;/div>
+&lt;/div>
+			</code>
+			<div class="image-picker">
+				<div class="main-image">
+					<img src="https://via.placeholder.com/600?text=1" alt="">
+				</div>
+				<div class="thumbstrip ">
+					<img  src="https://via.placeholder.com/600?text=1" alt="">
+					<img  src="https://via.placeholder.com/600?text=2" alt="">
+					<img  src="https://via.placeholder.com/600?text=3" alt="">
+					<img  src="https://via.placeholder.com/600?text=4" alt="">
+				</div>
+			</div>
 		</div>
 		<div class="card" id="align-image">
 			<h3>Image Alignment</h3>
@@ -615,19 +645,38 @@
 			</code>
 			<div class="form-control">
 				<label class="hotdog">
-					<div class="flex-none">&clubs;</div>
+					<div class="flex-none hotdog-icon"><img src="../images/search-icon.svg" alt=""></div>
 					<div class="flex-scretch">
 						<input type="search" placeholder="Search">
 					</div>
 				</label>
 			</div>
-			<div class="form-control display-flex">
-				<div class="flex-stretch"></div>
-				<div class="flex-none">
-					<input type="search" class="hotdog" placeholder="Search">
+		</div>
+
+			<div class="card">
+				<h3>Hotdog 2</h3>
+				<code class="card code">
+&lt;div class="form-control display-flex">
+	&lt;div class="flex-stretch">&lt;/div>			
+	&lt;label class="display-flex hotdog2">
+		&lt;input type="search" class="display-none" id="hotdog2" placeholder="Search">
+		&lt;div class="flex-none hotdog-icon2" for="hotdog2">
+			&lt;img src="../images/search-icon.svg" alt="">
+		&lt;/div>
+	&lt;/label>
+&lt;/div>
+
+				</code>
+				<div class="form-control display-flex">
+					<div class="flex-stretch"></div>
+					
+					<label class="display-flex display-none">
+						<input type="search" class="hotdog2 " id="hotdog2" placeholder="Search">
+						<div class="flex-none hotdog-icon2" for="hotdog2"><img src="../images/search-icon.svg" alt=""></div>
+					</label>
 				</div>
 			</div>
-		</div>
+
 
 	</section>
 
@@ -635,8 +684,140 @@
 		<h2>Tables</h2>
 		<div class="card">
 			<h3>Basic Table</h3>
+		<code class="card code">
+&lt;table class="table">
+&lt;/table>
+			</code>
+			<table class="table">
+				<tr>
+					<th>ID</th>
+					<th>Office</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Phone</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+			</table>
 
 
+		</div>
+
+
+		<div class="card">
+			<h3>Striped Table</h3>
+			<code class="card code">
+&lt;table class="table striped">
+&lt;/table>
+			</code>
+			<table class="table striped">
+				<tr>
+					<th>ID</th>
+					<th>Office</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Phone</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+			</table>
+		</div>
+		<div class="card">
+			<h3>Lined Table</h3>
+			<code class="card code">
+&lt;table class="table lined">
+&lt;/table>
+			</code>
+			<table class="table lined">
+				<tr>
+					<th>ID</th>
+					<th>Office</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Phone</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+			</table>
+	
 		</div>
 	</section>
 
@@ -764,10 +945,6 @@
 			</div>
 		
 		<div class="card">
-			<h3>Drop Down Selection</h3>
-
-		</div>
-		<div class="card">
 			<h3>Accordion</h3>
 			<code class="card code">
 &lt;div class="accodion">
@@ -849,6 +1026,24 @@
 					</ul>
 				</div>
 			</div>
+		</div>
+
+		<div class="card">
+			<h3>Drop Down Selection</h3>
+			<code class="card code">
+&lt;select name="dropdown-selection" id="dropdown-selection" class="dropdown-selection">
+	&lt;option  class="options"  value="option1">Option 1&lt;/option>
+	&lt;option  class="options" value="option2">Option 2&lt;/option>
+	&lt;option  class="options" value="option3">Option 3&lt;/option>
+	&lt;option  class="options" value="option4">Option 4&lt;/option>
+&lt;/select>
+			</code>
+			<select name="dropdown-selection" id="dropdown-selection" class="dropdown-selection">
+				<option  class="options"  value="option1">Option 1</option>
+				<option  class="options" value="option2">Option 2</option>
+				<option  class="options" value="option3">Option 3</option>
+				<option  class="options" value="option4">Option 4</option>
+			</select>
 		</div>
 	</section>
 
@@ -970,7 +1165,51 @@
 			</div>
 		</div>
 	</section>
+	
+	<section class="container">
+		<h2 id="grid">Grid System</h2>
+		<div class="card">
+			<h3>Basic Grid</h3>
+			<div class="grid">
+				<div class="card dark col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facere fugiat vero harum nam aspernatur officia debitis, laboriosam repudiandae sapiente.</div>
+				<div class="card dark col-md-4">Totam dolores ex labore, delectus. Hic, odio necessitatibus, tempore dolore expedita error blanditiis enim nulla sit, sunt modi, assumenda non.</div>
+				<div class="card dark col-md-4">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.</div>
+				<div class="card dark col-md-6">Totam dolores ex labore, delectus. Hic, odio necessitatibus, tempore dolore expedita error blanditiis enim nulla sit, sunt modi, assumenda non.</div>
+				<div class="card dark col-md-3">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.</div><div class="card dark col-md-3">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.</div>
+			</div>
+		</div>
+				<div class="card">
+			<h3>Basic Grid with Gap</h3>
+			<div class="grid gap">
+				<div class="card dark col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facere fugiat vero harum nam aspernatur officia debitis, laboriosam repudiandae sapiente.</div>
+				<div class="card dark col-md-4">Totam dolores ex labore, delectus. Hic, odio necessitatibus, tempore dolore expedita error blanditiis enim nulla sit, sunt modi, assumenda non.</div>
+				<div class="card dark col-md-4">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.</div>
+				<div class="card dark col-md-6">Totam dolores ex labore, delectus. Hic, odio necessitatibus, tempore dolore expedita error blanditiis enim nulla sit, sunt modi, assumenda non.</div>
+				<div class="card transparent col-md-3"><img src="https://via.placeholder.com/200?text=Product+image" alt="">
+				</div>
+				<div class="card dark col-md-3">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.</div>
+			</div>
+		</div>
+	</section>
 
+	<section class="container">
+		<h2 id="flex">Flex System</h2>
+		<div class="card">
+			<div class="display-flex flex-justify-center">
+				<div class="card dark flex-scretch">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita possimus harum voluptas repellendus animi dolore nemo eum magni distinctio eos?</div>
+				<div class="flex-none" style="width: 15px"></div>
+				<div class="card dark flex-scretch">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita possimus harum voluptas repellendus animi dolore nemo eum magni distinctio eos?</div>
+			</div>
+				<div class="display-flex flex-justify-between">
+					<div class="card soft flex-stretch">
+						<h1 class=" text-align-center">Logo</h1>
+					</div>
+					<div class="flex-none" style="width: 15px"></div>
+					<img src="https://via.placeholder.com/200?text=Product+image" alt="">
+
+				</div>
+		</div>
+	</section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript" src="index.js"></script>

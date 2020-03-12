@@ -14,7 +14,7 @@
 </head>
 <body>
 	
-	<div class="navbar">
+	<div class="navbar display-flex">
 		<div class="container display-block ">
 			<div class="flex-stretch text-align-center logo">
 				<img src="images/Meowie-logo.svg" alt="">
@@ -27,6 +27,15 @@
 						
 					</ul>
 				</nav>
+				
+		</div>
+		<div class="icons display-flex">
+				
+				
+			<input type="search" class=" display-none hotdog3" placeholder="Search">
+				<svg class="search-icon flex-none hotdog-icon3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.23 29.15"><defs></defs><title>search-icon</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M20.07,6.61a9.42,9.42,0,0,0-3.69-2.28L13.3,0,10.18,4.4h0l-5.7,5.7,0,0L0,13.3l4.47,3.17A9.29,9.29,0,0,0,6.69,20a9.46,9.46,0,0,0,11.69,1.35l7.82,7.81,3-3L21.41,18.3A9.46,9.46,0,0,0,20.07,6.61ZM18,17.89a6.19,6.19,0,1,1,0-8.75A6.19,6.19,0,0,1,18,17.89Z"/></g></g></svg>
+
+			<svg class="cart-icon flex-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.2 28.64"><defs></defs><title>cart-icon</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M29.2,21.55V20.26H25.52L24.8,8.32H22.13C21.55,3.61,18.31,0,14.4,0S7.25,3.61,6.68,8.32H3.89L3.5,20.26H0v1.29H3.45l0,1.21H0v1.29H3.37l-.15,4.59H26l-.28-4.59H29.2V22.76H25.67l-.08-1.21ZM14.67,14.4h-.13L9.92,8.32H8.58c.55-3.4,2.95-6,5.82-6s5.27,2.57,5.83,6H19Z"/></g></g></svg>
 		</div>
 	</div>
 
@@ -36,9 +45,10 @@
 	<div class="container ">
 		<div class=" grid margin-top-5 margin-bottom-5">
 			
-				<div class="col-md-12 col-lg-6 image boxshadow "><img src="images/phone-mockup.png" alt="">
+				<div class="col-sm-12 col-md-6 image boxshadow "><img src="images/phone-mockup.png" alt="">
 				</div>
-			<div class="col-lg-6 col-sm-12 ">
+				<div class="col-md-1"></div>
+			<div class="col-md-5 col-sm-12 ">
 				<div class="card transparent ">
 					<h2 class="medium-color">WELCOME</h2>
 					<br>
@@ -92,7 +102,7 @@
 			<h1 class="uppercase  medium-color">our story</h1>
 			<br>
 			<p class=" window-msg ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ratione totam est libero architecto cupiditate ad repudiandae dicta repellendus commodi!</p>
-			<a class="btn window " href="#">Shop Now</a> 
+			<a class="btn window " href="#">learn more</a> 
 			
 		</div>
 		</div>	
@@ -104,10 +114,13 @@
 	<div class="container">
 
 
-		<div class="card transparent text-align-center">
-			<h2>Heading 1</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia minima earum illo quas asperiores cum. Ipsam, eos officia autem vitae, tempora repellendus ex eligendi aliquam voluptatem. Labore, dicta corporis laudantium.</p>
-			<p>Esse dolorem est soluta quae rem, perferendis facere minus quisquam vitae debitis alias facilis doloremque, tempora ipsam error quibusdam, rerum. Cumque nam libero, tempora voluptatem maxime tenetur facere quia non!</p>
+		<div class="card transparent">
+			<div class="meow-icon">
+				<img src="images/Meow-icon.png" alt="">
+			</div>
+			<h2 class="uppercase text-align-center">meow with passion</h2>
+			<p class="passion-p">All our designs are created with 99% of passion and 1% of meow power! Thanks to all the amazing cats and cat lovers out there, we are able to make all these cute products and spread the love of cats online.</p>
+			
 		</div>
 		
 	</div>
@@ -141,12 +154,12 @@
 			<div class="col-md-4 col-sm-6">
 				
 					<div class="card transparent">
-						<h2>Links</h2>
+						<h2 class="uppercase">Categories</h2>
 						<ul>
-							<li><a href="article1">Link 1</a></li>
-							<li><a href="article2">Link 2</a></li>
-							<li><a href="article3">Link 3</a></li>
-							<li><a href="article4">Link 4</a></li>
+							<li><a href="article1">Pillows</a></li>
+							<li><a href="article2">Phone Cases</a></li>
+							<li><a href="article3">Stickers</a></li>
+						
 						</ul>
 					</div>
 			
@@ -154,21 +167,25 @@
 			
 			<div class="col-md-3 col-sm-6">
 				
-					<div class="card transparent">
-						<h2>Links</h2>
+					<div class="card footer transparent">
+						<h2 class="uppercase">Contact Us</h2>
 						<ul>
-							<li><a href="article1">Link 1</a></li>
-							<li><a href="article2">Link 2</a></li>
-							<li><a href="article3">Link 3</a></li>
-							<li><a href="article4">Link 4</a></li>
+							<li><a href="article1">Phone: 123-333-1234</a></li>
+							<li><a href="article2">Email: customer@meowie.com</a></li>
+							
 						</ul>
 					</div>
 				
 			</div>
 		</div>
-		
-		<p class="text-align-center col-md-12">Created by Lorem Ipsum 2020</p>
+		<br>
+		<p class="text-align-center col-md-12">Created by Meowie 2020</p>
 		<br>
 	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="styleguide/index.js"></script>
 </footer>
+
+
 </html>
