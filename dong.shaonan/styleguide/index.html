@@ -1,0 +1,266 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Styleguide</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="styleguide.css">
+	<link rel="stylesheet" href="storetheme.css">
+	<!-- <link rel="stylesheet" href="gridsystem.css"> -->
+	
+</head>
+<body>
+
+	
+<header class="container">
+	<div class="card">
+		<h1>Css Style Guide</h1>
+	</div>
+</header>
+    <!-- <div class="container">
+	    <h2>Navigation and searching tool</h2>
+ -->
+
+<!-- <div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><img src="img/search.png" height="15vh"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div> -->
+	<nav class="container">
+		<h2>Table of Contents</h2>
+
+
+		<ul>
+			<li><a href="#typography">Typography</a></li>
+			<ul>
+				<li><a href="#headings">Headings</a></li>
+				<li><a href="#paragraphs">Paragraphs</a></li>
+			</ul>
+			<li><a href="#images">Images</a></li>
+			<li><a href="#cards">Cards</a></li>
+			<li><a href="#viewwindow">View Window</a></li>
+			<li><a href="#navigations">Navigations</a></li>
+			<ul>
+				<li><a href="#navs">Navs</a></li>
+				<li><a href="#navbar">Navbar</a></li>
+			</ul>
+			<li><a href="#tables">Tables</a></li>
+			<li><a href="#forms">Forms</a></li>
+			<li><a href="#checboxes">Checkboxes</a></li>
+			<li><a href="#grid">Grid System</a></li>
+			<li><a href="#flex">Flex System</a></li>
+		</ul>
+	</div>
+
+	<hr>
+
+	<section id="typography" class="container">
+		<h2>Typography</h2>
+
+		
+		<div class="card">
+			<h3 id="headings">Headings</h3>
+			<!-- h$*6>{Heading $} -->
+			<h1>Heading 1</h1>
+			<h2>Heading 2</h2>
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+			<h5>Heading 5</h5>
+			<h6>Heading 6</h6>
+		</div>
+
+	<section class="container">
+			<h2 id="paragraphs">Paragraphs</h2>
+			<div class="card">
+		
+			<strong>Font for Paragraphs: Avenir, Roma, 16px</strong>
+			<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+
+	
+		<script>
+		const makeNav = (classes="") => {
+			const links = ["home","store","about"];
+			let ran = Math.floor(Math.random()*links.length);
+			return `
+			<div class="card soft">
+			<nav class="${classes}">
+				<ul>
+					${links.reduce((r,o,i)=>r+`<li ${i===ran?'class="active"':''}>
+						<a href="#">${o}</a>
+					</li>`,'')}
+					
+				</ul>
+			</nav>
+			</div>
+			`
+		}
+		</script>
+
+		<section class="container">
+			<h2 id="Color">Color</h2>
+		<div class="card">
+			
+			<hr>
+			<div class="card" style="background-color: #FF0098">
+				<p>#FF0098</p>
+			</div>
+			<div class="card" style="background-color: #FDADD1">
+				<p style="color: #FFFFFF">#FDADD1</p>
+			</div>
+			<div class="card" style="background-color: #235C53">
+				<p>##235C53</p>
+			</div>
+			<div class="card" style="background-color: #8DA997">
+				<p>##8DA997</p>
+			</div>
+		</div>
+	</section>
+		<section id="navigations" class="container">
+		<h2>Navigations</h2>
+
+        <div class="card">
+			<h3 id="Font"></h3>
+			<hr>
+			<strong>Logo</strong>
+			<p class="logo"><img src="img/roll.png" height="50vh"></p>
+			<strong>Typeface</strong>
+			<p class="logo"><img src="img/logo.png" height="20vh"></p>
+			</div>
+		
+		<div class="card">
+			<nav class="nav">
+				<ul>
+					<li class="logo">
+						<a class="active" href="#home"><img src="img/roll.png" height="50vh"></a>
+					</li>
+					<li class="menu-text">
+						<a href="#SHOP">SHOP</a>
+					</li>
+					<li class="menu-text">
+						<a href="#COUPONS">COUPONS</a>
+					</li>
+					<li class="menu-text">
+						<a href="#SEARCH"><img src="img/search.png" height="20vh"></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+	<section id="nav" class="container">
+		<h2>Pills Nav</h2>
+
+
+		<div class="card">
+		
+
+			<script>document.write(makeNav("nav-pills"))</script>
+		</div>
+
+		
+
+
+	
+
+	<section id="forms" class="container">
+		<h2>Next Picture</h2>
+
+
+		<div class="card">
+			<h3>Roll Image</h3>
+
+			
+
+			<div class="form-control display-flex">
+				<div class="flex-none">
+					<a href="#" class="form-button"><img src="img/arrow1.png" height="20vh"></a>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<a href="#" class="form-button"><img src="img/arrow2.png" height="20vh"></a>
+				</div>
+			</div>
+		</div>
+</section>
+<section id="forms" class="container">
+		<h2>Searching</h2>
+		<div class="card">
+			<h3>Hotdog</h3>
+
+			<div class="form-control">
+				<input type="search" class="hotdog" placeholder="Search">
+			</div>
+	</section>
+
+<section class="container">
+	<h2>Image</h2>
+
+	<div class="card">
+		<hr>
+		<img src="img/img01.jpg" height="300vh">
+	</div>
+</section>
+<section class="container">
+	<h2>Figures</h2>
+<div class="card">
+		<hr>
+	<h3>Overlay Figure</h3>
+			<a href="#" class="display-block">
+				<!-- figure>img+figcaption -->
+				<figure class="product-figure overlay">
+					<img src="img/img01.jpg" alt=""height="300vh">
+					<figcaption>
+						Product
+					</figcaption>
+				</figure>
+			</a>
+	</div>
+	</section>
+
+	
+
+	<section class="container">
+		<h2>Buttons</h2>
+		<div class="card">
+			
+			<hr>
+			<button class="button"> CHECKOUT </button>
+		</div>
+	</section>
+
+<section class="container">
+		<h2 id="checkboxes">Check Boxes</h2>
+		<hr>
+
+		<div class="card">
+			<h3>Basic Checkbox</h3>
+
+			<div>
+				<label>
+					<input type="checkbox" id="check-example1">
+					Checkbox
+				</label>
+			</div>
+		</div>
+	</section>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<script>
+	$("[class*='nav'] a").on("click",function(e){
+		e.preventDefault();
+		$(this).parent().addClass("active")
+			.siblings().removeClass("active")
+	})
+	</script>
+	
+</body>
+</html>
