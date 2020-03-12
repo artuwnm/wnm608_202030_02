@@ -74,6 +74,57 @@ code {
 .hidden { display:none; }
 
 /* ATOMIC CLASSES */
+.flexbox div{
+  width: 5em;
+  height: 5em;
+  margin-top: 1em;
+ margin-right: 1em;
+ margin-bottom: 1em;
+ background-color: var(--color-main-dark);
+ color: white;
+ text-align: center;
+
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: 10em;
+}
+
+.flex-start { align-self: flex-start; }
+.flex-end { align-self: flex-end; }
+.center { align-self: center; }
+.baseline { align-self: baseline; }
+.stretch { align-self: stretch; }
+
+.flex-item {
+  background: var(--color-main-dark);
+  padding: 5px;
+  width: 100px;
+  margin: 5px;
+  line-height: 100px;
+  color: white;
+  text-align: center;
+}
+
+
+
+.flex-start { align-self: flex-start; }
+.flex-end { align-self: flex-end; }
+.center { align-self: center; }
+.baseline { align-self: baseline; }
+.stretch { align-self: stretch; }
+
+.flex-direction{flex-direction: row;}
+
+.flex-direction-rowreverce{flex-direction: row-reverse;}
+.flex-direction-column{flex-direction: column;}
+.flex-direction-columnreverce{flex-direction: column-reverse;}
+.flex-justify-start{justify-content: flex-start;}
+.flex-justify-end{justify-content: flex-end;}
+
 
 .display-flex { display:flex; }
 .display-inline-flex { display:inline-flex; }
@@ -117,7 +168,7 @@ code {
 }
 
 .big-image{
-	width: 748px;
+	width: 100%;
 	position: relative;
 	margin-bottom: 0.25em;
 }
@@ -139,9 +190,10 @@ code {
 
 
 .thumb-images img{
-	width: 200px;
+	width: 10vh;
 	box-sizing: border-box;
 	margin-bottom:1em;
+	overflow: hidden;
 }
 
 .thumb-images img.active{
