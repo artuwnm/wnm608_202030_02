@@ -3,4 +3,6 @@
 ##Links
 
 - https://ceceliacao.com
-- https://ceceliacao.com/aau/wnm608_02/cecelia_cao
+- http://www.ceceliacao.com/aau/wnm608/cao.cecelia/index.html
+- http://www.ceceliacao.com/aau/wnm608/cao.cecelia/styleguide/index.html
+

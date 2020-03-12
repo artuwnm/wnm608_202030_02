@@ -5,7 +5,8 @@
 	<title>CSS Styleguide</title>
 
 	<meta name="viewport" content="width=device-width">
-
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="../lib/css/styleguide.css">
 	<link rel="stylesheet" href="../lib/css/gridsystem.css">
 	<link rel="stylesheet" href="../css/storetheme.css">
@@ -37,10 +38,13 @@
 				<li><a href="#navs">Navs</a></li>
 				<li><a href="#navbar">Navbar</a></li>
 			</ul>
-			<li><a href="#forms">Forms</a></li>
 			<li><a href="#tables">Tables</a></li>
-			<li><a href="#button">Button</a></li>
 			<li><a href="#grid">Grid System</a></li>
+			<li><a href="#forms">Forms</a></li>
+			<li><a href="#button">Button</a></li>
+			<li><a href="#checkboxes">Checkboxes</a></li>
+			<li><a href="#accordion">Accordion</a></li>
+			<li><a href="#figures">Figures</a></li>
 			<li><a href="#flex">Flex System</a></li>
 		</ul>
 	</div>
@@ -54,12 +58,12 @@
 		<div class="card">
 			<h3 id="headings">Headings</h3>
 			<!-- h$*6>{Heading $} -->
-			<h1>Heading 1</h1>
-			<h2>Heading 2</h2>
-			<h3>Heading 3</h3>
-			<h4>Heading 4</h4>
-			<h5>Heading 5</h5>
-			<h6>Heading 6</h6>
+			<h1>Heading 1 ‘Crimson’</h1>
+			<h2>Heading 2 Crimson’</h2>
+			<h3>Heading 3 Crimson’</h3>
+			<h4>Heading 4 Crimson’</h4>
+			<h5>Heading 5 Crimson’</h5>
+			<h6>Heading 6 Crimson’</h6>
 		</div>
 
 		<code>
@@ -73,27 +77,18 @@
 
 
 		<div class="card">
-			<h3 id="paragraphs">Paragraphs</h3>
+			<h3 id="paragraphs">Paragraphs ‘Source Sans Pro’</h3>
 			<!-- p*3>lorem40 -->
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum numquam, ullam quisquam maiores voluptas reiciendis libero temporibus esse nihil suscipit perspiciatis blanditiis error pariatur autem ea debitis aut vitae, aperiam quas. Odit ad laudantium, doloremque neque! Consequuntur, perspiciatis, modi.</p>
-			<p>Repellat aut voluptas sequi odio ipsa possimus, assumenda soluta ad cum excepturi eveniet aliquam deserunt quas, adipisci commodi? In iure, accusamus recusandae, earum commodi fugiat vero ullam et consequuntur temporibus alias repudiandae assumenda inventore, expedita nisi dolores, natus id voluptate.</p>
-			<p>Odio esse optio obcaecati excepturi fugiat omnis atque quae nesciunt a! Blanditiis nihil excepturi natus animi adipisci repellat praesentium voluptates ipsam quidem culpa cum, voluptas obcaecati, recusandae accusantium modi. Ipsam nemo inventore distinctio maxime impedit fugiat facere ducimus minus eius.</p>
 		</div>
 	</section>
 
 	<section id="images" class="container">
 		<h2>Images</h2>
-		<div class="card half">
-		<h3>Whole Image</h3>
-		<div class="view-window display-flex flex-align-center flex-justify-center" style="background-image:url(https://via.placeholder.com/500x100.png?text=shopping)">	
-		</div>
-		</div>
 		
-		
-		
-		<div class="card half">
+		<div class="card">
 			<h3>Image Right</h3>
-		<div class="grid gap">
+		<div class="grid gap large">
 			<div class="col-xs-12 col-xl-6">
 			<h3>Introduction</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore non quis similique, sit, doloremque hic excepturi dolorum odit explicabo mollitia?</p>
@@ -107,9 +102,9 @@
 			</div>
 			</div>
 		
-		<div class="card half">
+		<div class="card">
 		<h3>Image left</h3>
-		<div class="grid gap">
+		<div class="grid gap large">
 			
 			<div class="col-xs-12 col-xl-6">
 			<div class="imagealign">
@@ -124,8 +119,109 @@
 			</div>
 			</div>
 		
+		<div class="card">
+			<h3>Image Hover</h3>
+		<div class="grid gap large">
+			<!-- .col-xs-6*2>.card.soft>lorem30 -->
+			<div class="col-xs-12 col-lg-4">
+				<div id="rectangle" class="flex-align-center flex-justify-center">
+				<div class="imagedecorarion flex-align-center flex-justify-center">
+					
+				</div>	
+				</div>	
+					<!-- <div class="stylebookone">	 -->
+				
+				<div class="form-control display-flex">
+				<div class="flex-none">
+					<h4>Baby Earings</h4>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<h4>$98.00</h4>
+				</div>
+			</div>
+			</div>
+			
+				<div class="col-xs-12 col-xl-4">
+				<div id="rectangle" class="flex-align-center flex-justify-center">
+				<div class="imagedecorarion flex-align-center flex-justify-center">
+					
+				</div>	
+				</div>	
+					<!-- <div class="stylebookone">	 -->
+				
+				<div class="form-control display-flex">
+				<div class="flex-none">
+					<h4>Baby Earings</h4>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<h4>$98.00</h4>
+				</div>
+			</div>
+		</div>
 
+				<div class="col-xs-12 col-xl-4">
+				<div id="rectangle" class="flex-align-center flex-justify-center">
+				<div class="imagedecorarion flex-align-center flex-justify-center">
+					
+				</div>	
+			</div>
+					
+					<!-- <div class="stylebookone">	 -->
+				<div class="form-control display-flex">
+				<div class="flex-none">
+					<h4>Baby Earings</h4>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<h4>$98.00</h4>
+				</div>
+			</div>
+			</div>
+			</div>
+
+			<div class="card">
+			<h3>Image Filmstrip</h3>
+			<div class="film">
+	
+	<div class="thumb-images">
 		
+			<img class="thumbmain" src="https://via.placeholder.com/500.png?text=shopping">
+			<img class="thumbsecondary"src="https://via.placeholder.com/500.png?text=style">
+	
+	
+
+	</div>
+	<div class="big-image">
+		<img src="https://via.placeholder.com/500.png?text=shopping">
+		
+	</div>
+	</div>
+	<script>
+		let chosen = 0;
+let page = 0;
+
+function scrollDiv() {
+	$(".thumbs").animate({
+		scrollLeft:748*page
+	})
+}
+
+function showImage(){
+	let chose = $(".thumb-images img").eq(chosen);
+	$(".big-image img").attr({src:chose.attr("src")})
+	chose.addClass("active").siblings().removeClass("active")
+}
+
+$(".thumb-images img").on("click",function(){
+	chosen = $(this).index();
+	showImage();
+})
+
+
+	</script>
+			</div>
 
 	</section>
 	
@@ -155,9 +251,11 @@
 
 	<section id="viewwindow" class="container">
 		<h2>View Window</h2>
-		<div class="card">
-			
+			<div class="card half">
+		<div class="view-window display-flex flex-align-center flex-justify-center" style="background-image:url(https://via.placeholder.com/500x1000.png?text=shopping)">	
 		</div>
+		</div>
+	
 	</section>
 
 
@@ -220,15 +318,14 @@
 
 			<script>document.write(makeNav("nav-material"))</script>
 		</div>
-	</section>
 
-	
-	<section id="forms" class="container">
-		<h2>Forms</h2>
 		<div class="card">
-			
+		<h3>Flex Right Nav</h3>
+
+			<script>document.write(makeNav("nav-right-flex"))</script>
 		</div>
 	</section>
+
 
 	<section id="tables" class="container">
 		<h2>Tables</h2>
@@ -274,6 +371,43 @@
 
 			<script>document.write(makeTable("table striped"))</script>
 		</div>
+
+		<div class="card">
+			<h3>Horizontal Lined Table</h3>
+
+			<script>document.write(makeTable("table lined horizontal"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Vertical Lined Table</h3>
+
+			<script>document.write(makeTable("table lined vertical"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Outline Table</h3>
+
+			<script>document.write(makeTable("table lined outline"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Outlined striped vertical lined Table</h3>
+
+			<script>document.write(makeTable("table striped lined outline vertical"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Outlined striped vertical lined Table</h3>
+
+			<script>document.write(makeTable("table lined all"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Checkout Table</h3>
+			
+			<script>document.write(makeTable("table simple lined outline horizontol"))</script>
+		</div>
+
 	</section>
 
 
@@ -286,16 +420,6 @@
 			.siblings().removeClass("active")
 	})
 	</script>
-
-	<section id="button" class="container">
-		<h2>Button</h2>
-		<div class="card">
-			<h3>Link Button</h3>
-			<div class="card soft">
-			<a href="#" class="linkbutton">SHOP NOW</a>
-		</div>
-	</div>
-	</section>
 	
 	<section id="grid" class="container">
 		<h2>Grid System</h2>
@@ -306,7 +430,7 @@
 			<div class="col-xs-12 col-xl-4">
 				<div class="card half">
 					<img src="https://via.placeholder.com/200x200.png?text=stylebook">
-					<h2>Style One</h2>
+					<h3>Style One</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					
 					<!-- <div class="stylebookone">	 -->
@@ -317,7 +441,7 @@
 			<div class="col-xs-12 col-xl-4">
 				<div class="card half">
 					<img src="https://via.placeholder.com/200x200.png?text=stylebook">
-					<h2>Style Two</h2>
+					<h3>Style Two</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 
 					<!-- <div class="stylebookone">	 -->
@@ -328,25 +452,323 @@
 			<div class="col-xs-12 col-xl-4">
 				<div class="card half">
 					<img src="https://via.placeholder.com/200x200.png?text=stylebook">
-					<h2>Style Three</h2>
+					<h3>Style Three</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 
 					<!-- <div class="stylebookone">	 -->
 					
 				</div>
 			</div>
+
+			<div class="col-xs-12 col-xl-6">
+				<figure class="product-figure soft">
+					<img src="https://via.placeholder.com/300" alt="">
+					<figcaption>
+						Product
+					</figcaption>
+				</figure>
+			</div>
+			
+			<div class="col-xs-12 col-xl-6">
+				<figure class="product-figure soft">
+					<img src="https://via.placeholder.com/300" alt="">
+					<figcaption>
+						Product
+					</figcaption>
+				</figure>
+			</div>
+			
 		</div>
 	</div>
 	
 		</div>
 	</section>
 
-	<section id="flex" class="container">
-		<h2>Flex System</h2>
+	<section id="forms" class="container">
+		<h2>Forms</h2>
+
 		<div class="card">
+			<h3>Form Input</h3>
+
+			<input type="text" class="form-input" placeholder="Text">
+			<input type="password" class="form-input" placeholder="Password">
+			<input type="number" class="form-input" placeholder="Number">
+			<input type="search" class="form-input" placeholder="Search">
+
+		</div>
+
+		<div class="card">
+			<h3>Form Label</h3>
+
+			<label for="input-example1" class="form-label">Example</label>
+			<input type="text" class="form-input" placeholder="Text" id="input-example1">
+
+			<label for="input-example2" class="form-label">Example</label>
+			<input type="text" class="form-input" placeholder="Text" id="input-example2">
+
+			<label for="input-example3" class="form-label">Example</label>
+			<input type="text" class="form-input" placeholder="Text" id="input-example3">
+		</div>
+
+		<div class="card">
+			<h3>Form Control</h3>
+
+			<div class="form-control">
+				<label for="input-example4" class="form-label">Example</label>
+				<input type="text" class="form-input" placeholder="Text" id="input-example4">
+			</div>
+
+			<div class="form-control">
+				<label for="input-example5" class="form-label">Example</label>
+				<input type="text" class="form-input" placeholder="Text" id="input-example5">
+			</div>
+
+			<div class="form-control">
+				<label for="input-example6" class="form-label">Example</label>
+				<input type="text" class="form-input" placeholder="Text" id="input-example6">
+			</div>
+
+		</div>
+
+		<div class="card">
+			<h3>Form Input Submit</h3>
+			<div class="form-control">
+    <input type="text" class="form-input" name="firstname" placeholder="First Name" id="input-example7">
+	<input type="text" class="form-input" name="firstname" placeholder="Last Name" id="input-example7">		
+			</div>
+		</div>
+
+		<div class="card">
+			<h3>Hotdog</h3>
+
+			<div class="form-control">
+				<input type="search" class="hotdog" placeholder="Search">
+			</div>
+
+			<div class="form-control">
+				<label class="hotdog">
+					<div class="flex-none">&#128269;</div>
+					<div class="flex-stretch">
+						<input type="search" placeholder="Search">
+					</div>
+				</label>
+			</div>
+
+			<div class="form-control display-flex">
+				<div class="flex-stretch"></div>
+				<input type="search" class="hotdog" placeholder="Search">
+			</div>
+
+			<div class="animated-search-form">
+			<input type="text" name="search" placeholder="Search">
+		</div>
+	</div>
+
+		<div class="selectbox">
 			
+
+			<div class="card">
+			<h3>Select Box</h3>
+			<div class="selectbox">
+			<div class="dropdown">
+    <select name="one" class="dropdown-select">
+      <option value="">Filter By</option>
+      <option value="1">Option #1</option>
+      <option value="2">Option #2</option>
+      <option value="3">Option #3</option>
+    </select>
+  </div>
+		</div>
+</div>
+	</section>
+  
+
+  <section  id="button" class="container">
+  	<h2>Button</h2>
+  	
+  	<div class="card">
+			<h3>Form Button</h3>
+
+			<div class="form-control">
+				<button type="button" class="form-button">Button</button>
+			</div>
+
+			<div class="form-control">
+				<input type="submit" class="form-button" value="Submit">
+			</div>
+
+			<div class="form-control">
+				<a href="#" class="form-button">Button</a>
+			</div>
+
+			<div class="form-control display-flex">
+				<div class="flex-none">
+					<a href="#" class="form-button">Prev</a>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<a href="#" class="form-button">Next</a>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="card">
+			<h3>Link Button</h3>
+			<a href="#" class="linkbutton">SHOP NOW</a>
+	</div>
+
+  </section>
+
+	<section id="checkboxes" class="container">
+		<h2>Checkboxes</h2>
+
+		<div class="card">
+			<h3>Basic Checkbox</h3>
+
+			<div class="form-control">
+				<label for="check-example1">Label</label>
+				<label>
+					<input type="checkbox" id="check-example1">
+					Label
+				</label>
+			</div>
+
+			<h3>Heart Trick</h3>
+
+			<div class="form-control">
+				<div class="heart-toggle">
+					<input type="checkbox" id="heart-example1" class="hidden">
+					<label for="heart-example1">&hearts;</label>
+				</div>
+			</div>
+
+			<h3>Toggle</h3>
+
+			<div class="form-control">
+				<div class="toggle ">
+					<input type="checkbox" id="toggle1" class="hidden">
+					<label for="toggle1"></label>
+				</div>
+				<div class="toggle" style="font-size:2em">
+					<input type="checkbox" id="toggle2" class="hidden">
+					<label for="toggle2"></label>
+				</div>
+			</div>
+			
+			<h3>Number Input</h3>
+			<input id="number" type="number">
+
 		</div>
 	</section>
+
+	
+	<section id="accordion" class="container">
+		<h2>Accordion</h2>
+		<div class="card">
+			<ul class="a-container">
+  <!-- item01 -->
+  <li class="a-items">
+    <input type="radio" name="ac" id="a1" class="hidden" />
+    <label for="a1">About Us</label>
+    <div class="a-content">
+      
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam beatae maiores possimus sequi non quidem ad necessitatibus fugiat consectetur veritatis laboriosam ut soluta quis deleniti deserunt! Voluptate qui excepturi architecto.</p>
+    </div>
+  </li>
+  
+    <!-- item02 -->
+    <li class="a-items">
+    <input type="radio" name="ac" id="a2" class="hidden"/>
+    <label for="a2">Our Services</label>
+    <div class="a-content">
+      
+      <p>Lorem ipsum dolor sit amet, quidem ad necessitatibus fugiat consectetur veritatis laboriosam ut soluta quis deleniti deserunt! Voluptate qui excepturi architecto.</p>
+    </div>
+  </li>
+  
+    <!-- item03 -->  
+    <li class="a-items">
+    <input type="radio" name="ac" id="a3" class="hidden"/>
+    <label for="a3">Keep In Touch</label>
+    <div class="a-content">
+     
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam beatae maiores possimus sequi non quidem ad necessitatibus fugiat consectetur veritatis laboriosam ut soluta.</p>
+    </div>
+  </li>
+</ul>
+		</div>
+	</section>
+
+	<section id="figures" class="container">
+		<h2>Figures</h2>
+
+		<div class="card">
+			<h3>Basic Figure</h3>
+
+			<figure class="product-figure">
+				<img src="https://via.placeholder.com/300" alt="">
+				<figcaption>
+					Product
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="card">
+			<h3>Soft Figure</h3>
+
+			<figure class="product-figure soft">
+				<img src="https://via.placeholder.com/300" alt="">
+				<figcaption>
+					Product
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="card">
+			<h3>Overlay Figure</h3>
+
+			<figure class="product-figure overlay">
+				<img src="https://via.placeholder.com/300" alt="">
+				<figcaption>
+					Product
+				</figcaption>
+			</figure>
+		</div>
+
+		<h3>Gridded Figure</h3>
+		<div class="grid gap">
+			<div class="col-xs-12 col-md-4">
+
+				<figure class="product-figure overlay">
+					<img src="https://via.placeholder.com/300" alt="">
+					<figcaption>
+						Product
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<figure class="product-figure soft">
+					<img src="https://via.placeholder.com/300" alt="">
+					<figcaption>
+						Product
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<figure class="product-figure">
+					<img src="https://via.placeholder.com/300" alt="">
+					<figcaption>
+						Product
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+
+	</section>
+
+
+
 
 </body>
 </html>
