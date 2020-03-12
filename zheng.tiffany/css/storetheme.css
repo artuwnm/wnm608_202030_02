@@ -1,7 +1,40 @@
 
 body {
 	background-color: #fff;
-	font-family: 'Muli', 'Open Sans', 'Segoe UI', sans-serif;
+	font-family: 'Roboto', 'Open Sans', 'Segoe UI', sans-serif;
+	letter-spacing: 0.025em;
+	line-height: 1.5em;
+}
+
+h1 {
+	font-family: 'Elsie', cursive;
+	font-size: 2em;
+	color: var(--color-main-dark);
+}
+
+h2 {
+	font-family: 'Elsie', cursive;
+	font-size: 1.5em;
+	color: var(--color-neutral-dark);
+}
+
+h3 {
+	color: var(--color-neutral-medium);
+	letter-spacing: 0.025em;
+}
+
+h4, h5, h6 {
+	color: var(--color-neutral-dark);
+}
+
+:root {
+	--color-neutral-dark: #595959;
+	--color-neutral-medium: #c2c2c2;
+	--color-neutral-light: #eee;
+
+	--color-main-dark: #ffd14b;
+    --color-main-medium: #fdd94f;
+    --color-main-light: #fef4c3;
 }
 
 /* Component Classes */
@@ -11,24 +44,31 @@ body {
 	color: var(--color-neutral-dark);
 }
 
+.nav-bar__logo h1 {
+	color: var(--color-main-dark);
+	text-align: center;
+	letter-spacing: 0.025em;
+}
+
 [class*='col-']>.card {
 	margin: 0;
 	width: 323px;
 	height: 300px;
 }
 
-.card button {
+.featured-items .card button {
 	border: none;
-	background-color: var(--color-neutral-medium);
-	color: var(--color-neutral-light);
+	background-color: var(--color-main-dark);
+	color: var(--color-neutral-dark);
 	position: absolute;
 	top: 75%;
 	left: 10%;
 	width: 30%;
 }
 
-.card button:hover {
-	opacity: 50%;
+.featured-items .card button:hover {
+	background-color: var(--color-main-light);
+	color: var(--color-neutral-medium);
 	cursor: pointer;
 }
 

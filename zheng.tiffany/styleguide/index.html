@@ -4,30 +4,38 @@
 	<meta charset="UTF-8">
 	<title>CSS Style Guide</title>
 	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/css?family=Elsie|Roboto:400,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../lib/css/styleguide.css">
 	<link rel="stylesheet" href="../lib/css/gridsystem.css">
-	<!-- <link rel="stylesheet" href="../css/storetheme.css"> -->
+	<link rel="stylesheet" href="../css/storetheme.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 	
-	<header class="container">
-		<h1>CSS Style Guide</h1>
+	<header class="nav-bar__logo container">
+		<h1>Stylista</h1>
+		<h4 style="text-align: center;">CSS Style Guide</h4>
 	</header>
 
 	<div class="container">
-		<h2>Table of Contents</h2>
-		<ul>
-			<li><a href="#typography">Typography</a></li>
-			<ul>
-				<li><a href="#headings">Headings</a></li>
-				<li><a href="#paragraphs">Paragraphs</a></li>
-			</ul>
-			<li><a href="#navigations">Navigations</a></li>
-		</ul>
+		<dl class="accordion">
+			<dt><h3>+ <span>Table of Contents</span></h3></dt>
+				<dd>
+					<ul>
+						<li><a href="#typography">Typography</a></li>
+						<li><a href="#navigations">Navigations</a></li>
+						<li><a href="#tables">Tables</a></li>
+						<li><a href="#forms">Forms</a></li>
+						<li><a href="#checkboxes">Checkboxes</a></li>
+						<li><a href="#figures">Figures</a></li>
+					</ul>
+				</dd>				
+		</dl>
 	</div>
+	<hr class="divider">
 
 	<section id="typography" class="container">
-		<h2>Typography</h2>
+		<h2 class="section-title">Typography</h2>
 
 		<div id="headings" class="card">
 			<h1>Heading 1</h1>
@@ -38,14 +46,14 @@
 			<h6>Heading 6</h6>
 		</div>
 
-		<code>
+		<!-- <code>
 &lt;h1>Heading 1&lt;/h1>
 &lt;h2>Heading 2&lt;/h2>
 &lt;h3>Heading 3&lt;/h3>
 &lt;h4>Heading 4&lt;/h4>
 &lt;h5>Heading 5&lt;/h5>
 &lt;h6>Heading 6&lt;/h6>
-		</code>
+		</code> -->
 
 		<div id="paragraphs" class="card">
 			<h3>Paragraphs</h3>
@@ -54,9 +62,10 @@
 			<p>Quisquam recusandae magni quis saepe labore dicta itaque minus esse tenetur minima, tempora rerum vero autem blanditiis. Quia quam vitae beatae sit voluptatum suscipit illo ab ipsum, alias explicabo incidunt pariatur consequuntur, aperiam ea fugit aliquid! Enim, atque eius incidunt.</p>
 		</div>
 	</section>
+	<hr class="divider">
 
 	<section id="navigations" class="container">
-		<h2>Navigations</h2>
+		<h2 class="section-title">Navigations</h2>
 	
 		<script>
 		const makeNav = (classes="") => {
@@ -107,9 +116,10 @@
 			<script>document.write(makeNav("nav-material"))</script>
 		</div>
 	</section>
+	<hr class="divider">
 
 	<section id="tables" class="container">
-		<h2>Tables</h2>
+		<h2 class="section-title">Tables</h2>
 
 		<script>
 		// THIS IS JUST FOR EXAMPLES
@@ -151,8 +161,10 @@
 			<script>document.write(makeTable("table striped"))</script>
 		</div>
 	</section>
+	<hr class="divider">
 
 	<section id="forms" class="container">
+		<h2 class="section-title">Forms</h2>
 		<div class="card">
 			<h3>Form Input</h3>
 			<input type="text" class="form-input" placeholder="Text">
@@ -219,9 +231,10 @@
 			</div>
 		</div>
 	</section>
+	<hr class="divider">
 
 	<section id="checkboxes" class="container">
-		<h2>Checkboxes</h2>
+		<h2 class="section-title">Checkboxes</h2>
 
 		<div class="card">
 			<h3>Basic Checkbox</h3>
@@ -247,9 +260,10 @@
 			</div>
 		</div>
 	</section>
+	<hr class="divider">
 
 	<section id="figures" class="container">
-		<h2>Figures</h2>
+		<h2 class="section-title">Figures</h2>
 		<div class="card">
 			<h3>Basic Figure</h3>
 
@@ -267,16 +281,8 @@
 			</figure>
 		</div>
 	</section>
-	
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-	<script>
-	$("[class*='nav'] a").on("click",function(e){
-		e.preventDefault();
-		$(this).parent().addClass("active")
-			.siblings().removeClass("active")
-	})
-	</script>
+	<script src="../js/app.js"></script>
 
 </body>
 </html>
