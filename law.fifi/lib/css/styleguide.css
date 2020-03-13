@@ -126,7 +126,7 @@ footer p{
 	
 	label{
 		display: inline-block;
-		margin: 1em;
+		/*margin: 1em;*/
 	}
 	
 	.hotdog3,
@@ -968,7 +968,7 @@ footer p{
     	width: 12px;
     	height: 12px;
     	border-radius: 15px;
-    	left: 35px;
+    	left: 33px;
     	margin: 2px 0;
 	}
 .toggle label{
@@ -1078,9 +1078,9 @@ footer p{
 
 
 
-.dropdown-selection{
+.dropdown-selection select{
+	-webkit-appearance: button; 
 	background-color: var(--color-neutral-white);
-	-webkit-appearance: button;
 	border: 1px solid var(--color-neutral-dark);
 	border-radius: 5px;
 	outline: none;
@@ -1088,9 +1088,38 @@ footer p{
 	padding: 0.8em 1.5em;
 
 }
+    
 .options{
+	-webkit-appearance: button;
 	padding: 0.2em 0.5em;
 }
+
+
+
+.number-slider-value{
+	color: var(--color-neutral-dark);
+
+}
+
+.number-slider-bar{
+	-webkit-appearance:none;
+	height: 2px;
+	width: 50%;
+	background: var(--color-neutral-dark);
+	outline: none;
+	transition: 0.2s linear all;
+}
+input[type=range]::-webkit-slider-thumb{
+	-webkit-appearance:none;
+	height: 20px;
+	width: 10px;
+	border: 5px solid var(--color-neutral-dark);
+	cursor: pointer;
+	background: var(--color-neutral-dark);
+/*	margin-top: -5px;*/
+	box-shadow: 0 0 2px var(--color-neutral-medium);
+}
+
 
 
 .meow-icon{

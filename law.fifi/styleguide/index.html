@@ -2,7 +2,10 @@
 <html>
 <head>
 	<title>CSS style guide</title>
+	<meta charset="utf-8" >
 
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	 
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" type="text/css" href="../lib/css/styleguide.css">
@@ -667,7 +670,7 @@
 &lt;/div>
 
 				</code>
-				<div class="form-control display-flex">
+				<div class="form-control display-flex padding-bottom-2">
 					<div class="flex-stretch"></div>
 					
 					<label class="display-flex display-none">
@@ -1038,12 +1041,30 @@
 	&lt;option  class="options" value="option4">Option 4&lt;/option>
 &lt;/select>
 			</code>
-			<select name="dropdown-selection" id="dropdown-selection" class="dropdown-selection">
-				<option  class="options"  value="option1">Option 1</option>
-				<option  class="options" value="option2">Option 2</option>
-				<option  class="options" value="option3">Option 3</option>
-				<option  class="options" value="option4">Option 4</option>
-			</select>
+			<div class="dropdown-selection">
+				<select name="dropdown-selection" id="dropdown-selection">
+					<option class="options" value="">Pick One</option>
+					<option  class="options"  value="option1">Option 1</option>
+					<option  class="options" value="option2">Option 2</option>
+					<option  class="options" value="option3">Option 3</option>
+					<option  class="options" value="option4">Option 4</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="card">
+			<h3>Slider</h3>
+
+			<code class="card code">
+&lt;div class="number-slider-value">
+	&lt;input type="range" name="range" value="0" min="0" max="50" step="1"	class="number-slider-bar">
+&lt;/div>
+			</code>
+			<div class="number-slider-value">
+				<input type="range" name="range" value="0" min="0" max="50" step="1"
+				class="number-slider-bar">
+			</div>
+
 		</div>
 	</section>
 
@@ -1170,6 +1191,17 @@
 		<h2 id="grid">Grid System</h2>
 		<div class="card">
 			<h3>Basic Grid</h3>
+
+			<code class="card code">
+&lt;div class="grid">
+	&lt;div class="card dark col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facere fugiat vero harum nam aspernatur officia debitis, laboriosam repudiandae sapiente.&lt;/div>
+	&lt;div class="card dark col-md-4">Totam dolores ex labore, delectus. Hic, odio necessitatibus, tempore dolore expedita error blanditiis enim nulla sit, sunt modi, assumenda non.&lt;/div>
+	&lt;div class="card dark col-md-4">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.&lt;/div>
+	&lt;div class="card dark col-md-6">Totam dolores ex labore, delectus. Hic, odio necessitatibus, tempore dolore expedita error blanditiis enim nulla sit, sunt modi, assumenda non.&lt;/div>
+	&lt;div class="card dark col-md-3">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.&lt;/div>
+	&lt;div class="card dark col-md-3">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.&lt;/div>
+&lt;/div>
+			</code>
 			<div class="grid">
 				<div class="card dark col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facere fugiat vero harum nam aspernatur officia debitis, laboriosam repudiandae sapiente.</div>
 				<div class="card dark col-md-4">Totam dolores ex labore, delectus. Hic, odio necessitatibus, tempore dolore expedita error blanditiis enim nulla sit, sunt modi, assumenda non.</div>
@@ -1180,6 +1212,16 @@
 		</div>
 				<div class="card">
 			<h3>Basic Grid with Gap</h3>
+						<code class="card code">
+&lt;div class="grid gap">
+	&lt;div class="card dark col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facere fugiat vero harum nam aspernatur officia debitis, laboriosam repudiandae sapiente.&lt;/div>
+	&lt;div class="card dark col-md-4">Totam dolores ex labore, delectus. Hic, odio necessitatibus, tempore dolore expedita error blanditiis enim nulla sit, sunt modi, assumenda non.&lt;/div>
+	&lt;div class="card dark col-md-4">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.&lt;/div>
+	&lt;div class="card dark col-md-6">Totam dolores ex labore, delectus. Hic, odio necessitatibus, tempore dolore expedita error blanditiis enim nulla sit, sunt modi, assumenda non.&lt;/div>
+	&lt;div class="card dark col-md-3">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.&lt;/div>
+	&lt;div class="card dark col-md-3">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.&lt;/div>
+&lt;/div>
+			</code>
 			<div class="grid gap">
 				<div class="card dark col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facere fugiat vero harum nam aspernatur officia debitis, laboriosam repudiandae sapiente.</div>
 				<div class="card dark col-md-4">Totam dolores ex labore, delectus. Hic, odio necessitatibus, tempore dolore expedita error blanditiis enim nulla sit, sunt modi, assumenda non.</div>
@@ -1195,19 +1237,34 @@
 	<section class="container">
 		<h2 id="flex">Flex System</h2>
 		<div class="card">
+			<code class="card code">
+&lt;div class="display-flex flex-justify-center">
+	&lt;div class="card dark flex-scretch">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita possimus harum voluptas repellendus animi dolore nemo eum magni distinctio eos&lt;/div>
+	&lt;div class="flex-none" style="width: 15px">&lt;/div>
+	&lt;div class="card dark flex-scretch">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita possimus harum voluptas repellendus animi dolore nemo eum magni distinctio eos?&lt;/div>
+&lt;/div>
+&lt;div class="display-flex flex-justify-between">
+	&lt;div class="card soft flex-stretch">
+		&lt;h1 class=" text-align-center">Logo&lt;/h1>
+	&lt;/div>
+	&lt;div class="flex-none" style="width: 15px">&lt;/div>
+&lt;&lt;img src="https://via.placeholder.com/200?text=Product+image" alt="">
+
+&lt;/div>
+			</code>
 			<div class="display-flex flex-justify-center">
 				<div class="card dark flex-scretch">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita possimus harum voluptas repellendus animi dolore nemo eum magni distinctio eos?</div>
 				<div class="flex-none" style="width: 15px"></div>
 				<div class="card dark flex-scretch">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita possimus harum voluptas repellendus animi dolore nemo eum magni distinctio eos?</div>
 			</div>
-				<div class="display-flex flex-justify-between">
-					<div class="card soft flex-stretch">
-						<h1 class=" text-align-center">Logo</h1>
-					</div>
-					<div class="flex-none" style="width: 15px"></div>
-					<img src="https://via.placeholder.com/200?text=Product+image" alt="">
-
+			<div class="display-flex flex-justify-between">
+				<div class="card soft flex-stretch">
+					<h1 class=" text-align-center">Logo</h1>
 				</div>
+				<div class="flex-none" style="width: 15px"></div>
+				<img src="https://via.placeholder.com/200?text=Product+image" alt="">
+
+			</div>
 		</div>
 	</section>
 
