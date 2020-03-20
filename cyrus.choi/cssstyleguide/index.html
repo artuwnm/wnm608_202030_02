@@ -37,10 +37,11 @@
 				<li><a href="#navs">Navs</a></li>
 				<li><a href="#navbar">Navbar</a></li>
 			</ul>
+			<li><a href="#checboxes">Checkboxes</a></li>		
 			<li><a href="#forms">Forms</a></li>
 			<li><a href="#tables">Tables</a></li>
 			<li><a href="#grid">Grid System</a></li>
-			<li><a href="#flex">Flex System</a></li>
+			<li><a href="#tables">Figures</a></li>
 		</ul>
 	</div>
 
@@ -82,12 +83,48 @@
 
 	<section id="color" class="container">
 		<h2>Color Scheme</h2>
+		<div class="grid gap ">
+		<div class="col-8 ">
+		<div class="grid">		
+	    <div class="col-3 ">
         <div class="square"></div>
+        <p> #e01f3cff </p>
+        </div>
+        <div class="col-3 ">
         <div class="square1"></div>
+        <p> #b21c1cff </p>       
+        </div>
+        <div class="col-3 ">
         <div class="square2"></div>
-        <div class="square3"></div>
+        <p> #e2909cff </p>        
+        </div>
+        </div>
+        </div>
+        <div class="col-4 ">
+        </div>
+		<div class="col-8 ">
+		<div class="grid">		 
+        <div class="col-3 ">
         <div class="square4"></div>
+        <p> #dcdcdcff </p>       
+        </div>
+        <div class="col-3 ">
         <div class="square5"></div>
+        <p> #aaa8a9ff </p>        
+        </div>
+        <div class="col-3 ">
+        <div class="square6"></div>
+        <p> #000000ff </p>        
+        </div>
+         <div class="col-3 ">
+        <div class="square3"></div>
+        <p> #ffffffff </p>        
+        </div>       
+        </div>        
+        </div>
+         <div class="col-4 ">
+        </div>       
+       </div>
 		
 	</section>
 
@@ -98,7 +135,7 @@
 
 		<script>
 		const makeNav = (classes="") => {
-			const links = ["home","store","about"];
+			const links = ["Playstation Games","Nintendo Switch Games","Accessories"];
 			let ran = Math.floor(Math.random()*links.length);
 			return `
 			<div class="card soft">
@@ -120,18 +157,6 @@
 
 			<!-- nav.nav>ul>li*3>a[href=#]>{Link $} -->
 			<script>document.write(makeNav("nav"))</script>
-		</div>
-
-		<div class="card">
-			<h3>Flex Nav</h3>
-
-			<script>document.write(makeNav("nav-flex"))</script>
-		</div>
-
-		<div class="card">
-			<h3>Stretch Nav</h3>
-
-			<script>document.write(makeNav("nav-stretch"))</script>
 		</div>
 
 		<div class="card">
@@ -160,13 +185,12 @@
 		<script>
 		// THIS IS JUST FOR EXAMPLES
 		const makeTable = (classes='') => {
-			const head = ["ID","Office","Name","Email","Phone"];
+			const head = ["Item Number","Item Name","Delivery","Price","Quantity"];
 			const body = [
-				["522","Hamilton Cline",	"hcline@academyart.edu",	"555-2424"],
-				["512","Fred McHale",		"fmchale@academyart.edu",	"555-2424"],
-				["522","Michael Catanzaro",	"jimmycats@academyart.edu",	"555-2424"],
-				["514","Andrea Pimentel",	"apimentel@academyart.edu",	"555-2424"],
-				["516","DC Scarpelli",		"dscarpelli@academyart.edu","555-2424"]
+				["1","STAR WARS Jedi","$44.99","1" ,"Usps"],
+				["2","FNBA 2K20",	"$54.99","1","Usps"],
+				["3","Battlefield 4","$24.99","1","Usps"],
+				["4","Call of Duty: Ghosts","$44.99","1","Usps"]
 			].sort(()=>Math.random()-.5);
 			return `
 			<div class="container">
@@ -193,6 +217,132 @@
 			<script>document.write(makeTable("table"))</script>
 		</div>
 	</section>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<script>
+	$("[class*='nav'] a").on("click",function(e){
+		e.preventDefault();
+		$(this).parent().addClass("active")
+			.siblings().removeClass("active")
+	})
+	</script>
+	
+	<section id="checkboxes" class="container">
+		<h2>Checkboxes</h2>
+
+		<div class="card">
+			<h3>Basic Checkbox</h3>
+
+			<div class="form-control">
+				<label for="check-example1">Label</label>
+				<label>
+					<input type="checkbox" id="check-example1">
+					Label
+				</label>
+			</div>
+
+			<h3>Favourite</h3>
+
+			<div class="form-control">
+				<div class="heart-toggle">
+					<input type="checkbox" id="heart-example1" class="hidden">
+					<label for="heart-example1">&hearts;</label>
+				</div>
+			</div>
+
+			<h3>Toggle</h3>
+
+			<div class="form-control">
+				<div class="toggle">
+					<input type="checkbox" id="toggle1" class="hidden">
+					<label for="toggle1"></label>
+				</div>
+				<div class="toggle" style="font-size:2em">
+					<input type="checkbox" id="toggle2" class="hidden">
+					<label for="toggle2"></label>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+	<section id="figures" class="container">
+		<h2>Figures</h2>
+
+		<div class="card">
+			<h3>Basic Figure</h3>
+
+			<figure class="product-figure">
+				<img src="https://via.placeholder.com/300" alt="">
+				<figcaption>
+					Product
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="card">
+			<h3>Soft Figure</h3>
+
+			<figure class="product-figure soft">
+				<img src="https://via.placeholder.com/300" alt="">
+				<figcaption>
+					Product
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="card">
+			<h3>Overlay Figure</h3>
+
+			<figure class="product-figure overlay">
+				<img src="https://via.placeholder.com/300" alt="">
+				<figcaption>
+					Product
+				</figcaption>
+			</figure>
+		</div>
+
+		<h3>Gridded Figure</h3>
+		<div class="grid gap">
+			<div class="col-xs-12 col-md-4">
+
+				<figure class="product-figure overlay">
+					<img src="https://via.placeholder.com/300" alt="">
+					<figcaption>
+						Product
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<figure class="product-figure soft">
+					<img src="https://via.placeholder.com/300" alt="">
+					<figcaption>
+						Product
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<figure class="product-figure">
+					<img src="https://via.placeholder.com/300" alt="">
+					<figcaption>
+						Product
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+
+	</section>
+
+
+
+
+
 
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
