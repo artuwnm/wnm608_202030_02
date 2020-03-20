@@ -666,7 +666,7 @@ dt {
 	cursor: pointer;
 }
 
-dt h3:hover {
+dt h3:hover span {
 	color: var(--color-neutral-dark);
 }
 
@@ -680,7 +680,7 @@ dd {
 }
 
 dl, dt, dd {
-	width: 70%;
+	width: 75%;
 	margin: 0 auto;
 	box-sizing: border-box;
 }
@@ -688,10 +688,12 @@ dl, dt, dd {
 dt h3 {
 	text-align: left;
 	padding-left: 1em;
+	color: var(--color-main-dark);
 }
 
 dt h3 span {
 	padding-left: 0.75em;
+	color: var(--color-neutral-medium);
 }
 
 dd li a {

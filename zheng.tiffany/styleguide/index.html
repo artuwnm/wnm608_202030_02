@@ -33,6 +33,7 @@
 						<li><a href="#tables">Tables</a></li>
 						<li><a href="#forms">Forms</a></li>
 						<li><a href="#checkboxes">Checkboxes</a></li>
+						<li><a href="#accordion">Accordion</a></li>
 						<li><a href="#figures">Figures</a></li>
 					</ul>
 				</dd>				
@@ -145,13 +146,13 @@
 
 		<script>
 		const makeTable = (classes='') => {
-			const head = ["ID","Office","Name","Email","Phone"];
+			const head = ["Item Number", "Item Name","Size","Quantity","Price"];
 			const body = [
-				["522","Name Name",	"name@email.com", "555-5555"],
-				["512","Name Name",	"name@email.com", "555-5555"],
-				["522","Name Name",	"name@email.com", "555-5555"],
-				["514","Name Name",	"name@email.com", "555-5555"],
-				["516","Name Name",	"name@email.com", "555-5555"]
+				["White Dress", "XS", "1", "$30.00"],
+				["Navy Dress", "S", "1", "$25.00"],
+				["Yellow Top", "M", "1", "$15.00"],
+				["Beige Tank", "L", "1", "$10.00"],
+				["Pink Peplum Top", "XL", "1", "$20.00"]
 			].sort(()=>Math.random()-.5);
 			return `
 			<div class="container">
@@ -280,6 +281,25 @@
 				</div>
 			</div>
 		</div>
+	</section>
+	<hr class="divider">
+
+	<section id="accordion" class="container">
+		<h2 class="section-title">Accordion</h2>
+		<dl class="accordion">
+			<dt><h3>+ <span>What is your exchange / return policy?</span></h3></dt>
+				<dd>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis minus sunt unde amet dicta corrupti obcaecati quas natus molestiae aspernatur.</p>
+				</dd>		
+			<dt><h3>+ <span>What payment methods do you accept?</span></h3></dt>
+				<dd>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis minus sunt unde amet dicta corrupti obcaecati quas natus molestiae aspernatur.</p>
+				</dd>		
+			<dt><h3>+ <span>How do I check my size?</span></h3></dt>
+				<dd>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis minus sunt unde amet dicta corrupti obcaecati quas natus molestiae aspernatur.</p>
+				</dd>				
+		</dl>
 	</section>
 	<hr class="divider">
 

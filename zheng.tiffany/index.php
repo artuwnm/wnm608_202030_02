@@ -1,40 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Landing Page</title>
-	<link href="https://fonts.googleapis.com/css?family=Elsie|Roboto:400,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="lib/css/styleguide.css">
-	<link rel="stylesheet" href="lib/css/gridsystem.css">
-	<link rel="stylesheet" href="css/storetheme.css">
+	
+	<?php include "parts/meta.php" ?>
+	
 </head>
 <body>
 	
-	<header class="navbar">
-		<nav class="container display-flex">
-			<a href="#" class="nav-bar__logo flex-none">
-				<h1>Stylista</h1>
-			</a>
-			<ul class="nav-bar__menu nav-bar__menu--main display-flex">
-				<li><a href="#">Shop</a></li>
-				<li><a href="#">Our Story</a></li>
-				<li><a href="#">FAQs</a></li>
-			</ul>
-			<ul class="nav-bar__menu nav-bar__menu--ctas display-flex">
-				<li>
-					<a href="#">
-						<img src="images/search.svg" width="15px" height="15px" alt="Search">
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<img src="images/bag.svg" width="15px" height="15px" alt="Shopping Bag">
-					</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
+	<?php include "parts/navbar.php" ?>
 
 	<div class="hero">
 		<div class="hero__image"></div>
