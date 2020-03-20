@@ -48,10 +48,12 @@ code{
 
 /*Footer */
 footer{
-	color: var(--color-neutral-medium);
-	background-color: var(--color-neutral-dark);
-	padding: 1em;
-	margin-top: 3em;
+	width: 100%;
+    color: var(--color-neutral-medium);
+    background-color: var(--color-neutral-dark);
+    padding: 1em;
+    margin-top: 3em;
+    bottom: 0;
 }
 footer p{
 	font-size: 0.8em;
