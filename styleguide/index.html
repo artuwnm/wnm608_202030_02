@@ -6,9 +6,9 @@
 
 	<meta name="viewport" content="width=device-width">
 
-	<link rel="stylesheet" href="../lib/css/gridsystem.css">
-	<link rel="stylesheet" href="../lib/css/styleguide.css">
 	<link rel="stylesheet" href="../css/storetheme.css">
+	<link rel="stylesheet" href="../lib/css/styleguide.css">
+	<link rel="stylesheet" href="../lib/css/gridsystem.css">
 
 </head>
 <body>
@@ -87,7 +87,7 @@
 
 		<script>
 		const makeNav = (classes="") => {
-			const links = ["home","search","shop"];
+			const links = ["Home","Search","Shop"];
 			let ran = Math.floor(Math.random()*links.length);
 			return `
 			<div class="card soft">
@@ -439,3 +439,51 @@
 	
 </body>
 </html>
+
+<section id="images" class="container">
+		<h2>Images</h2>
+		<div class="card">
+		<h3>Whole Image</h3>
+		<div class="view-window display-flex flex-align-center flex-justify-center" style="background-image:url(https://via.placeholder.com/500x100.png?text=product)">	
+		</div>
+		</div>
+		
+		
+		
+		<div class="card">
+			<h3>Image Right</h3>
+		<div class="grid gap">
+			<div class="col-xs-12 col-xl-6">
+			<h3>Product Name</h3>
+		
+			
+		</div>
+			<div class="col-xs-12 col-xl-6">
+			<div class="imagealign">
+			<img src="https://via.placeholder.com/500x400.png?text=product" align="right">	
+		</div>
+			</div>
+			</div>
+			</div>
+		
+		<div class="card half">
+		<h3>Image left</h3>
+		<div class="grid gap">
+			
+			<div class="col-xs-12 col-xl-6">
+			<div class="imagealign">
+			<img src="https://via.placeholder.com/500x400.png?text=product" align="left">	
+		</div>
+			</div>
+			<div class="col-xs-12 col-xl-6">
+			<h3>Product Name</h3>
+			
+			
+		</div>
+			</div>
+			</div>
+		
+
+		
+
+	</section>

@@ -6,11 +6,11 @@
 
 :root {
     --color-neutral-dark: #DD6243;
-    --color-neutral-medium: #517761;
+    --color-neutral-medium: #DD6243;
     --color-neutral-light: #FCF6EF;
 
     --color-main-dark: #034066;
-    --color-main-medium: #1ba2f4;
+    --color-main-medium: #DD6243;
     --color-main-light: #bde6ff;
 
     --header-height:3rem;
@@ -48,8 +48,6 @@ code {
 	background-color:var(--color-neutral-dark);
 	color:var(--color-neutral-light);
 }
-
-
 
 
 
@@ -213,6 +211,16 @@ code {
 
 	.card.flat {
 		padding:0;
+	}
+
+	.card.half {
+    	box-shadow: 4px 4px 10px 10px rgba(39,43,38,0.1);
+		border-radius:0.3em;
+		padding-bottom: 3em;
+		text-align: center;
+		padding-right: 0;
+		padding-left: 0;
+
 	}
 
 
