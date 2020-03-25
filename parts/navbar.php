@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Store: Product List</title>
-
-	<meta charset="UTF-8"
-
-	<meta name="viewport" content="width=device-width">
-
-	<link rel="stylesheet" href="../css/storetheme.css">
-	<link rel="stylesheet" href="../lib/css/styleguide.css">
-	<link rel="stylesheet" href="../lib/css/gridsystem.css">
-
-</head>
-<body>
-
-	<header class="nav"
+<header class="navbar">
+	<div class="container display-flex">
+		<div class="flex-stretch">
+			<h1>Store</h1>
+		</div>
+		<nav class="nav flex-none">
+			<ul class="display-flex">
+				<!-- li*3>a[href=#]>{Link $} -->
+				<li><a href="#">Home</a></li>
+				<li><a href="product_list.php">Store</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
