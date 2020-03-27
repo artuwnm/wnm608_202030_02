@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 	<title>Store: Product List</title>
+
 	<?php include "parts/meta.php" ?>
+	
 	
 </head>
 <body>

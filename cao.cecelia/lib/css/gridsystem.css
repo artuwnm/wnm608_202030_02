@@ -14,9 +14,11 @@
 	grid-gap:var(--grid-gap);
 	gap:var(--grid-gap);
 }
-	.gap.large { --grid-gap:2em; }
+	.gap.large { --grid-gap:3em; }
 	.gap.small { --grid-gap:0.5em; }
-
+	.grid.gap.extralarge {
+    --grid-gap: 5em;
+}
 
 
 

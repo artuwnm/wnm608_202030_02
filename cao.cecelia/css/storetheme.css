@@ -40,14 +40,14 @@ section h2 {
 	background-color:white;
 }
 	.product-figure.soft {
-		border-radius:1em;
+		margin: 0em 1em;
 		overflow:hidden;
 		box-shadow:0 2px 5px rgba(0,0,0,0.1);
 	}
 	.product-figure.overlay {
 		position:relative;
 		overflow:hidden;
-		border-radius:1em;
+		/*border-radius:1em;*/
 	}
 	.product-figure.overlay figcaption {
 		position:absolute;
@@ -70,8 +70,137 @@ section h2 {
 		transform:scale(1.4,1.4);
 	}
 
+/*navbar*/
 
-@media (max-width:600px) {
-	.navbar .display-flex {
-		display:block;
-	}
+
+.animated-search-form {
+	padding-left: 0.5em;
+}
+
+.cart {
+  height: 1.5vw;
+  width: 1.5vw;
+  background-color:var(--color-neutral-dark);
+  border-radius: 50%;
+  display: inline-block;
+    margin-left: 2.5em;
+    margin-right: 1em;
+}
+
+
+
+.logo{
+	width: 15%;
+}
+
+.topnav .icon{
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav #displaynone li:not(:first-child){display: none;}
+	.topnav #displaynone {
+	display: flex;
+   margin-right: 19px;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive #displaynone li {
+    float: none;
+    display: block !important;
+    text-align: left;
+     list-style-type: none;
+    display: inline-block;
+    
+  }
+  
+  .topnav.responsive #displaynone li:not(:first-child){margin:-12px;}
+
+  .topnav.responsive #displaynone {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+    background-color: var(--color-main-dark);
+    width: 50px;
+    color: white;
+  }
+
+}
+
+/*advertisement*/
+
+.homebgimage {
+  padding: 25px;
+  background: url(../images/homeheader.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+}
+
+
+.advertisement{
+	margin-top: 25vw;
+	margin-bottom: 10vw;
+}
+
+.advertisement h1{
+	font-size: 2vw;
+}
+
+.advertisement h4{
+	font-size: 2vw;
+	font-weight:normal;
+}
+
+/*footer*/
+
+.footer h2{
+	margin-bottom: 3em;
+}
+
+.footer hr{
+	margin-bottom: 3em;
+}
+
+.emailreceive{
+	margin-left: 3em;
+}
+
+.emailreceive p{
+	padding-bottom: 2em;
+}
+
+/*Home*/
+.selectionstyle{
+	margin-top: 3em;
+}
+
+.selectionstyle h1{
+	font-size: 2vw;
+}
+
+.selectionstyle h4{
+	font-size: 1.5vw;
+	font-weight:normal;
+}
+
+.trytrytry {
+  width: 100%;
+  height: auto;
+}
+
+/*filter*/
+
+.selectbox {
+    margin-top: 1em;
+    margin-right: 5em;
+   }
