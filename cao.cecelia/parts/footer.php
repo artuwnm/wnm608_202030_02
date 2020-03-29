@@ -3,7 +3,7 @@
   <h2 align="center">"Find Out Yourself Daily Mood"</h1>
  <hr style="width:90%"/>
      <div class="grid gap">
-      <div class="col-xs-12 col-md-">
+      <div class="col-xs-12 col-md-6">
         <div class="emailreceive">
         <p>I would like to receive communications about PILE ON PEARLS products, services, stores, matters of cultural interests.</p>
             <div class="form-control">

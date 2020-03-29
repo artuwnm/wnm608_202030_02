@@ -65,12 +65,21 @@ code {
 /* SMALL CLASSES */
 
 .container {
-	max-width:1000px;
+	max-width:1300px;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
-	padding: 5%;
+	padding: 3%;
+}
+
+.containerflat {
+	max-width:1300px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
+
 }
 
 .containercenter {
@@ -432,7 +441,10 @@ code {
 	}
 
 	.card.flat {
-		padding:0;
+		padding-left:5%;
+		padding-bottom: 0;
+		background-color: transparent;
+		padding-top: 2%;
 	}
 	
 
@@ -597,8 +609,38 @@ code {
     background-color:var(--color-neutral-dark);
 }
 
+#input-example1{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
 #input-example7{
-  width: 20%;
+  width: 49%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+#input-example8{
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+#input-example9{
+  width: 48%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -818,7 +860,7 @@ code {
   display: block;
   position: relative;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 1vw;
   font-weight: bold;
   padding: 10px 20px;
   transition: all .2s ease;
@@ -835,6 +877,7 @@ code {
 .a-content {
   padding: 0 20px 20px;
   display: none;
+
 }
 
 .a-container input:checked ~ .a-content {

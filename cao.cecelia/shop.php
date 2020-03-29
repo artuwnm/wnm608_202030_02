@@ -59,6 +59,7 @@
 			</div>
 			
 				<div class="col-xs-12 col-xl-4">
+				<a href="product_item.php?id=2">
 				<div class="display-flex flex-align-center flex-justify-center">
 				<div id="rectangle">
 				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
@@ -75,12 +76,11 @@
 			</div>	
 				</div>
 				</div>	
-					<!-- <div class="stylebookone">	 -->
-				
-				
-		</div>
+				</a>
+			</div>
 
 				<div class="col-xs-12 col-xl-4 ">
+				<a href="product_item.php?id=3">
 				<div class="display-flex flex-align-center flex-justify-center">
 				<div id="rectangle" >
 				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
@@ -102,6 +102,7 @@
 			</div>
 
 			</div>
+		</a>
 		</div>
 
 
@@ -109,6 +110,7 @@
 	<div class="grid gap">
 			<!-- .col-xs-6*2>.card.soft>lorem30 -->
 			<div class="col-xs-12 col-lg-4">
+				<a href="product_item.php?id=4">
 				<div class="display-flex flex-align-center flex-justify-center">
 				<div id="rectangle">
 				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
@@ -125,9 +127,11 @@
 			</div>
 				</div>
 				</div>	
+			</a>
 			</div>
 			
 				<div class="col-xs-12 col-xl-4">
+				<a href="product_item.php?id=5">
 				<div class="display-flex flex-align-center flex-justify-center">
 				<div id="rectangle">
 				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
@@ -143,13 +147,12 @@
 				</div>
 			</div>	
 				</div>
-				</div>	
-					<!-- <div class="stylebookone">	 -->
-				
-				
-		</div>
+				</div>
+				</a>	
+				</div>
 
 				<div class="col-xs-12 col-xl-4 ">
+				<a href="product_item.php?id=6">
 				<div class="display-flex flex-align-center flex-justify-center">
 				<div id="rectangle" >
 				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
@@ -171,6 +174,7 @@
 			</div>
 
 			</div>
+		</a>
 		</div>
 
 
@@ -178,6 +182,7 @@
 	<div class="grid gap">
 			<!-- .col-xs-6*2>.card.soft>lorem30 -->
 			<div class="col-xs-12 col-lg-4">
+				<a href="product_item.php?id=7">
 				<div class="display-flex flex-align-center flex-justify-center">
 				<div id="rectangle">
 				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
@@ -194,9 +199,11 @@
 			</div>
 				</div>
 				</div>	
+			</a>
 			</div>
 			
 				<div class="col-xs-12 col-xl-4">
+				<a href="product_item.php?id=8">
 				<div class="display-flex flex-align-center flex-justify-center">
 				<div id="rectangle">
 				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
@@ -213,12 +220,11 @@
 			</div>	
 				</div>
 				</div>	
-					<!-- <div class="stylebookone">	 -->
-				
-				
-		</div>
+				</a>
+				</div>
 
 				<div class="col-xs-12 col-xl-4 ">
+				<a href="product_item.php?id=9">
 				<div class="display-flex flex-align-center flex-justify-center">
 				<div id="rectangle" >
 				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
@@ -240,6 +246,7 @@
 			</div>
 
 			</div>
+		</a>
 		</div>
 
 
@@ -248,6 +255,7 @@
 	<div class="grid gap">
 			<!-- .col-xs-6*2>.card.soft>lorem30 -->
 			<div class="col-xs-12 col-lg-4">
+				<a href="product_item.php?id=10">
 				<div class="display-flex flex-align-center flex-justify-center">
 				<div id="rectangle">
 				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
@@ -264,9 +272,11 @@
 			</div>
 				</div>
 				</div>	
+			</a>
 			</div>
 			
 				<div class="col-xs-12 col-xl-4">
+				<a href="product_item.php?id=11">
 				<div class="display-flex flex-align-center flex-justify-center">
 				<div id="rectangle">
 				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
@@ -283,12 +293,11 @@
 			</div>	
 				</div>
 				</div>	
-					<!-- <div class="stylebookone">	 -->
-				
-				
-		</div>
+			</a>
+			</div>
 
 				<div class="col-xs-12 col-xl-4 ">
+				<a href="product_item.php?id=12">
 				<div class="display-flex flex-align-center flex-justify-center">
 				<div id="rectangle" >
 				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
@@ -310,6 +319,7 @@
 			</div>
 
 			</div>
+		</a>
 		</div>
 
 		

@@ -11,11 +11,13 @@
 <body>
 		<?php include "parts/navbar.php" ?>
 
-
+		<div class="container">
+		<h2>Find Our Store!</h2>
 		<div class="grid gap large">
 			
 			<div class="col-xs-12 col-xl-6">
 			<div class="imagealign flex-start">
+
 			<img src="https://via.placeholder.com/500x400.png?text=shopping">	
 		</div>
 			</div>
@@ -25,7 +27,7 @@
 			
 		</div>
 			</div>
-
+		</div>
 		<?php include "parts/footer.php" ?>
 </body>
 </html>
