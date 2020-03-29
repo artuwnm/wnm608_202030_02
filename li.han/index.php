@@ -26,8 +26,8 @@
 <?php include "parts/navbar.php" ?>
 	<!-- .container>p*2>lorem40 -->
 	<div class="container">
-		<div class="heroimag">
-			<img src="li.han/image/festival.jpg" alt="">
+		<div class="heroimg">
+
 		</div>
 		<div class="card soft">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt tempora laboriosam suscipit consequuntur nemo vitae eos, obcaecati doloribus rem labore animi porro necessitatibus mollitia autem sequi accusantium facere minima ducimus. Fugiat dignissimos quod perspiciatis mollitia facere voluptas culpa eligendi praesentium.</p>
