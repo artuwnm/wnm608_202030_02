@@ -3,9 +3,9 @@
 <head>
 	<title>Landing Page</title>
 <?php include "parts/meta.php" ?>
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web|Varela&display=swap" rel="stylesheet">
 </head>
 <body>
-	<?php include "parts/navbar.php" ?>
 	
 	<!-- header.navbar>h1+nav.nav -->
 	<header class="navbar">
@@ -23,9 +23,12 @@
 			</nav>
 		</div>
 	</header>
-
+<?php include "parts/navbar.php" ?>
 	<!-- .container>p*2>lorem40 -->
 	<div class="container">
+		<div class="heroimag">
+			<img src="li.han/image/festival.jpg" alt="">
+		</div>
 		<div class="card soft">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt tempora laboriosam suscipit consequuntur nemo vitae eos, obcaecati doloribus rem labore animi porro necessitatibus mollitia autem sequi accusantium facere minima ducimus. Fugiat dignissimos quod perspiciatis mollitia facere voluptas culpa eligendi praesentium.</p>
 			<p>Sequi asperiores ex mollitia reiciendis libero, maxime eum cumque beatae rerum provident tempore recusandae odio assumenda minima laudantium impedit illum aliquam accusamus autem architecto, rem molestiae, tempora voluptatibus a? Id excepturi, doloremque eius amet hic, nobis harum et praesentium a!</p>
