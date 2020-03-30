@@ -206,7 +206,9 @@ code {
 	.card.flat {
 		padding:0;
 	}
-
+.brands{
+	
+}
 .card.heroimg{
 	background-image: url("../../image/festival.jpg");
 	background-size: cover;

@@ -25,8 +25,18 @@
 	</header>
 <?php include "parts/navbar.php" ?>
 	<!-- .container>p*2>lorem40 -->
+	
 	<div class="container">
-		<div class="brands"></div>
+	<div class="grid gap">
+	<div class="col-2">
+		<img src="image/shiseido.png" alt="shiseido.png">
+	</div>
+	<div class="col-2"><img src="image/ptr.png" alt="ptr.png"></div>
+	<div class="col-2"><img src="image/eve.png" alt="eve.png"></div>
+	<div class="col-2"><img src="image/lancome.jpg" alt="lancome"></div>
+	<div class="col-2"><img src="image/cpb.png" alt="cpb"></div>
+	<div class="col-2"><img src="image/erno.png" alt="erno laszro"></div>
+	</div>	
 		<div class="card heroimg">
 		</div>
 		<div class="card soft">
