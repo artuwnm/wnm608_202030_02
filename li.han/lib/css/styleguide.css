@@ -215,7 +215,9 @@ code {
 	height: 550px;
 }
 
-
+.col-2{
+	background-color: white;
+}
 
 /* VIEW WINDOW */
 
