@@ -9,4 +9,7 @@
 		<link rel="stylesheet" href="css/storetheme.css">
 		<link rel="stylesheet" href="lib/css/gridsystem.css">
 
+		<link rel="shortcut icon" href="http://yourwebsitepath/favicon.ico" />
+  		<link rel="icon" href="favicon.ico" type="image/x-icon">
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

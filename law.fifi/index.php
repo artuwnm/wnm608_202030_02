@@ -21,7 +21,7 @@
 					<br>
 					<p>Hello cat lovers, shop all the cat-related accessories here at Meowie! You will find the best products here with neat and clean designs. The best thing is, they are all about cats!</p>
 					
-					 <a class="btn dark display-inline-block" href="#"> shop now </a>
+					 <a class="btn dark display-inline-block" href="product_list.php"> shop now </a>
 				</div>
 			</div>
 		</div>
@@ -33,7 +33,7 @@
 		<div class="grid gap margin-bottom-5">
 			<div class="col-md-4 col-sm-12">
 				<figure class="product-figure overlay">
-				<img src="images/pillow1.png" alt="">
+				<img src="images/meow_paws_pillow.png" alt="">
 				<figcaption>
 					<h4>Pillow</h4>
 				</figcaption>
@@ -42,7 +42,7 @@
 			
 				<div class="col-md-4 col-sm-12">
 					<figure class="product-figure overlay">
-						<img src="images/phonecase1.png" alt="">
+						<img src="images/meowie_logo_phone_case.png" alt="">
 						<figcaption>
 							<h4>Phone Case</h4>
 						</figcaption>
@@ -51,7 +51,7 @@
 			
 				<div class="col-md-4 col-sm-12">
 					<figure class="product-figure overlay">
-						<img src="images/sticker1.png" alt="">
+						<img src="images/iconic_meow_stickers.png" alt="">
 						<figcaption>
 							<h4>Stickers</h4>
 						</figcaption>

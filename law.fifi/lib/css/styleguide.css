@@ -25,6 +25,18 @@ h1, h2, h3, h4, h5, h6{
 	font-family: PT-serif, Georiga, serif;
 }
 
+
+hr {
+  display: block;
+  border-color: var(--color-neutral-light);
+  border-style: solid none none;
+  border-width: 10px;
+  width: 5%;
+  margin-top: 5em;
+  margin-bottom: 5em;
+
+}
+
 a{
 	color: inherit;
 	font-weight: bold;
@@ -347,20 +359,26 @@ footer p{
 
 .padding-top-2{padding-top: 2rem;}
 .padding-bottom-2{padding-bottom: 2rem;}
+.padding-left-0{padding-left: 0;}
 
 .uppercase{text-transform: uppercase; letter-spacing: 1px;}
 
 .medium-color{color:var(--color-neutral-medium);}
 
+.right-150{right: 150px;}
+
 
 
 
 /*component classes*/
+
+
 .navbar{
 	background-color: var(--color-neutral-light);
 	color: var(--color-neutral-medium);
 	line-height: var(--header-height);
 	padding-top: 1em;
+	margin-bottom: 1em;
 }
 
 	.navbar .icons{
@@ -572,6 +590,8 @@ footer p{
 		padding: 0 1em;
 		color:var(--color-neutral-medium);
 	}
+
+
 	.nav-breadcrumb li::before,
 	.nav-breadcrumb2 li::before{
 		color:var(--color-neutral-medium);
@@ -602,13 +622,17 @@ footer p{
 	
 	.nav-pills li,
 	.nav-breadcrumb li,
-	.nav-breadcrumb2 li,
 	.nav-scretch li,
 	.nav-flex li,
 	.nav li{
 		font-size: 1em;
 		padding: 0.5em 0;
 
+	}
+
+	.nav-breadcrumb2 li{
+		font-weight:400;
+		font-size:0.8em;
 	}
 
 	.nav-stretch a,
@@ -689,13 +713,13 @@ footer p{
 	width: 600px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 2em;
+	margin-top: 1em;
 }
 .main-image{
     position: absolute;
-	width: 600px;
+	/*width: 600px;*/
     background-color: inherit;
-    left: 300px;
+    left: 150px;
 }
 
 .main-image img{
@@ -705,6 +729,7 @@ footer p{
 .thumbstrip{
 	position: relative;
 	width: 100px;
+
 
 
 }
@@ -743,12 +768,14 @@ footer p{
 }
 
 	.btn.dark{
-		border: var(--color-neutral-dark) 2px solid;
-		color: var(--color-neutral-dark);
+		background-color: var(--color-neutral-dark);
+		
+		color: var(--color-neutral-light);
 	}
 	.btn.dark:hover{
 		background-color: var(--color-neutral-dark);
-		color: var(--color-neutral-light);
+		color: var(--color-neutral-medium);
+
 
 	}
 	.btn.light{
@@ -817,6 +844,7 @@ footer p{
 	.card.transparent{
 		background-color: inherit;
 		color:var(--color-neutral-medium);
+		padding-top: 0;
 
 	}
 	.card.center{
@@ -834,6 +862,14 @@ footer p{
 		border: 1px solid var(--color-neutral-medium);
 		border-radius: 0.4em;
 	}
+
+
+	.accordion-card{
+		width: 260px; 
+		height:600px;
+	}
+
+
 	.footer{
 		padding-left: 0;
 	}
@@ -1031,20 +1067,21 @@ footer p{
 
 
 .accordion{
-	margin: 1em 0;
-	height: 45px;
+	width: 170px;
+	margin: 0.5em auto;
+	height: 40px;
 	overflow: hidden;
 	transition: 0.3s all ease;
 }
 .accordion-active{
-	height: 180px;
+	height: 150px;
 }
 
 .accordion-header{
 	margin: 0 1em 0 0;
 	background-color: inherit;
 	border-bottom: 1.5px solid var(--color-neutral-dark);
-	font-size: 1.5em;
+	font-size: 1em;
 	font-weight: 700;
 	cursor: pointer;
 }
@@ -1063,6 +1100,9 @@ footer p{
 	color:var(--color-neutral-dark);
 	background-color: inherit;
 }
+.nav-accordion li{
+	padding: 0.2em 0;
+}
 
 /*.line-plus{
 	width: 5px;
@@ -1080,20 +1120,20 @@ footer p{
 
 
 
-.dropdown-selection select{
+.dropdown-selection {
 	-webkit-appearance: button; 
 	background-color: var(--color-neutral-white);
 	border: 1px solid var(--color-neutral-dark);
 	border-radius: 5px;
 	outline: none;
 	color:var(--color-neutral-dark);
-	padding: 0.8em 1.5em;
+	padding: 0.8em 1em;
 
 }
     
 .options{
 	-webkit-appearance: button;
-	padding: 0.2em 0.5em;
+	padding: 0.2em ;
 }
 
 
@@ -1106,7 +1146,7 @@ footer p{
 .number-slider-bar{
 	-webkit-appearance:none;
 	height: 2px;
-	width: 50%;
+	width: 70%;
 	background: var(--color-neutral-dark);
 	outline: none;
 	transition: 0.2s linear all;
@@ -1163,3 +1203,27 @@ input[type=range]::-webkit-slider-thumb{
 		border-top: 1px solid var(--color-neutral-dark);
 
 	}
+
+
+.title{
+	color:var(--color-neutral-medium);
+	width: 750px;
+}
+
+
+
+.product-image{
+	width: 400px;
+}
+
+.product-image img{
+	max-width: 100%;
+}
+
+.color-dark{
+	color: var(--color-neutral-dark);
+}
+.position-relative{
+	position: relative;
+	left: 150px;
+}

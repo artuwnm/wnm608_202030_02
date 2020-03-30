@@ -7,7 +7,7 @@
 					<ul class="display-flex flex-justify-center">
 						<li class="uppercase"><a href="index.php">Home</a></li>
 						<li class="uppercase"><a href="product_list.php">Shop</a></li>
-						<li class="uppercase"><a href="#article3">About</a></li>
+						<li class="uppercase"><a href="about.php">About</a></li>
 						
 					</ul>
 				</nav>

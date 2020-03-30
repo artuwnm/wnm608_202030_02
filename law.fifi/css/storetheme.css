@@ -22,8 +22,13 @@ section>h2{
 
 }
 
+figure:hover{
+	cursor: pointer;
+}
+
 .product-figure{
 	margin: 0;
+
 }
 
 .product-figure img{
@@ -39,11 +44,16 @@ section>h2{
 	padding: 0;
 }
 
+
+.product-figure figcaption p,
 .product-figure figcaption h5{
 	font-size: 1em;
 	margin: 0.5em 0;
+	color:var(--color-neutral-dark);
 }
-
+.product-figure figcaption p{
+	font-weight: 400;
+}
 
 .product-figure.soft figcaption{
 	padding: 1em;
@@ -96,3 +106,4 @@ section>h2{
 	.product-figure.overlay:hover img{
 		transform: scale(1.1,1.1);
 	}
+
