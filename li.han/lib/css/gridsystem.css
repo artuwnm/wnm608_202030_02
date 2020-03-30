@@ -9,6 +9,7 @@
 .grid.gap {
 	grid-gap:var(--gap-size);
 	gap:var(--gap-size);
+	background-color: white;
 }
 
 .col-1 { grid-column: span 1; }
