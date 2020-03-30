@@ -1,6 +1,6 @@
 
 :root {
-    --color-neutral-dark: #074476;;
+    --color-neutral-dark: #074476;
     --color-neutral-medium: #BCF0FF;
     --color-neutral-light: #e6eae5;
 
@@ -11,7 +11,7 @@
 
 
 body {
-	background-color:white;
+	background-color:#F5FBFF;
 	padding-bottom:10em;
 }
 section h2 {

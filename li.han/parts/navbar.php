@@ -2,7 +2,7 @@
 <header class="navbar">
 	<div class="container display-flex">
 		<div class="flex-stretch">
-			<h1>Store</h1>
+			<h1></h1>
 		</div>
 		<nav class="nav flex-none">
 			<ul class="display-flex">

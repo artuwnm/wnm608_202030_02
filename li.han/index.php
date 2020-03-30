@@ -4,14 +4,16 @@
 	<title>Landing Page</title>
 <?php include "parts/meta.php" ?>
 <link href="https://fonts.googleapis.com/css?family=Titillium+Web|Varela&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap" rel="stylesheet">
 </head>
 <body>
 	
 	<!-- header.navbar>h1+nav.nav -->
-	<header class="navbar">
+	<header >
 		<div class="container display-flex">
 			<div class="flex-stretch">
-				<h1>Store Page</h1>
+				<img src="image/logo.png" alt="">
+				<h1>Glowing Beauty</h1>
 			</div>
 			<nav class="nav flex-none">
 				<!-- ul>li*3>a[href=#]>{Link $} -->
@@ -37,7 +39,7 @@
 	</div>
 	<div class="col-2"><img src="image/lancome.jpg" alt="lancome" style="width: 80%"></div>
 	<div class="col-2"><img src="image/cpb.png" alt="cpb" style="width: 70%"></div>
-	<div class="col-2"><img src="image/erno.png" alt="erno laszro" style="width: 70%"></div>
+	<div class="col-2"><img src="image/erno.png" alt="erno laszro" style="width: 65%"></div>
 	</div>	
 		<div class="card heroimg">
 		</div>
