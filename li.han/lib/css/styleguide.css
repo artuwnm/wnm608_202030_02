@@ -58,9 +58,7 @@ code {
 
 .hidden { display:none; }
 
-.heroimg{
-	background-image: url(image/festival.jpg);
-}
+
 
 
 /* ATOMIC CLASSES */
@@ -209,7 +207,11 @@ code {
 		padding:0;
 	}
 
-
+.card.heroimg{
+	background-image: url("../../image/festival.jpg");
+	background-size: cover;
+	height: 550px;
+}
 
 
 
