@@ -31,13 +31,13 @@
 	<div class="col-2">
 		<img src="image/shiseido.png" alt="shiseido.png" style="width: 100%">
 	</div>
-	<div class="col-2"><img src="image/ptr.png" alt="ptr.png" style="width: 100%">
+	<div class="col-2"><img src="image/ptr.png" alt="ptr.png" style="width: 90%">
 	</div>
-	<div class="col-2"><img src="image/eve.png" alt="eve.png" style="width: 90%">
+	<div class="col-2"><img src="image/eve.png" alt="eve.png" style="width: 70%">
 	</div>
-	<div class="col-2"><img src="image/lancome.jpg" alt="lancome" style="width: 100%"></div>
-	<div class="col-2"><img src="image/cpb.png" alt="cpb" style="width: 100%"></div>
-	<div class="col-2"><img src="image/erno.png" alt="erno laszro" style="width: 100%"></div>
+	<div class="col-2"><img src="image/lancome.jpg" alt="lancome" style="width: 80%"></div>
+	<div class="col-2"><img src="image/cpb.png" alt="cpb" style="width: 80%"></div>
+	<div class="col-2"><img src="image/erno.png" alt="erno laszro" style="width: 80%"></div>
 	</div>	
 		<div class="card heroimg">
 		</div>
