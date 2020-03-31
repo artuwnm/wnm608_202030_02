@@ -10,17 +10,19 @@
 	
 	<!-- header.navbar>h1+nav.nav -->
 	<header >
+
 		<div class="container display-flex">
-			<div class="flex-stretch">
-				<img src="image/logo.png" alt="">
-				<h1>Glowing Beauty</h1>
+			<div class="src" style="margin-top: 2%"><input type="text" name="search" placeholder="Search.."></div>
+			<div class="flex-stretch" align="center">  
+				<img id="head" src="image/logo.png" alt="GLOWING BEAUTY" style="width: 10%">
+				<h1 id="head" >Glowing Beauty</h1>
 			</div>
-			<nav class="nav flex-none">
+			<nav class="nav flex-none" style="margin-top: 2%">
 				<!-- ul>li*3>a[href=#]>{Link $} -->
 				<ul class="display-flex">
-					<li><a href="#">Link 1</a></li>
-					<li><a href="#">Link 2</a></li>
-					<li><a href="#">Link 3</a></li>
+					<li><a href="#"><img src="image/Profile.png" alt="" style="width: 55%"></a></li>
+					<li><a href="#"><img src="image/Heart.png" alt="" style="width: 55%"></a></li>
+					<li><a href="#"><img src="image/cart.png" alt="" style="width: 55%"></a></li>
 				</ul>
 			</nav>
 		</div>

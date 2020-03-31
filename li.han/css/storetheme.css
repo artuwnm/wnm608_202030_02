@@ -1,7 +1,7 @@
 
 :root {
     --color-neutral-dark: #074476;
-    --color-neutral-medium: #BCF0FF;
+    --color-neutral-medium:#BCF0FF;
     --color-neutral-light: #e6eae5;
 
     --color-main-dark: #086603;
@@ -76,10 +76,18 @@ section h2 {
 		transform:scale(1.4,1.4);
 	}
 
+input[type=text] {
+  width: 10px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  border-radius: 100px;
+  border: 1px solid #074476;
+}
 
-
-
-
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  width: 100%;
+}
 
 @media (max-width:1000px) {
 	.navbar .display-flex {

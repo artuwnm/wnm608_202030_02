@@ -15,20 +15,24 @@
 body {
 	margin:0;
 	font-size:100%;
-	font-family:Titillium,Varela;
+	font-family:Varela;
 }
 h2,
 h3,
 h4,
 h5,
 h6 {
-	font-family:Titillium,Varela;
+	font-family:Varela;
 	color:var(--color-neutral-dark);
+}
+
+#head{
+	display: inline-block;
+	align-items: center;
 }
 h1{
 	font-family:'Julius Sans One', sans-serif;
 	color:var(--color-neutral-dark);
-	text-align: center;
 }
 a {
 	color:inherit;
@@ -122,7 +126,7 @@ code {
 	.nav-stretch a:hover,
 	.nav-flex a:hover,
 	.nav a:hover {
-		background-color:var(--color-neutral-medium);
+		background-color:var(--color-neutral-dark);
 		color:white;
 	}
 	.nav-pills li.active a,
