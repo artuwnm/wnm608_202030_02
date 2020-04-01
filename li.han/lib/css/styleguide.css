@@ -111,7 +111,6 @@ code {
 	list-style-type:none;
 	margin-top: 0;
 	margin-bottom: 0;
-	padding-left: 0;
 }
 	.nav-material a,
 	.nav-pills a,
@@ -181,13 +180,6 @@ code {
 	.nav-material li.active a::after {
 		height:3px;
 	}
-
-.src{
-	margin-top: 2.5%;
-	margin-left: 1%; 
-	text-decoration-color:#074476;
-}
-
 
 /* CARD */
 .card {

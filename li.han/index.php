@@ -10,7 +10,7 @@
 	<header >
 
 		<div class="container display-flex">
-			<form class="src"><input type="text" name="search" placeholder="Search..">
+			<form class="search" style="margin-top:3%"><input type="text" name="search" placeholder="Search..">
 			</form>
 			<div class="flex-stretch" align="center">  
 				<img id="head" src="image/logo.png" alt="GLOWING BEAUTY" style="width: 10%">
@@ -30,7 +30,6 @@
 	<!-- .container>p*2>lorem40 -->
 	
 	<div class="container">
-		<h4 style="margin: 0px">Feature brands</h4>
 	<div class="grid gap">
 	<div class="col-2">
 		<img src="image/shiseido.png" alt="shiseido.png" style="width: 90%">
