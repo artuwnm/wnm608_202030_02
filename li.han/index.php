@@ -3,8 +3,6 @@
 <head>
 	<title>Landing Page</title>
 <?php include "parts/meta.php" ?>
-<link href="https://fonts.googleapis.com/css?family=Titillium+Web|Varela&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap" rel="stylesheet">
 </head>
 <body>
 	
@@ -12,12 +10,13 @@
 	<header >
 
 		<div class="container display-flex">
-			<div class="src" style="margin-top: 2%"><input type="text" name="search" placeholder="Search.."></div>
+			<form class="src"><input type="text" name="search" placeholder="Search..">
+			</form>
 			<div class="flex-stretch" align="center">  
 				<img id="head" src="image/logo.png" alt="GLOWING BEAUTY" style="width: 10%">
 				<h1 id="head" >Glowing Beauty</h1>
 			</div>
-			<nav class="nav flex-none" style="margin-top: 2%">
+			<nav class="nav flex-none" style="margin-top: 2%;margin-right: -3%">
 				<!-- ul>li*3>a[href=#]>{Link $} -->
 				<ul class="display-flex">
 					<li><a href="#"><img src="image/Profile.png" alt="" style="width: 55%"></a></li>
@@ -31,6 +30,7 @@
 	<!-- .container>p*2>lorem40 -->
 	
 	<div class="container">
+		<h4 style="margin: 0px">Feature brands</h4>
 	<div class="grid gap">
 	<div class="col-2">
 		<img src="image/shiseido.png" alt="shiseido.png" style="width: 90%">
