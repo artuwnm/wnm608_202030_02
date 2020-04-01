@@ -83,9 +83,10 @@ input[type=text] {
   border-radius: 100px;
   border: 1px solid #074476;
   background-color: #F5FBFF;
-  background-image: url("../image/search.png");
-  background-size: 20%;
+  background-image: url("../image/magnifier.png");
   background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: 8px 1px;
   color:#074476;
 }
 

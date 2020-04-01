@@ -10,7 +10,7 @@
 	<header >
 
 		<div class="container display-flex">
-			<form class="search" style="margin-top:3%"><input type="text" name="search" placeholder="Search..">
+			<form class="search" style="margin-top:3%"><input type="text" name="search" placeholder="">
 			</form>
 			<div class="flex-stretch" align="center">  
 				<img id="head" src="image/logo.png" alt="GLOWING BEAUTY" style="width: 10%">
@@ -44,35 +44,25 @@
 	</div>	
 		<div class="card heroimg">
 		</div>
-		<div class="card soft">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt tempora laboriosam suscipit consequuntur nemo vitae eos, obcaecati doloribus rem labore animi porro necessitatibus mollitia autem sequi accusantium facere minima ducimus. Fugiat dignissimos quod perspiciatis mollitia facere voluptas culpa eligendi praesentium.</p>
-			<p>Sequi asperiores ex mollitia reiciendis libero, maxime eum cumque beatae rerum provident tempore recusandae odio assumenda minima laudantium impedit illum aliquam accusamus autem architecto, rem molestiae, tempora voluptatibus a? Id excepturi, doloremque eius amet hic, nobis harum et praesentium a!</p>
-		</div>
-		<div class="card dark">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt tempora laboriosam suscipit consequuntur nemo vitae eos, obcaecati doloribus rem labore animi porro necessitatibus mollitia autem sequi accusantium facere minima ducimus. Fugiat dignissimos quod perspiciatis mollitia facere voluptas culpa eligendi praesentium.</p>
-			<p>Sequi asperiores ex mollitia reiciendis libero, maxime eum cumque beatae rerum provident tempore recusandae odio assumenda minima laudantium impedit illum aliquam accusamus autem architecto, rem molestiae, tempora voluptatibus a? Id excepturi, doloremque eius amet hic, nobis harum et praesentium a!</p>
-		</div>
 	</div>
 
 	<div class="container">
 		<div class="display-flex">
 			<div class="flex-stretch">
 				<div class="card soft">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste recusandae deserunt vel, explicabo nostrum tempora tenetur quod amet sequi eum sit, rem aliquam placeat cumque nam adipisci nemo! Expedita, quia!</p>
-					<p>Alias rerum sapiente voluptates saepe, corrupti animi, delectus veniam nisi, maiores eos soluta iste at reprehenderit placeat obcaecati illum dolore architecto natus amet porro. Ullam dicta voluptatum soluta, qui eligendi.</p>
+					<img src="image/shipping.png" alt="">
 				</div>
 			</div>
 			<div class="flex-none" style="width:1em;">&nbsp;</div>
 			<div class="flex-stretch">
 				<div class="card soft">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nihil deserunt in numquam nobis, sapiente delectus corrupti quisquam reprehenderit odio sit commodi aperiam cupiditate ipsa accusantium hic. Consectetur, laborum, eligendi.</p>
-					<p>Culpa veniam pariatur ex illo tenetur, possimus alias! Sed, aliquid cupiditate doloremque voluptate labore voluptatem? Consequuntur aperiam corporis debitis, sapiente amet itaque culpa eligendi praesentium voluptatibus blanditiis neque, possimus rerum.</p>
+				<img src="image/summer.png" alt="">
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="view-window display-flex flex-align-center flex-justify-center" style="background-image:url(img/mountains01.jpg)">
+	<div class="view-window display-flex flex-align-center flex-justify-center" style="background-image:url(image/card bg.jpg)">
 		<div class="card soft">
 			<h2>PRODUCT</h2>
 		</div>
