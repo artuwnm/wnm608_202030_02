@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Landing Page</title>
+	<title>Stylista</title>
 	
 	<?php include "parts/meta.php" ?>
 	
