@@ -32,6 +32,14 @@
 		</div>
 	</header>
 
+	<div class="view-window" style="background-image:url(img/welcome.jpg)"></div>
+
+	<div class="view-window display-flex flex-align-center flex-justify-center" style="background-image:url(img/welcome.jpg)">
+		<div class="card soft">
+			<h2>PRODUCT</h2>
+		</div>
+	</div>
+
 	<!-- .container>p*2>lorem40 -->
 	<div class="container">
 		<div class="card soft">
@@ -62,11 +70,6 @@
 		</div>
 	</div>
 
-	<div class="view-window display-flex flex-align-center flex-justify-center" style="background-image:url(img/welcome.png)">
-		<div class="card soft">
-			<h2>PRODUCT</h2>
-		</div>
-	</div>
 
 	<div class="container">
 		<div class="grid gap">
