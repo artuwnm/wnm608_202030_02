@@ -42,8 +42,20 @@ h4 {
 	margin: 0;
 }
 
-h5, h6 {
+h5 {
+	font-size: 1.15em;
 	color: var(--color-neutral-dark);
+	letter-spacing: 0.025em;
+	margin: 0;
+}
+
+h6 {
+	color: var(--color-neutral-dark);
+}
+
+hr {
+	margin-top: 2em;
+	margin-bottom: 1.5em;
 }
 
 /* Navbar */
@@ -55,7 +67,7 @@ h5, h6 {
 	width: 15%;
 }
 
-.store-header .row .logo img {
+.logo img {
 	width: 100%;
 	height: auto;
 }
@@ -84,6 +96,55 @@ h5, h6 {
 	font-weight: 300;
 }
 
+/* Checkout Classes */
+
+.back-link {
+	padding: 1rem;
+}
+
+.back-link a {
+	font-weight: 300;
+	font-size: 0.8em;
+}
+
+.bag-container {
+	background-color: var(--color-neutral-light);
+	padding: 1em;
+	min-height: 100%;
+}
+
+.bag-item ul {
+	padding-left: 1em;
+}
+
+.bag-item-info {
+	padding: 0 1.25em;
+}
+
+	.bag-item-info-table {
+		bottom: 0.25em;
+	}
+
+.bag-item-price {
+	color: var(--color-neutral-dark);
+	right: 1em;
+}
+
+.bag-subtotal-table td, .bag-total-table td {
+	text-align: right;
+	padding-right: 1em;
+}
+
+.bag-total-table h3 {
+	font-size: 1.5em;
+	margin-top: 0em;
+}
+
+.checkout .logo {
+	position: relative;
+	margin: 2rem 0;
+	width: 20%;
+}
 
 
 
