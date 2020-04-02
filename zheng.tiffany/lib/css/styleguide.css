@@ -45,6 +45,7 @@ code {
 	background-color: var(--color-neutral-dark);
 	color: var(--color-neutral-light);
 }
+
 /*Small Classes*/
 
 .container {
@@ -107,6 +108,10 @@ code {
 
 .space-between {
 	justify-content: space-between;
+}
+
+.center {
+	text-align: center;
 }
 
 
@@ -409,8 +414,8 @@ nav ul li a {
 
 [class*='col-']>.card {
 	margin: 0;
-	width: 310px;
-	height: 518px;
+	width: 300px;
+	height: 400px;
 }
 
 /*View Window*/
@@ -706,11 +711,6 @@ nav ul li a {
 
 .featured-items button span {
 	padding-left: 0.75em;
-}
-
-.featured-items h1 {
-	text-align: center;
-	padding-top: 1em;
 }
 
 /* Accordion */

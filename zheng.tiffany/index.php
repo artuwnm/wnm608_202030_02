@@ -22,7 +22,8 @@
 	</div>
 
 	<div class="featured-items container">
-		<h1>Featured Items</h1>
+		<h1 class="center">Featured Items</h1>
+		<h2>Women</h2>
 		<div class="grid gap">
 			<div class="col-xs-12 col-md-6 col-lg-4">
 				<div class="card light">
@@ -39,6 +40,9 @@
 					<button><h3>Shop</h3></button>
 				</div>
 			</div>
+		</div>
+		<h2>Men</h2>
+		<div class="grid gap">
 			<div class="col-xs-12 col-md-6 col-lg-4">
 				<div class="card light">
 					<button><h3>Shop</h3></button>
