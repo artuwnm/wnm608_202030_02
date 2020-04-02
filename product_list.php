@@ -36,7 +36,22 @@
 </header>
 
 	<div class="container">
-		<div class="card soft">
+		<div class="grid gap">
+			<div class="col-lg-4 col-xs-12">
+				<div class="card">
+					<figure class="product-figure">
+						<a href="product_item.php?id=skill_1">
+							<img src="img/yoga.jpg" alt="">
+						</a>
+							<figcaption>
+								<div>Yoga Lesson</div>
+								<div>$50.00/hr</div>
+							</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+	</div>
 			<h2>Product List</h2>
 
 			<!-- ul>li*10>a[href="#$"]>{Product $} -->

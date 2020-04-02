@@ -53,7 +53,14 @@ code {
 	color:var(--color-neutral-light);
 }
 
-
+footer {
+    width: 100%;
+    color: white;
+    background-color: var(--color-neutral-dark);
+    padding: 1em;
+    margin-top: 3em;
+    bottom: 0;
+}
 
 
 /* SMALL CLASSES */
@@ -95,8 +102,7 @@ code {
 /* COMPONENT CLASSES */
 
 .navbar {
-	background-color:#f9f9f9;
-	color:var(--color-neutral-dark);
+	background-color:var(--color-neutral-light);
 	line-height: var(--header-height);
 	padding-top: 0.5em;
 	padding-bottom: 0.5em
@@ -189,8 +195,6 @@ code {
 	.nav-material li.active a::after {
 		height:3px;
 	}
-
-
 
 
 /* CARD */
