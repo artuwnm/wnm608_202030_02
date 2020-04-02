@@ -24,12 +24,17 @@ body {
 
 h1,
 h2,
-h3,
 h4,
 h5,
 h6 {
 	font-family:Helvetica,Arial,sans-serif;
 	font-weight:400;
+}
+
+h3 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: 2.5em;
 }
 
 a {
@@ -78,14 +83,19 @@ code {
 .flex-align-center { align-items:center; }
 .flex-justify-center { justify-content:center; }
 
+.text-align-center{text-align:center;}
 
+.margin-top-2{margin-top: 2rem;}
+.margin-top-5{margin-top: 5rem;}
+.margin-bottom-2{margin-bottom: 2rem;}
+.margin-bottom-5{margin-bottom: 5rem;}
 
 
 
 /* COMPONENT CLASSES */
 
 .navbar {
-	background-color:white;
+	background-color:#f9f9f9;
 	color:var(--color-neutral-dark);
 	line-height: var(--header-height);
 	padding-top: 0.5em;

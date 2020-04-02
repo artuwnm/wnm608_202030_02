@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="lib/css/gridsystem.css">
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
 	
@@ -32,12 +34,16 @@
 		</div>
 	</header>
 
-	<div class="view-window" style="background-image:url(img/welcome.jpg)"></div>
+	<div class="view-window display-flex flex-align-center flex-justify-center" style="background-image:url(img/welcome2.jpg)">
+	</div>
 
-	<div class="view-window display-flex flex-align-center flex-justify-center" style="background-image:url(img/welcome.jpg)">
-		<div class="card soft">
-			<h2>PRODUCT</h2>
-		</div>
+	<div class="container">
+		<h3 class="text-align-center flex-stretch margin-top-5 margin-bottom-5">
+		You Need a Hand?
+		<br>
+		Let Me Help You With My Skills
+
+		</h3>
 	</div>
 
 	<!-- .container>p*2>lorem40 -->
