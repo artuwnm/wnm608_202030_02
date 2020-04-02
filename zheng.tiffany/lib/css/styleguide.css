@@ -105,6 +105,10 @@ code {
 	justify-content: space-between;
 }
 
+.space-between {
+	justify-content: space-between;
+}
+
 
 /*Component Classes*/
 
@@ -329,20 +333,6 @@ nav ul li a {
 	line-height: var(--title-height);
 }
 
-.hero__content button {
-	border: none;
-	border-radius: 50px;
-	background-color: var(--color-main-dark);
-	color: #fff;
-	padding: 0.5em 3.5em;
-}
-
-.hero__content button:hover {
-	cursor: pointer;
-	background-color: var(--color-neutral-light);
-	color: var(--color-neutral-dark);
-}
-
 /* Row Classes */
 
 .row {
@@ -449,16 +439,52 @@ nav ul li a {
 		background-color:var(--color-neutral-light);
 	}
 
+/* Button Classes */
+
+.round {
+	border-radius: 0.3em;
+}
+
+.filled-button {
+	border: 3px solid var(--color-main-dark);
+	background-color: var(--color-main-dark);
+	color: #fff;
+	padding: 1em 3.5em;
+}
+
+.filled-button:hover {
+	cursor: pointer;
+	background-color: transparent;
+}
+
+.filled-button:hover h4 {
+	color: var(--color-main-dark);
+}
+
 /* Forms */
+
+.search-input {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+	font-size: 0.75em;
+	letter-spacing: 0.025em;
+    color: var(--color-neutral-dark);
+    border: 1px solid var(--color-neutral-medium);
+    height: 50px;
+    margin: 0px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    text-indent: 10px;
+    outline: none;
+}
 
 .form-input {
 	display: inline-block;
-	width: 100%;
+	width: 79%;
 	color: inherit;
 	font: inherit;
 	border-width: 0;
-	background-color: transparent;
-	border-bottom: 1px solid var(--color-neutral-light);
+	background-color: #fff;
 	padding: 0.5em 1em;
 	outline: 0;
 }
@@ -480,14 +506,15 @@ nav ul li a {
 
 .form-button {
 	display: inline-block;
-	width: 100%;
+	width: 20%;
 	border-width: 0;
-	background-color: var(--color-neutral-light);
+	background-color: var(--color-main-dark);
 	padding: 0.5em 1em;
 	color: inherit;
 	font: inherit;
+	font-weight: 700;
+	letter-spacing: 0.025em;
 	text-align: center;
-	border-radius: 0.3em;
 	cursor: pointer;
 	text-decoration: none;
 	outline: 0;
@@ -544,21 +571,6 @@ nav ul li a {
 
 .search:hover #searchbox {
 	display: block;
-}
-
-input[type=text], input[type=password], input[type=email], input[type=url], input[type=number] {
-    width: 100%;
-    font-family: 'Roboto', sans-serif;
-	font-size: 12px;
-	letter-spacing: 0.025em;
-    color: var(--color-neutral-dark);
-    border: 1px solid var(--color-neutral-medium);
-    height: 50px;
-    margin: 0px;
-    margin-bottom: 20px;
-    max-width: 100%;
-    text-indent: 10px;
-    outline: none;
 }
 
 /*Checkboxes*/
@@ -751,7 +763,7 @@ dd li a:hover {
 
 /* Footer */
 
-.site-footer {
+footer {
 	background-color: var(--color-neutral-light);
 	color: var(--color-neutral-dark);
 	width: 100%;
@@ -759,12 +771,21 @@ dd li a:hover {
 	margin-top: 3em;
 }
 
-.site-footer ul {
-	padding: 3em 7.5em 3em 0;
+footer ul {
+	padding: 3em;
+	padding-left: 0;
 }
 
-.site-footer ul li {
+.footer__menu--form {
+	padding-right: 0;
+}
+
+footer ul li {
 	line-height: var(--body-height);
+}
+
+footer a:hover {
+	opacity: 50%;
 }
 
 .footer__copyright {

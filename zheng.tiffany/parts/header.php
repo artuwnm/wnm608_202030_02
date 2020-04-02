@@ -16,7 +16,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="/bag" class="bag-icon">
+				<a href="#" class="bag-icon">
 					<img src="images/bag.svg" width="20px" height="20px" alt="Shopping Bag">
 				</a>
 			</li>

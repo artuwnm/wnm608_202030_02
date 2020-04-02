@@ -29,11 +29,18 @@ h2 {
 }
 
 h3 {
-	color: var(--color-neutral-medium);
+	color: var(--color-neutral-dark);
 	letter-spacing: 0.025em;
 }
 
-h4, h5, h6 {
+h4 {
+	font-size: 1.25em;
+	color: #fff;
+	letter-spacing: 0.05em;
+	margin: 0;
+}
+
+h5, h6 {
 	color: var(--color-neutral-dark);
 }
 
@@ -67,3 +74,17 @@ h4, h5, h6 {
 	cursor: pointer;
 	border-bottom: 3px solid var(--color-main-medium);
 }
+
+
+/* Footer */
+
+.store-footer a {
+	font-weight: 300;
+}
+
+
+
+
+
+
+
