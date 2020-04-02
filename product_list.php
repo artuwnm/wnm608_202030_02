@@ -22,7 +22,7 @@
 <header class="navbar">
 	<div class="container display-flex">
 		<div class="flex-stretch">
-			<h1>Store</h1>
+			<h1>Skillbank</h1>
 		</div>
 		<nav class="nav flex-none">
 			<ul class="display-flex">
@@ -34,6 +34,7 @@
 		</nav>
 	</div>
 </header>
+<h2 class=" text-align-center">Product List</h2>
 
 	<div class="container">
 		<div class="grid gap">
@@ -50,23 +51,123 @@
 					</figure>
 				</div>
 			</div>
+
+				<div class="col-lg-4 col-xs-12">
+				<div class="card">
+					<figure class="product-figure">
+						<a href="product_item.php?id=skill_1">
+							<img src="img/surfing.jpg" alt="">
+						</a>
+							<figcaption>
+								<div>Surfing Lesson</div>
+								<div>$100.00/hr</div>
+							</figcaption>
+					</figure>
+				</div>
+			</div>
+	
+			<div class="col-lg-4 col-xs-12">
+				<div class="card">
+					<figure class="product-figure">
+						<a href="product_item.php?id=skill_1">
+							<img src="img/flower.jpg" alt="">
+						</a>
+							<figcaption>
+								<div>Flower Arrangement</div>
+								<div>$30.00-$50</div>
+							</figcaption>
+					</figure>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-xs-12">
+				<div class="card">
+					<figure class="product-figure">
+						<a href="product_item.php?id=skill_1">
+							<img src="img/korean.jpg" alt="">
+						</a>
+							<figcaption>
+								<div>Korean Lesson</div>
+								<div>$50.00/hr</div>
+							</figcaption>
+					</figure>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-xs-12">
+				<div class="card">
+					<figure class="product-figure">
+						<a href="product_item.php?id=skill_1">
+							<img src="img/christmas.jpg" alt="">
+						</a>
+							<figcaption>
+								<div>Chreistmas Tree Decoration</div>
+								<div>$100.00</div>
+							</figcaption>
+					</figure>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-xs-12">
+				<div class="card">
+					<figure class="product-figure">
+						<a href="product_item.php?id=skill_1">
+							<img src="img/cook.jpg" alt="">
+						</a>
+							<figcaption>
+								<div>Korean Food Cooking Lesson</div>
+								<div>$45.00/hr</div>
+							</figcaption>
+					</figure>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-xs-12">
+				<div class="card">
+					<figure class="product-figure">
+						<a href="product_item.php?id=skill_1">
+							<img src="img/photo.jpg" alt="">
+						</a>
+							<figcaption>
+								<div>Graduation Photo</div>
+								<div>$200.00</div>
+							</figcaption>
+					</figure>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-xs-12">
+				<div class="card">
+					<figure class="product-figure">
+						<a href="product_item.php?id=skill_1">
+							<img src="img/construction.jpg" alt="">
+						</a>
+							<figcaption>
+								<div>Easy Construction</div>
+								<div>$70.00</div>
+							</figcaption>
+					</figure>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-xs-12">
+				<div class="card">
+					<figure class="product-figure">
+						<a href="product_item.php?id=skill_1">
+							<img src="img/painting.jpg" alt="">
+						</a>
+							<figcaption>
+								<div>Wall Painting</div>
+								<div>$70.00</div>
+							</figcaption>
+					</figure>
+				</div>
+			</div>
 		</div>
 	</div>
-			<h2>Product List</h2>
 
-			<!-- ul>li*10>a[href="#$"]>{Product $} -->
-			<ul>
-				<li><a href="product_item.php?id=1">Product 1</a></li>
-				<li><a href="product_item.php?id=2">Product 2</a></li>
-				<li><a href="product_item.php?id=3">Product 3</a></li>
-				<li><a href="product_item.php?id=4">Product 4</a></li>
-				<li><a href="product_item.php?id=5">Product 5</a></li>
-				<li><a href="product_item.php?id=6">Product 6</a></li>
-				<li><a href="product_item.php?id=7">Product 7</a></li>
-				<li><a href="product_item.php?id=8">Product 8</a></li>
-				<li><a href="product_item.php?id=9">Product 9</a></li>
-				<li><a href="product_item.php?id=10">Product 10</a></li>
-			</ul>
+	
+			
 		</div>
 	</div>
 	
