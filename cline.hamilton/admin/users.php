@@ -4,7 +4,9 @@ include "../lib/php/functions.php";
 
 $users = getData("../data/users.json");
 
+// CRUD = CREATE READ UPDATE DELETE
 
+// file_put_contents, json_encode, explode, $_POST
 
 
 function showUserPage($user) {
