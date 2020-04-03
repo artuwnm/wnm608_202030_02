@@ -102,7 +102,7 @@ footer {
 /* COMPONENT CLASSES */
 
 .navbar {
-	background-color:var(--color-neutral-light);
+	background-color:white;
 	line-height: var(--header-height);
 	padding-top: 0.5em;
 	padding-bottom: 0.5em

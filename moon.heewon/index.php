@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Landing Page</title>
-
-	<!-- meta:vp -->
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 	<link rel="stylesheet" href="lib/css/styleguide.css">
 	<link rel="stylesheet" href="css/storetheme.css">
@@ -28,7 +23,9 @@
 				<ul class="display-flex">
 					<li><a href="index.php">Home</a></li>
 					<li><a href="product_list.php">Store</a></li>
-					<li><a href="#">About</a></li>
+					<li><a href="about.php">About</a></li>
+					<li><a href="product_cart.php">Cart</a></li>
+
 				</ul>
 			</nav>
 		</div>
@@ -38,7 +35,7 @@
 		<h3 class="text-align-center flex-stretch margin-top-2 margin-bottom-5">
 		You Need a Hand?
 		<br>
-		Let Me Help You With My Skills
+		Let Me Help You With My Skills!
 
 		</h3>
 	</div>
