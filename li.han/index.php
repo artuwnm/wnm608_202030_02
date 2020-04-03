@@ -29,36 +29,19 @@
 <?php include "parts/navbar.php" ?>
 	<!-- .container>p*2>lorem40 -->
 	
-	<div class="container">
+	<div class="container" style="margin-top: 20px">
 	<div class="grid gap">
-	<div class="col-2">
-		<img src="image/shiseido.png" alt="shiseido.png" style="width: 90%">
-	</div>
-	<div class="col-2"><img src="image/ptr.png" alt="ptr.png" style="width: 90%">
-	</div>
-	<div class="col-2"><img src="image/eve.png" alt="eve.png" style="width: 60%">
-	</div>
-	<div class="col-2"><img src="image/lancome.jpg" alt="lancome" style="width: 80%"></div>
-	<div class="col-2"><img src="image/cpb.png" alt="cpb" style="width: 70%"></div>
-	<div class="col-2"><img src="image/erno.png" alt="erno laszro" style="width: 65%"></div>
+	          <div class="col-2"><img src="image/shiseido.png" alt="shiseido.png" style="width: 90%">
+	          </div>
+	          <div class="col-2"><img src="image/ptr.png" alt="ptr.png" style="width: 90%">
+	          </div>
+	          <div class="col-2"><img src="image/eve.png" alt="eve.png" style="width: 60%">
+	          </div>
+	          <div class="col-2"><img src="image/lancome.jpg" alt="lancome" style="width: 80%"></div>
+	          <div class="col-2"><img src="image/cpb.png" alt="cpb" style="width: 70%"></div>
+	          <div class="col-2"><img src="image/erno.png" alt="erno laszro" style="width: 65%"></div>
 	</div>	
 		<div class="card heroimg">
-		</div>
-	</div>
-
-	<div class="container">
-		<div class="display-flex">
-			<div class="flex-stretch">
-				<div class="card soft">
-					<img src="image/shipping.png" alt="">
-				</div>
-			</div>
-			<div class="flex-none" style="width:1em;">&nbsp;</div>
-			<div class="flex-stretch">
-				<div class="card soft">
-				<img src="image/summer.png" alt="">
-				</div>
-			</div>
 		</div>
 	</div>
 
@@ -69,16 +52,20 @@
 	</div>
 
 	<div class="container">
-		<h2>Grid</h2>
-		<div class="grid gap">
+		<div class="grid gap" style="background-color: transparent" >
 			<!-- .col-6*2>.card.soft>lorem20 -->
-			<div class="col-6">
-				<div class="card soft">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore non quis similique, sit, doloremque hic excepturi dolorum odit explicabo mollitia?</div>
+			<div class="col-6 ad" style="background-image: url(image/shipping.png)">
+                <h2>Free shipping over $29 </h2> 
+                <p><a href="#">Details</a></p>   
+				
 			</div>
-			<div class="col-6">
-				<div class="card soft">Hic modi, soluta quasi? Consequuntur necessitatibus autem aspernatur eveniet assumenda rerum facere est neque omnis quod ipsam enim, iure alias.</div>
+			
+			<div class="col-6 ad" style="background-image: url(image/summer.png)">
+                <h2>Summer Selections</h2>
+                <p><a href="#">Shop</a></p>
+				
 			</div>
-
+             </div>
 
 
 			<!-- .col-6*2>.card.soft>lorem20 -->

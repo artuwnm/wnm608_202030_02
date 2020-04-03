@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Store: Product Item</title>
-	
+	<title>Store: Cart</title>
+
 	<?php include "parts/meta.php" ?>
+
 </head>
 <body>
 
@@ -11,11 +12,9 @@
 
 	<div class="container">
 		<div class="card soft">
-			<h2>Product Item</h2>
 
-			<div>
-				This is Product <?= $_GET['id']?>
-			</div>
+			<h2>Cart Page</h2>
+		
 		</div>
 	</div>
 	

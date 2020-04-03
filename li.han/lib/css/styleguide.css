@@ -5,7 +5,7 @@
  :root {
     --color-neutral-dark: #074476;
     --color-neutral-medium:#BCF0FF;
-    --color-neutral-light: #eee;
+    --color-neutral-light: #F5FBFF;
     --color-main-dark: #034066;
     --color-main-medium: #1ba2f4;
     --color-main-light: #bde6ff;
@@ -219,10 +219,6 @@ code {
 	height: 550px;
 }
 
-.col-2{
-	background-color: white;
-}
-
 /* VIEW WINDOW */
 
 .view-window {
@@ -234,7 +230,12 @@ code {
 	background-attachment: fixed;
 }
 
-
+.col-6.ad{
+text-align: center;
+background-size: 100%;
+padding-top: 15%;
+padding-bottom: 15%;
+}
 
 
 
