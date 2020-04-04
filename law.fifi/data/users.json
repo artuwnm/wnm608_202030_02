@@ -1,0 +1,24 @@
+[
+	{
+		"name":"Fifi Law",
+		"type": "Student",
+		"email": "fifilaw.aau@gmail.com",
+		"classes": [605, 608, 613]
+	},{
+		"name":"Cecelia Cao",
+		"type":"Customer",
+		"email":"ceceliacao@gmail.com",
+		"classes":[605,608,613,615]
+	},{
+		"name":"Yuezhou Yu",
+		"type":"Student",
+		"email":"yuyuezhou0322@gmail.com",
+		"classes":[605,608,663]
+	},{
+		"name":"Huan Meng",
+		"type":"Designer",
+		"email":"huanmengdesign@gmail.com",
+		"classes":[608,613,605]
+	}
+
+]
