@@ -381,6 +381,30 @@ code {
 		height:3px;
 	}
 
+	.sidenav{
+		 height: 100%;
+		  width: 160px;
+		  position: fixed;
+		  z-index: 1;
+		  top: 0;
+		  left: 0;
+		  background-color: var(--color-main-dark);
+		  overflow-x: hidden;
+		  padding-top: 20px;
+			}
+
+	.sidenav a {
+		  padding: 6px 8px 6px 16px;
+		  text-decoration: none;
+		  font-size: 1em;
+		  color: var(--color-neutral-light);
+		  display: block;
+		}
+
+.sidenav a:hover {
+		  text-decoration: underline;
+		}
+
 #accordion ul {
 	list-style-type:none;
 	margin-top: 0;
@@ -447,6 +471,22 @@ code {
 		padding-top: 2%;
 	}
 	
+	.card.side {
+		margin-left: 160px;
+	    padding-bottom: 0;
+	    padding: 2%;
+	    background-color: var(--color-main-dark);
+	    margin-top: 0;
+	   
+	}
+
+	.card.side ol {
+    margin-left: -20px;
+    }
+
+    .card.side li{
+    	padding: 1%;
+    }
 
 
 /* VIEW WINDOW */
@@ -493,6 +533,32 @@ code {
 }
 
 .linkbutton:hover {
+  background-color: var(--color-neutral-dark);
+  color: white;
+  text-decoration: none;
+}
+
+.linkeditusers {
+	background-color: var(--color-neutral-light);
+    font-family: 'Crimson Pro', serif;
+    color: var(--color-main-dark);
+    /* border: 0.1em solid var(--color-neutral-dark); */
+    /* position: relative; */
+    font-size: 1em;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    /* margin-top: 300px; */
+    width: 12em;
+    text-align: center;
+    float: right;
+}
+
+.linkeditusers a:hover{
+	text-decoration: none;
+}
+
+.linkeditusers:hover {
   background-color: var(--color-neutral-dark);
   color: white;
   text-decoration: none;
