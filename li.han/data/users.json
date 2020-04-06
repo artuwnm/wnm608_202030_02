@@ -4,15 +4,20 @@
 	"type":"Student",
 	"email":"hli75@art.edu",
 	"classes":[608,615,605]
-  },
-  {
-   	"name":"Hamilton Cline", 		
-    "type":"Teacher", 		
-    "email":"hcline@academyart.edu", 		
-    "classes":[608,617,820] 	
-},
-{ 	"name":"Cyrus Choi", 	
-    "type":"Student", 	
-    "email":"cyruc.design@gmail.com", 	
-    "classes":[608,617,820] }
+ }, {
+    "name": "Tiffany Zheng",
+    "type": "Student",
+    "email": "tzheng8@art.edu",
+    "classes": [605, 608, 613]
+  }, {
+    "name": "Peiyun Li",
+    "type": "Student",
+    "email": "pli30@art.edu",
+    "classes": [605, 608, 613]
+  }, {
+    "name": "Heewon Moon",
+    "type": "Student",
+    "email": "hwmoon94@gmail.com",
+    "classes": [615, 605, 608, 613]
+  }
 ]

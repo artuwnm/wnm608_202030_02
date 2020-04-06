@@ -31,22 +31,25 @@ echo <<<HTML
 HTML;
 }
 
-<!DOCTYPE html>
+
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>User Aamin</title>
-	
-	<?php include "parts/meta.php" ?>
+	<title>User Admin</title>
+
+	<?php include "../parts/meta.php" ?>
 </head>
 <body>
-<header class="navbar">
+
+	<header class="navbar">
 		<div class="container display-flex">
 			<div class="flex-stretch">
 				<h1>User Admin</h1>
 			</div>
 			<nav class="nav flex-none">
 				<ul class="display-flex">
-					<li><a href="admin/">User List</a></li>
+					<li><a href="admin/users.php">User List</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -54,12 +57,24 @@ HTML;
 
 	<div class="container">
 		<div class="card soft">
-			<h2>User List</h2>
-            
-            <ol>
+
 			<?php
 
-			for($i=0; $i<count($users); $i++) {
+			if(isset($_GET['id'])) {
+
+				showUserPage($users[$_GET['id']]);
+
+			} else {
+
+
+			?>
+
+			<h2>User List</h2>
+
+			<ol>
+			<?php
+
+			foreach($users as $i=>$user) {
 				echo "<li>
 					<a href='admin/users.php?id=$i'>$user->name</a>
 				</li>";
@@ -67,11 +82,12 @@ HTML;
 
 			?>
 			</ol>
+
 			<?php
-		
-		}
-		
-		?>
+
+			}
+
+			?>
 		</div>
 	</div>
 	
