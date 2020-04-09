@@ -10,19 +10,19 @@
 	<header >
 
 		<div class="container display-flex">
-			<form class="search" style="margin-top:3%"><input type="text" name="search" placeholder="">
-			</form>
-			<div class="flex-stretch" align="center">  
-				<img id="head" src="image/logo.png" alt="GLOWING BEAUTY" style="width: 10%">
-				<h1 id="head" >Glowing Beauty</h1>
+			<div class="flex-stretch" align="center" style="margin-top: 1em">  
+				<img id="head" src="image/logo.png" alt="GLOWING BEAUTY" style="width: 12%">
+				<h1 id="head" >GLOWING BEAUTY</h1>
 			</div>
 			<nav class="nav flex-none" style="margin-top: 2%;margin-right: -3%">
 				<!-- ul>li*3>a[href=#]>{Link $} -->
 				<ul class="display-flex">
 					<li><a href="#"><img src="image/Profile.png" alt="" style="width: 55%"></a></li>
-					<li><a href="#"><img src="image/Heart.png" alt="" style="width: 55%"></a></li>
+					<li><a href="#"><img src="image/Heart.png" alt="" style="width: 55%;padding-top:8%"></a></li>
 					<li><a href="#"><img src="image/cart.png" alt="" style="width: 55%"></a></li>
 				</ul>
+				<form class="search" style="margin-top:3%;margin-left: 20%"><input type="text" name="search" placeholder="">
+			</form>
 			</nav>
 		</div>
 	</header>
@@ -30,7 +30,7 @@
 	<!-- .container>p*2>lorem40 -->
 	
 	<div class="container" style="margin-top: 20px">
-	<div class="grid gap">
+	<div class="grid gap" style="size: 50%">
 	          <div class="col-2"><img src="image/shiseido.png" alt="shiseido.png" style="width: 90%">
 	          </div>
 	          <div class="col-2"><img src="image/ptr.png" alt="ptr.png" style="width: 90%">

@@ -7,7 +7,7 @@
     --color-neutral-medium:#BCF0FF;
     --color-neutral-light: #F5FBFF;
     --color-main-dark: #034066;
-    --color-main-medium: #1ba2f4;
+    --color-main-medium: #BCF0FF;
     --color-main-light: #bde6ff;
     --header-height:3rem;
 }
@@ -31,8 +31,9 @@ h6 {
 	align-items: center;
 }
 h1{
-	font-family:'Julius Sans One', sans-serif;
+	font-family:'Raleway Dots', cursive;
 	color:var(--color-neutral-dark);
+	font-size: 2.3em;
 }
 a {
 	color:inherit;
@@ -180,6 +181,9 @@ code {
 	.nav-material li.active a::after {
 		height:3px;
 	}
+	.form-lable{
+		font-weight: bold;
+	}
 
 /* CARD */
 .card {
@@ -195,7 +199,6 @@ code {
 	.card>:last-child { margin-bottom:0; }
 
 	.card.soft {
-    	box-shadow: 4px 4px 10px 10px rgba(39,43,38,0.1);
 		border-radius:0.3em;
 	}
 
@@ -235,6 +238,7 @@ text-align: center;
 background-size: 100%;
 padding-top: 15%;
 padding-bottom: 15%;
+background-repeat: no-repeat;
 }
 
 
@@ -295,7 +299,7 @@ padding-bottom: 15%;
     outline: 0;
 }
 .form-input:focus {
-	border-bottom-color:var(--color-main-medium);
+	border-bottom-color:var(--color-neutral-medium);
 }
 .form-label {
     display: block;
@@ -307,7 +311,7 @@ padding-bottom: 15%;
     display: inline-block;
     width: 100%;
     border-width: 0;
-    background-color: var(--color-neutral-light);
+    background-color: var(--color-neutral-medium);
     padding: 0.5em 1em;
     color: inherit;
     font: inherit;
