@@ -1,29 +1,10 @@
 <?php
 
-
 include "../lib/php/function.php";
 
 $users = getData("../data/users.json");
 
 // print_p($users);
-
-function showUserPage($user){
-$classes = implode(",", $user->classes);
-
-echo <<<HTML
-
-<div>
-<h2>$user->name</h2>
-</div>
-
-<div>
-<h4>Classes</h4>
-<span>$classes</span>
-</div>
-
-
-HTML;
-}
 
 ?><!DOCTYPE html>
 <html>
@@ -34,42 +15,34 @@ HTML;
 	</head>
 	<body>
 
-	<div class="navbar display-flex">
-		<div class="container display-flex ">
-			<div class="flex-stretch text-align-center logo">
-				<h2>User Admin</h2>
-			</div>
-				<nav class="nav-breadcrumb flex-scretch ">
-					<ul class="display-flex flex-justify-between">
-						<li class="uppercase"><a href="admin/users.php">User List</a></li>
-						
-						
+		<div class="navbar">
+			<div class="container display-flex ">
+				<div class="flex-stretch">
+					<h1>User Admin</h1>
+				</div>
+				<nav class="nav-flex">
+					<ul class="display-flex flex-justify-center">
+						<li><a href="admin/users.php">USER LIST</a></li>
 					</ul>
 				</nav>
-				
-		</div>
+			</div>
 		</div>
 		
-
 		<div class="container">
 			<div class="card">
 				
 				<?php 
 
 					if (isset($_GET['id'])) {
-						# code...
-
+						
 						showUserPage($users[$_GET['id']]);
-							// echo "User";
 
 					}else{
 
-
-
 				 ?>
 
-
-				<h2>User List</h2>
+				<h2 class="display-inline-block">User List</h2>
+				<h3 class="add-new btn light display-inline-block"> <a href="admin/edit.php">Add New User</a> </h3>
 
 				<ol>
 					<?php 
@@ -79,15 +52,14 @@ HTML;
 							// };
 					
 						foreach ($users as $i=>$user) {
-							echo "<li><a href='admin/users.php?id=$i'>$user->name </a></li>";
+							// echo "<li><a href='admin/users.php?id=$i'>$user->name </a></li>";
+						echo 	"<li>{$user['name']}
+									<span>
+									<a href='admin/users.php?id=$i'>View Details</a>
+									</span></li>";		
 						}
-					
-						 ?>
-					
-						 <?php 
-					
-					
-						 } 
+									
+					}
 					
 					?>
 						 	

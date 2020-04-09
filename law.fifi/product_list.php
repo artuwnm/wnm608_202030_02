@@ -45,7 +45,7 @@
 			echo	"<a href='product_item.php?id={$this->photo}>";
 			echo			"<img src='images/{$this->photo}.png>";			
 			echo		"<figcaption>";
-			echo			"<h5> ${$this->name} </h5>";
+			echo			"<h5> {$this->name} </h5>";
 			echo			"<p>{$this->price}</p>";
 			echo		"</figcaption>";
 			echo	"</a>";

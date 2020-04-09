@@ -41,10 +41,13 @@ a{
 	color: inherit;
 	font-weight: bold;
 	text-decoration: none;
+	display: inline-block;
+    padding: 0.8em 1.5em;
 }
 
 a:hover{
 	color: var(--color-neutral-dark);
+	cursor: pointer;
 }
 
 code{
@@ -754,7 +757,7 @@ footer p{
 
 
 .btn{
-	padding: 0.8em 1.5em;
+	/*padding: 0.8em 1.5em;*/
 	text-transform: uppercase;
 	font-size: 0.8em;
 	display: inline-block;
@@ -1226,4 +1229,56 @@ input[type=range]::-webkit-slider-thumb{
 .position-relative{
 	position: relative;
 	left: 150px;
+}
+
+
+ol{
+	padding: 20px;
+}
+
+ol li{
+	
+	padding: 10px 0;
+	font-size: 1.2em;
+	font-weight: 500;
+}
+
+ol li span a{
+	display: inline-block;
+	font-weight: 200;
+	font-size: 0.7em;
+	padding: 8px;
+	position: absolute;
+	right: 10%;
+}
+
+ol li span a:hover{
+	text-decoration: underline;
+}
+
+.actions-panel{
+	position: relative;
+	left: 80%;
+	display: block;
+	margin: 20px;
+}
+
+.actions-panel span{
+	color:var(--color-neutral-medium);
+	margin: 5px;
+	padding: 10px;
+}
+
+.actions-panel span a:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
+.actions-panel span a{
+	font-weight: 200;
+	display: inline-block;
+	padding: 5px;
+}
+.add-new{
+	position: relative;
+	left: 66%;
 }
