@@ -37,7 +37,7 @@ h3 {
 
 h4 {
 	font-size: 1.25em;
-	color: #fff;
+	color: var(--color-main-dark);
 	letter-spacing: 0.05em;
 	margin: 0;
 }
@@ -50,6 +50,10 @@ h5 {
 }
 
 h6 {
+	display: inline;
+	font-size: 1em;
+	font-weight: 500;
+	margin: 0;
 	color: var(--color-neutral-dark);
 }
 
@@ -86,7 +90,7 @@ hr {
 
 .store-header nav ul > li:hover {
 	cursor: pointer;
-	border-bottom: 3px solid var(--color-main-medium);
+	/*border-bottom: 3px solid var(--color-main-medium);*/
 }
 
 
@@ -96,13 +100,25 @@ hr {
 	font-weight: 300;
 }
 
+/* Component Classes */
+
+.featured-items button {
+	display: block;
+	margin: 2rem auto 4rem;
+}
+
 /* Checkout Classes */
 
 .back-link {
+	color: var(--color-neutral-dark);
 	padding: 1rem;
 }
 
-.back-link a {
+.back-link a:hover {
+	opacity: 50%;
+}
+
+.small-link a {
 	font-weight: 300;
 	font-size: 0.8em;
 }
@@ -145,6 +161,43 @@ hr {
 	margin: 2rem 0;
 	width: 20%;
 }
+
+/*Admin*/
+
+.admin-form-table  tbody tr td:first-child {
+	width: 10%;
+}
+
+
+.admin-form-label {
+	display: inline;
+	font: inherit;
+	font-weight: 700;
+	margin: 1em;
+	color: var(--color-neutral-dark);
+}
+
+.admin-form-input {
+	width: 50%;
+	display: inline;
+	font: inherit;
+	border: 1px solid var(--color-neutral-medium);
+    height: 2em;
+    max-width: 100%;
+    text-indent: 0.5em;
+    outline: none;
+}
+
+.admin-form-input:focus {
+	border-bottom: 1px solid var(--color-main-medium);
+}
+
+.user-name {
+	font-size: 1.25em;
+	font-weight: 700;
+	color: var(--color-neutral-dark);
+}
+
 
 
 

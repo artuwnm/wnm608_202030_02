@@ -1,7 +1,7 @@
 <header class="store-header">
 	<div class="row container">
 		<div class="logo">
-			<a href="#">
+			<a href="index.php">
 				<img src="images/stylista.png" alt="Stylista">
 			</a>
 		</div>
@@ -16,7 +16,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="#" class="bag-icon">
+				<a href="bag.php" class="bag-icon">
 					<img src="images/bag.svg" width="20px" height="20px" alt="Shopping Bag">
 				</a>
 			</li>
@@ -25,15 +25,15 @@
 	<nav class="container display-flex">
 		<ul>
 			<li class="dropdown">
-				<a href="#">Shop<span class="chevron bottom"></span></a>
+				<a href="shop_all.php">Shop<span class="chevron bottom"></span></a>
 				<ul class="dropdown-content">
-					<li><a href="#">All</a></li>
-					<li><a href="#">Women's</a></li>
-					<li><a href="#">Men's</a></li>
+					<li><a href="shop_all.php">All</a></li>
+					<li><a href="shop_women.php">Women's</a></li>
+					<li><a href="shop_men.php">Men's</a></li>
 				</ul>
 		  	</li>
-		  	<li><a href="#">Our Story</a></li>
-		  	<li><a href="#">FAQs</a></li>
+		  	<li><a href="about.php">Our Story</a></li>
+		  	<li><a href="faqs.php">FAQs</a></li>
 		</ul>
 	</nav>
 </header>

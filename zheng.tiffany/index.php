@@ -16,7 +16,7 @@
 			<div class="hero__content">
 				<h1>Introducing our Spring Collection</h1>
 				<p>Fun, fresh florals for your favorite season.</p>
-				<button class="filled-button round"><h4>Shop Now</h4></button>
+				<button class="hollow-button round"><a href="shop_all.php"><h4>Shop Now</h4></a></button>
 			</div>
 		</div>
 	</div>
@@ -59,6 +59,7 @@
 				</div>
 			</div>
 		</div>
+		<button class="hollow-button round"><a href="shop_all.php"><h4>Shop All</h4></a></button>
 	</div>
 
 	<?php include "parts/footer.php" ?>

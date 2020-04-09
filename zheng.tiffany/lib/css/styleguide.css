@@ -34,10 +34,6 @@ a {
 	text-decoration: none;
 }
 
-li {
-	list-style: none;
-}
-
 code {
 	display: block;
 	padding: 1em;
@@ -67,7 +63,6 @@ code {
 	margin: 2.5em auto;
 }
 
-
 /*Atomic Classes*/
 
 .full-height {
@@ -96,6 +91,10 @@ code {
 
 .display-inline-block {
 	display: inline-block;
+}
+
+.display-inline {
+	display: inline;
 }
 
 .flex-stretch {
@@ -128,6 +127,14 @@ code {
 
 .bold {
 	font-weight: 700;
+}
+
+.padding {
+	padding: 1em;
+}
+
+.padding-left {
+	padding-left: 1em;
 }
 
 /*Component Classes*/
@@ -471,20 +478,20 @@ table {
 	border-radius: 0.3em;
 }
 
-.filled-button {
+.hollow-button {
 	border: 3px solid var(--color-main-dark);
-	background-color: var(--color-main-dark);
-	color: #fff;
+	background-color: transparent;
+	color: var(--color-main-dark);
 	padding: 1em 3.5em;
 }
 
-.filled-button:hover {
+.hollow-button:hover {
 	cursor: pointer;
-	background-color: transparent;
+	background-color: var(--color-main-dark);
 }
 
-.filled-button:hover h4 {
-	color: var(--color-main-dark);
+.hollow-button:hover h4 {
+	color: #fff;
 }
 
 /* Forms */
@@ -815,10 +822,45 @@ footer a:hover {
 	margin-bottom: 0;
 }
 
+/*Admin Users*/
 
+.container.admin {
+	max-width: 50%;
+}
 
+.card.soft.user-list > h1 {
+	margin: 0.65em;
+}
 
+.card.soft.user-list > ol {
+	margin-bottom: 1em;
+}
 
+.card.soft.user-list li {
+	padding: 1em 0;
+}
+
+.card.soft.user-list h6 {
+	padding-left: 0.5em;
+}
+
+input.inline-button,
+span.inline-button a {
+	display: inline-block;
+    padding: 0.5em 1em;
+    position: absolute;
+    right: 5%;
+    font-size: 0.75em;
+    font-weight: 500;
+    border: 1px solid var(--color-neutral-dark);
+    outline: none;
+}
+
+span.inline-button a:hover,
+.padding input:hover {
+	cursor: pointer;
+    background-color: var(--color-neutral-light);
+}
 
 
 
