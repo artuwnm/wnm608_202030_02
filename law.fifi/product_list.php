@@ -72,7 +72,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="accordion">
+				<!-- <div class="accordion">
 					<div class="display-flex accordion-header">
 						<div class="accordion-section flex-stretch uppercase">Colors</div>
 						<div class="flex-none accordion-icon">+</div>
@@ -84,7 +84,7 @@
 							<li><a href="#">Link#</a></li>
 						</ul>
 					</div>
-				</div>
+				</div> -->
 				<div class="accordion">
 					<div class="display-flex accordion-header">
 						<div class="accordion-section flex-stretch uppercase">Price</div>

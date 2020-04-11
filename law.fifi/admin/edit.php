@@ -6,48 +6,9 @@ include "../lib/php/function.php";
 $users = getData("../data/users.json");
 // print_p($users[$_GET['id']]);
 
-function showEditPage($user){
-
-// 	print_p($user->classes);
-$classes = $user['classes'];
-
-if (is_array($classes)== true) {
-	# code...
-$classes = implode(",", $user['classes']);
-}else{
-$classes = $user['classes'];
-
-}
-// if (is_array($user->classes)==true) {
-// 	# code...
-// 	$classes = implode(",", $user->classes);
-
-// }else{
-	
-// 	$classes = explode(",", $user->classes);
-// 	print_p(explode(",", $user->classes));
-// }
+if(isset($_GET['action'])){
 
 
-echo <<<HTML
-
-<h2>Edit User: {$user['name']} </h2>
-	
-	<form action="" class="form form-control" method="post">
-		<label for="name">Name:</label>
-		<input  class="form-basic" type="text" id="name" name="name" value="{$user['name']}">
-		<label for="type">Type:</label>
-		<input  class="form-basic" type="text" id="type" name="type" value="{$user['type']}">
-		<label for="email">Email:</label>
-		<input  class="form-basic" type="text" id="email" name="email" value="{$user['email']}">
-		<label for="classes">Classes:</label>
-		<input  class="form-basic" type="text" id="classes" name="classes" value="$classes">
-		<input class="form-basic-button uppercase" type="submit" name="submit" value="submit">
-
-	</form>
-HTML;
-
-if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 	// $users = getData("../data/users.json");
 	
@@ -63,7 +24,37 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 	updateUser($_POST,$_GET['id']);
 	
+	// $users[$_GET['id']]->name = $_POST['name'];
+
 }
+
+function showEditPage($user){
+
+// 	print_p($user->classes);
+$id = $_GET['id'];
+$addoredit = $id =='new'? 'Add':'Edit';
+
+$classes = implode(",", $user->classes);
+
+echo <<<HTML
+
+<h2>$addoredit User: $user->name </h2>
+	
+	<form action="{$_SERVER['PHP_SELF']}?id=$id&action=$addoredit" class="form form-control" method="post">
+		<label for="name">Name:</label>
+		<input  class="form-basic" type="text" id="name" name="name" value="$user->name">
+		<label for="type">Type:</label>
+		<input  class="form-basic" type="text" id="type" name="type" value="$user->type">
+		<label for="email">Email:</label>
+		<input  class="form-basic" type="text" id="email" name="email" value="$user->email">
+		<label for="classes">Classes:</label>
+		<input  class="form-basic" type="text" id="classes" name="classes" value="$classes">
+		<input class="form-basic-button uppercase" type="submit" name="submit" value="submit">
+
+	</form>
+HTML;
+
+
 
 }
 ?><!DOCTYPE html>
