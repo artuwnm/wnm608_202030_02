@@ -13,21 +13,7 @@ echo <<<HTML
 <div>
 	<a href="admin/users.php"><h4 style="color: white">&lt; BACK</h4></a>
 </div>
-<div>
-	<h2>$user->name</h2>
-	<div>
-		<strong>Type</strong>
-		<span>$user->type</span>
-	</div>
-	<div>
-		<strong>Email</strong>
-		<span>$user->email</span>
-	</div>
-	<div>
-		<strong>Classes</strong>
-		<span>$classes</span>
-	</div>
-</div>
+
 <div>
 	<a href="admin/edit.php" class="linkeditusers">EDIT</a>
 </div>
@@ -92,15 +78,19 @@ HTML;
 		<table width="25%" border="0">
 			<tr> 
 				<td>Name</td>
-				<td><input type="text" name="name"></td>
+				<td><input type="text" placeholder="A User Name" id="user-name" name="user-name" value="$user->name"></td>
+			</tr>
+			<tr> 
+				<td>Type</td>
+				<td><input type="text" placeholder="A User Name" id="user-name" name="user-name" value="$user->type"></td>
 			</tr>
 			<tr> 
 				<td>Email</td>
-				<td><input type="text" name="email"></td>
+				<td><input type="text" placeholder="A User Name" id="user-name" name="user-name" value="$user->email"></td>
 			</tr>
 			<tr> 
 				<td>Classes</td>
-				<td><input type="text" name="classes"></td>
+				<td><input type="text" placeholder="A User Name" id="user-name" name="user-name" value="$classes"></td>
 			</tr>
 		</table>
 		<a href="admin/edit.php" class="linkeditusers">ADD</a>
