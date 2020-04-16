@@ -8,6 +8,8 @@
 	<!-- meta:vp -->
 	<meta name="viewport" content="width=device-width">
 
+	<base href="/aau/wnm608_02/moon.heewon/">
+
 	<link rel="stylesheet" href="lib/css/gridsystem.css">
 	<link rel="stylesheet" href="lib/css/styleguide.css">
 	<link rel="stylesheet" href="css/storetheme.css">
@@ -29,7 +31,8 @@
 				<!-- li*3>a[href=#]>{Link $} -->
 				<li><a href="index.php">Home</a></li>
 				<li><a href="product_list.php">Store</a></li>
-				<li><a href="#">About</a></li>
+				<li><a href="about.php">About</a></li>
+				<li><a href="product_cart.php">Cart</a></li>
 			</ul>
 		</nav>
 	</div>

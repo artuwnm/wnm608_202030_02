@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Store: About us</title>
+	<title>Store: Cart</title>
 
 	<meta charset="UTF-8">
 
-	<meta name="viewport" content="width=device-width">
-	
-	<link rel="stylesheet" href="lib/css/gridsystem.css">
-	<link rel="stylesheet" href="lib/css/styleguide.css">
-	<link rel="stylesheet" href="css/storetheme.css">
-	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width">
 
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<base href="/aau/wnm608_02/moon.heewon/">
 
-</head>
+<link rel="stylesheet" href="lib/css/styleguide.css">
+<link rel="stylesheet" href="lib/css/gridsystem.css">
+<link rel="stylesheet" href="css/storetheme.css">
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 
-	<?php include "parts/navbar.php" ?>
 	
-
+<header class="navbar">
+	<div class="container display-flex">
+		<div class="flex-stretch">
+			<h1>Store</h1>
+		</div>
+		<nav class="nav flex-none">
+			<ul class="display-flex">
+				<!-- li*3>a[href=#]>{Link $} -->
+				<li><a href="index.php">Home</a></li>
+				<li><a href="product_list.php">Store</a></li>
+				<li><a href="about.php">About</a></li>
+				<li><a href="product_cart.php">Cart</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
 	<div class="container">
 		<div class="card soft">
-			<h2>Product Item</h2>
 
-			<div>
-				This is Product <?= $_GET['id'] ?>
-			</div>
+			<h2>Cart Page</h2>
+		
 		</div>
 	</div>
-	
 	
 </body>
 </html>

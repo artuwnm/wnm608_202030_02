@@ -4,42 +4,22 @@ include "../lib/php/functions.php";
 
 $users = getData("../data/users.json");
 
-
-
-
-function showUserPage($user) {
-$classes = implode(", ",$user->classes);
-echo <<<HTML
-<div>
-	<a href="admin/users.php">Back</a>
-</div>
-<div>
-	<h2>$user->name</h2>
-	<div>
-		<strong>Type</strong>
-		<span>$user->type</span>
-	</div>
-	<div>
-		<strong>Email</strong>
-		<span>$user->email</span>
-	</div>
-	<div>
-		<strong>Classes</strong>
-		<span>$classes</span>
-	</div>
-</div>
-HTML;
-}
-
-
-
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>User Admin</title>
 
-	<?php include "../parts/meta.php" ?>
-</head>
+	<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width">
+
+<base href="/aau/wnm608_02/moon.heewon/">
+
+<link rel="stylesheet" href="lib/css/styleguide.css">
+<link rel="stylesheet" href="lib/css/gridsystem.css">
+<link rel="stylesheet" href="css/storetheme.css">
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script></head>
 <body>
 
 	<header class="navbar">
@@ -58,37 +38,23 @@ HTML;
 	<div class="container">
 		<div class="card soft">
 
-			<?php
-
-			if(isset($_GET['id'])) {
-
-				showUserPage($users[$_GET['id']]);
-
-			} else {
-
-
-			?>
-
+			
 			<h2>User List</h2>
 
 			<ol>
-			<?php
+			<li>
+					<a href='admin/users.php?id=0'>Hamilton Cline</a>
+				</li><li>
+					<a href='admin/users.php?id=1'>Tiffany Zheng</a>
+				</li><li>
+					<a href='admin/users.php?id=2'>Peiyun Li</a>
+				</li><li>
+					<a href='admin/users.php?id=3'>Heewon Moon</a>
+				</li><li>
+					<a href='admin/users.php?id=4'>Shaonan Dong</a>
+				</li>			</ol>
 
-			foreach($users as $i=>$user) {
-				echo "<li>
-					<a href='admin/users.php?id=$i'>$user->name</a>
-				</li>";
-			}
-
-			?>
-			</ol>
-
-			<?php
-
-			}
-
-			?>
-		</div>
+					</div>
 	</div>
 	
 </body>
