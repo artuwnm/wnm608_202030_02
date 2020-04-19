@@ -1,24 +1,46 @@
-<!DOCTYPE html>
+<?php
+
+include_once "lib/php/function.php";
+include_once "parts/templates.php";
+
+$result = getRows(
+	makeConn(),
+	"SELECT *
+	FROM `products`
+	WHERE `id` = '{$_GET['id']}'
+	"
+);
+
+$randProducts = getRows(
+	makeConn(),
+	"
+	SELECT *
+	FROM `products`
+	WHERE `id`IN (2,5,8)
+	"
+);
+
+$o = $result[0];
+$thumbs = explode(",",$o->images);
+
+// print_p($result);
+
+?><!DOCTYPE html>
 <html>
 	<head>
 		<?php include "parts/meta.php" ?>
-		<?php 
-				$productName = $_GET['id'];
-				$productName = str_replace("_", " ", $productName);
-			 ?>
-		<title><?php echo ucwords($productName); ?></title>
+
+		<title><?= $o->productName  ?></title>
 	</head>
 	<body>
 	
-		<?php include "parts/navbar.php" ?>
-
-			
+		<?php include "parts/navbar.php" ?>			
 		<div class="container">
 			<div class="nav-breadcrumb2 uppercase margin-top-2">
 				<ul>
 					<li><a href="index.php">Home</a></li>
 					<li><a href="product_list.php">Products</a></li>
-					<li><a href="#"><?php echo $productName; ?></a></li>
+					<li><a href="product_item.php?id=<?= $o->id ?>"><?= $o->productName  ?></a></li>
 				</ul>
 			</div>
 		</div>
@@ -28,36 +50,29 @@
 			<div class="card transparent">
 				<div class="grid gap">
 					<div class="col-md-6 image-picker">
-						
-
-						
+												
 							<div class="main-image">
-								<?php 
-									$productImage = "<img src = 'images/".$_GET['id'].".png'>";
-									echo $productImage;
-								 ?>
-								
+									<img src = images/<?= $o->thumbnail?>>
+																	
 							</div>
-							<div class="thumbstrip ">
-								<?php echo $productImage; ?>
-								<?php echo "<img src = 'images/".$_GET['id']."_2.png'>" ?>
-								<?php echo "<img src = 'images/".$_GET['id']."_3.png'>" ?>
-								<?php echo "<img src = 'images/".$_GET['id']."_4.png'>" ?>
+							<div class="thumbstrip">
+								<?php
 
-							</div>
-						
+								echo array_reduce($thumbs,function($r,$o){
+									return $r."<img src='images/$o'>";
+								})
+								?>
+
+							</div>						
 						 	
 					</div>
 
 					 <div class="col-md-6 color-dark position-relative" >
 					 	<h2 class="">
-							<?php 
-
-								echo ucwords($productName);
-							 ?>
+							<?= $o->productName  ?>
 						</h2>
 						<h3 class="margin-bottom-2">
-							$30
+							$ <?= $o->price  ?>
 						</h3>
 						
 						<h5>Choose your phone:</h5>
@@ -67,7 +82,7 @@
 							<option  class="options" value="option3">iPhone 11 Pro Max</option>
 							<option  class="options" value="option4">iPhone X</option>
 						</select>
-						<a href="#" class="btn dark uppercase">Add to Cart</a>
+						<a href="product_addedtocart.php?id=<?= $o->id ?>" class="btn dark uppercase">Add to Cart</a>
 					 </div>
 				</div>
 			</div>
@@ -75,60 +90,14 @@
 		<hr>
 		<div class="container">
 			
-				<h2 class="uppercase color-dark">You may also like:</h2>
-			
-		
-
-				<?php 
-					$allProducts = array("iconic_meow_phone_case", "meowie_logo_phone_case", "multi-meow_phone_case", "iconic_meow_stickers", "iconic_meow_pillow", "multi-meow_pillow", "meow_warning_phone_case", "meowie_logo_stickers", "meowie_logo_pillow", "meow_paws_pillow", "meow_paws_phone_case", "meow_paws_stickers");
-
-					$randomProduct = array_rand($allProducts, 4);
-
-					// $searchProduct = array_search("$productName", $randomProduct);
-					// if ($searchProduct !== FALSE){
-					// 	unset($randomProduct[$searchProduct]);
-					// 	var_dump($randomProduct);
-					// };
-
-
-					$allProductsName = str_replace("_", " ", $allProducts);
-
-				 ?>
+				<h2 class="uppercase color-dark">You may also like:</h2>					
 
 		
 			<div class="grid">
 				<?php
-				echo "<a href='product_item.php?id=". $allProducts[$randomProduct[0]]."'>
-					<div class='card transparent col-md-4'>";
-						 
-							echo "<div><img src = 'images/".$allProducts[$randomProduct[0]].".png'></div>";
-					
-							echo "<h4>" .ucwords($allProductsName[$randomProduct[0]]) ."</h4>";
-						 
-				echo	"</div></a>";
+					echo array_reduce($randProducts, 'productListTemplate');
 				?>
-				<?php
-				echo "<a href='product_item.php?id=". $allProducts[$randomProduct[1]]."'>
-					<div class='card transparent col-md-4'>";
-						 
-							echo "<div><img src = 'images/".$allProducts[$randomProduct[1]].".png'></div>";
-					
-							echo "<h4>" .ucwords($allProductsName[$randomProduct[1]]) ."</h4>";
-						 
-				echo	"</div></a>";
-				?>
-				<?php
-				echo "<a href='product_item.php?id=". $allProducts[$randomProduct[2]]."'>
-					<div class='card transparent col-md-4'>";
-						 
-							echo "<div><img src = 'images/".$allProducts[$randomProduct[2]].".png'></div>";
-					
-							echo "<h4>" .ucwords($allProductsName[$randomProduct[2]]) ."</h4>";
-						 
-				echo	"</div></a>";
-				?>
-				
-				
+								
 			</div>
 		</div>
 

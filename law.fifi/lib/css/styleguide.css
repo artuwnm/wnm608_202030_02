@@ -187,7 +187,7 @@ footer p{
 		opacity: 0;
 		width: 0px;
 		position: relative;
-    	right: 15%;
+    	right: 8%;
     	height: 45px;
     	
 		transition: 0.5s all ease;
@@ -225,7 +225,7 @@ footer p{
 	}
 
 	.form-basic {
-		display: block;
+		display: inline-block;
     	height: 40px;
     	margin: 0.5em 0;
     	background-color: var(--color-neutral-white);
@@ -243,7 +243,7 @@ footer p{
 		
 	.form-basic-button {
 		background-color: var(--color-neutral-dark);
-    	border-radius: 2px;
+    	border-radius: 1px;
     	display: inline-block;
     	cursor: pointer;
     	color: var(--color-neutral-light);
@@ -359,6 +359,7 @@ footer p{
 .margin-top-5{margin-top: 5rem;}
 .margin-bottom-2{margin-bottom: 2rem;}
 .margin-bottom-5{margin-bottom: 5rem;}
+.margin-right-2{margin-right: 2em;}
 
 .padding-top-2{padding-top: 2rem;}
 .padding-bottom-2{padding-bottom: 2rem;}
@@ -772,7 +773,7 @@ footer p{
 
 	.btn.dark{
 		background-color: var(--color-neutral-dark);
-		
+		border: var(--color-neutral-dark) 1px solid;
 		color: var(--color-neutral-light);
 	}
 	.btn.dark:hover{
@@ -782,7 +783,7 @@ footer p{
 
 	}
 	.btn.light{
-		border: var(--color-neutral-medium) 2px solid;
+		border: var(--color-neutral-medium) 1px solid;
 		color: var(--color-neutral-medium);
 	}
 	.btn.light:hover{
@@ -813,6 +814,17 @@ footer p{
 		color: var(--color-neutral-light);
 	}
 
+.return-btn{
+
+	font-weight:200;
+	padding-top: 1em;
+
+}
+
+.checkout-title{
+	padding-right: 6em;
+
+}
 
 
 /*CARD*/
@@ -864,6 +876,16 @@ footer p{
 		background-color: #fffcf3;
 		border: 1px solid var(--color-neutral-medium);
 		border-radius: 0.4em;
+	}
+	.card.checkout{
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: inherit;
+		padding-top: 20px;
+		margin-top: 0;
+		box-shadow: 0px 5px 10px 0px #bdaea342;
+
 	}
 
 
@@ -1281,4 +1303,35 @@ ol li span a:hover{
 .add-new{
 	position: relative;
 	left: 66%;
+}
+
+
+
+.cart-img{
+	width: 100px;
+
+}
+
+.cart-img img{
+	max-width: 100%;
+}
+
+
+.suggestedProduct-img{
+	width: 250px;
+}
+
+.suggestedProduct-img img{
+
+	max-width: 100%;
+}
+
+.added-to-cart h3{
+
+	font-weight: 300;
+	padding: 20px;
+}
+
+.added-to-cart a{
+	margin: 30px 5px 0 5px;
 }

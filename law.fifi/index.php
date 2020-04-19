@@ -68,14 +68,12 @@
 		<div class="card center text-align-left ">
 			<h1 class="uppercase  medium-color">our story</h1>
 			<br>
-			<p class=" window-msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ratione totam est libero architecto cupiditate ad repudiandae dicta repellendus commodi!</p>
-			<a class="btn window " href="#">learn more</a> 
+			<p class=" window-msg">Meowie aims to create cats-related products that are cute, clean and neat. Learn more about our story and the mission statement of Meowie.</p>
+			<a class="btn window " href="about.php">learn more</a> 
 			
 		</div>
 		</div>	
 	</div>
-	
-
 
 
 	<div class="container">

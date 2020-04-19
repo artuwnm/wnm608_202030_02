@@ -47,8 +47,30 @@ function getData($str){
 	return json_decode(file_get_contents($str));
 }
 
+include_once "auth.php";
+function makeConn(){
+	@$conn = new mysqli(...makeAuth()); //...spread operator
 
+	if ($conn->connect_errno) die($conn->connect_errno);
 
+	$conn->set_charset('utf8');
 
+	return $conn;
 
+};
+
+function getRows($conn, $sql){
+
+	$a = [];
+
+	$result = $conn ->query($sql);
+
+	if ($conn->errno) die($conn->error);
+		
+		while ($row = $result->fetch_object()) {
+			# code...
+			$a[]= $row;
+		}
+		return $a;
+}
 
