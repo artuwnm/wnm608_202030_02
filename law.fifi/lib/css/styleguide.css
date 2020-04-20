@@ -813,6 +813,11 @@ footer p{
 		background-color: var(--color-neutral-dark);
 		color: var(--color-neutral-light);
 	}
+	.center-btn{
+		width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
 .return-btn{
 

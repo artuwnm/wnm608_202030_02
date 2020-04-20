@@ -20,15 +20,16 @@
 			</div>
 		</div>
 		<hr>
-		<div class="container title">
-			<h2 class="uppercase text-align-center color-dark">Our Mission</h2>
-			<div class="card flat">
-				<div class="margin-bottom-2"><img class="image center" src="images/suju-2.png" alt=""></div>
-				<p>Before Meowie was launched, we found that all the cats-related accessories are often cute and have an organic look. However, most of them do not give us the clean and simple feeling that we are looking for. So we decided to create our own cat-related products and share them with the public.</p>
-
+		<div class="container title color-dark">
+			<h2 class="uppercase margin-bottom-2 margin-top-5">Our Mission</h2>
+			<div class="display-flex">
+				<div class="card transparent flex-stretch" style="padding-left:0;">
+					<p class="color-dark">Before Meowie was launched, we found that all the cats-related accessories are often cute and have an organic look. However, most of them do not give us the clean and simple feeling that we are looking for. So we decided to create our own cat-related products and share them with the public.</p>
+				</div>
+				<div class="flex-none image boxshadow"><img src="images/suju-2.png" alt=""></div>
 			</div>
 		</div>
-
+		
 </body>
 
 <footer>

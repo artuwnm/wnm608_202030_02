@@ -33,8 +33,8 @@ $thumbs = explode(",",$o->images);
 				<div class="meow-icon">
 					<img src="images/Meow-icon.png" alt="">
 				</div>
-				<h1 class="">Thank You!</h1>
-				<p>Thank you for shopping at Meowie. Your order has been placed.</p>
+				<h1 >Thank You!</h1>
+				<p style="padding: 0 10em;">Thank you for shopping with Meowie. Your order has been placed and here is the confirmation number for your order: #12345678</p>
 				<div class="margin-top-2">
 					<a href="product_list.php" class="btn light">Continue Shopping</a>
 				</div>

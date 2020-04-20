@@ -73,7 +73,7 @@ include_once "parts/templates.php";
 						</ul>
 					</div>
 				</div>
-				<div class="accordion">
+				<!-- <div class="accordion">
 					<div class="display-flex accordion-header">
 						<div class="accordion-section flex-stretch uppercase">Price</div>
 						<div class="flex-none accordion-icon">+</div>
@@ -85,7 +85,7 @@ include_once "parts/templates.php";
 						</div>
 		
 					</div>
-				</div>
+				</div> -->
 			</div>
 
 			

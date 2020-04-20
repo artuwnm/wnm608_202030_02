@@ -4,6 +4,10 @@ $(".hamburger-menu").click(function(){
 		$(this).parent().toggleClass("activated");
 	});
 
+$(".nav-item").click(function(){
+		$(this).parents(".hamburger-nav").removeClass("activated");
+	});
+
 
 // Accordion created by Fifi Law
 
