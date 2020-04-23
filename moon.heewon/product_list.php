@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+
+include_once "lib/php/functions.php";
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Store: Product List</title>
@@ -41,138 +45,152 @@
 
 	<div class="container">
 		<div class="grid gap">
-			<div class="col-lg-4 col-xs-12">
-				<div class="card">
-					<figure class="product-figure">
-						<a href="product_item.php?id=skill_1">
-							<img src="img/yoga.jpg" alt="">
-						</a>
-							<figcaption>
-								<div>Yoga Lesson</div>
-								<div>$50.00/hr</div>
-							</figcaption>
-					</figure>
-				</div>
+			<div class="col-xs-6 col-md-4">
+	<a href="product_item.php?id=86" class="display-block">
+		<figure class="product-figure soft">
+			<div class="product-image">
+				<img src="img/yoga.jpg" alt="">
 			</div>
-
-				<div class="col-lg-4 col-xs-12">
-				<div class="card">
-					<figure class="product-figure">
-						<a href="product_item.php?id=skill_1">
-							<img src="img/surfing.jpg" alt="">
-						</a>
-							<figcaption>
-								<div>Surfing Lesson</div>
-								<div>$100.00/hr</div>
-							</figcaption>
-					</figure>
-				</div>
+			<figcaption class="product-description">
+				<div class="product-price">&dollar;50</div>
+				<div class="product-title">Yoga Lesson</div>
+			</figcaption>
+		</figure>
+	</a>
+</div><div class="col-xs-6 col-md-4">
+	<a href="product_item.php?id=86" class="display-block">
+		<figure class="product-figure soft">
+			<div class="product-image">
+				<img src="img/surfing.jpg" alt="">
 			</div>
-	
-			<div class="col-lg-4 col-xs-12">
-				<div class="card">
-					<figure class="product-figure">
-						<a href="product_item.php?id=skill_1">
-							<img src="img/flower.jpg" alt="">
-						</a>
-							<figcaption>
-								<div>Flower Arrangement</div>
-								<div>$30.00-$50</div>
-							</figcaption>
-					</figure>
-				</div>
+			<figcaption class="product-description">
+				<div class="product-price">&dollar;100</div>
+				<div class="product-title">Surfing Lesson</div>
+			</figcaption>
+		</figure>
+	</a>
+</div><div class="col-xs-6 col-md-4">
+	<a href="product_item.php?id=86" class="display-block">
+		<figure class="product-figure soft">
+			<div class="product-image">
+				<img src="img/flower.jpg" alt="">
 			</div>
-
-			<div class="col-lg-4 col-xs-12">
-				<div class="card">
-					<figure class="product-figure">
-						<a href="product_item.php?id=skill_1">
-							<img src="img/korean.jpg" alt="">
-						</a>
-							<figcaption>
-								<div>Korean Lesson</div>
-								<div>$50.00/hr</div>
-							</figcaption>
-					</figure>
-				</div>
+			<figcaption class="product-description">
+				<div class="product-price">&dollar;40</div>
+				<div class="product-title">Flower Arrangement</div>
+			</figcaption>
+		</figure>
+	</a>
+</div><div class="col-xs-6 col-md-4">
+	<a href="product_item.php?id=86" class="display-block">
+		<figure class="product-figure soft">
+			<div class="product-image">
+				<img src="img/korean.jpg" alt="">
 			</div>
-
-			<div class="col-lg-4 col-xs-12">
-				<div class="card">
-					<figure class="product-figure">
-						<a href="product_item.php?id=skill_1">
-							<img src="img/christmas.jpg" alt="">
-						</a>
-							<figcaption>
-								<div>Chreistmas Tree Decoration</div>
-								<div>$100.00</div>
-							</figcaption>
-					</figure>
-				</div>
+			<figcaption class="product-description">
+				<div class="product-price">&dollar;50</div>
+				<div class="product-title">Korean Lesson</div>
+			</figcaption>
+		</figure>
+	</a>
+</div><div class="col-xs-6 col-md-4">
+	<a href="product_item.php?id=86" class="display-block">
+		<figure class="product-figure soft">
+			<div class="product-image">
+				<img src="img/christmas.jpg" alt="">
 			</div>
-
-			<div class="col-lg-4 col-xs-12">
-				<div class="card">
-					<figure class="product-figure">
-						<a href="product_item.php?id=skill_1">
-							<img src="img/cook.jpg" alt="">
-						</a>
-							<figcaption>
-								<div>Korean Food Cooking Lesson</div>
-								<div>$45.00/hr</div>
-							</figcaption>
-					</figure>
-				</div>
+			<figcaption class="product-description">
+				<div class="product-price">&dollar;100</div>
+				<div class="product-title">Christmas Tree Decoration</div>
+			</figcaption>
+		</figure>
+	</a>
+</div><div class="col-xs-6 col-md-4">
+	<a href="product_item.php?id=86" class="display-block">
+		<figure class="product-figure soft">
+			<div class="product-image">
+				<img src="img/cook.jpg" alt="">
 			</div>
-
-			<div class="col-lg-4 col-xs-12">
-				<div class="card">
-					<figure class="product-figure">
-						<a href="product_item.php?id=skill_1">
-							<img src="img/photo.jpg" alt="">
-						</a>
-							<figcaption>
-								<div>Graduation Photo</div>
-								<div>$200.00</div>
-							</figcaption>
-					</figure>
-				</div>
+			<figcaption class="product-description">
+				<div class="product-price">&dollar;50</div>
+				<div class="product-title">Korean Food Cooking Lesson</div>
+			</figcaption>
+		</figure>
+	</a>
+</div><div class="col-xs-6 col-md-4">
+	<a href="product_item.php?id=86" class="display-block">
+		<figure class="product-figure soft">
+			<div class="product-image">
+				<img src="img/photo.jpg" alt="">
 			</div>
-
-			<div class="col-lg-4 col-xs-12">
-				<div class="card">
-					<figure class="product-figure">
-						<a href="product_item.php?id=skill_1">
-							<img src="img/construction.jpg" alt="">
-						</a>
-							<figcaption>
-								<div>Easy Construction</div>
-								<div>$70.00</div>
-							</figcaption>
-					</figure>
-				</div>
+			<figcaption class="product-description">
+				<div class="product-price">&dollar;200</div>
+				<div class="product-title">Graduation Photo</div>
+			</figcaption>
+		</figure>
+	</a>
+</div><div class="col-xs-6 col-md-4">
+	<a href="product_item.php?id=86" class="display-block">
+		<figure class="product-figure soft">
+			<div class="product-image">
+				<img src="img/construction.jpg" alt="">
 			</div>
-
-			<div class="col-lg-4 col-xs-12">
-				<div class="card">
-					<figure class="product-figure">
-						<a href="product_item.php?id=skill_1">
-							<img src="img/painting.jpg" alt="">
-						</a>
-							<figcaption>
-								<div>Wall Painting</div>
-								<div>$70.00</div>
-							</figcaption>
-					</figure>
-				</div>
+			<figcaption class="product-description">
+				<div class="product-price">&dollar;3.99</div>
+				<div class="product-title">Easy Construction</div>
+			</figcaption>
+		</figure>
+	</a>
+</div><div class="col-xs-6 col-md-4">
+	<a href="product_item.php?id=86" class="display-block">
+		<figure class="product-figure soft">
+			<div class="product-image">
+				<img src="img/painting.jpg" alt="">
 			</div>
-		</div>
-	</div>
-
-	
-			
-		</div>
-	</div>
-	
+			<figcaption class="product-description">
+				<div class="product-price">&dollar;70</div>
+				<div class="product-title">Painting Lesson</div>
+			</figcaption>
+		</figure>
+	</a>
+</div><div class="col-xs-6 col-md-4">
+	<a href="product_item.php?id=86" class="display-block">
+		<figure class="product-figure soft">
+			<div class="product-image">
+				<img src="img/yoga.jpg" alt="">
+			</div>
+			<figcaption class="product-description">
+				<div class="product-price">&dollar;70</div>
+				<div class="product-title">Yoga Lesson</div>
+			</figcaption>
+		</figure>
+	</a>
+</div><div class="col-xs-6 col-md-4">
+	<a href="product_item.php?id=86" class="display-block">
+		<figure class="product-figure soft">
+			<div class="product-image">
+				<img src="img/yoga.jpg" alt="">
+			</div>
+			<figcaption class="product-description">
+				<div class="product-price">&dollar;3.99</div>
+				<div class="product-title">Yoga Lesson</div>
+			</figcaption>
+		</figure>
+	</a>
+</div><div class="col-xs-6 col-md-4">
+	<a href="product_item.php?id=86" class="display-block">
+		<figure class="product-figure soft">
+			<div class="product-image">
+				<img src="img/yoga.jpg" alt="">
+			</div>
+			<figcaption class="product-description">
+				<div class="product-price">&dollar;3.99</div>
+				<div class="product-title">Yoga Lesson</div>
+			</figcaption>
+		</figure>
+	</a>
+</div>		</div>
+</div>
 </body>
 </html>
+
