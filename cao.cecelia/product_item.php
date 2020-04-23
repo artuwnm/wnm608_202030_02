@@ -1,31 +1,48 @@
-<!DOCTYPE html>
+<?php
+
+include_once "lib/php/function.php";
+include_once "parts/templates.php";
+
+$result = getRows(
+	makeConn(),
+	"SELECT *
+	FROM `product`
+	WHERE `id` = '{$_GET['id']}'
+	"
+);
+$o = $result[0];
+
+$thumbs = explode(",", $o->images);
+
+// print_p($result);
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Shop</title>
+	<title>Store: Product Item</title>
 
-	
 	<?php include "parts/meta.php" ?>
+
 </head>
 <body>
 
 	<?php include "parts/navbar.php" ?>
 
 	<div class="container">
-		<div class="grid gap large">
-			
-			<div class="col-xs-12 col-xl-6">
+		<div class="grid gap">
+			<div class="col-xs-12 col-md-7">
 			<div class="imagealign flex-start">
 
 			<div class="film">
 	
 	<div class="thumb-images">
 		
-			<img class="thumbmain" src="https://via.placeholder.com/400x500.png?text=shopping">
+			<img class="thumbmain" src="<?= $o->thumbnail ?>" alt="">
 			<img class="thumbsecondary" src="https://via.placeholder.com/400x500.png?text=style">
 	
 	</div>
 	<div class="big-image">
-		<img src="https://via.placeholder.com/400x500.png?text=shopping">
+		<img src="<?= $o->thumbnail ?>" alt="">
 		
 	</div>
 	<script>
@@ -54,9 +71,12 @@ $(".thumb-images img").on("click",function(){
 		</div>
 			</div>
 			
-			<div class="col-xs-12 col-xl-6">
+			<div class="col-xs-12 col-md-5">
 			<div>
-				<h3>This is Product <?=$_GET['id']?></h3>
+				<h2><?= $o->name ?></h2>
+				<div class="product-description">
+				<h4><?= $o->description ?></h4>
+			</div>
 			</div>
 		
 		<div id="accordion">
@@ -64,20 +84,22 @@ $(".thumb-images img").on("click",function(){
   <!-- item01 -->
   <li class="a-items">
     <input type="radio" name="ac" id="a1" class="hidden" />
-    <label for="a1">About Us</label>
+    <label for="a1">DESCRIPTION</label>
     <div class="a-content">
       
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam beatae maiores possimus sequi non quidem ad necessitatibus fugiat consectetur veritatis laboriosam ut soluta quis deleniti deserunt! Voluptate qui excepturi architecto.</p>
+    <div class="product-description">
+				<?= $o->description ?>
+			</div>
     </div>
   </li>
   
     <!-- item02 -->
     <li class="a-items">
     <input type="radio" name="ac" id="a2" class="hidden"/>
-    <label for="a2">Our Services</label>
+    <label for="a2">SHIPPING & RETURNING</label>
     <div class="a-content">
       
-      <p>Lorem ipsum dolor sit amet, quidem ad necessitatibus fugiat consectetur veritatis laboriosam ut soluta quis deleniti deserunt! Voluptate qui excepturi architecto.</p>
+     Lorem ipsum dolor sit amet, quidem ad necessitatibus fugiat consectetur veritatis laboriosam ut soluta quis deleniti deserunt! Voluptate qui excepturi architecto.
     </div>
   </li>
   
@@ -87,7 +109,7 @@ $(".thumb-images img").on("click",function(){
     <label for="a3">Keep In Touch</label>
     <div class="a-content">
      
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam beatae maiores possimus sequi non quidem ad necessitatibus fugiat consectetur veritatis laboriosam ut soluta.</p>
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam beatae maiores possimus sequi non quidem ad necessitatibus fugiat consectetur veritatis laboriosam ut soluta.
     </div>
   </li>
 </ul>
@@ -95,7 +117,7 @@ $(".thumb-images img").on("click",function(){
 		</div>
 		<div class="display-flex flex-justify-center">
 			<a href="cart.php" class="linkbutton">
-				ADD TO CART $98
+				ADD TO CART <div class="product-price">&dollar;<?= $o->price ?></div>
 
 			</a>
 			</div>
@@ -103,64 +125,53 @@ $(".thumb-images img").on("click",function(){
 </div>
 </div>
 
-<div class="containershop">
-	<div class="grid gap">
-			<!-- .col-xs-6*2>.card.soft>lorem30 -->
-
-			<div class="col-xs-12 col-xl-4">
-				<div class="display-flex flex-align-center flex-justify-center">
-				<div class="imagedecorarionrecommendation display-flex flex-align-center flex-justify-center">
+<div class="container">
+<div class="grid gap">
+	<div class="col-xs-6 col-md-4">
+	<a href="product_item.php?id=$o->id" class="display-block">
+		<figure class="product-figure">
+			<div class="imagedecorarionrecommendation display-flex flex-align-center flex-justify-center">
 					<h3>RECOMMENDATIONS</h3>
 					
 				</div>
-				
-				</div>	
-		</div>
-
 			
-				<div class="col-xs-12 col-xl-4">
-				<div class="display-flex flex-align-center flex-justify-center">
-				<div id="rectangle">
-				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
-					
-				</div>
-				<div class="form-control display-flex">
-				<div class="flex-none">
-					<h4>Baby Earings</h4>
-				</div>
+		</figure>
+	</a>
+</div>
+
+	<div class="col-xs-6 col-md-4">
+	<a href="product_item.php?id=$o->id" class="display-block">
+		<figure class="product-figure">
+			<div class="product-image">
+				<img src="images/babyearings_thumbnail.jpg" alt="">
+			</div>
+			<div class="form-control display-flex">
+				<div class="flex-none">Baby Earings</div>
 				<div class="flex-stretch"></div>
-				<div class="flex-none">
-					<h4>$98.00</h4>
-				</div>
-			</div>	
-				</div>
-				</div>	
-		</div>
-
-				<div class="col-xs-12 col-xl-4 ">
-				<div class="display-flex flex-align-center flex-justify-center">
-				<div id="rectangle" >
-				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
-					
-				</div>	
-				<div class="form-control display-flex">
-				<div class="flex-none">
-					<h4>Baby Earings</h4>
-				</div>
+				<div class="flex-none">$98.98</div>
+			</div>
+			
+		</figure>
+	</a>
+</div>
+	
+	<div class="col-xs-6 col-md-4">
+	<a href="product_item.php?id=$o->id" class="display-block">
+		<figure class="product-figure">
+			<div class="product-image">
+				<img src="images/babyearings_thumbnail.jpg" alt="">
+			</div>
+			<div class="form-control display-flex">
+				<div class="flex-none">Baby Earings</div>
 				<div class="flex-stretch"></div>
-				<div class="flex-none">
-					<h4>$98.00</h4>
-				</div>
+				<div class="flex-none">$98.98</div>
 			</div>
-			</div>
-
-			</div>
-				
-			</div>
-
-			</div>
+			
+		</figure>
+	</a>
+</div>
 		</div>
-
+</div>
 	
 </body>
 <?php include "parts/footer.php" ?>

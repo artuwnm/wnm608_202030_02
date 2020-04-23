@@ -218,13 +218,13 @@ code {
 }
 
 .big-image{
-	width: 100%;
+	width: 80%;
 	position: relative;
 	margin-bottom: 0.25em;
 }
 
 .big-image img{
-	max-width: 100%;
+	max-width: 80%;
 }
 
 .thumb-images {

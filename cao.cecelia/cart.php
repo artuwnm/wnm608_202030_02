@@ -1,55 +1,65 @@
-<!DOCTYPE html>
+<?php
+
+include_once "lib/php/function.php";
+include_once "parts/templates.php";
+
+$result = getRows(
+	makeConn(),
+	"SELECT *
+	FROM `product`
+	WHERE `id` IN (2,5,8)
+	"
+);
+
+// print_p($result);
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
-	
-	<title>Cart</title>
+	<title>Store: Cart</title>
 
-	<!-- meta:vp -->
 	<?php include "parts/meta.php" ?>
 
-
 </head>
-
 <body>
-		<?php include "parts/navbar.php" ?>
-		
-	
-	
-			
-			<div class="card flat">
-			<a href="shop.php"><h5>< Countinue Shopping</h5></a>
-			</div>
-			
 
-	
-	<div class="containerflat">
-		
-		<div class="grid gap large">
-			
-			<div class="col-xs-12 col-xl-8">
-				<h2>Find Our Store!</h2>
-			<table class="table simple lined outline horizontol">
-				<thead><tr><th>ID</th><th>Office</th><th>Name</th><th>Email</th><th>Phone</th></tr></thead>
-				<tbody><tr><td>1</td><td>522</td><td>Michael Catanzaro</td><td>jimmycats@academyart.edu</td><td>555-2424</td></tr><tr><td>2</td><td>512</td><td>Fred McHale</td><td>fmchale@academyart.edu</td><td>555-2424</td></tr><tr><td>3</td><td>522</td><td>Hamilton Cline</td><td>hcline@academyart.edu</td><td>555-2424</td></tr><tr><td>4</td><td>516</td><td>DC Scarpelli</td><td>dscarpelli@academyart.edu</td><td>555-2424</td></tr><tr><td>5</td><td>514</td><td>Andrea Pimentel</td><td>apimentel@academyart.edu</td><td>555-2424</td></tr></tbody>
-			</table>
-			</div>
-			<div class="col-xs-12 col-xl-4">
-			
-			<div class="card soft">
-			<h3>Order Summary</h3>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo cupiditate quasi excepturi repellendus nostrum, minus enim itaque suscipit quaerat iste.
-			<div class="display-flex flex-justify-center">
-			<a href="checkout.php" class="linkbutton">
-				CHECKOUT
+	<?php include "parts/navbar.php" ?>
 
-			</a>
+	<div class="container">
+		<nav class="nav-crumbs" style="margin:1em 0">
+			<ul>
+				<li><a href="product_list.php">< Continue Shopping</a></li>
+			</ul>
+		</nav>
+
+		<div class="grid gap">
+			<div class="col-xs-12 col-md-8">
+				<div class="card">
+				<?php
+				echo array_reduce($result,'cartListTemplate');
+				?>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="card">
+					<h2>Totals</h2>
+					<div>
+						<strong>Products</strong>
+						<span>$13</span>
+					</div>
+					<div>
+						<strong>Tax</strong>
+						<span>$13</span>
+					</div>
+					<div>
+						<strong>Total</strong>
+						<span>$13</span>
+					</div>
+					<div><a href="checkout.php" class="form-button">Checkout</a></div>
+				</div>
 			</div>
 		</div>
-			
-		</div>
-			</div>
-		</div>
-
-		<?php include "parts/footer.php" ?>
+	</div>
+	
 </body>
 </html>

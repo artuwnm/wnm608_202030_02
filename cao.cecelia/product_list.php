@@ -1,35 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Store: Product List</title>
+	
+	<title>Shop</title>
 
+	
 	<?php include "parts/meta.php" ?>
-	
-	
+
 </head>
-<body>
-
 	<?php include "parts/navbar.php" ?>
-
-	<div class="container">
-		<div class="card soft">
-			<h2>Product List</h2>
-
-			<!-- ul>li*10>a[href="#$"]>{Product $} -->
-			<ul>
-				<li><a href="product_item.php?id=1">Product 1</a></li>
-				<li><a href="product_item.php?id=2">Product 2</a></li>
-				<li><a href="product_item.php?id=3">Product 3</a></li>
-				<li><a href="product_item.php?id=4">Product 4</a></li>
-				<li><a href="product_item.php?id=5">Product 5</a></li>
-				<li><a href="product_item.php?id=6">Product 6</a></li>
-				<li><a href="product_item.php?id=7">Product 7</a></li>
-				<li><a href="product_item.php?id=8">Product 8</a></li>
-				<li><a href="product_item.php?id=9">Product 9</a></li>
-				<li><a href="product_item.php?id=10">Product 10</a></li>
-			</ul>
-		</div>
-	</div>
 	
+	<div class="homebgimage">
+
+	<div class="advertisement">
+	<h1>HAVE AN EXCLAMATION POINT FOR YOU</h1>
+	<h4>Enjoy every moment in your life</h4>
+	</div>
+	</div>
+
+<body>
+		
+	
+			<div class="selectbox" align="right">
+			<div class="dropdown">
+    <select name="one" class="dropdown-select">
+      <option value="">Filter By</option>
+      <option value="1">Option #1</option>
+      <option value="2">Option #2</option>
+      <option value="3">Option #3</option>
+    </select>
+  </div>
+		</div>
+
+	<div class="containershop">
+	<div class="grid gap">
+			<!-- .col-xs-6*2>.card.soft>lorem30 -->
+
+			<div class="col-xs-12 col-lg-4">
+				<a href="product_item.php?id=1">
+				<div class="display-flex flex-align-center flex-justify-center">
+				
+				<div id="rectangle">
+				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
+					
+				</div>	
+				<div class="form-control display-flex">
+				<div class="flex-none">
+					<h4>Baby Earings</h4>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<h4>$98.00</h4>
+				</div>
+			</div>
+				</div>
+				</div>	
+				</a>
+			</div>
+			
+				<div class="col-xs-12 col-xl-4">
+				<a href="product_item.php?id=2">
+				<div class="display-flex flex-align-center flex-justify-center">
+				<div id="rectangle">
+				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
+					
+				</div>
+				<div class="form-control display-flex">
+				<div class="flex-none">
+					<h4>Baby Earings</h4>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<h4>$98.00</h4>
+				</div>
+			</div>	
+				</div>
+				</div>	
+				</a>
+			</div>
+
+				<div class="col-xs-12 col-xl-4 ">
+				<a href="product_item.php?id=3">
+				<div class="display-flex flex-align-center flex-justify-center">
+				<div id="rectangle" >
+				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
+					
+				</div>	
+				<div class="form-control display-flex">
+				<div class="flex-none">
+					<h4>Baby Earings</h4>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<h4>$98.00</h4>
+				</div>
+			</div>
+			</div>
+
+			</div>
+				
+			</div>
+
+			</div>
+		</a>
+		</div>
+
+
+		<div class="containershop">
+	<div class="grid gap">
+			<!-- .col-xs-6*2>.card.soft>lorem30 -->
+			<div class="col-xs-12 col-lg-4">
+				<a href="product_item.php?id=4">
+				<div class="display-flex flex-align-center flex-justify-center">
+				<div id="rectangle">
+				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
+					
+				</div>	
+				<div class="form-control display-flex">
+				<div class="flex-none">
+					<h4>Baby Earings</h4>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<h4>$98.00</h4>
+				</div>
+			</div>
+				</div>
+				</div>	
+			</a>
+			</div>
+			
+				<div class="col-xs-12 col-xl-4">
+				<a href="product_item.php?id=5">
+				<div class="display-flex flex-align-center flex-justify-center">
+				<div id="rectangle">
+				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
+					
+				</div>
+				<div class="form-control display-flex">
+				<div class="flex-none">
+					<h4>Baby Earings</h4>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<h4>$98.00</h4>
+				</div>
+			</div>	
+				</div>
+				</div>
+				</a>	
+				</div>
+
+				<div class="col-xs-12 col-xl-4 ">
+				<a href="product_item.php?id=6">
+				<div class="display-flex flex-align-center flex-justify-center">
+				<div id="rectangle" >
+				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
+					
+				</div>	
+				<div class="form-control display-flex">
+				<div class="flex-none">
+					<h4>Baby Earings</h4>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<h4>$98.00</h4>
+				</div>
+			</div>
+			</div>
+
+			</div>
+				
+			</div>
+
+			</div>
+		</a>
+		</div>
+
+
+		<div class="containershop">
+	<div class="grid gap">
+			<!-- .col-xs-6*2>.card.soft>lorem30 -->
+			<div class="col-xs-12 col-lg-4">
+				<a href="product_item.php?id=7">
+				<div class="display-flex flex-align-center flex-justify-center">
+				<div id="rectangle">
+				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
+					
+				</div>	
+				<div class="form-control display-flex">
+				<div class="flex-none">
+					<h4>Baby Earings</h4>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<h4>$98.00</h4>
+				</div>
+			</div>
+				</div>
+				</div>	
+			</a>
+			</div>
+			
+				<div class="col-xs-12 col-xl-4">
+				<a href="product_item.php?id=8">
+				<div class="display-flex flex-align-center flex-justify-center">
+				<div id="rectangle">
+				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
+					
+				</div>
+				<div class="form-control display-flex">
+				<div class="flex-none">
+					<h4>Baby Earings</h4>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<h4>$98.00</h4>
+				</div>
+			</div>	
+				</div>
+				</div>	
+				</a>
+				</div>
+
+				<div class="col-xs-12 col-xl-4 ">
+				<a href="product_item.php?id=9">
+				<div class="display-flex flex-align-center flex-justify-center">
+				<div id="rectangle" >
+				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
+					
+				</div>	
+				<div class="form-control display-flex">
+				<div class="flex-none">
+					<h4>Baby Earings</h4>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<h4>$98.00</h4>
+				</div>
+			</div>
+			</div>
+
+			</div>
+				
+			</div>
+
+			</div>
+		</a>
+		</div>
+
+
+
+		<div class="containershop">
+	<div class="grid gap">
+			<!-- .col-xs-6*2>.card.soft>lorem30 -->
+			<div class="col-xs-12 col-lg-4">
+				<a href="product_item.php?id=10">
+				<div class="display-flex flex-align-center flex-justify-center">
+				<div id="rectangle">
+				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
+					
+				</div>	
+				<div class="form-control display-flex">
+				<div class="flex-none">
+					<h4>Baby Earings</h4>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<h4>$98.00</h4>
+				</div>
+			</div>
+				</div>
+				</div>	
+			</a>
+			</div>
+			
+				<div class="col-xs-12 col-xl-4">
+				<a href="product_item.php?id=11">
+				<div class="display-flex flex-align-center flex-justify-center">
+				<div id="rectangle">
+				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
+					
+				</div>
+				<div class="form-control display-flex">
+				<div class="flex-none">
+					<h4>Baby Earings</h4>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<h4>$98.00</h4>
+				</div>
+			</div>	
+				</div>
+				</div>	
+			</a>
+			</div>
+
+				<div class="col-xs-12 col-xl-4 ">
+				<a href="product_item.php?id=12">
+				<div class="display-flex flex-align-center flex-justify-center">
+				<div id="rectangle" >
+				<div class="imagedecorarion display-flex flex-align-center flex-justify-center">
+					
+				</div>	
+				<div class="form-control display-flex">
+				<div class="flex-none">
+					<h4>Baby Earings</h4>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<h4>$98.00</h4>
+				</div>
+			</div>
+			</div>
+
+			</div>
+				
+			</div>
+
+			</div>
+		</a>
+		</div>
+
+		
 </body>
+<?php include "parts/footer.php" ?>
 </html>
