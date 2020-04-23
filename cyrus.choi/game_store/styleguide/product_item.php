@@ -1,3 +1,22 @@
+<?php
+
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+$result = getRows(
+	makeConn(),
+	"SELECT *
+	FROM `products`
+	WHERE `id` = '{$_GET['id']}'
+	"
+);
+$o = $result[0];
+
+$thumbs = explode(",", $o->images);
+
+// print_p($result);
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

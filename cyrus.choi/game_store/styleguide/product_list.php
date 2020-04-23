@@ -1,3 +1,20 @@
+<?php
+
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+$result = getRows(
+	makeConn(),
+	"SELECT *
+	FROM `products`
+	ORDER BY `date_create` DESC
+	LIMIT 12
+	"
+);
+
+// print_p($result);
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,6 +45,14 @@
 				<li><a href="product_item.php?id=9">Product 9</a></li>
 				<li><a href="product_item.php?id=10">Product 10</a></li>
 			</ul>
+		</div>
+
+		<div class="grid gap">
+		<?php
+
+		echo array_reduce($result,'productListTemplate');
+
+		?>
 		</div>
 	</div>
 	
