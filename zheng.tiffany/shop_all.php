@@ -7,7 +7,7 @@ $result = getRows(
 	makeConn(),
 	"SELECT * 
 	FROM `products`
-	ORDER BY `date_create` DESC
+	ORDER BY `price` DESC
 	LIMIT 12
 	"
 );

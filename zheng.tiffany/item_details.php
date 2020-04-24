@@ -13,9 +13,9 @@ $result = getRows(
 
 $o = $result[0];
 
-$thumbs = explode(",", $o->images)
+$thumbs = explode(", ", $o->images);
 
-// print_p($result);
+// print_p($_SESSION);
 
  ?><!DOCTYPE html>
 <html lang="en">
@@ -41,13 +41,13 @@ $thumbs = explode(",", $o->images)
 			<div class="col-xs-12 col-md-7">
 				<div class="card soft">
 					<div class="product-main">
-						<img src="images/<?= $o->thumbnail ?>" alt="">
+						<img src="<?= $o->thumbnail ?>" alt="">
 					</div>
 					<div class="product-thumbs">
 						<?php 
 
 						echo array_reduce($thumbs,function($r,$o){
-							return $r."<img src='images/$o'>";
+							return $r."<img src='$o'>";
 						})
 
 						?>
@@ -56,12 +56,33 @@ $thumbs = explode(",", $o->images)
 			</div>
 			<div class="col-xs-12 col-md-7">
 				<h1><?= $o->name ?></h1>
+				<form class="card soft flat" method="get" action="data/form_actions.php">
 				<div class="product-details">
 					<div class="product-price">&dollar;<?= $o->price ?></div>
 					<div class="product-description"><?= $o->description ?></div>
 				</div>
+				<div class="card-section">
+					<label class="form-label">Amount</label>
+					<select name="amount" class="form-button">
+						<!-- option*10>{$} -->
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
+					</select>
+				</div>
+
 				<div>
-					<a href="product_added_to_cart.php" class="form-button">Add To Bag</a>
+					<input type="hidden" name="action" value="add-to-cart">
+					<input type="hidden" name="id" value="<?= $o->id ?>">
+					<input type="hidden" name="price" value="<?= $o->price ?>">
+					<input type="submit" class="form-button" value="Add To Cart">
 				</div>
 			</div>
 		</div>
