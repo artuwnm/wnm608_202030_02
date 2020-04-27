@@ -15,7 +15,7 @@ $o = $result[0];
 $thumbs = explode(",", $o->images);
 
 // print_p($result);
-
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +34,8 @@ $thumbs = explode(",", $o->images);
 			<h2>Product Item</h2>
 
 			<div>
-				This is Product <?= $_GET['id'] ?>
+				<?= $o->name?>
+
 			</div>
 		</div>
 	</div>

@@ -2,9 +2,12 @@
 
 include "../lib/php/functions.php";
 
-// $filename = "notes.json";
-// $file = file_get_contents($filename);
-// $notes = json_decode($file);
+$filename = "notes.json";
+$file = file_get_contents($filename);
+$notes = json_decode($file);
+
+//echo $notes;
+//print_p($notes);
 
 // $filename = "../data/users.json";
 // $file = file_get_contents($filename);
@@ -12,8 +15,7 @@ include "../lib/php/functions.php";
 
 $notes = getData("notes.json");
 $users = getData("../data/users.json");
-
-// print_p($users);
+//print_p($users);
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -46,7 +48,7 @@ $users = getData("../data/users.json");
 
 			<ol>
 			<?php
-
+			
 			for($i=0; $i<count($users); $i++) {
 				echo "<li>
 					<strong>{$users[$i]->name}</strong>
