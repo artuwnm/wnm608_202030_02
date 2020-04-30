@@ -32,6 +32,20 @@ h5,
 h6 {
 	font-family: Georgia, "Times New Roman", serif;
 }
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+ul li {
+    list-style: none;
+}
+
+header {
+    background-color: #fff;
+    color: var(--color-neutral-dark);
+    line-height: var(--header-height);
+}
 
 a {
 	color: inherit;

@@ -38,6 +38,11 @@ section h2 {
 	display:inline-block;
 }
 
+.ctas {
+	    position: absolute;
+    right: 20px;
+    margin: 1rem auto 0;
+}
 
 [class*='col-']>.card {
 	margin: 0;
