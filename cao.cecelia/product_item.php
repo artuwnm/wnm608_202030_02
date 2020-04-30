@@ -88,7 +88,7 @@ $(".thumb-images img").on("click",function(){
     <input type="radio" name="ac" id="a2" class="hidden"/>
     <label for="a2">Shipping & Returning</label>
     <div class="a-content">
-      <p>Most J. Hannah fine jewelry is handmade to order. Due to the current closure of non-essential businesses in Los Angeles we cannot guarantee our regular lead time of 1-4 weeks. We are still accepting orders despite these delays and encourage customers to browse our index of in stock pieces which are able to ship in 1-2 days. </p>
+      <p>Pile on Pearls fine jewelry is handmade to order. Due to the current closure of non-essential businesses in Los Angeles we cannot guarantee our regular lead time of 1-4 weeks. We are still accepting orders despite these delays and encourage customers to browse our index of in stock pieces which are able to ship in 1-2 days. </p>
     </div>
   </li>
   
@@ -108,7 +108,7 @@ $(".thumb-images img").on("click",function(){
 						<input type="hidden" name="action" value="add-to-cart">
 						<input type="hidden" name="id" value="<?= $o->id ?>">
 						<input type="hidden" name="price" value="<?= $o->price ?>">
-						<input type="submit" class="form-button" value="Add To Cart &dollar;<?= $o->price ?>">
+						<input type="submit" class="linkbutton" value="Add To Cart &dollar;<?= $o->price ?>">
 
 			</div>
 				</form>

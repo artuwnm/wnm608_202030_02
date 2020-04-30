@@ -523,7 +523,7 @@ code {
   padding:0.5em;
   padding-left: 1em;
   padding-right: 1em;
-  margin-top: 5%;
+  margin-top: 5em;
   width: 12em;
   text-align: center;
 }
@@ -656,7 +656,7 @@ code {
 }
 .form-button {
     display: inline-block;
-    width: 50%;
+    width: 100%;
     border-width: 0;
     background-color: var(--color-main-dark);
     padding: 0.5em 1em;
@@ -668,6 +668,7 @@ code {
     text-decoration: none;
     outline:0;
     margin-top: 5em;
+    margin-bottom: 1em;
 }
 .form-button:hover {
     text-decoration: none;

@@ -3,13 +3,8 @@
 include_once "lib/php/function.php";
 include_once "parts/templates.php";
 
-$result = getRows(
-	makeConn(),
-	"SELECT *
-	FROM `product`
-	WHERE `id` IN (2,5,8)
-	"
-);
+
+$result = getCartItems();
 
 // print_p($result);
 
@@ -42,18 +37,7 @@ $result = getRows(
 			</div>
 			<div class="col-xs-12 col-md-4">
 				<div class="card">
-					<h2>Totals</h2>
-					<div>
-						<strong>Products</strong>
-						<span>$13</span>
-					</div>
-					<div>
-						<strong>Tax</strong>
-						<span>$13</span>
-					</div>
-					<div>
-						<strong>Total</strong>
-						<span>$13</span>
+					<?= cartTotals(); ?>
 					</div>
 					<div><a href="checkout.php" class="form-button">Checkout</a></div>
 				</div>
