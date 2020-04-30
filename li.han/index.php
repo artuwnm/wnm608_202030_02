@@ -10,19 +10,16 @@
 	<header >
 
 		<div class="container display-flex">
-			<div class="flex-stretch" align="center" style="margin-top: 1em">  
-				<img id="head" src="image/logo.png" alt="GLOWING BEAUTY" style="width: 12%">
-				<h1 id="head" >GLOWING BEAUTY</h1>
+			<div class="flex-stretch" align="center" style="margin-top: 0.8em">  
+				<img id="head" src="image/logo.png" alt="GLOWING BEAUTY" style="width: 5%">
+				<h1 id="head" ><a href="index.php">GLOWING BEAUTY</a></h1>
 			</div>
-			<nav class="nav flex-none" style="margin-top: 2%;margin-right: -3%">
+			<nav class="nav flex-none" style="margin-top: 2%">
 				<!-- ul>li*3>a[href=#]>{Link $} -->
 				<ul class="display-flex">
-					<li><a href="#"><img src="image/Profile.png" alt="" style="width: 55%"></a></li>
-					<li><a href="#"><img src="image/Heart.png" alt="" style="width: 55%;padding-top:8%"></a></li>
-					<li><a href="#"><img src="image/cart.png" alt="" style="width: 55%"></a></li>
+					<li><a href="product_cart.php"><img src="image/cart.png" alt="" style="width: 55%"></a></li>
 				</ul>
-				<form class="search" style="margin-top:3%;margin-left: 20%"><input type="text" name="search" placeholder="">
-			</form>
+			
 			</nav>
 		</div>
 	</header>

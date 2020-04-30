@@ -60,7 +60,6 @@ code {
 /* SMALL CLASSES */
 
 .container {
-	max-width:1000px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -72,13 +71,16 @@ code {
 
 /* ATOMIC CLASSES */
 
-.display-flex { display:flex; }
+.display-flex { display:flex;
+ justify-content: space-around; }
 .display-inline-flex { display:inline-flex; }
 .display-block { display:block; }
 .display-inline-block { display:inline-block; }
 
-.flex-stretch { flex: 1 1 auto; }
-.flex-none { flex: none; }
+.flex-stretch { flex: 1 1 auto; 
+ }
+.flex-none { flex: none; 
+}
 
 .flex-align-center { align-items:center; }
 .flex-justify-center { justify-content:center; }

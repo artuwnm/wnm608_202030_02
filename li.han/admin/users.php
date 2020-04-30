@@ -140,7 +140,7 @@ HTML;
 	<header class="navbar">
 		<div class="container display-flex">
 			<div class="flex-stretch">
-				<img id="head" src="image/logo.png" alt="GLOWING BEAUTY" style="width: 8%; margin-top: 1%">
+				<a href="index.php"> <img id="head" src="image/logo.png" alt="GLOWING BEAUTY" style="width: 8%; margin-top: 1%"></a>
 				<h1 id="head" style="font-size: 1.7em">Admin</h1>
 			</div>
 			<nav class="nav-flex flex-none">

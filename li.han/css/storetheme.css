@@ -77,7 +77,6 @@ section h2 {
 	}
 
 input[type=text] {
-  width: 70px;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
   border-radius: 100px;
