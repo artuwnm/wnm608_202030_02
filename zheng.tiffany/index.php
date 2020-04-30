@@ -26,36 +26,54 @@
 		<h2>Women</h2>
 		<div class="grid gap">
 			<div class="col-xs-12 col-md-6 col-lg-4">
-				<div class="card light">
-					<button><h3>Shop</h3></button>
+				<div class="product-figure card light">
+					<a href="item_details.php?id=3">
+						<button><h3>Shop</h3></button>
+					</a>
+					<img src="images/sundaze_dress_thumbnail.jpg" alt="Sundaze Dress">
 				</div>
 			</div>
 			<div class="col-xs-12 col-md-6 col-lg-4">
-				<div class="card light">
-					<button><h3>Shop</h3></button>
+				<div class="product-figure card light">
+					<a href="item_details.php?id=6">
+						<button><h3>Shop</h3></button>
+					</a>
+					<img src="images/bliss_dress_thumbnail.jpg" alt="Bliss Dress">
 				</div>
 			</div>
 			<div class="col-xs-12 col-md-6 col-lg-4">
-				<div class="card light">
-					<button><h3>Shop</h3></button>
+				<div class="product-figure card light">
+					<a href="item_details.php?id=4">
+						<button><h3>Shop</h3></button>
+					</a>
+					<img src="images/beachy_top_thumbnail.jpg" alt="Beachy Top">
 				</div>
 			</div>
 		</div>
 		<h2>Men</h2>
 		<div class="grid gap">
 			<div class="col-xs-12 col-md-6 col-lg-4">
-				<div class="card light">
-					<button><h3>Shop</h3></button>
+				<div class="product-figure card light">
+					<a href="item_details.php?id=12">
+						<button><h3>Shop</h3></button>
+					</a>
+					<img src="images/desert_shirt_thumbnail.jpg" alt="Desert Shirt">
 				</div>
 			</div>
 			<div class="col-xs-12 col-md-6 col-lg-4">
-				<div class="card light">
-					<button><h3>Shop</h3></button>
+				<div class="product-figure card light">
+					<a href="item_details.php?id=10">
+						<button><h3>Shop</h3></button>
+					</a>
+					<img src="images/heavens_above_shirt_thumbnail.jpg" alt="Heavens Above Shirt">
 				</div>
 			</div>
 			<div class="col-xs-12 col-md-6 col-lg-4">
-				<div class="card light">
-					<button><h3>Shop</h3></button>
+				<div class="product-figure card light">
+					<a href="item_details.php?id=11">
+						<button><h3>Shop</h3></button>
+					</a>
+					<img src="images/boho_shirt_thumbnail.jpg" alt="Boho Shirt">
 				</div>
 			</div>
 		</div>

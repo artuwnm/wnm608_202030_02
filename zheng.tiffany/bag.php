@@ -28,10 +28,10 @@ $result = getCartItems();
 		<h1 class="center">Shopping Bag</h1>
 		<div class="grid gap">
 			<div class="col-xs-12 col-md-8">
-				<div class="card">
-				<?php
-				echo array_reduce($result,'cartListTemplate');
-				?>
+				<div class="card flat">
+					<?php
+					echo array_reduce($result,'cartListTemplate');
+					?>
 				</div>
 			</div>
 			<div class="col-xs-12 col-md-4">

@@ -19,25 +19,53 @@ HTML;
 }
 
 function cartListTemplate($r,$o) {
+// $hascase = rand(0,1) ? "case: big" : "";
+// $amount = rand(1,5);
+$pricefixed = number_format($o->total,2,'.','');
+$selectAmount = selectAmount($o->amount);
 return $r.<<<HTML
-<div class="display-flex">
+<div class="display-flex card-section">
 	<div class="flex-none product-thumbs">
 		<img src="$o->thumbnail">
 	</div>
 	<div class="flex-stretch">
 		<div class="display-flex">
 			<div class="flex-stretch">
-				<strong>$o->name</strong>
-				<div>Delete</div>
+				<strong>$o->name ($o->amount)</strong>
 			</div>
 			<div class="flex-none">
-				&dollar;$o->total
+				&dollar;$pricefixed
 			</div>
+		</div>
+		<div class="display-flex" style="font-size:0.8em">
+			<form class="flex-none" method="get" action="data/form_actions.php">
+				<input type="hidden" name="action" value="delete-cart-item">
+				<input type="hidden" name="id" value="$o->id">
+				<button type="submit" class="form-button">Delete</button>
+			</form>
+			<div class="flex-stretch"></div>
+			<form class="flex-none" method="get" action="data/form_actions.php" onchange="this.submit()">
+				<input type="hidden" name="action" value="update-cart-amount">
+				<input type="hidden" name="id" value="$o->id">
+				$selectAmount
+			</form>
 		</div>
 	</div>
 </div>
 HTML;
 }
+
+
+function selectAmount($amount=1,$total=10) {
+	$output = "<select name='amount' class='form-button'>";
+	for($i=1;$i<=$total;$i++) {
+		$output .= "<option ".($i==$amount?"selected":"").">$i</option>";
+	}
+	$output .= "</select>";
+	return $output;
+}
+
+
 
 
 function cartTotals() {
@@ -80,6 +108,13 @@ return <<<HTML
 	</div>
 </div>
 HTML;
+}
+
+
+function makeCartBadge() {
+	if(!isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
+		return "";
+	} else return "(".array_reduce($_SESSION['cart'],function($r,$o){ return $r + $o->amount; },0).")";
 }
 
 
