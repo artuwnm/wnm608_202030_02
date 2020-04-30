@@ -26,9 +26,105 @@ body {
 	margin:0;
 	font-size:100%;
 	font-family:sans-serif;
-	background-color: var(--color-main-light);
+	background-color: white;
 }
 
+li{list-style-type: none;
+
+}
+
+a{
+  text-decoration: none;
+  color: black
+}
+
+.display-flex { display:flex; }
+.display-inline-flex { display:inline-flex; }
+.display-block { display:block; }
+.display-inline-block { display:inline-block; }
+
+.flex-stretch { flex: 1 1 auto; }
+.flex-none { flex: none; }
+
+.flex-align-center { align-items:center; }
+.flex-justify-center { justify-content:center; }
+
+
+
+
+
+
+
+/*text*/
+h1{
+  text-align: center;
+  padding-top: 30vh;
+}
+
+h2{
+  padding: 1em 0;
+  text-align: center;
+}
+
+h3{
+  text-align: center;
+  color: var(--color-main-medium);
+}
+
+h4{
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: 1.2rem;
+}
+
+/*button*/
+.btn-color{
+  display: block;
+  border: 2px solid var(--color-main-medium);
+  padding: 0.6em 1.2em;
+  border-radius: 0.15em;
+  background-color: none;
+  color: var(--color-main-medium);
+  font-size: 1.4rem;
+  text-align: center;
+  transition: all: 0.25s;
+}
+
+.btn-color:hover{
+  background-color: var(--color-main-medium);
+  color: white;
+}
+
+.btn-plain{
+  display: block;
+  font-size: 1.4rem;
+  color: black;
+  text-align: center;
+  padding: 0.6em 0;
+  transition: all: 0.25s;
+}
+
+.btn-plain:hover{
+  color: var(--color-main-medium);
+}
+
+
+.float-cart{
+  position:fixed;
+  width: 75px;
+  top: 80vh;
+  left: 10vw;
+  
+  border-radius: 50%;
+  z-index: 999;
+}
+/*containers*/
+
+.container{
+width: 80vw;
+margin: 0 auto;
+
+}
 
 .container-right{
 	width: 70vw;
@@ -79,24 +175,50 @@ body {
 
 
 /*Navigations*/
+.nav-crumbs{
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0.8em 0;
+}
+.nav-crumbs ul{
+   margin: 0;
+}
+.nav-crumbs a:hover{
+  color: var(--color-main-medium);
+}
+
+
+
+
 .tnav-drop {
   overflow: hidden;
   background-color: var(--color-neutral-light);
+  border: none;
+  outline: none;
  
 }
 
+.tnav-container{
+  width: 80vw;
+  margin: 0 auto;
+}
+
 .tnav-drop a {
-  float: left;
-  font-size: 1rem;
+  float: right;
+  font-size: 1.1rem;
   color: black;
   text-align: center;
-  padding: 0.9em 1em;
+  padding: 0.9em 1.5em;
   text-decoration: none;
+}
+
+.logo a{
+  float:left;
 }
 
 /* The dropdown container */
 .tnav-dropdown {
-  float: left;
+  float: right;
   overflow: hidden;
 }
 
@@ -106,7 +228,7 @@ body {
   outline: none;
   color: black;
   font-size: 1rem;
-  padding: 0.9em 1em;
+  
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
@@ -114,7 +236,7 @@ body {
 
 /* Add a red background color to navbar links on hover */
 .tnav-drop a:hover, .tnav-dropdown:hover .tnav-btn {
-  background-color: var(--color-main-light);
+  color: var(--color-main-medium);
 
 }
 
@@ -140,7 +262,7 @@ body {
 
 /* Add a grey background color to dropdown links on hover */
 .tnav-drop-content a:hover {
-  background-color: var(--color-main-light);
+  color: var(--color-main-medium);
 }
 
 /* Show the dropdown menu on hover */
@@ -210,13 +332,32 @@ body {
 }
 
 
+.product-main img {
+ width: 100%;
+}
+
+.product-thumbs img {
+ width: 80%;
+ float: right;
+ margin-bottom: 1.5rem;
+}
+
+.cart-thumbs img{
+  width: 100px;
+  height: 100px;
+}
+
+
+
 /*Slide*/
 .mySlides {display:none}
 
 .slideshow-container {
-  height: 80vh;
+  width:100%;
+
   position: relative;
-  margin: auto;
+  margin-left: 0;
+  margin-top: 1.5rem;
   overflow: hidden;
 }
 
@@ -255,8 +396,8 @@ body {
   top: 50%;
   left: 50%;
   margin-top: -2em;
-  margin-left: -10em;
-  width: 20em;
+  margin-left: -7.5em;
+  width: 15em;
   text-align: center;
   border: solid;
   border-radius: 0.2em;
@@ -266,7 +407,7 @@ body {
 
 .slide-btn a{
   color: #f2f2f2;
-  font-size: 2.5em;
+  font-size: 1.8rem;
   text-decoration: none;
 
 }
@@ -472,6 +613,11 @@ img{
 	box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.card-light{
+  background-color: var(--color-neutral-light);
+  padding: 1em;
+}
+
 /*tables*/
 .table {
 	width:100%;
@@ -503,3 +649,116 @@ img{
 	.table.lined.outline {
 		border:1px solid var(--color-neutral-light);
 	}
+
+
+/* FORMS */
+.form{
+  margin: 0
+  padding: 0;
+  
+}
+
+.form-control {
+  margin: 1em 0;
+}
+.form-input {
+  display: inline-block;
+  width: 100%;
+  color: inherit;
+  font: inherit;
+  border-width: 0;
+  background-color: transparent;
+  border-bottom: 1px solid var(--color-neutral-light);
+  padding: 0.5em 1em;
+  outline: 0;
+}
+.form-input:focus {
+  border-bottom-color:var(--color-main-medium);
+}
+.form-label {
+  display: inline-block;
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--color-neutral-dark);
+}
+.form-btn-sm {
+  display: inline-block;
+  width: 2.8em;
+  margin: 0.5em 0;
+  border-width: 0;
+  background-color: var(--color-neutral-light);
+  padding: 0.3em 1em;
+  color: inherit;
+  font: inherit;
+  text-align: center;
+  border-radius: 0.3em;
+  cursor: pointer;
+  text-decoration: none;
+  outline:0;
+  -webkit-appearance: none;
+}
+
+.form-btn-sm:hover {
+  text-decoration: none;
+}
+.form-btn:active {
+  background-color:var(--color-main-medium);
+}
+
+.form-btn-color{
+  display: block;
+  border: 2px solid var(--color-main-medium);
+  padding: 0.6em 2em;
+  margin: 1em 0;
+  border-radius: 0.1em;
+  background-color: white;
+  color: var(--color-main-medium);
+  font-size: 1.4rem;
+  text-align: center;
+  transition: all: 0.25s;
+}
+
+.form-btn-color:hover{
+  background-color: var(--color-main-medium);
+  color: white;
+  outline: none;
+}
+
+
+.hotdog {
+  display: inline-block;
+  width: 100%;
+  border-width: 0;
+  background-color: var(--color-neutral-light);
+  padding: 0.5em 1em;
+  font: inherit;
+  color: inherit;
+  border-radius: 2em;
+  outline:0;
+  display:flex;
+}
+
+.hotdog input {
+  background-color:transparent;
+  color:inherit;
+  font:inherit;
+  border-width:0;
+  line-height:inherit;
+  width:100%;
+  display:block;
+  outline:0;
+  padding:0 1em;
+}
+.delete-btn{
+  border: none;
+  background-color:white;
+}
+.delete-btn svg{
+  width: 25px;
+  height: 25px;
+  fill: var(--color-neutral-medium);
+}
+
+.delete-btn svg:hover{
+  fill: var(--color-main-medium);
+}

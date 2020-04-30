@@ -1,0 +1,93 @@
+*, *::before, *::after {
+	box-sizing:border-box;
+}
+
+:root {
+	font-size: 16px;
+
+  --color-neutral-dark: #333;
+  --color-neutral-medium: #999;
+  --color-neutral-light: #eee;
+
+  --color-warm-dark: #333;
+  --color-warm-medium: #999;
+  --color-warm-light: #F2EBDC;
+
+  --color-main-dark: #034066;
+  --color-main-medium: #D98484;
+  --color-main-light: #F2C2C2;
+
+  --header-height:3rem;
+}
+
+.product-caption{
+  text-align: center;
+  color: var(--color-neutral-dark);
+  padding: 1.5em 0;
+}
+
+.caption-price{
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+.product-about{
+	margin-left: 1rem;
+
+}
+
+.product-name{
+	font-size: 2rem;
+	font-weight: bold;
+	padding-bottom: 1em;
+}
+
+.product-price{
+	font-size: 2rem;
+	color: var(--color-main-medium);
+	font-weight: bold;
+	padding: 0.6em 0;
+
+}
+
+.product-description{
+	font-size: 16px;
+	line-height: 2em;
+}
+
+.about-img img{
+  float:left;
+}
+
+.added-container{
+  width: 65vw;
+  margin: 0 auto;
+}
+
+.thankyou{
+  background-color: var(--color-neutral-light);
+  font-size: 1.1em;
+  padding: 1em 1em;
+  margin-bottom: 3em;
+}
+
+.cart-caption{
+  flex: 1 1 auto;
+  margin: 0 1em;
+}
+
+.cart-section{
+  border-bottom: 1px solid var(--color-main-medium);
+  margin: 0 1em;
+  padding: 0.5em;
+}
+
+.cart-subtotal,.cart-total{
+  line-height: 2em;
+}
+
+.cart-total{
+  border-top: 1px solid #333;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
