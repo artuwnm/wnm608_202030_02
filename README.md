@@ -3,9 +3,10 @@
 ## Links
 
 - https://moonmoon94.com
-- https://moonmoon94.com/aau/wnm608_02/index.html
-- https://moonmoon94.com/aau/wnm608_02/recipes
-- https://moonmoon94.com/aau/wnm608_02/styleguide/index.html
+- https://moonmoon94.com/aau/wnm608_02/moon.heewon
+- https://moonmoon94.com/aau/wnm608_02/moon.heewon/recipes
+- https://moonmoon94.com/aau/wnm608_02/moon.heewon/styleguide
+- https://moonmoon94.com/aau/wnm608_02/moon.heewon/admin/users.php
 
 ## Git
 - git status
