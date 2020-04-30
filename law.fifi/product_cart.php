@@ -3,16 +3,12 @@
 include_once "lib/php/function.php";
 include_once "parts/templates.php";
 
-$result = getRows(
-	makeConn(),
-	"SELECT *
-	FROM `products`
-	WHERE `id` IN (2,6,10)
-	"
-);
 
-$o = $result[0];
-$thumbs = explode(",",$o->images);
+$result = getCartItems();
+
+// $o = $result[0];
+
+// $thumbs = explode(",",$o->images);
 
 // print_p($result);
 
@@ -21,7 +17,7 @@ $thumbs = explode(",",$o->images);
 	<head>
 		<?php include "parts/meta.php" ?>
 
-		<title>Add to cart</title>
+		<title>Cart</title>
 	</head>
 	<body>
 	
@@ -38,16 +34,7 @@ $thumbs = explode(",",$o->images);
 						 ?>
 					</div>
 				<div class="card flat col-md-4">
-					<div>
-						<h2>Subtotal</h2>
-					</div>
-					<div>
-						<p>Products:$75</p>
-					</div>
-					<div><p>Tax:$10</p>	</div>				
-					<div>
-						<p>Total:$85</p>
-					</div>
+					<?= cartTotal(); ?>
 					<div>
 						<a href="checkout.php" class="btn dark form-button">Checkout</a>
 					</div>

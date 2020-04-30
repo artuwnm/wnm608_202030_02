@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Welcome to Meowie</title>
+	<title>About Meowie</title>
 	<?php include "parts/meta.php" ?>
 	
 </head>

@@ -1238,32 +1238,87 @@
 		<h2 id="flex">Flex System</h2>
 		<div class="card">
 			<code class="card code">
-&lt;div class="display-flex flex-justify-center">
-	&lt;div class="card dark flex-scretch">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita possimus harum voluptas repellendus animi dolore nemo eum magni distinctio eos&lt;/div>
-	&lt;div class="flex-none" style="width: 15px">&lt;/div>
-	&lt;div class="card dark flex-scretch">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita possimus harum voluptas repellendus animi dolore nemo eum magni distinctio eos?&lt;/div>
-&lt;/div>
-&lt;div class="display-flex flex-justify-between">
-	&lt;div class="card soft flex-stretch">
-		&lt;h1 class=" text-align-center">Logo&lt;/h1>
+&lt;div class="card soft">
+	&lt;div class="display-flex added-to-cart margin-bottom-2">
+		&lt;div class="cart-img flex-none">
+			&lt;img  src="https://via.placeholder.com/200?text=1" alt="">
+		&lt;/div>
+		&lt;div class="flex-stretch">
+			&lt;div class="display-flex">
+				&lt;div class="flex-stretch">
+					&lt;h3 class="medium-color">Thank you! 1 qty of the product has been added to cart.&lt;/h3>
+				&lt;/div>
+				&lt;div class="flex-none" >
+					&lt;a href="product_list.php" class="btn dark">Continue Shopping&lt;/a>
+			
+					&lt;a href="product_cart.php" class="btn light">View Cart&lt;/a>
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
 	&lt;/div>
-	&lt;div class="flex-none" style="width: 15px">&lt;/div>
-&lt;&lt;img src="https://via.placeholder.com/200?text=Product+image" alt="">
-
 &lt;/div>
 			</code>
-			<div class="display-flex flex-justify-center">
-				<div class="card dark flex-scretch">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita possimus harum voluptas repellendus animi dolore nemo eum magni distinctio eos?</div>
-				<div class="flex-none" style="width: 15px"></div>
-				<div class="card dark flex-scretch">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita possimus harum voluptas repellendus animi dolore nemo eum magni distinctio eos?</div>
-			</div>
-			<div class="display-flex flex-justify-between">
-				<div class="card soft flex-stretch">
-					<h1 class=" text-align-center">Logo</h1>
+			<div class="card soft">
+				<div class="display-flex added-to-cart margin-bottom-2">
+					<div class="cart-img flex-none">
+						<img  src="https://via.placeholder.com/200?text=1" alt="">
+					</div>
+					<div class="flex-stretch">
+						<div class="display-flex">
+							<div class="flex-stretch">
+								<h3 class="medium-color">Thank you! 1 qty of the product has been added to cart.</h3>
+							</div>
+							<div class="flex-none" >
+								<a href="product_list.php" class="btn dark">Continue Shopping</a>
+						
+								<a href="product_cart.php" class="btn light">View Cart</a>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="flex-none" style="width: 15px"></div>
-				<img src="https://via.placeholder.com/200?text=Product+image" alt="">
+			</div>
 
+
+
+			<div class="card soft">
+				<div class="display-flex">		
+					<div class="image flex-none cart-img">
+						<img  src="https://via.placeholder.com/200?text=1" alt="">
+					</div>
+					<div class="flex-stretch">
+						<div class="display-flex">
+							<div class="flex-stretch">
+								<h4>productName (2)</h4>										
+								<form method="get" action="">
+									<input type="hidden" name="action" value="delete-cart-item">
+									<input type="hidden" name="id" value="">
+									<button type="submit" class="btn delete">Delete</button>
+								</form>
+							</div>
+							<div class="flex-none">
+								<h5>$30</h5>
+								<div class="select-amount">
+									<div class="card-section">
+ 									
+ 									<select name="amount" class="dropdown-selection display-block">
+ 										<!-- option*10>{$} -->
+ 										<option>1</option>
+ 										<option>2</option>
+ 										<option>3</option>
+ 										<option>4</option>
+ 										<option>5</option>
+ 										<option>6</option>
+ 										<option>7</option>
+ 										<option>8</option>
+ 										<option>9</option>
+ 										<option>10</option>
+ 									</select>
+ 								</div>
+								</div>
+							</div>
+						</div>			
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>

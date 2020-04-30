@@ -3,13 +3,20 @@
 include_once "lib/php/function.php";
 include_once "parts/templates.php";
 
-$result = getRows(
-	makeConn(),
-	"SELECT *
-	FROM `products`
-	WHERE `id` = '{$_GET['id']}'
-	"
-);
+
+$p = cartItemByID($_GET['id']);
+
+$o = getRows(makeConn(),"SELECT * FROM `products` WHERE `id` = '{$_GET['id']}'")[0];
+
+// print_p($p,$o);
+
+// $result = getRows(
+// 	makeConn(),
+// 	"SELECT *
+// 	FROM `products`
+// 	WHERE `id` = '{$_GET['id']}'
+// 	"
+// );
 
 $randProducts = getRows(
 	makeConn(),
@@ -20,7 +27,7 @@ $randProducts = getRows(
 	"
 );
 
-$o = $result[0];
+// $o = $result[0];
 $thumbs = explode(",",$o->images);
 
 // print_p($result);
@@ -49,7 +56,7 @@ $thumbs = explode(",",$o->images);
 					<div class="flex-stretch">
 						<div class="display-flex">
 							<div class="flex-stretch">
-								<h3 class="medium-color"><?= $o->productName ?> is added to cart.</h3>
+								<h3 class="medium-color">Thank you! <?= $p->amount ?> of <?= $o->productName?> has been added to cart.</h3>
 							</div>
 							<div class="flex-none" >
 								<a href="product_list.php" class="btn dark">Continue Shopping</a>
