@@ -1,5 +1,10 @@
 <?php
 
+
+session_start();
+
+
+
 function print_p($v) {
 	echo "<pre>",print_r($v),"</pre>";
 }
@@ -9,7 +14,7 @@ function getData($str) {
 	return json_decode(file_get_contents($str));
 }
 
-// include, require, include_once, require_once
+
 // include, require, include_once, require_once
 include_once "auth.php";
 function makeConn() {
@@ -36,6 +41,10 @@ function getRows($conn,$sql) {
 
 	return $a;
 }
+
+
+
+
 
 // CART FUNCTIONS
 

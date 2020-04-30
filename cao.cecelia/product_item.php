@@ -109,8 +109,10 @@ $(".thumb-images img").on("click",function(){
 						<input type="hidden" name="id" value="<?= $o->id ?>">
 						<input type="hidden" name="price" value="<?= $o->price ?>">
 						<input type="submit" class="linkbutton" value="Add To Cart &dollar;<?= $o->price ?>">
+						
 
 			</div>
+			
 				</form>
 	</div>
 </div>

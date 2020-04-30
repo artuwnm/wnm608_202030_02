@@ -5,16 +5,14 @@ function productListTemplate($r,$o) {
 return $r.<<<HTML
 <div class="col-xs-6 col-md-4">
 	<a href="product_item.php?id=$o->id" class="display-block">
-		<figure class="product-figure">
+		<figure class="product-figure soft">
 			<div class="product-image">
 				<img src="$o->thumbnail" alt="">
 			</div>
-			<div class="form-control display-flex">
-				<div class="flex-none">$o->name</a></div>
-				<div class="flex-stretch"></div>
-				<div class="flex-none">&dollar;$o->price</a></div>
-			</div>
-			
+			<figcaption class="product-description">
+				<div class="product-price">&dollar;$o->price</div>
+				<div class="product-title">$o->name</div>
+			</figcaption>
 		</figure>
 	</a>
 </div>
@@ -23,19 +21,17 @@ HTML;
 
 
 function cartListTemplate($r,$o) {
-// $hascase = rand(0,1) ? "case: big" : "";
-// $amount = rand(1,5);
 $pricefixed = number_format($o->total,2,'.','');
 $selectAmount = selectAmount($o->amount);
 return $r.<<<HTML
-<div class="display-flex card-section">
+<div class="display-flex">
 	<div class="flex-none product-thumbs">
 		<img src="$o->thumbnail">
 	</div>
 	<div class="flex-stretch">
 		<div class="display-flex">
 			<div class="flex-stretch">
-				<strong>$o->name($o->amount)</strong>
+				<strong>$o->name</strong>
 			</div>
 			<div class="flex-none">
 				&dollar;$pricefixed
