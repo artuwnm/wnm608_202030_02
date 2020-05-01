@@ -3,10 +3,12 @@
     --color-neutral-dark: #272b26;
     --color-neutral-medium: #7f877d;
     --color-neutral-light: #e6eae5;
+    --color-neutral-medium-light: #c5cbc3;
 
     --color-main-dark: #086603;
     --color-main-medium: #23f41b;
     --color-main-light: #d1ffbd;
+    
 }
 
 
@@ -25,6 +27,11 @@ section h2 {
 [class*='col-']>.card {
 	margin:0;
 	height:100%;
+}
+
+.form-select select,
+.form-button {
+	background-color:var(--color-neutral-medium-light);
 }
 
 
