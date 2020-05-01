@@ -1,8 +1,0 @@
-[03-Feb-2020 21:59:34 UTC] PHP Warning:  include(parts/head.php): failed to open stream: No such file or directory in /home/dh99ne4u4p3j/public_html/aau/wnm608/m01/index.php on line 5
-[03-Feb-2020 21:59:34 UTC] PHP Warning:  include(): Failed opening 'parts/head.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/dh99ne4u4p3j/public_html/aau/wnm608/m01/index.php on line 5
-[03-Feb-2020 21:59:34 UTC] PHP Warning:  include(parts/header-scroll.php): failed to open stream: No such file or directory in /home/dh99ne4u4p3j/public_html/aau/wnm608/m01/index.php on line 8
-[03-Feb-2020 21:59:34 UTC] PHP Warning:  include(): Failed opening 'parts/header-scroll.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/dh99ne4u4p3j/public_html/aau/wnm608/m01/index.php on line 8
-[03-Feb-2020 21:59:34 UTC] PHP Warning:  include(parts/header-home.php): failed to open stream: No such file or directory in /home/dh99ne4u4p3j/public_html/aau/wnm608/m01/index.php on line 10
-[03-Feb-2020 21:59:34 UTC] PHP Warning:  include(): Failed opening 'parts/header-home.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/dh99ne4u4p3j/public_html/aau/wnm608/m01/index.php on line 10
-[03-Feb-2020 21:59:34 UTC] PHP Warning:  include(parts/footer.php): failed to open stream: No such file or directory in /home/dh99ne4u4p3j/public_html/aau/wnm608/m01/index.php on line 289
-[03-Feb-2020 21:59:34 UTC] PHP Warning:  include(): Failed opening 'parts/footer.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/dh99ne4u4p3j/public_html/aau/wnm608/m01/index.php on line 289
