@@ -6,4 +6,6 @@
 	<link rel="stylesheet" href="lib/css/gridsystem.css">
 	<link rel="stylesheet" href="css/storetheme.css">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Varela&display=swap" rel="stylesheet">
-</head>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="js/products.js"></script>

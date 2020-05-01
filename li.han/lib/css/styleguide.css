@@ -5,6 +5,7 @@
  :root {
     --color-neutral-dark: #074476;
     --color-neutral-medium:#BCF0FF;
+
     --color-neutral-light: #F5FBFF;
     --color-main-dark: #034066;
     --color-main-medium: #BCF0FF;
@@ -309,6 +310,7 @@ background-repeat: no-repeat;
     margin: 0.2em 0;
     color: var(--color-neutral-medium);
 }
+.form-select select,
 .form-button {
     display: inline-block;
     width: 100%;
@@ -329,7 +331,19 @@ background-repeat: no-repeat;
 .form-button:active {
     background-color:var(--color-main-light);
 }
-
+.form-select {
+    position: relative;
+}
+.form-select::after {
+    content: '▼';
+    position: absolute;
+    color:var(--color-neutral-medium);
+    top: 50%;
+    right: 0.3rem;
+    transform: translateY(-50%);
+    pointer-events:none;
+    font-size:0.7em;
+}
 
 .hotdog {
     display: inline-block;
@@ -354,6 +368,10 @@ background-repeat: no-repeat;
 	outline:0;
 	padding:0 1em;
 }
+.hotdog.light {
+		background-color:white;
+	}
+
 
 
 
