@@ -23,7 +23,7 @@ include_once "lib/php/functions.php";
 </head>
 <body>
 
-
+<div class="container">
 
 <header class="navbar">
 	<div class="container display-flex">
@@ -41,7 +41,12 @@ include_once "lib/php/functions.php";
 		</nav>
 	</div>
 </header>
-<h2 class=" text-align-center">Product List</h2>
+
+	<div class="form-control">
+		<form class="hotdog light" id="product-search">
+			<input type="search" class="search" placeholder="Search Products">
+		</form>
+	</div>
 
 	<div class="container">
 		<div class="grid gap">
