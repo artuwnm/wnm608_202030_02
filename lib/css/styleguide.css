@@ -30,7 +30,8 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: Georgia, "Times New Roman", serif;
+	font-family: Josefin Sans;
+	letter-spacing: 2px;
 }
 li {
     display: list-item;
@@ -365,7 +366,7 @@ code {
 	display: inline-block;
 	width: 100%;
 	border-width: 0;
-	background-color: var(--color-neutral-light);
+	background-color: darkorange;
 	padding: 0.5em 1em;
 	color: inherit;
 	font: inherit;
