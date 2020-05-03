@@ -1,32 +1,21 @@
 <?php
 
 include_once "lib/php/function.php";
-include_once "parts/templates.php";
 
-
-		$result = getRows(makeConn(), 
-			"SELECT * 
-			FROM `products`
-			ORDER BY `date_created` DESC
-			LIMIT 12
-
-			"
-		);
-
-		// print_p($result);
-
-// makeConn();
 
  ?><!DOCTYPE html>
 <html>
-	<head>
-		<title>Products</title>
-		<?php include "parts/meta.php" ?>
-		
-	</head> 
-	<body>
-	
-		<?php include "parts/navbar.php" ?>
+<head>
+	<title>Products</title>
+	<?php include "parts/meta.php" ?>
+
+	<script src="lib/js/functions.js"></script>
+	<script src="js/templates.js"></script>
+	<script src="js/list.js"></script>
+</head> 
+<body>
+
+	<?php include "parts/navbar.php" ?>
 	
 	<div class="container">
 		<div class="nav-breadcrumb2 uppercase margin-top-2">
@@ -41,67 +30,78 @@ include_once "parts/templates.php";
 	<div class="container title">
 		<h2 class=" text-align-center uppercase">Products</h2>
 		<p>All our products are originally designed and made with passion. Get your Meowie products today!</p>
-	</div>
 
+		<div class="form-control">
+			<form class="hotdog" id="product-search">
+				<div class="flex-none hotdog-icon"><img src="images/search-icon.svg" alt=""></div>
+				
+				<input type="search" placeholder="Search products..." class="search">
+				
+			</form>
+		</div>
+		
+	
+	</div>
 	
 	<div class="container">
-		<div class="display-flex">
-			<div class="card accordion-card" >
-				<div class="accordion">
-					<div class="display-flex accordion-header">
-						<div class="accordion-section flex-stretch uppercase">Categories</div>
-						<div class="flex-none accordion-icon">+</div>
-					</div>
-					<div class="nav nav-accordion">
-						<ul>
-							<li><a href="#">Pillow</a></li>
-							<li><a href="#">Stickers</a></li>
-							<li><a href="#">Phone Case</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="accordion">
-					<div class="display-flex accordion-header">
-						<div class="accordion-section flex-stretch uppercase">Colors</div>
-						<div class="flex-none accordion-icon">+</div>
-					</div>
-					<div class="nav nav-accordion">
-						<ul>
-							<li><a href="#">Yellow</a></li>
-							<li><a href="#">White</a></li>
-							<li><a href="#">Beige</a></li>
-						</ul>
-					</div>
-				</div>
-				<!-- <div class="accordion">
-					<div class="display-flex accordion-header">
-						<div class="accordion-section flex-stretch uppercase">Price</div>
-						<div class="flex-none accordion-icon">+</div>
-					</div>
-					<div class="nav nav-accordion">
-						<div class="number-slider-value">
-							<h5>Price</h5>
-							<input type="range" name="range" value="0" min="0" max="50" step="1" class="number-slider-bar">
+		<div class="grid gap">
+			<div class="col-md-3" >
+									
+					<div class="card flat filter-form form-control">
+						<div class="uppercase filter-form-title">
+							<h2>Filter by</h2>						
 						</div>
-		
+						<div class="uppercase">
+							<h3>Categories</h3>						
+						</div>
+						<form class="">
+							<a class="form-link products_filter" data-column="category" data-value="" >All</a>
+							<a class="form-link products_filter" data-column="category" data-value="pillow" >Pillow</a>
+							<a class="form-link products_filter" data-column="category" data-value="stickers" >Stickers</a>
+							<a class="form-link products_filter" data-column="category" data-value="phone case" >Phone Case</a>
+							
+						</form>
+
+						<div class="uppercase">
+							<h3>Colors</h3>
+						</div>					
+						<form>
+							<a class="form-link products_filter" data-column="colors" data-value="">All</a>
+							<a class="form-link products_filter" data-column="colors" data-value="yellow">Yellow</a>
+							<a class="form-link products_filter" data-column="colors" data-value="white">White</a>
+							<a class="form-link products_filter" data-column="colors" data-value="beige">Beige</a>
+						</form>
 					</div>
-				</div> -->
-			</div>
+					<div class="card flat filter-form form-control">
+						<div class="uppercase filter-form-title">
+							<h2>Sort by</h2>						
+						</div>
+						<div class="uppercase">
+							<h3>Price</h3>
+						</div>
+						<form>
+							<a class="form-link products_sort" data-column="price" data-value="1">High to Low</a>
+							<a class="form-link products_sort" data-column="price" data-value="2">Low to High</a>
+						</form>
+						<div class="uppercase">
+							<h3>Date</h3>
+						</div>
+							<form>
+								<a class="form-link products_sort" data-column="date_created" data-value="3">New to Old</a>
+								<a class="form-link products_sort" data-column="date_created" data-value="4">Old to New</a>
+							</form>
+					</div>
+					
+				</div>
 
 			
-			<div class="card transparent">
-				<div class="grid gap">
-					<?php 
-
-						// $conn = makeConn();
-						
-						echo array_reduce($result,'productListTemplate');
-
-					 ?>
+			<div class="card transparent col-md-9">
+				<div class="grid gap productlist">
+					
 				</div>
 			</div>
-			
 		</div>
+			
 	</div>
 
 

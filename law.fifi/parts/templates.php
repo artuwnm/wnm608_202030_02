@@ -42,6 +42,7 @@ function cartListTemplate($r, $o){
 // $qty = rand(1,5);
 $pricefixed = number_format($o->total,2,'.','');
 $selectAmount = selectAmount($o->amount);
+
 return $r.<<<HTML
 
 	<div class="display-flex">		
@@ -52,7 +53,7 @@ return $r.<<<HTML
 			<div class="display-flex">
 				<div class="flex-stretch">
 					<h4>$o->productName ($o->amount)</h4>
-					<span style="font-size: 0.8em;">Color:</span>										
+															
 					<form method="get" action="data/form_actions.php">
 						<input type="hidden" name="action" value="delete-cart-item">
 						<input type="hidden" name="id" value="$o->id">
@@ -106,5 +107,30 @@ return<<<HTML
 <div>
 	<p>Total: &dollar;$total</p>
 </div>
+HTML;
+}
+
+
+function makeCartBadge(){
+	if(!isset($_SESSION['cart'])||empty($_SESSION['cart'])){
+		return"";
+	}else return "(".array_reduce($_SESSION['cart'],function($r,$o){return $r+$o->amount;},0).")";
+		
+}
+
+function popularItems($r,$o){
+
+return $r.<<<HTML
+<div class="col-md-4 col-sm-12">
+	<figure class="product-figure overlay">
+		<a href="product_item.php?id=$o->id">
+			<img src="images/$o->thumbnail" alt="">
+			<figcaption>
+				<h4 class="popular-item-title">$o->productName</h4>
+			</figcaption>
+		</a>
+	</figure>
+</div>
+
 HTML;
 }

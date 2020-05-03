@@ -96,7 +96,7 @@ function getCart(){
 
 }
 
-function addToCart($id,$amount,$price,$phone,$color) {
+function addToCart($id,$amount,$price,$color) {
 	$cart = getCart();
 
 	$p = cartItemByID($id);
@@ -111,7 +111,7 @@ function addToCart($id,$amount,$price,$phone,$color) {
 			"id"=>$id,
 			"amount"=>$amount,
 			"price"=>$price,
-			"phone"=>$phone,
+			
 			"color"=>$color
 	];
 }
@@ -136,6 +136,7 @@ function getCartItems(){
 	return array_map(function($o) use ($cart){
 		$cart_o = array_find($cart, function($c) use($o){return $c->id==$o->id;});
 		$o->amount = $cart_o->amount;
+		$o->color= $cart_o->color;
 		$o->total = $o->price*$cart_o->amount;
 		return $o;
 	}, $database_result);

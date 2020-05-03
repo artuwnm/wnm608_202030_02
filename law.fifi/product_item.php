@@ -22,6 +22,7 @@ $randProducts = getRows(
 
 $o = $result[0];
 $thumbs = explode(",",$o->images);
+$color = explode(",",$o->colors);
 
 // print_p($_SESSION);
 
@@ -76,20 +77,25 @@ $thumbs = explode(",",$o->images);
  									$ <?= $o->price  ?>
  								</h3>
  								
- 								<label class="form-label">Phone:</label>
+ 								<!-- <label class="form-label">Phone:</label>
  								<select name="phone" class="dropdown-selection display-block ">
  									<option>iPhone 11</option>
  									<option>iPhone 11 Pro</option>
  									<option>iPhone 11 Pro Max</option>
  									<option>iPhone X</option>
- 								</select>
+ 								</select> -->
 
  								<div class="card-section">
  									<label class="form-label">Color:</label>
  									<select name="color" class="dropdown-selection display-block ">
- 										<option >Yellow</option>
+ 										<?php 
+ 											echo array_reduce($color,function($r,$o){
+ 												return $r."<option data-value='$o'>$o</option>";
+ 											})
+ 										 ?>
+ 										<!-- <option >Yellow</option>
  										<option >White</option>
- 										<option >Beige</option>
+ 										<option >Beige</option> -->
  									</select>
  								</div>
  										
@@ -115,6 +121,7 @@ $thumbs = explode(",",$o->images);
  										<input type="hidden" name="action" value="add-to-cart">
  										<input type="hidden" name="id" value="<?= $o->id ?>">
  										<input type="hidden" name="price" value="<?= $o->price ?>">
+ 										<input type="hidden" name="color" value="<?= $o->colors ?>">
  										<input type="submit" class="btn dark uppercase" value="Add To Cart">
  									</div>
  								

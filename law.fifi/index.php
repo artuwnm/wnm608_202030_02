@@ -1,4 +1,17 @@
-<!DOCTYPE html>
+<?php 
+
+include_once "lib/php/function.php";
+include_once "parts/templates.php";
+
+$randProducts = getRows(
+	makeConn(),
+	"
+	SELECT *
+	FROM `products`
+	WHERE `id`IN (2,11,8)
+	"
+);
+ ?><!DOCTYPE html>
 <html>
 <head>
 	<title>Welcome to Meowie</title>
@@ -7,7 +20,7 @@
 </head>
 <body>
 	
-		<?php include "parts/navbar.php" ?>
+	<?php include "parts/navbar.php" ?>
 
 	<div class="container ">
 		<div class=" grid margin-top-5 margin-bottom-5">
@@ -29,34 +42,27 @@
 
 
 	<div class="container">
-		<h2 class="uppercase medium-color text-align-center flex-stretch text-align-center margin-bottom-5">Categories</h2>
+		<h2 class="uppercase medium-color text-align-center flex-stretch text-align-center margin-bottom-5">Popular Items</h2>
 		<div class="grid gap margin-bottom-5">
-			<div class="col-md-4 col-sm-12">
+			<?= array_reduce($randProducts, "popularItems"); ?>
+			
+			<!-- <div class="col-md-4 col-sm-12">
 				<figure class="product-figure overlay">
-				<img src="images/meow_paws_pillow.png" alt="">
-				<figcaption>
-					<h4>Pillow</h4>
-				</figcaption>
-			</figure>
+					<img src="images/meowie_logo_phone_case.png" alt="">
+					<figcaption>
+						<h4>Phone Case</h4>
+					</figcaption>
+				</figure>
 			</div>
 			
-				<div class="col-md-4 col-sm-12">
-					<figure class="product-figure overlay">
-						<img src="images/meowie_logo_phone_case.png" alt="">
-						<figcaption>
-							<h4>Phone Case</h4>
-						</figcaption>
-					</figure>
-				</div>
-			
-				<div class="col-md-4 col-sm-12">
-					<figure class="product-figure overlay">
-						<img src="images/iconic_meow_stickers.png" alt="">
-						<figcaption>
-							<h4>Stickers</h4>
-						</figcaption>
-					</figure>
-				</div>
+			<div class="col-md-4 col-sm-12">
+				<figure class="product-figure overlay">
+					<img src="images/iconic_meow_stickers.png" alt="">
+					<figcaption>
+						<h4>Stickers</h4>
+					</figcaption>
+				</figure>
+			</div> -->
 		</div>
 	</div>
 
@@ -74,7 +80,6 @@
 		</div>
 		</div>	
 	</div>
-
 
 	<div class="container">
 

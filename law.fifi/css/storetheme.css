@@ -8,6 +8,7 @@ h1, h2, h3, h4, h5, h6{
 	--color-neutral-light:#ffe8d6;
 	--color-neutral-medium:#ff971d;
 	--color-neutral-white:#f9f6f7;
+	--color-neutral-grey:#e9e1db;
 
 }
 
@@ -34,8 +35,8 @@ figure:hover{
 }
 
 .product-figure img{
-	width: 100%;
-	max-height: 30vh;
+	width: 105%;
+	/*max-height: 30vh;*/
 	object-fit: cover;
 
 	vertical-align: text-bottom; 
@@ -109,3 +110,9 @@ figure:hover{
 		transform: scale(1.1,1.1);
 	}
 
+.product-figure.overlay figcaption h4.popular-item-title{
+	font-size: 2em;
+    line-height: 1.5em;
+    font-weight: 500;
+    overflow: hidden;
+}

@@ -10,7 +10,7 @@ if (!isset($_GET['action'])) die("no action set");
 switch($_GET['action']){
 
 	case 'add-to-cart':
-		addToCart($_GET['id'],$_GET['amount'],$_GET['price'],$_GET['phone'],$_GET['color']);
+		addToCart($_GET['id'],$_GET['amount'],$_GET['price'],$_GET['color']);
 		header("location:../product_addedtocart.php?id={$_GET['id']}");
 		break;
 	case 'update-cart-amount':

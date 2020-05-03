@@ -2,6 +2,7 @@
 
 include_once "lib/php/function.php";
 include_once "parts/templates.php";
+$_SESSION['cart']=[];
 
 $result = getRows(
 	makeConn(),
