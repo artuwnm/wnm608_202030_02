@@ -34,7 +34,7 @@ return $r.<<<HTML
 				<strong>$o->name</strong>
 			</div>
 			<div class="flex-none">
-				&dollar;$pricefixed
+				&dollar;$o->price
 			</div>
 		</div>
 		<div class="display-flex" style="font-size:0.8em">
