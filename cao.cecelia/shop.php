@@ -25,12 +25,13 @@ include_once "lib/php/function.php";
 	</div>
 	</div>
 <body>
-	<div class="form-control">
+	<!-- <div class="form-control">
 			<form class="hotdog light" id="product-search">
 				<input type="search" class="search" placeholder="Search Products">
 			</form>
-		</div>
-		<div class="form-control display-flex">
+		</div> -->
+		
+		<!-- <div class="form-control display-flex">
 			<div class="flex-none">
 				<button type="button" class="form-button js-filter" data-column="category" data-value="">All</button>
 			</div>
@@ -40,17 +41,18 @@ include_once "lib/php/function.php";
 			<div class="flex-none">
 				<button type="button" class="form-button js-filter" data-column="category" data-value="Necklace">Necklace</button>
 			</div>
-		</div>
-		<div class="form-control">
-			<!-- .form-select>select>option -->
-			<div class="form-select">
-				<select class="js-sort">
-					<option value="1">Newest</option>
-					<option value="2">Oldest</option>
-					<option value="3">Most Expensive</option>
-					<option value="4">Least Expensive</option>
-				</select>
-			</div>
+		</div> -->
+		
+		<div class="selectbox display-flex flex-direction-rowreverce">
+			<div class="dropdown">
+    <select name="one" class="dropdown-select js-sort">
+      <option value="">Filter By</option>
+      <option value="1">Newest</option>
+	  <option value="2">Oldest</option>
+	  <option value="3">Most Expensive</option>
+	  <option value="4">Least Expensive</option>
+    </select>
+  </div>
 		</div>
 
 	<div class="container">

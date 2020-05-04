@@ -719,7 +719,7 @@ code {
 /*animatedsearch*/
 
 .animated-search-form input {
-   width: 7vh;
+   width: 5em;
   border-top:none;
   border-left:none;
   border-right:none;

@@ -7,8 +7,9 @@
 			<a href="index.php"><img  src="images/horizontallogo.png" alt="Nature" class="responsiveimage logo"></a>
 				<ul >
 				<li>
-				<div class="animated-search-form">
-			<input type="text" name="search" placeholder="SEARCH">
+				<div class="animated-search-form" id="product-search">
+			<!-- <input type="text" name="search" placeholder="SEARCH"> -->
+			<input type="search" class="search" placeholder="SEARCH">
 						</div>
 				</li>
 				<li>

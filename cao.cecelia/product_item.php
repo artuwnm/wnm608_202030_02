@@ -73,12 +73,12 @@ $(".thumb-images img").on("click",function(){
 			
 			<div class="col-xs-12 col-md-5">
 				<form method="get" action="data/form_actions.php">
-			<div>
+			<div class="productcontainer">
 				<h2><?= $o->name ?></h2>
 				<div class="product-description">
 				<p><?= $o->description ?></p>
 			</div>
-			</div>
+			
 		
 		<div id="accordion">
 			<ul class="a-container">
@@ -103,7 +103,15 @@ $(".thumb-images img").on("click",function(){
 </ul>
 
 		</div>
-		<div class="display-flex flex-justify-center">
+	</div>
+
+<div class="card-section">
+						<input type="hidden" name="amount" value="1">
+							<!-- option*10>{$} -->
+							
+					</div>
+
+		<div class="display-flex">
 			
 						<input type="hidden" name="action" value="add-to-cart">
 						<input type="hidden" name="id" value="<?= $o->id ?>">
