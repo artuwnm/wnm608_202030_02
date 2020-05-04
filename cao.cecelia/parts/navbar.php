@@ -1,5 +1,6 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <?php include_once "parts/templates.php" ?>
 <header class="navbar">
 		<nav class="nav-right-flex">
 			<div class="topnav" id="myTopnav">
@@ -13,7 +14,7 @@
 						</div>
 				</li>
 				<li>
-				 <a href="cart.php"><span class="cart"></span></a>
+				 <a href="cart.php"><div class="cart"><?= makeCartBadge() ?></div></a>
 				 </li>
 
 				 </ul>

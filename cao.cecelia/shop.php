@@ -1,6 +1,12 @@
 <?php
 
 include_once "lib/php/function.php";
+include_once "parts/templates.php";
+
+
+$result = getCartItems();
+
+// print_p($result);
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -15,7 +21,9 @@ include_once "lib/php/function.php";
 
 
 </head>
-<?php include "parts/navbar.php" ?>
+
+<body>
+	<?php include "parts/navbar.php" ?>
 	
 	<div class="homebgimage">
 
@@ -24,7 +32,6 @@ include_once "lib/php/function.php";
 	<h4>Enjoy every moment in your life</h4>
 	</div>
 	</div>
-<body>
 	<!-- <div class="form-control">
 			<form class="hotdog light" id="product-search">
 				<input type="search" class="search" placeholder="Search Products">

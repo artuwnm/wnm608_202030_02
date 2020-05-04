@@ -267,7 +267,7 @@ code {
 	color:var(--color-neutral-dark);
 	line-height: var(--header-height);
 	height: 8vh;
-	font-size: 1vw;
+	font-size: 0.8em;
     margin-top: 3vh;
 }
 
@@ -725,7 +725,7 @@ code {
   border-right:none;
   border-bottom: 1px solid var(--color-neutral-medium);
   color: var(--color-neutral-dark);
-    font-size: 1vw;
+    font-size: 1em;
     font-family: "Crimson Pro", serif;
   text-align: left;
   -webkit-transition: width 0.4s ease-in-out;

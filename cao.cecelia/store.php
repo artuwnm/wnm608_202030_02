@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+<?php
+
+include_once "lib/php/function.php";
+include_once "parts/templates.php";
+
+
+$result = getCartItems();
+
+// print_p($result);
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	

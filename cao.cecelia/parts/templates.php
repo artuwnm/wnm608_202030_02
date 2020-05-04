@@ -118,5 +118,5 @@ HTML;
 function makeCartBadge() {
 	if(!isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
 		return "";
-	} else return "(".array_reduce($_SESSION['cart'],function($r,$o){ return $r + $o->amount; },0).")";
+	} else return array_reduce($_SESSION['cart'],function($r,$o){ return $r + $o->amount; },0);
 }

@@ -104,19 +104,22 @@ section h2 {
 }
 
 .cart {
-  height: 1.5vw;
-  width: 1.5vw;
+  line-height: 1.5em;
+  width: 1.5em;
   background-color:var(--color-neutral-dark);
+  text-align: center;
+  color: white;
   border-radius: 50%;
   display: inline-block;
     margin-left: 2.5em;
     margin-right: 1em;
+
 }
 
 
 
 .logo{
-	width: 15%;
+	width: 12%;
 }
 
 .topnav .icon{
@@ -132,6 +135,7 @@ section h2 {
   .topnav a.icon {
     float: right;
     display: block;
+    font-size: 0.5em;
   }
   
 }
@@ -164,7 +168,7 @@ section h2 {
 /*advertisement*/
 
 .homebgimage {
-  padding: 25px;
+  padding: 1px;
   background: url(../images/homeheader.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -176,6 +180,7 @@ section h2 {
 .advertisement{
 	margin-top: 25vw;
 	margin-bottom: 10vw;
+	margin-left: 1em;
 }
 
 .advertisement h1{
