@@ -42,6 +42,13 @@ ul li {
     list-style: none;
 }
 
+.top-nav {
+	text-align: center;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+}
+
 header {
     background-color: #fff;
     color: var(--color-neutral-dark);
