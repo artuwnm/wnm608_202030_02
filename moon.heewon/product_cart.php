@@ -1,44 +1,48 @@
-<!DOCTYPE html>
+<?php
+
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+
+$result = getCartItems();
+
+// print_p($result);
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Store: Cart</title>
 
-	<meta charset="UTF-8">
+	<?php include "parts/meta.php" ?>
 
-<meta name="viewport" content="width=device-width">
-
-<base href="/aau/wnm608_02/moon.heewon/">
-
-<link rel="stylesheet" href="lib/css/styleguide.css">
-<link rel="stylesheet" href="lib/css/gridsystem.css">
-<link rel="stylesheet" href="css/storetheme.css">
-
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 
-	
-<header class="navbar">
-	<div class="container display-flex">
-		<div class="flex-stretch">
-			<h1>Store</h1>
-		</div>
-		<nav class="nav flex-none">
-			<ul class="display-flex">
-				<!-- li*3>a[href=#]>{Link $} -->
-				<li><a href="index.php">Home</a></li>
-				<li><a href="product_list.php">Store</a></li>
-				<li><a href="about.php">About</a></li>
-				<li><a href="product_cart.php">Cart</a></li>
+	<?php include "parts/navbar.php" ?>
+
+	<div class="container">
+		<nav class="nav-crumbs" style="margin:1em 0">
+			<ul>
+				<li><a href="product_list.php">Back</a></li>
 			</ul>
 		</nav>
-	</div>
-</header>
-	<div class="container">
-		<div class="card soft">
 
-			<h2>Cart Page</h2>
-		
+		<div class="grid gap">
+			<div class="col-xs-12 col-md-8">
+				<div class="card flat">
+				<?php
+				echo array_reduce($result,'cartListTemplate');
+				?>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="card flat">
+					<?= cartTotals(); ?>
+					<div class="card-section">
+						<a href="product_checkout.php" class="form-button">Checkout</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	

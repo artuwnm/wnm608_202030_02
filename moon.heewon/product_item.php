@@ -14,7 +14,7 @@ $o = $result[0];
 
 $thumbs = explode(",", $o->images);
 
-print_p($_SESSION);
+// print_p($_SESSION);
 
 ?><!DOCTYPE html>
 <html lang="en">
