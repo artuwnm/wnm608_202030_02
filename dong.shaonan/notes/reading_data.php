@@ -13,37 +13,42 @@ include "../lib/php/functions.php";
 $notes = getData("notes.json");
 $users = getData("../data/users.json");
 
-// print_p($users);
+// print_p($notes);
 
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Admin: Notes</title>
-
 	<?php include "../parts/meta.php" ?>
 
 </head>
+
 <body>
-
+	
 	<?php include "../parts/navbar.php" ?>
-
+</header>
 	<div class="container">
 		<div class="card soft">
-			<h2>Notes</h2>
 
+			<h2>Notes</h2>
+		
 			<ul>
 			<?php
 
-			for($i=0; $i<count($notes->notes); $i++) {
+			for($i=0; $i<count( $notes->notes); $i++) {
 				echo "<li>{$notes->notes[$i]}</li>";
 			}
+
 
 			?>
 			</ul>
 		</div>
-		<div class="card soft">
-			<h2>Users</h2>
 
+
+		<div class="card soft">
+
+			<h2>Users</h2>
+		
 			<ol>
 			<?php
 
@@ -58,6 +63,5 @@ $users = getData("../data/users.json");
 			</ol>
 		</div>
 	</div>
-	
 </body>
 </html>

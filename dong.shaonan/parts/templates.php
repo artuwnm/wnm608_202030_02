@@ -7,11 +7,11 @@ return $r.<<<HTML
 	<a href="product_item.php?id=$o->id" class="display-block">
 		<figure class="product-figure soft">
 			<div class="product-image">
-				<img src="/images/store/$o->thumbnail" alt="">
+				<img src="img/$o->thumbnail" alt="">
 			</div>
 			<figcaption class="product-description">
 				<div class="product-price">&dollar;$o->price</div>
-				<div class="product-title">$o->title</div>
+				<div class="product-title">$o->name</div>
 			</figcaption>
 		</figure>
 	</a>
@@ -28,12 +28,12 @@ $selectAmount = selectAmount($o->amount);
 return $r.<<<HTML
 <div class="display-flex card-section">
 	<div class="flex-none product-thumbs">
-		<img src="/images/store/$o->thumbnail">
+		a
 	</div>
 	<div class="flex-stretch">
 		<div class="display-flex">
 			<div class="flex-stretch">
-				<strong>$o->title ($o->amount)</strong>
+				<strong>$o->name ($o->amount)</strong>
 			</div>
 			<div class="flex-none">
 				&dollar;$pricefixed
@@ -121,4 +121,26 @@ function makeCartBadge() {
 	if(!isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
 		return "";
 	} else return "(".array_reduce($_SESSION['cart'],function($r,$o){ return $r + $o->amount; },0).")";
+}
+
+
+
+function makeListItemTemplate($r,$o) {
+return $r.<<<HTML
+<div class="itemlist-item display-flex">
+	<div class="flex-none">
+		<div class="image-square">
+			<img src="img/$o->thumbnail">
+		</div>
+	</div>
+	<div class="flex-stretch">
+		<div><strong>$o->title</strong></div>
+		<div><span>$o->category</span></div>
+	</div>
+	<div class="flex-none display-flex">
+		<div><a href="admin/?id=$o->id" class="form-button">Edit</a></div>
+		<div><a href="product_item.php?id=$o->id" class="form-button">Visit</a></div>
+	</div>
+</div>
+HTML;
 }

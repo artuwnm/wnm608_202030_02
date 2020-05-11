@@ -5,124 +5,87 @@ session_start();
 
 
 
-
-function updateUser($data, $id){
-
-	$users = getData("../data/users.json");
-
-		foreach ($users as $i => $user) {
-			# code...
-			
-			if ($i == $id) {
-
-			print_p($i);
-	
-
-			// $editData = json_decode(json_encode($_POST));
-			// print_p($id);
-
-			$users[$i] = array_merge($user,$data);
-
-
-
-			// $getValue = json_decode($addEditedData);
-			// echo $editData;
-			// print_p($users[$i]);
-			if (!is_array($data["classes"])) {
-				explode(",", $data["classes"]);
-
-				
-	print_p($users);
-			}
-
-
-			}
-		}
-	file_put_contents("../data/users.json", json_encode($users));
-
-}
-
-
 function print_p($v) {
 	echo "<pre>",print_r($v),"</pre>";
 }
 
 
-function getData($str){
-
+function getData($str) {
 	return json_decode(file_get_contents($str));
 }
 
-include_once "auth.php";
-function makeConn(){
-	@$conn = new mysqli(...makeAuth()); //...spread operator
 
-	if ($conn->connect_errno) die($conn->connect_errno);
+// include, require, include_once, require_once
+include_once "auth.php";
+function makeConn() {
+	@$conn = new mysqli(...makeAuth());
+
+	if($conn->connect_errno) die($conn->connect_error);
 
 	$conn->set_charset('utf8');
 
 	return $conn;
+}
 
-};
 
-function getRows($conn, $sql){
-
+function getRows($conn,$sql) {
 	$a = [];
 
-	$result = $conn ->query($sql);
+	$result = $conn->query($sql);
 
-	if ($conn->errno) die($conn->error);
-		
-		while ($row = $result->fetch_object()) {
-			# code...
-			$a[]= $row;
-		}
-		return $a;
+	if($conn->errno) die($conn->error);
+
+	while($row = $result->fetch_object()) {
+		$a[] = $row;
+	}
+
+	return $a;
 }
 
 
 
-function array_find($array,$fn){
 
-	foreach ($array as $o) if($fn($o)) return $o;
+
+
+
+
+
+// CART FUNCTIONS
+
+function array_find($array,$fn) {
+	foreach($array as $o) if($fn($o)) return $o;
 	return false;
 }
 
-function getCart(){
 
-
-	if (!isset($_SESSION['cart']) || !is_array($_SESSION['cart'])) $_SESSION['cart'] =[];
+function getCart() {
+	if(!isset($_SESSION['cart']) || !is_array($_SESSION['cart'])) $_SESSION['cart'] = [];
 	return $_SESSION['cart'];
-
 }
 
-function addToCart($id,$amount,$price,$color) {
+function addToCart($id,$amount,$price) {
 	$cart = getCart();
 
 	$p = cartItemByID($id);
 
-	if($p){
+	if($p) {
 		$p->amount += $amount;
-	}else{
-		
-		$price = getRows(makeConn(),"SELECT`price`FROM `products` WHERE `id` = $id")[0]->price;
-
+	} else {
+		$price = getRows(makeConn(),"SELECT `price` FROM `products` WHERE `id` = $id")[0]->price;
 		$_SESSION['cart'][] = (object) [
 			"id"=>$id,
 			"amount"=>$amount,
-			"price"=>$price,
-			
-			"color"=>$color
-	];
+			"price"=>$price
+		];
+	}
+
 }
-};
 
-function getCartItems(){
 
+function getCartItems() {
 	$cart = getCart();
 
-	$ids= empty($cart) ? 0 : implode(",",array_map(function($o){return$o->id;},$cart));
-
+	$ids = empty($cart) ? 0 : implode(",",array_map(function($o){return $o->id;},$cart));
 	$sql = "SELECT *
 		FROM `products`
 		WHERE `id` IN ($ids)
@@ -134,16 +97,13 @@ function getCartItems(){
 	);
 
 	return array_map(function($o) use ($cart){
-		$cart_o = array_find($cart, function($c) use($o){return $c->id==$o->id;});
+		$cart_o = array_find($cart,function($c) use($o) { return $c->id==$o->id; });
 		$o->amount = $cart_o->amount;
-		$o->color= $cart_o->color;
-		$o->total = $o->price*$cart_o->amount;
+		$o->total = $o->price * $cart_o->amount;
 		return $o;
-	}, $database_result);
+	},$database_result);
 }
 
-
-function cartItemByID($id){
-
+function cartItemByID($id) {
 	return array_find(getCart(),function($o) use ($id){return $o->id==$id;});
 }

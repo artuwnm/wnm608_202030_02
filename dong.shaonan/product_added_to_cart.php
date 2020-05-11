@@ -26,7 +26,7 @@ $o = getRows(makeConn(),"SELECT * FROM `products` WHERE `id`={$_GET['id']}")[0];
 				<h2>Cart Confirmation</h2>
 				
 				<div>
-					Thank you for adding <?= $p->amount ?> of the <?= $o->title ?> to the cart.
+					Thank you for adding <?= $p->amount ?> of the <?= $o->name ?> to the cart.
 				</div>
 			</div>
 

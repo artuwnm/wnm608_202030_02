@@ -4,6 +4,9 @@ const showResults = (d) =>{
 		d.result.length==0 ? "<div class='col-xs-12'><div class='card'>No Results</div></div>" :
 		makeProductList(d.result)
 	);
+	$(".num-sort-item").html(
+		"Showing " + d.result.length + " Items"
+	);
 }
 
 

@@ -1,0 +1,63 @@
+/*Theme CSS*/
+
+
+/*Color
+    Yellow: 
+    #FFD700
+    RGB(255, 215, 0)
+
+    Grey:
+    color: rgb(70,70,70);*/
+
+/*Font:
+	font-family: 'Raleway', sans-serif;
+
+	special-font: 'Fjalla One', sans-serif;*/
+
+
+/*General*/
+body {
+	background-color: #fff;
+}
+
+body{
+	font-family: 'Raleway', sans-serif;
+	/*color: rgb(70,70,70);*/
+	color:#000;
+}
+
+.specialfont{
+	font-family:  'Fira Sans Condensed', sans-serif;
+
+}
+.colorfont{
+	color: #FFD700;
+}
+
+.greyfont{
+	color: rgb(70,70,70);
+
+}
+.center{
+	text-align: center;
+}
+
+/*Card for Specs*/
+.card dl:after {
+	content:'';
+	display:table;
+	clear:both;
+}
+.card dt {
+	font-weight:bold;
+	width:10em;
+	text-align:right;
+	padding-right:1em;
+	float:left;
+	clear:left;
+}
+.card dd {
+	width:calc(100% - 10em);
+	float:left;
+	margin:0;
+}
