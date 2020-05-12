@@ -13,7 +13,7 @@
 	<?php include "parts/header.php" ?>
 
 	<div class="container">
-		<div class="card soft">
+		<div class="card  ">
 
 			<h2>About Us</h2>
 
