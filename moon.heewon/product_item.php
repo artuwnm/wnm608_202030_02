@@ -33,7 +33,7 @@ $thumbs = explode(",", $o->images);
 			<ul>
 				<li><a href="product_list.php">Back</a></li>
 			</ul>
-		</nav>
+		</nav> 
 
 		<div class="grid gap">
 			<div class="col-xs-12 col-md-7">
