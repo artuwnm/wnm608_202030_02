@@ -25,9 +25,11 @@ section h2 {
 	margin:0;
 }
 
+
+
 /* FIGURE */
 .product-figure {
-	margin:0;
+	margin:30px;
 }
 
 .product-thumbnail img{
@@ -38,35 +40,35 @@ section h2 {
 	padding-right: 1em;
 }
 
-.product-image img{
+.product-image{
 	border: 1px solid black;
-	width:100%;
-	max-height:50vh;
-	object-fit:cover;
-	vertical-align:text-bottom;
+    width: 100%;
+    max-height: 80vh;
+    object-fit: cover;
+    vertical-align: text-bottom;
+    padding: 1vh;
 }
 
 .product-figure img {
-	border: 1px solid black;
-	width:100%;
-	max-height:50vh;
-	object-fit:cover;
-	vertical-align:text-bottom;
-	padding: 1em;
+	width: 100%;
+    
+    object-fit: cover;
+    vertical-align: text-bottom;
 }
 .product-figure figcaption {
 	padding:1em;
 	background-color:white;
 }
 	.product-figure.soft {
-		margin: 0em 1em;
+		border-radius:1em;
 		overflow:hidden;
 		box-shadow:0 2px 5px rgba(0,0,0,0.1);
+		transition: all 0.3s;
 	}
 	.product-figure.overlay {
 		position:relative;
 		overflow:hidden;
-		/*border-radius:1em;*/
+		border-radius:1em;
 	}
 	.product-figure.overlay figcaption {
 		position:absolute;
@@ -90,8 +92,8 @@ section h2 {
 	}
 
 	.product-thumbs img {
-    height: 120px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     object-fit: cover;
     margin-right: 50px;
 }
@@ -116,7 +118,9 @@ section h2 {
 
 }
 
-
+.topnav{
+	margin-bottom: 20px;
+}
 
 .logo{
 	width: 12%;
@@ -174,6 +178,25 @@ section h2 {
   background-size: cover;
   background-position: center center;
 
+}
+
+.homebgimageshop {
+  padding: 1px;
+  background: url(../images/homeintroduction_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-top: 15px;
+
+}
+
+.homebgimageread {
+  padding: 1px;
+  background: url(../images/homeintroduction_2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-top: 15px;
 }
 
 
@@ -251,3 +274,25 @@ section h2 {
 	width: 20em;
 	height:22em;
 }
+
+/*admin item*/
+.itemlist {
+	display:grid;
+	grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+}
+.itemlist-item {
+	margin:1em;
+	padding:1em;
+	border: 1px solid var(--color-neutral-light);
+	border-radius:0.5em;
+}
+
+/*filmstrip*/
+
+
+
+
+
+
+
+

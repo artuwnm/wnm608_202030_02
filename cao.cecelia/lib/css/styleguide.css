@@ -98,15 +98,21 @@ code {
 .containerstretch p{
 	margin-left: 10%;
 	margin-right:10%;
+	font-size: 14px;
 	
 }
 
-.containerstretch h3{
+.containerstretch h2{
 	margin-left: 10%;
 	margin-right:10%;
 	
 }
 
+.containerstretch h4{
+	margin-left: 10%;
+	margin-right:10%;
+	
+}
 
 .hidden { display:none; }
 

@@ -25,7 +25,7 @@ $result = getCartItems();
 <body>
 	<?php include "parts/navbar.php" ?>
 	
-	<div class="homebgimage">
+	<div class="homebgimageshop">
 
 	<div class="advertisement">
 	<h1>HAVE AN EXCLAMATION POINT FOR YOU</h1>

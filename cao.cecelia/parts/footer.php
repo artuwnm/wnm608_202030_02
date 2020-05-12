@@ -1,6 +1,6 @@
  
  <footer class="footer">
-  <h2 align="center">"Find Out Yourself Daily Mood"</h1>
+  <h2 align="center">"Find Out Yourself Daily Mood"</h2>
  <hr style="width:90%"/>
      <div class="grid gap">
       <div class="col-xs-12 col-md-6">
@@ -16,7 +16,7 @@
       <div class="col-xs-12 col-md-3">
           <h4>Customer Services</h4>
           <ul>
-          <li><a href="#">Product Administration</a>
+          <li><a href="admin/index.php">Admin</a>
           </li>
           <li><a href="read.php">About Us</a>
           </li>

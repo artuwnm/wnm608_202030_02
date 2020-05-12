@@ -40,26 +40,26 @@ $result = getCartItems();
 		<div class="grid gap">
 			
 			<div class="col-xs-12 col-xl-6 ">
-				<a href="index.php">
-				<figure class="product-figure soft">
-					<img src="https://via.placeholder.com/500" alt="">
-					<figcaption>
+				<a href="shop.php">
+					<figure class="product-figure">
+						<img src="images/homerecommendation_1.jpg">
+					
+				
 						<h3>Creative Way to Stack Earings</h3>
 						<h5>From beloved pearl design for this summer</h5>
-					</figcaption>
-					</figcaption>
+					
 				</figure>
 				</a>
 			</div>
 			
 			<div class="col-xs-12 col-xl-6">
-				<a href="index.php">
-				<figure class="product-figure soft">
-					<img src="https://via.placeholder.com/500" alt="">
-					<figcaption>
+				<a href="shop.php">
+				<figure class="product-figure">
+					<img src="images/homerecommendation.jpg" alt="">
+					
 						<h3>Creative Way to Stack Earings</h3>
 						<h5>From beloved pearl design for this summer</h5>
-					</figcaption>
+					
 				</figure>
 			</a>
 			</div>
@@ -72,19 +72,23 @@ $result = getCartItems();
  		<div class="containerstretch">
 		<div class="grid gap">
 			<div class="col-xs-12 col-xl-6">
-			<h3>Introduction</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore non quis similique, sit, doloremque hic excepturi dolorum odit explicabo mollitia?</p>
+			<h4>Explore New accessories</h4>
+			<h2>New Beauty in urban environments</h2>
+			<p style="font-size: 16px">PILE ON PEARLS provides a way for people who want to embrace their femininity and beauty through Eastern spiritual practices and mysticism, for young girls, for daily mix & match, for all kinds of occasions. The collection is comprised of earings, necklaces, rings and bracelets featuring with pearls or diamonds on most of them.</p>
 			<div class="display-flex flex-justify-center">
 			<a href="#" class="linkbutton">SHOP NOW</a>
 			</div>
 		</div>
 			<div class="col-xs-12 col-xl-6">
-			<img src="images/homeheader.png" alt="Nature" class="trytrytry">
+			<img src="images/homeintroduction_2.jpg" alt="Nature" class="trytrytry">
 		
 			</div>
 			</div>
 
 		</div>	
+
+		  <h2 align="center">"We provides a way for people who want to embrace their femininity and beauty through Eastern spiritual practices and mysticism."</h2>
+
 		
 		<div class="containerstretch">
 		<div class="grid gap">
@@ -92,12 +96,13 @@ $result = getCartItems();
 			<div class="col-xs-12 col-xl-6">
 			
 			
-			<img src="images/homeheader.png" alt="Nature" class="trytrytry">
+			<img src="images/homeintroduction_1.jpg" alt="Nature" class="trytrytry">
 	
 			</div>
 			<div class="col-xs-12 col-xl-6">
-			<h3>Introduction</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore non quis similique, sit, doloremque hic excepturi dolorum odit explicabo mollitia?</p>
+			<h4>About Us</h4>
+			<h2>Know More About Our Brand</h2>
+			<p style="font-size: 16px">PILES ON PEARLS wants to create special styles for young girls in daily use. The different geometry shapes in the logo are combined together to show the precise and demanding attitude of this brand. The three main color in this logo display the taste of this brand.</p>
 			<div class="display-flex flex-justify-center">
 			<a href="#" class="linkbutton">SHOP NOW</a>
 			</div>

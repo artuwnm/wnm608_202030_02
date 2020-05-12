@@ -38,7 +38,7 @@ $thumbs = explode(",", $o->images);
 	<div class="thumb-images">
 		
 			<img class="thumbmain" src="<?= $o->thumbnail ?>" alt="">
-			<img class="thumbsecondary" src="https://via.placeholder.com/400x500.png?text=style">
+			<img class="thumbsecondary" src="<?= $o->images ?>">
 	
 	</div>
 	<div class="big-image">
@@ -127,6 +127,8 @@ $(".thumb-images img").on("click",function(){
 </div>
 
 <div class="container">
+	
+	
 <div class="grid gap">
 	<div class="col-xs-12 col-md-4">
 	<a href="product_item.php?id=$o->id" class="display-block">
@@ -144,7 +146,7 @@ $(".thumb-images img").on("click",function(){
 	<a href="product_item.php?id=$o->id" class="display-block">
 		<figure class="product-figure">
 			<div class="product-image">
-				<img src="images/babyearings_thumbnail.jpg" alt="">
+				<img src="images/aquamarineearrings_thumbnail.jpg" alt="">
 			</div>
 			<div class="form-control display-flex">
 				<div class="flex-none">Baby Earrings</div>
@@ -160,7 +162,7 @@ $(".thumb-images img").on("click",function(){
 	<a href="product_item.php?id=$o->id" class="display-block">
 		<figure class="product-figure">
 			<div class="product-image">
-				<img src="images/babyearings_thumbnail.jpg" alt="">
+				<img src="images/doublelonglinkearrings_pc_1.jpg" alt="">
 			</div>
 			<div class="form-control display-flex">
 				<div class="flex-none">Baby Earrings</div>

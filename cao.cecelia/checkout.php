@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+<?php
+
+include_once "lib/php/function.php";
+include_once "parts/templates.php";
+
+
+$result = getCartItems();
+
+// print_p($result);
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	
@@ -58,7 +68,7 @@
 	<input type="text" class="form-input" name="zip" placeholder="Zip" id="input-example9">			
 			</div>
 			<div class="display-flex flex-justify-end">
-			<a href="cart.php" class="linkbutton">
+			<a href="confirmation.php" class="linkbutton">
 				COUNTINUE
 			</a>
 </div>
@@ -66,9 +76,11 @@
 			
 			<div class="col-xs-12 col-xl-6">
 			<div class="card soft">
-			<h3>Order Summary</h3>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo cupiditate quasi excepturi repellendus nostrum, minus enim itaque suscipit quaerat iste.
-			
+				<?php
+				echo array_reduce($result,'addCartTemplate');
+				?>
+				<?= cartTotals(); ?>
+
 		</div>
 			
 		</div>

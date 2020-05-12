@@ -29,19 +29,23 @@ $result = getCartItems();
 
 		<div class="grid gap">
 			<div class="col-xs-12 col-md-8">
-				<div class="card">
+				<hr align="center" width="100%" color="grey" size="1">
 				<?php
 				echo array_reduce($result,'cartListTemplate');
 				?>
-				</div>
+				
 			</div>
 			<div class="col-xs-12 col-md-4">
 				<div class="card">
 					<?= cartTotals(); ?>
 					</div>
-					<div><a href="checkout.php" class="form-button">Checkout</a></div>
+					<a href="checkout.php" class="form-button">Checkout</a>
+</div>
 				</div>
+				<div>
+
 			</div>
+
 		</div>
 	</div>
 	
