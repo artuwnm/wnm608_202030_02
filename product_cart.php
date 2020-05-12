@@ -12,7 +12,7 @@
 
 
 	<div class="container">
-		<div class="card soft">
+		<div class="card  ">
 
 			<h2>Cart Page</h2>
 
