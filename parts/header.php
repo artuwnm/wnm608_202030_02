@@ -6,7 +6,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="bag.php" class="bag-icon">
+			<a href="product_cart.php" class="bag-icon">
 				<img src="img/bag.png" width="40px" height="40px" alt="Cart">
 			</a>
 		</li>
@@ -22,13 +22,13 @@
 	<nav class="container nav-stretch">
 		<ul>
 			<li>
-				<a href="aboutus.html">about</a>
+				<a href="aboutus.php">about</a>
 			</li>
 			<li>
-				<a href="#">shop</a>
+				<a href="product_list.php">shop</a>
 			</li>
 			<li>
-				<a href="#">contact</a>
+				<a href="contact.php">contact</a>
 			</li>
 		</ul>
 	</nav>
