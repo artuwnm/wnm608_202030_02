@@ -45,7 +45,7 @@ $thumbs = explode(",", $o->images);
 					<?php
 
 					echo array_reduce($thumbs,function($r,$o){
-						return $r."<img src='/img/$o'>";
+						return $r."<img src='$o'>";
 					})
 
 					?>
