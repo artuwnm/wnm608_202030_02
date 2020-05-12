@@ -14,7 +14,7 @@
 				<h3>Explore</h3>
 			</li>
 			<li><a href="aboutus.php">Our Story</a></li>
-			<li><a href="faqs.php">Frequently Asked Questions</a></li>
+			<li><a href="faq.php">Frequently Asked Questions</a></li>
 			<li><a href="contact.php">Contact</a></li>
 		</ul>
 		<ul class="footer__menu--form">

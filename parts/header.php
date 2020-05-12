@@ -2,12 +2,12 @@
 	<ul class="ctas display-flex">
 		<li class="search">
 			<a href="#" class="search-icon">
-				<img src="img/search.png" width="40px" height="40px" alt="Search">
+				<img src="/wnm608_202030_02/img/search.png" width="40px" height="40px" alt="Search">
 			</a>
 		</li>
 		<li>
 			<a href="product_cart.php" class="bag-icon">
-				<img src="img/bag.png" width="40px" height="40px" alt="Cart">
+				<img src="/wnm608_202030_02/img/bag.png" width="40px" height="40px" alt="Cart">
 			</a>
 		</li>
 	</ul>
@@ -16,7 +16,7 @@
 <header class="header">
 	<div class="logo">
 		<a href="index.php">
-			<img src="img/logo.png" alt="fenfong logo">
+			<img src="/wnm608_202030_02/img/logo.png" alt="fenfong logo">
 		</a>
 	</div>
 	<nav class="container nav-stretch">

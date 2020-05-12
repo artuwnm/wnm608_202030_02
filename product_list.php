@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Store: Product List</title>
+	<title>FenFong: Product List</title>
 
 	<?php include "parts/meta.php" ?>
 
