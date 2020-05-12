@@ -14,7 +14,9 @@
 
 	<div class="hero-image">
 		<div class="hero-text">
-			<button class="site-button">SHOP NOW</button>
+			<a href="product_list.php">
+				<button class="site-button">SHOP NOW</button>
+			</a>
 		</div>
 	</div>
 	<div class="featured-items container">
