@@ -341,6 +341,7 @@ footer {
     cursor: pointer;
     text-decoration: none;
     outline:0;
+    -webkit-appearance: none;
 }
 .form-button:hover {
     text-decoration: none;

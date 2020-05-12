@@ -65,11 +65,11 @@ $thumbs = explode(",", $o->images);
 						<label class="form-label">Amount</label>
 						<select name="amount" class="form-button">
 							<!-- option*10>{$} -->
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
+							<option>1hr</option>
+							<option>2hr</option>
+							<option>3hr</option>
+							<option>4hr</option>
+							<option>5hr</option>
 						</select>
 					</div>
 
