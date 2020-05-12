@@ -3,14 +3,7 @@
 include_once "lib/php/functions.php";
 include_once "parts/templates.php";
 
-
-$result = getRows(
-	makeConn(),
-	"SELECT *
-	FROM `products`
-	WHERE `id` IN (2,5,8)
-	"
-);
+$result = getCartItems();
 
 // print_p($result);
 

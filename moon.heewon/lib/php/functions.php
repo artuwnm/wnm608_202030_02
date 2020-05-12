@@ -26,6 +26,14 @@ function makeConn() {
 
 	return $conn;
 }
+function makePDOConn() {
+	try {
+		$conn = new PDO(...makePDOAuth());
+	} catch(PDOException $e) {
+		die($e->getMessage());
+	}
+	return $conn;
+}
 
 
 function getRows($conn,$sql) {
@@ -66,9 +74,7 @@ function getCart() {
 function addToCart($id,$amount,$price) {
 	$cart = getCart();
 
-	$p = array_find($cart,function($o) use ($id) {
-		return $o->id==$id;
-	});
+	$p = cartItemByID($id);
 
 	if($p) {
 		$p->amount += $amount;
@@ -84,20 +90,28 @@ function addToCart($id,$amount,$price) {
 }
 
 
-
 function getCartItems() {
 	$cart = getCart();
 
-	$ids = implode(",",array_map(function($o){return $o->id;},$cart));
-
-	$result = getRows(
-		makeConn(),
-		"SELECT *
+	$ids = empty($cart) ? 0 : implode(",",array_map(function($o){return $o->id;},$cart));
+	$sql = "SELECT *
 		FROM `products`
 		WHERE `id` IN ($ids)
-		"
+		";
+
+	$database_result = getRows(
+		makeConn(),
+		$sql
 	);
 
-	return $result;
+	return array_map(function($o) use ($cart){
+		$cart_o = array_find($cart,function($c) use($o) { return $c->id==$o->id; });
+		$o->amount = $cart_o->amount;
+		$o->total = $o->price * $cart_o->amount;
+		return $o;
+	},$database_result);
 }
 
+function cartItemByID($id) {
+	return array_find(getCart(),function($o) use ($id){return $o->id==$id;});
+}
