@@ -1,6 +1,7 @@
 <?php
 
 include_once "lib/php/functions.php";
+include_once "parts/templates.php";
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -32,10 +33,10 @@ include_once "lib/php/functions.php";
 				<button type="button" class="form-button js-filter" data-column="category" data-value="">All</button>
 			</div>
 			<div class="flex-none">
-				<button type="button" class="form-button js-filter" data-column="category" data-value="fruit">Fruit</button>
+				<button type="button" class="form-button js-filter" data-column="category" data-value="fruit">Craft</button>
 			</div>
 			<div class="flex-none">
-				<button type="button" class="form-button js-filter" data-column="category" data-value="vegetable">Vegetables</button>
+				<button type="button" class="form-button js-filter" data-column="category" data-value="vegetable">Lesson</button>
 			</div>
 		</div>
 		<div class="form-control">
@@ -51,6 +52,9 @@ include_once "lib/php/functions.php";
 		</div>
 
 		<div class="grid gap productlist"></div>
+
+		
+
 	</div>
 	
 </body>

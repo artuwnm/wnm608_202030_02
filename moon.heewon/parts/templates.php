@@ -7,11 +7,11 @@ return $r.<<<HTML
 	<a href="product_item.php?id=$o->id" class="display-block">
 		<figure class="product-figure soft">
 			<div class="product-image">
-				<img src="img/$o->thumbnail" alt="">
+				<img src="$o->thumbnail" alt="">
 			</div>
 			<figcaption class="product-description">
 				<div class="product-price">&dollar;$o->price</div>
-				<div class="product-name">$o->title</div>
+				<div class="product-name">$o->name</div>
 			</figcaption>
 		</figure>
 	</a>
@@ -28,7 +28,7 @@ $selectAmount = selectAmount($o->amount);
 return $r.<<<HTML
 <div class="display-flex card-section">
 	<div class="flex-none product-thumbs">
-		<img src="/images/store/$o->thumbnail">
+		<img src="img/$o->thumbnail">
 	</div>
 	<div class="flex-stretch">
 		<div class="display-flex">
