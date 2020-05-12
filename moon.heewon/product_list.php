@@ -3,6 +3,16 @@
 include_once "lib/php/functions.php";
 include_once "parts/templates.php";
 
+$result = getRows(
+	makeConn(),
+	"SELECT *
+	FROM `products`
+	ORDER BY `price`
+	"
+);
+
+// print_p($result);
+
 ?><!DOCTYPE html>
 <html lang="en">
 <head>

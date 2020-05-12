@@ -55,7 +55,7 @@ $thumbs = explode(",", $o->images);
 			<div class="col-xs-12 col-md-5">
 				<form class="card soft flat" method="get" action="data/form_actions.php">
 					<div class="card-section">
-						<h2><?= $o->title ?></h2>
+						<h2><?= $o->name ?></h2>
 						<div class="product-description">
 							<div class="product-price">&dollar;<?= $o->price ?></div>
 						</div>
@@ -70,11 +70,6 @@ $thumbs = explode(",", $o->images);
 							<option>3</option>
 							<option>4</option>
 							<option>5</option>
-							<option>6</option>
-							<option>7</option>
-							<option>8</option>
-							<option>9</option>
-							<option>10</option>
 						</select>
 					</div>
 
@@ -89,7 +84,7 @@ $thumbs = explode(",", $o->images);
 		</div>
 
 		<div class="card soft dark">
-			<h3>Description</h3>
+			<h1>Description</h1>
 			<div class="product-description">
 				<?= $o->description ?>
 			</div>
