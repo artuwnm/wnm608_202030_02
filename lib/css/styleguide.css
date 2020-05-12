@@ -21,7 +21,7 @@
 body {
 	margin: 0;
 	font-size: 100%;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 h1,
@@ -60,6 +60,8 @@ a {
 	font-weight: bold;
 	text-decoration: none;
 }
+
+
 
 a:hover {
 	text-decoration: underline;
@@ -171,6 +173,7 @@ code {
 	font-weight: normal;
 	font-size: 24px;
 	line-height: 55px;
+	text-align:center
 
 	/* identical to box height */
 }
@@ -242,8 +245,19 @@ code {
 	height: 3px;
 }
 
+.main-image img {
+   width: 350px;
+    height: 450px;
+    padding-left: 60px;
+}
 
-
+.thumbstrip img {
+    width: 90px;
+    height: 110px;
+    margin: 6px;
+    margin-top: 30px;
+    cursor: pointer;
+}
 
 /* CARD */
 .card {
@@ -253,7 +267,9 @@ code {
 	position: relative;
 	margin-top: 1em;
 	margin-bottom: 1em;
+	
 }
+
 
 .card>:first-child {
 	margin-top: 0;
@@ -280,9 +296,11 @@ code {
 .card.flat {
 	padding: 0;
 }
-
-
-
+.card.transparent {
+    background-color: inherit;
+    color: var(--color-neutral-medium);
+    padding-top: 0;
+}
 
 
 /* VIEW WINDOW */
@@ -332,9 +350,6 @@ code {
 .table.lined.outline {
 	border: 1px solid var(--color-neutral-light);
 }
-
-
-
 
 
 
