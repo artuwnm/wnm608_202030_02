@@ -5,9 +5,9 @@
 			<li>
 				<h3>Shop</h3>
 			</li>
-			<li><a href="shop_all.php">All Collections</a></li>
-			<li><a href="shop_women.php">Hand Soap</a></li>
-			<li><a href="shop_men.php">Body Wash</a></li>
+			<li><a href="product_list.php">All Collections</a></li>
+			<li><a href="product_list.php">Hand Soap</a></li>
+			<li><a href="product_list.php">Body Wash</a></li>
 		</ul>
 		<ul class="footer__menu--explore">
 			<li>
@@ -26,7 +26,7 @@
 			</li>
 			<li>
 				<input type="text" class="form-input" placeholder="Sign up for email alerts">
-				<input type="submit" class="form-button" value="Join">
+				<input type="submit" class="footer-button" value="Join">
 			</li>
 		</ul>
 	</div>

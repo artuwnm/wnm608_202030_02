@@ -19,6 +19,8 @@ $empty_user = (object)[
 	"classes"=>[]
 ];
 
+
+
 if(isset($_GET['action'])) {
 	if($_GET['action']=="update") {
 		$users[$_GET['id']]->name = $_POST['user-name'];

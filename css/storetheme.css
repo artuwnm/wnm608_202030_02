@@ -92,7 +92,11 @@ section h2 {
 	color: #fff;
 }
 
-
+.product-thumbs img {
+	height:75px;
+	width:100px;
+	object-fit:cover;
+}
 /* FIGURE */
 .product-figure {
 	margin: 0;
@@ -180,7 +184,7 @@ footer {
 	outline: 0;
 }
 
-.form-button {
+.footer-button {
 	display: inline-block;
 	width: 20%;
 	border-width: 0;

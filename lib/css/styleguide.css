@@ -387,12 +387,10 @@ code {
 .form-button {
 	display: inline-block;
 	width: 100%;
-	border-width: 0;
-	background-color: darkorange;
+	border-width: 1;
+	background-color: white;
 	padding: 0.5em 1em;
-	color: inherit;
-	font: inherit;
-	text-align: center;
+ 	text-align: center;
 	border-radius: 0.3em;
 	cursor: pointer;
 	text-decoration: none;
@@ -402,11 +400,7 @@ code {
 .form-button:hover {
 	text-decoration: none;
 }
-
-.form-button:active {
-	background-color: var(--color-main-light);
-}
-
+ 
 
 .hotdog {
 	display: inline-block;

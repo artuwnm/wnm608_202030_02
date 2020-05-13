@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `test`
 --
 
-CREATE TABLE `test` (
+CREATE TABLE `products` (
   `id` int(13) NOT NULL,
   `name` varchar(64) NOT NULL,
   `email` varchar(128) NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE `test` (
 -- Dumping data for table `test`
 --
 
-INSERT INTO `test` (`id`, `name`, `email`, `url`, `price`, `category`, `date_create`, `date_modify`, `description`, `thumbnail`, `images`) VALUES
+INSERT INTO `products` (`id`, `name`, `email`, `url`, `price`, `category`, `date_create`, `date_modify`, `description`, `thumbnail`, `images`) VALUES
 (1, 'Apple', 'Apple@banana.com', 'https://banana.com', 15.99, 'fruit', '2020-04-09 18:01:15', '2020-04-09 18:01:15', 'An apple is pretty delicious.', 'images/apple_thumbnail.jpg', 'images/apple_med_1.jpg,images/apple_med_2.jpg,images/apple_med_3.jpg'),
 (2, 'Banana', 'banana@banana.com', 'https://banana.com', 3.75, 'fruit', '2020-04-09 18:04:13', '2020-04-09 18:04:13', 'Banana. Peanut Butter Jelly Time.', 'images/banana_thumbnail.jpg', 'images/banana_med_1.jpg');
 
@@ -57,7 +57,7 @@ INSERT INTO `test` (`id`, `name`, `email`, `url`, `price`, `category`, `date_cre
 --
 -- Indexes for table `test`
 --
-ALTER TABLE `test`
+ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -67,7 +67,7 @@ ALTER TABLE `test`
 --
 -- AUTO_INCREMENT for table `test`
 --
-ALTER TABLE `test`
+ALTER TABLE `products`
   MODIFY `id` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 

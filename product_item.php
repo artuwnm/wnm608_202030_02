@@ -48,13 +48,13 @@ $thumbs = explode(",", $o->images);
 			<div class="grid gap">
 				<div class="col-md-6 image-picker">
 					<div class="main-image">
-						<img src="/wnm608_202030_02/img/products/<?= $o->thumbnail ?>" alt="">
+						<img src="img/products/<?= $o->thumbnail ?>" alt="">
 					</div>
 					<div class="thumbstrip">
 						<?php
 
 						echo array_reduce($thumbs, function ($r, $o) {
-							return $r . "<img src='/wnm608_202030_02/img/products/$o'>";
+							return $r . "<img src='img/products/$o'>";
 						})
 
 						?> </div>
@@ -92,9 +92,8 @@ $thumbs = explode(",", $o->images);
 
 						<div class="form-input">
 							<input type="hidden" name="action" value="add-to-cart">
-							<input type="hidden" name="id" value="10">
-							<input type="hidden" name="price" value="25.00">
-							<input type="hidden" name="color" value="white,beige">
+							<input type="hidden" name="id" value="<?= $o->id ?>">
+							<input type="hidden" name="price" value="<?= $o->price ?>">
 							<input type="submit" class="btn dark site-button uppercase" value="Add To Cart">
 						</div>
 

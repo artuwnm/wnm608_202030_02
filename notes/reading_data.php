@@ -32,7 +32,6 @@ $users = getData("../data/users.json");
     <div class="container">
         <div class="card soft">
             <h2>Notes</h2>
-
             <ul>
                 <?php
 
