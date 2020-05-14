@@ -2,7 +2,7 @@
 <header class="navbar">
 	<div class="container display-flex">
 		<div class="flex-stretch">
-			<h1>Store</h1>
+		<a href="index.php"><img src="img/logo.png" alt="">
 		</div>
 		<nav class="nav flex-none">
 			<ul class="display-flex">

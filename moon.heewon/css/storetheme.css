@@ -1,13 +1,13 @@
 
 :root {
     --color-neutral-dark: #DD6243;
-    --color-neutral-medium: #517761;
+    --color-neutral-medium: #DD6243;
     --color-neutral-light: #FCF6EF;
-    --color-neutral-medium-light: #c5cbc3;
+    --color-neutral-medium-light: #f5976b;
 
-    --color-main-dark: #086603;
-    --color-main-medium: #23f41b;
-    --color-main-light: #d1ffbd;
+    --color-main-dark: #034066;
+    --color-main-medium: #DD6243;
+    --color-main-light: #bde6ff;
 }
 
 
@@ -28,6 +28,7 @@ section h2 {
 	height:100%;
 }
 
+.form-select select,
 .form-button{
 	background-color:var(--color-neutral-medium-light);
 }

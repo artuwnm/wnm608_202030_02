@@ -43,10 +43,13 @@ $result = getRows(
 				<button type="button" class="form-button js-filter" data-column="category" data-value="">All</button>
 			</div>
 			<div class="flex-none">
-				<button type="button" class="form-button js-filter" data-column="category" data-value="fruit">Craft</button>
+				<button type="button" class="form-button js-filter" data-column="category" data-value="craft">Craft</button>
 			</div>
 			<div class="flex-none">
-				<button type="button" class="form-button js-filter" data-column="category" data-value="vegetable">Lesson</button>
+				<button type="button" class="form-button js-filter" data-column="category" data-value="lesson">Lesson</button>
+			</div>
+			<div class="flex-none">
+				<button type="button" class="form-button js-filter" data-column="category" data-value="architecture">Architecture</button>
 			</div>
 		</div>
 		<div class="form-control">

@@ -20,16 +20,35 @@ $(()=>{
 			type:'product_search',
 			search:$("#product-search>input").val()
 		}).then(showResults)
-	})
+	});
 
 
 	$(".js-filter").on("click",function(e){
-		getData({
-			type:'product_filter',
-			column:$(this).data("column"),
-			value:$(this).data("value")
-		}).then(showResults);
-	})
+		getData(
+			$(this).data("value")==""?{
+				type:'product_all'
+			}:{
+				type:'product_filter',
+				column:$(this).data("column"),
+				value:$(this).data("value")
+			}
+		).then(showResults);
+	});
+
+
+	$(".js-sort").on("change",function(e){
+		getData(
+			this.value==1 ?
+				{type:'product_sort',column:'date_create',dir:'DESC'} :
+			this.value==2 ?
+				{type:'product_sort',column:'date_create',dir:'ASC'} :
+			this.value==3 ?
+				{type:'product_sort',column:'price',dir:'DESC'} :
+			this.value==4 ?
+				{type:'product_sort',column:'price',dir:'ASC'} :
+			{type:'product_all'}
+		).then(showResults);
+	});
 
 
 });

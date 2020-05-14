@@ -328,6 +328,8 @@ footer {
     margin: 0.2em 0;
     color: var(--color-neutral-medium);
 }
+
+.form-select select,
 .form-button {
     display: inline-block;
     width: 100%;
@@ -343,6 +345,7 @@ footer {
     outline:0;
     -webkit-appearance: none;
 }
+
 .form-button:hover {
     text-decoration: none;
 }
@@ -356,6 +359,7 @@ footer {
 .form-select::after {
     content: '▼';
     position: absolute;
+    color:var(--color-neutral-medium);
     top: 50%;
     right: 0.3rem;
     transform: translateY(-50%);
@@ -386,6 +390,9 @@ footer {
 	outline:0;
 	padding:0 1em;
 }
+.hotdog.light {
+		background-color: var(--color-neutral-light);
+	}
 
 
 
