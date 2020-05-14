@@ -15,7 +15,7 @@
 
 body {
 	margin:0;
-	font-size:100%;
+	font-size:130%;
 	font-family:Varela;
 }
 h2,
@@ -99,7 +99,7 @@ code {
 }
 .navbar h1 {
 	margin:0;
-	font-size:1em;
+	font-size:1.5em;
 }
 .navbar a {
 	padding:0 1em;
@@ -203,6 +203,7 @@ code {
 
 	.card.soft {
 		border-radius:0.3em;
+		background-color: white;
 	}
 
 	.card.dark {
@@ -210,7 +211,11 @@ code {
 		color:var(--color-neutral-light);
 	}
 	.card.medium {
-		background-color:var(--color-neutral-medium);
+		background-image: url("../../images/bk.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 800px;
+	padding: 0px;
 	}
 
 	.card.flat {
@@ -219,12 +224,15 @@ code {
 .brands{
 	
 }
-.card.heroimg{
-	background-image: url("../../image/festival.jpg");
-	background-size: cover;
-	height: 550px;
+.card.soft.medium{
 }
 
+.card.transparent{
+	background-color: #BCF0FF40;
+	margin: 0 400px;
+	height: 800px;
+   
+}
 /* VIEW WINDOW */
 
 .view-window {
@@ -239,9 +247,9 @@ code {
 .col-6.ad{
 text-align: center;
 background-size: 100%;
-padding-top: 15%;
-padding-bottom: 15%;
 background-repeat: no-repeat;
+min-height: 100%; 
+
 }
 
 
@@ -315,15 +323,15 @@ background-repeat: no-repeat;
     display: inline-block;
     width: 100%;
     border-width: 0;
-    background-color: var(--color-neutral-medium);
+    background-color: var(--color-neutral-light);
     padding: 0.5em 1em;
     color: inherit;
     font: inherit;
     text-align: center;
-    border-radius: 0.3em;
     cursor: pointer;
     text-decoration: none;
     outline:0;
+    color:var(--color-neutral-dark);
 }
 .form-button:hover {
     text-decoration: none;
@@ -337,9 +345,9 @@ background-repeat: no-repeat;
 .form-select::after {
     content: '▼';
     position: absolute;
-    color:var(--color-neutral-medium);
+    color:var(--color-neutral-dark);
     top: 50%;
-    right: 0.3rem;
+    right: 0.04rem;
     transform: translateY(-50%);
     pointer-events:none;
     font-size:0.7em;

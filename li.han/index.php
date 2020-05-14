@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php
+
+include_once "lib/php/functions.php";
+$empty_poduct=(object)[
+]
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Landing Page</title>
@@ -7,99 +13,57 @@
 <body>
 	
 	<!-- header.navbar>h1+nav.nav -->
-	<header >
-
-		<div class="container display-flex">
-			<div class="flex-stretch" align="center" style="margin-top: 0.8em">  
-				<img id="head" src="image/logo.png" alt="GLOWING BEAUTY" style="width: 5%">
-				<h1 id="head" ><a href="index.php">GLOWING BEAUTY</a></h1>
-			</div>
-			<nav class="nav flex-none" style="margin-top: 2%">
-				<!-- ul>li*3>a[href=#]>{Link $} -->
-				<ul class="display-flex">
-					<li><a href="product_cart.php"><img src="image/cart.png" alt="" style="width: 55%"></a></li>
-				</ul>
-			
-			</nav>
-		</div>
-	</header>
 <?php include "parts/navbar.php" ?>
 	<!-- .container>p*2>lorem40 -->
 	
+
+<div class="container">
+	<div class="card medium" >
+	<div class="card transparent" >
+		
+	</div>		
+	</div>
+	
 	<div class="container" style="margin-top: 20px">
-	<div class="grid gap" style="size: 50%">
-	          <div class="col-2"><img src="image/shiseido.png" alt="shiseido.png" style="width: 90%">
+	<div class="grid gap" >
+	          <div class="col-2"><img src="images/shiseido.png" alt="shiseido.png" style="width: 50%">
 	          </div>
-	          <div class="col-2"><img src="image/ptr.png" alt="ptr.png" style="width: 90%">
+	          <div class="col-2"><img src="images/ptr.png" alt="ptr.png" style="width: 55%">
 	          </div>
-	          <div class="col-2"><img src="image/eve.png" alt="eve.png" style="width: 60%">
+	          <div class="col-2"><img src="images/eve.png" alt="eve.png" style="width: 40%">
 	          </div>
-	          <div class="col-2"><img src="image/lancome.jpg" alt="lancome" style="width: 80%"></div>
-	          <div class="col-2"><img src="image/cpb.png" alt="cpb" style="width: 70%"></div>
-	          <div class="col-2"><img src="image/erno.png" alt="erno laszro" style="width: 65%"></div>
+	          <div class="col-2"><img src="images/lancome.jpg" alt="lancome" style="width: 30%"></div>
+	          <div class="col-2"><img src="images/cpb.png" alt="cpb" style="width: 50%"></div>
+	          <div class="col-2"><img src="images/erno.png" alt="erno laszro" style="width: 45%"></div>
 	</div>	
-		<div class="card heroimg">
-		</div>
 	</div>
-
-	<div class="view-window display-flex flex-align-center flex-justify-center" style="background-image:url(image/card bg.jpg)">
-		<div class="card soft">
-			<h2>PRODUCT</h2>
-		</div>
-	</div>
-
 	<div class="container">
-		<div class="grid gap" style="background-color: transparent" >
+		<div class="card ">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt tempora laboriosam suscipit consequuntur nemo vitae eos, obcaecati doloribus rem labore animi porro necessitatibus mollitia autem sequi accusantium facere minima ducimus. Fugiat dignissimos quod perspiciatis mollitia facere voluptas culpa eligendi praesentium.</p>
+			<p>Sequi asperiores ex mollitia reiciendis libero, maxime eum cumque beatae rerum provident tempore recusandae odio assumenda minima laudantium impedit illum aliquam accusamus autem architecto, rem molestiae, tempora voluptatibus a? Id excepturi, doloremque eius amet hic, nobis harum et praesentium a!</p>
+		</div>
+	</div>
+
+</div>
+	<div class="view-window display-flex flex-align-center flex-justify-center" style="background-image:url(images/hero.jpg)">
+		<div class="card soft" style="background-image: url(images/shipping.png)">
 			<!-- .col-6*2>.card.soft>lorem20 -->
-			<div class="col-6 ad" style="background-image: url(image/shipping.png)">
-                <h2>Free shipping over $29 </h2> 
-                <p><a href="#">Details</a></p>   
+                <h3>Free shipping over $29 </h3> 
+                <p><a class="form-button" href="product_list.php">Details</a></p>   
 				
 			</div>
 			
-			<div class="col-6 ad" style="background-image: url(image/summer.png)">
-                <h2>Summer Selections</h2>
-                <p><a href="#">Shop</a></p>
+			<div class="card soft" style="background-image: url(images/summer.png)">
+                <h3>Summer Selections</h3>
+                <p><a class="form-button" href="product_list.php">Shop</a></p>
 				
 			</div>
-             </div>
+           
+     </div>
+
+		
 
 
-			<!-- .col-6*2>.card.soft>lorem20 -->
-			<div class="col-4">
-				<div class="card soft">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore non quis similique, sit, doloremque hic excepturi dolorum odit explicabo mollitia?</div>
-			</div>
-			<div class="col-4">
-				<div class="card soft">Hic modi, soluta quasi? Consequuntur necessitatibus autem aspernatur eveniet assumenda rerum facere est neque omnis quod ipsam enim, iure alias.</div>
-			</div>
-			<div class="col-4">
-				<div class="card soft">Hic modi, soluta quasi? Consequuntur necessitatibus autem aspernatur eveniet assumenda rerum facere est neque omnis quod ipsam enim, iure alias.</div>
-			</div>
-
-
-			<!-- .col-6*2>.card.soft>lorem20 -->
-			<div class="col-3">
-				<div class="card soft">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore non quis similique, sit, doloremque hic excepturi dolorum odit explicabo mollitia? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit officiis blanditiis asperiores accusamus at quo natus. Quisquam minus obcaecati, deleniti.</div>
-			</div>
-			<div class="col-6">
-				<div class="grid">
-					<!-- .col-4*3>.card.soft>lorem10 -->
-					<div class="col-4">
-						<div class="card soft">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, ut.</div>
-					</div>
-					<div class="col-4">
-						<div class="card soft">Harum et inventore minima reiciendis, minus dolorum illum ab omnis.</div>
-					</div>
-					<div class="col-4">
-						<div class="card soft">Consequuntur fugiat quidem possimus officiis in, eum animi suscipit eveniet?</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-3">
-				<div class="card soft">Hic modi, soluta quasi? Consequuntur necessitatibus autem aspernatur eveniet assumenda rerum facere est neque omnis quod ipsam enim, iure alias.</div>
-			</div>
-		</div>
-	</div>
 
 	<div class="container">
 		<h2>Responsive Grid</h2>
@@ -158,11 +122,6 @@
 		</div>
 	</div>
 
-	<div class="container">
-		<div class="card soft medium">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt tempora laboriosam suscipit consequuntur nemo vitae eos, obcaecati doloribus rem labore animi porro necessitatibus mollitia autem sequi accusantium facere minima ducimus. Fugiat dignissimos quod perspiciatis mollitia facere voluptas culpa eligendi praesentium.</p>
-			<p>Sequi asperiores ex mollitia reiciendis libero, maxime eum cumque beatae rerum provident tempore recusandae odio assumenda minima laudantium impedit illum aliquam accusamus autem architecto, rem molestiae, tempora voluptatibus a? Id excepturi, doloremque eius amet hic, nobis harum et praesentium a!</p>
-		</div>
-	</div>
+	
 </body>
 </html>
