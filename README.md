@@ -1,10 +1,4 @@
-# Cyrus Choi
+# wnm608_202030_02
 
-## Links
-
-- http://cyrucdesign.com
-- http://cyrucdesign.com/aau/wnm608/cyrus.choi/index.php
-- http://cyrucdesign.com/aau/wnm608/recipes/index.html
-- http://cyrucdesign.com/aau/wnm608/styleguide
-- http://cyrucdesign.com/aau/wnm608/admin/user.php
+WNM 608 2020 Spring 02
 

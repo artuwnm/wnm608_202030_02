@@ -4,7 +4,7 @@
 
 - http://cyrucdesign.com
 - http://cyrucdesign.com/aau/wnm608/cyrus.choi/index.php
-- http://cyrucdesign.com/aau/wnm608/recipes/index.html
-- http://cyrucdesign.com/aau/wnm608/styleguide
-- http://cyrucdesign.com/aau/wnm608/admin/user.php
+- http://cyrucdesign.com/aau/wnm608/cyrus.choi/recipes/index.html
+- http://cyrucdesign.com/aau/wnm608/cyrus.choi/styleguide
+- http://cyrucdesign.com/aau/wnm608/cyrus.choi/admin/user.php
 
