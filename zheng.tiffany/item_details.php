@@ -33,17 +33,14 @@ $thumbs = explode(", ", $o->images);
 
 	<div class="container">
 		<nav class="nav-crumbs" style="margin:1em 0">
-			<ul>
-				<li><a href="shop_all.php">Back</a></li>
-			</ul>
+			<div class="back-link">
+				<a href="shop_all.php"><span class="chevron left"></span> Back</a>
+			</div>
 		</nav>
 		<div class="grid gap">
-			<div class="col-xs-12 col-md-7">
-				<div class="card soft">
-					<div class="product-main">
-						<img src="<?= $o->thumbnail ?>" alt="">
-					</div>
-					<div class="product-thumbs">
+			<div class="col-xs-12 col-md-6">
+				<div class="product-images display-flex">
+					<div class="product-thumbs flex-none">
 						<?php 
 
 						echo array_reduce($thumbs,function($r,$o){
@@ -52,18 +49,27 @@ $thumbs = explode(", ", $o->images);
 
 						?>
 					</div>
+					<div class="product-main">
+						<img src="<?= $o->thumbnail ?>" alt="">
+					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 col-md-7">
-				<h1><?= $o->name ?></h1>
-				<form class="card soft flat" method="get" action="data/form_actions.php">
+			<div class="col-xs-12 col-md-6">
+				<form method="get" action="data/form_actions.php">
 				<div class="product-details">
-					<div class="product-price">&dollar;<?= $o->price ?></div>
-					<div class="product-description"><?= $o->description ?></div>
-				</div>
-				<div class="card-section">
-					<label class="form-label">Amount</label>
-					<select name="amount" class="form-button">
+					<h1><?= $o->name ?></h1>
+					<h3 class="product-price">&dollar;<?= $o->price ?></h3>
+					<p class="product-description"><?= $o->description ?></p>
+					<label class="form-label">Size</label>
+					<select name="amount" class="select-button">
+						<option>XS</option>
+						<option>S</option>
+						<option>M</option>
+						<option>L</option>
+						<option>XL</option>
+					</select>
+					<label class="form-label">Quantity</label>
+					<select name="amount" class="select-button">
 						<!-- option*10>{$} -->
 						<option>1</option>
 						<option>2</option>
@@ -76,13 +82,12 @@ $thumbs = explode(", ", $o->images);
 						<option>9</option>
 						<option>10</option>
 					</select>
-				</div>
-
-				<div>
-					<input type="hidden" name="action" value="add-to-cart">
-					<input type="hidden" name="id" value="<?= $o->id ?>">
-					<input type="hidden" name="price" value="<?= $o->price ?>">
-					<input type="submit" class="form-button" value="Add To Cart">
+					<div class="add-to-bag-button">
+						<input type="hidden" name="action" value="add-to-cart">
+						<input type="hidden" name="id" value="<?= $o->id ?>">
+						<input type="hidden" name="price" value="<?= $o->price ?>">
+						<input type="submit" class="form-button" value="Add To Bag">
+					</div>
 				</div>
 			</div>
 		</div>

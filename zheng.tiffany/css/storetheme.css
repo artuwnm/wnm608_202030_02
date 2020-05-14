@@ -37,7 +37,6 @@ h3 {
 
 h4 {
 	font-size: 1.25em;
-	color: var(--color-main-dark);
 	letter-spacing: 0.05em;
 	margin: 0;
 }
@@ -64,12 +63,20 @@ hr {
 
 /* Navbar */
 
+.store-header {
+	margin: 1.5rem auto 0;
+}
+
 .store-header .row .logo {
+	width: 15%;
+}
+
+/*.store-header .row .logo {
 	position: relative;
 	text-align: center;
 	margin: 1.25rem auto 0;
 	width: 15%;
-}
+}*/
 
 .logo img {
 	width: 100%;
@@ -107,6 +114,59 @@ hr {
 	margin: 2rem auto 4rem;
 }
 
+.products-header {
+	margin: 4rem auto 2rem;
+}
+
+.products-header h1 {
+	margin: 0 auto;
+}
+
+/*Bag Classes*/
+
+.bag-item>ul>li {
+	padding: 2em 5em;
+	padding-left: 0;
+}
+
+.bag-item>ul>li:first-child {
+	padding-top: 0;
+	margin-right: 2em;
+}
+
+.bag-item>ul>li:nth-child(2) {
+	min-width: 40%;
+}
+
+.bag-item>ul>li:last-child {
+	padding-right: 0;
+}
+
+.bag-item-delete button {
+	-webkit-appearance: none;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+}
+
+.bag-totals {
+	width: 40%;
+	height: 20vh;
+	float: right;
+	margin-right: 20%;
+}
+
+.bag-item-totals-table td {
+	text-align: right;
+}
+
+.checkout-button {
+	clear: both;
+	float: right;
+	width: 50%;
+}
+
+
 /* Checkout Classes */
 
 .back-link {
@@ -129,20 +189,24 @@ hr {
 	min-height: 100%;
 }
 
-.bag-item ul {
+/*.bag-item ul {
 	padding-left: 1em;
+}*/
+
+.checkout-bag-item {
+	font-size: 0.9em;
+	padding-bottom: 0.5em;
 }
 
 .bag-item-info {
 	padding: 0 1.25em;
 }
 
-	.bag-item-info-table {
-		bottom: 0.25em;
-	}
+.bag-item-info-table {
+	bottom: 0.25em;
+}
 
 .bag-item-price {
-	color: var(--color-neutral-dark);
 	right: 1em;
 }
 
@@ -152,14 +216,59 @@ hr {
 }
 
 .bag-total-table h3 {
-	font-size: 1.5em;
-	margin-top: 0em;
+	display: inline;
 }
 
 .checkout .logo {
 	position: relative;
-	margin: 2rem 0;
-	width: 20%;
+	margin: 2rem 0 0;
+	width: 15%;
+}
+
+.checkout-form>h5 {
+	margin-top: 3rem;
+}
+
+.checkout-button {
+	background-color: #fff;
+	padding: 0.5em 1em;
+	color: var(--color-neutral-dark);
+	font: inherit;
+	font-size: 1em;
+	letter-spacing: 0.025em;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	outline: 0;
+}
+
+.checkout-row select {
+	width: 100%;
+}
+
+.checkout-row {
+	width: 70%;
+}
+
+.checkout-row div {
+	padding-right: 2em;
+    width: 100%;
+}
+
+.checkout-row>div:last-child {
+	padding-top: 2.25em;
+	padding-right: 0;
+}
+
+.checkout-row>div:last-child input {
+	width: 100%;
+}
+
+.checkout-button.pay-now {
+	clear: none;
+	float: none;
+	padding: 1em 0 10em;
+    width: 30%;
 }
 
 /*Admin*/
@@ -196,6 +305,84 @@ hr {
 	font-size: 1.25em;
 	font-weight: 700;
 	color: var(--color-neutral-dark);
+}
+
+/*Product Details*/
+
+.product-main img {
+    width: 100%;
+    height: auto%;
+    object-fit: cover;
+}
+
+.product-thumbs {
+	width: 85px;
+}
+
+.product-thumbs img {
+    height: 100px;
+    width: 75px;
+    object-fit: cover;
+}
+
+.product-details {
+	width: 95%;
+	padding: 0 1.5em;
+}
+
+.product-details h1 {
+	margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+.product-name {
+	font-weight: 700;
+}
+
+.product-description {
+	line-height: var(--body-height);
+}
+
+/*Products Admin*/
+
+.store-header.admin a:hover{
+	color: var(--color-neutral-medium);
+}
+
+.itemlist-item {
+	margin: 1em 0;
+	padding: 1em;
+	border: 1px solid var(--color-neutral-light);
+	border-radius: 0.5em;
+}
+
+.itemlist-item .image {
+	width: 3.75em;
+	height: 5em;
+}
+
+.itemlist-item .image img {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	object-position: center;
+}
+
+.itemlist-item .info {
+	line-height: var(--body-height);
+    padding-left: 1em;
+}
+
+.admin-edit div:first-child {
+	margin-right: 2em;
+}
+
+.admin-edit div:last-child {
+	margin-right: 1em;
+}
+
+.admin-edit a:hover {
+	color: var(--color-neutral-medium);
 }
 
 

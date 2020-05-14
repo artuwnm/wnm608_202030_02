@@ -2,16 +2,16 @@
 
 include_once "lib/php/functions.php";
 
-$p = cartItemByID($_GET['$id']);
+$p = cartItemByID($_GET['id']);
 
-$o - getRows(makeConn(),"SELECT * FROM `products` WHERE `id`={$_GET['id']}")[0];
+$o = getRows(makeConn(),"SELECT * FROM `products` WHERE `id`={$_GET['id']}")[0];
 
 
 
  ?><!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Store: Item Added To Cart</title>
+	<title>Item Added To Cart</title>
 
 	<?php include "parts/meta.php" ?>
 
@@ -26,7 +26,7 @@ $o - getRows(makeConn(),"SELECT * FROM `products` WHERE `id`={$_GET['id']}")[0];
 				<h2>Cart Confirmation</h2>
 				
 				<div>
-					Thank you for adding <?= $p->amount ?> of the <?= $o->title ?> to the cart.
+					Thank you for adding <?= $p->amount ?> of <?= $o->name ?> to the cart.
 				</div>
 			</div>
 

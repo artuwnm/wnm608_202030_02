@@ -30,7 +30,6 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
 	color: inherit;
-	font-weight: bold;
 	text-decoration: none;
 }
 
@@ -50,6 +49,12 @@ code {
 
 .container {
 	max-width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.medium-container {
+	max-width: 750px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -183,6 +188,10 @@ nav ul li a {
 	font-weight: 300;
 }
 
+nav ul li a:hover {
+	color: var(--color-main-dark);
+}
+
 .nav ul,
 .nav-flex ul,
 .nav-stretch ul,
@@ -277,6 +286,44 @@ nav ul li a {
 	height: 3px;
 }
 
+	.filters {
+	    width: 100%;
+	    margin-bottom: 0px;
+	    z-index: 2;
+	    justify-content: space-between;
+	}
+
+	.filters ul {
+		display: flex;
+		padding-left: 0;
+		line-height: 0.5rem;
+	}
+
+	.filters>ul>li {
+		padding: 1rem 0.25rem;
+		margin: 0 1rem;
+	    position: relative;
+	}
+
+	.filters>ul>li:first-child {
+		padding-left: 0;
+		margin-left: 0;
+	}
+
+	.filters>ul>li:last-child {
+		padding-right: 0;
+		margin-right: 0;
+	}
+
+	.filters ul li a {
+		color: var(--color-neutral-dark);
+		font-weight: 300;
+	}
+
+	.filters ul li a:hover {
+		color: var(--color-main-dark);
+	}
+
 	.dropdown ul {
 		display: none;
 		visibility: hidden;
@@ -284,12 +331,17 @@ nav ul li a {
 		position: absolute;
 		transition: all 0.5s ease;
 		margin-top: 1rem;
-		left: 0;
-		min-width: 5rem;
-		line-height: 2.5rem;
+		padding-left: 0.75em;
+		min-width: 6.5rem;
+		font-size: 0.9rem;
+		line-height: 2rem;
 		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
 		z-index: 10;
 		background-color: #fff;
+	}
+
+	.dropdown.color ul {
+		min-width: 8rem;
 	}
 
 	.dropdown-content li {
@@ -316,9 +368,10 @@ nav ul li a {
 		border-bottom: none;
 	}
 
-	.dropdown-content li:hover a {
+	.dropdown-content li:hover {
 		color: var(--color-main-dark);
 		font-weight: 700;
+		cursor: pointer;
 	}
 
 	.chevron::before {
@@ -346,25 +399,51 @@ nav ul li a {
 		margin-right: 1em;
 	}
 
+	.form-select {
+		position: relative;
+		width: 160px;
+	}
+
+	.form-select select {
+		margin-top: -10px;
+	    width: 100%;
+	    border-width: 0;
+	    background-color: #fff;
+	    padding: 0.5em 1em;
+	    font: inherit;
+	    /*font-size: 0.9rem;*/
+	    text-align: center;
+	    /*border-radius: 0.3em;*/
+	    cursor: pointer;
+	    text-decoration: none;
+	    outline: 0;
+	   /* -webkit-appearance: none;*/
+	}
+
 .hero {
 	position: relative;
 }
 
-.hero__image {
+.hero img {
+	width: 100%;
+	height: auto;
+}
+
+/*.hero__image {
 	position: relative;
 	background-color: var(--color-main-light);
 	width: 100%;
 	height: 600px;
-}
+}*/
 
 .hero__content {
 	position: absolute;
 	width: 30%;
-	top: 40%;
+	top: 35%;
 }
 
 .hero__content h1, .hero__content p {
-	color: var(--color-neutral-dark);
+	color: #fff;
 	text-align: left;
 	line-height: var(--title-height);
 }
@@ -450,8 +529,10 @@ nav ul li a {
 }
 
 .card-section {
-		padding:1em;
-	}
+	padding-top: 1em;
+	width: 80%;
+	height: 20vh;
+}
 
 .card-section+.card-section {
 	border-top:1px solid var(--color-neutral-light);
@@ -495,6 +576,7 @@ table {
 	background-color: transparent;
 	color: var(--color-main-dark);
 	padding: 1em 3.5em;
+	outline: none;
 }
 
 .hollow-button:hover {
@@ -506,22 +588,16 @@ table {
 	color: #fff;
 }
 
-/* Forms */
-
-.search-input {
-    width: 100%;
-    font-family: 'Roboto', sans-serif;
-	font-size: 0.75em;
-	letter-spacing: 0.025em;
-    color: var(--color-neutral-dark);
-    border: 1px solid var(--color-neutral-medium);
-    height: 50px;
-    margin: 0px;
-    margin-bottom: 20px;
-    max-width: 100%;
-    text-indent: 10px;
-    outline: none;
+.hollow-button.neutral {
+	border-color: var(--color-neutral-dark);
+	color: var(--color-neutral-dark);
 }
+
+.hollow-button.neutral:hover {
+	background-color: var(--color-neutral-dark);
+}
+
+/* Forms */
 
 .form-input {
 	display: inline-block;
@@ -538,31 +614,68 @@ table {
 	border-bottom-color: var(--color-main-medium);
 }
 
+.checkout-input {
+	display: inline-block;
+	width: 70%;
+	color: inherit;
+	font: inherit;
+	outline: 0;
+	padding: 0.3em 0.8em 0.25em;
+	border-radius: 0.5em;
+}
+
 .form-label {
 	display: block;
-	font-size: 0.7em;
 	margin: 0.5em 0;
-	color: var(--color-neutral-medium);
+	line-height: var(--body-height);
 }
 
 .form-control {
 	margin: 1em 0;
 }
 
-.form-button {
+.select-button {
 	display: inline-block;
 	width: 20%;
 	border-width: 0;
-	background-color: var(--color-main-dark);
+	background-color: var(--color-neutral-light);
 	padding: 0.5em 1em;
-	color: inherit;
+	color: var(--color-neutral-dark);
 	font: inherit;
+	font-size: 1em;
 	font-weight: 700;
 	letter-spacing: 0.025em;
 	text-align: center;
 	cursor: pointer;
 	text-decoration: none;
 	outline: 0;
+	margin-bottom: 10%;
+}
+
+.select-button.bag {
+	width: 100%;
+}
+
+.form-button {
+	display: inline-block;
+	border-width: 0;
+	background-color: var(--color-main-dark);
+	padding: 0.5em 1em;
+	color: var(--color-neutral-dark);
+	font: inherit;
+	font-size: 1em;
+	font-weight: 700;
+	letter-spacing: 0.025em;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	outline: 0;
+}
+
+.add-to-bag-button .form-button,
+.checkout-button .form-button {
+	width: 100%;
+	padding: 0.9em;
 }
 
 .form-button:hover {
@@ -598,24 +711,40 @@ table {
 	padding: 0 1em;
 }
 
-#searchbox {
+.hotdog.light {
+	background-color: white;
+}
+
+.search {
+	position: absolute;
+	right: 0;
+}
+
+.search-icon {
+	cursor: pointer;
+}
+
+#product-search {
 	display: none;
 	position: absolute;
-	right: 80px;
-    top: 0;
+	right: 35px;
+    top: -5px;
     z-index: 10;
-    margin-bottom: 0;
     min-width: 300px;
-    padding: 0;
+    transition: all 0.5s ease;
 }
 
-#searchbox #q {
-    margin-bottom: 0;
-    height: 3em;
-}
-
-.search:hover #searchbox {
-	display: block;
+#product-search input {
+    width: 100%;
+    font: inherit;
+	font-size: 0.9em;
+	letter-spacing: 0.025em;
+    color: inherit;
+    border: 1px solid var(--color-neutral-medium);
+    border-radius: 0.3em;
+    margin: 0px;
+    outline: none;
+    padding: 0.3em 0.8em 0.2em;
 }
 
 /*Checkboxes*/
@@ -682,8 +811,8 @@ table {
 }
 
 .product-figure figcaption {
-	padding: 1em;
-	background-color: white;
+	padding-top: 0.5em;
+    padding-bottom: 4em;
 }
 
 .product-figure.soft {
@@ -840,9 +969,9 @@ footer a:hover {
 
 /*Admin Users*/
 
-.container.admin {
+/*.container.admin {
 	max-width: 50%;
-}
+}*/
 
 .card.soft.user-list > h1 {
 	margin: 0.65em;

@@ -11,7 +11,7 @@
 	<?php include "parts/header.php" ?>
 
 	<div class="hero">
-		<div class="hero__image"></div>
+		<img src="images/hero_background.png" alt="Hero Image">
 		<div class="container">
 			<div class="hero__content">
 				<h1>Introducing our Spring Collection</h1>
@@ -77,7 +77,7 @@
 				</div>
 			</div>
 		</div>
-		<button class="hollow-button round"><a href="shop_all.php"><h4>Shop All</h4></a></button>
+		<a href="shop_all.php"><button class="hollow-button round"><h4>Shop All</h4></button></a>
 	</div>
 
 	<?php include "parts/footer.php" ?>
