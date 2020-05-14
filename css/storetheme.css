@@ -199,13 +199,18 @@ footer {
 	text-decoration: none;
 	outline: 0;
 }
-
+.collection-sort {
+	display: flex;
+	flex-direction: column;
+  }
 .footer a {
 	color: inherit;
 	font-weight: normal;
 	text-decoration: none;
 }
-
+.sort {
+	display: flex;
+  }
 footer ul {
 	padding: 3em;
 	padding-left: 0;

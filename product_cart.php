@@ -47,10 +47,9 @@
   				</div>
   				<div class="col-xs-12 col-md-4">
   					<?= cartTotals(); ?>
-
-  					<div class="card">
-  						<div><a href="product_checkout.php" class="site-button">Checkout</a></div>
-  					</div>
+  					<form action="product_checkout.php">
+  						<input type="submit" class="site-button" value="Checkout" />
+  					</form>
   				</div>
   			</div>
   		</div>
