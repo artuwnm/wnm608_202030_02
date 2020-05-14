@@ -33,7 +33,7 @@ return $r.<<<HTML
 	<div class="flex-stretch">
 		<div class="display-flex">
 			<div class="flex-stretch">
-				<strong>$o->title ($o->amount)</strong>
+				<strong>$o->name ($o->amount)</strong>
 			</div>
 			<div class="flex-none">
 				&dollar;$pricefixed

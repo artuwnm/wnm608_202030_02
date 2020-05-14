@@ -281,7 +281,10 @@ code {
 }
 
 	.card>:first-child { margin-top:0; }
-	.card>:last-child { margin-bottom:0; }
+	.card>:last-child { margin-bottom:0; 
+		                margin-left: 2em;
+		                margin-right: 2em;
+		            }
 
 	.card.soft {
     	box-shadow: 4px 4px 10px 10px rgba(39,43,38,0.1);
@@ -419,6 +422,7 @@ code {
     cursor: pointer;
     text-decoration: none;
     outline:0;
+    margin-top: 1em;
 }
 .form-button:hover {
     text-decoration: none;
