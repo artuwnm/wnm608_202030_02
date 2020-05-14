@@ -62,7 +62,7 @@ HTML;
 function selectAmount($amount=1,$total=10) {
 	$output = "<select name='amount' class='form-button'>";
 	for($i=1;$i<=$total;$i++) {
-		$output .= "<option ".($i==$amount?"selected":"").">$i</option>";
+		$output .= "<option value='$i' ".($i==$amount?"selected":"").">{$i}hr</option>";
 	}
 	$output .= "</select>";
 	return $output;
