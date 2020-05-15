@@ -153,6 +153,20 @@ section h2 {
 
 
 
+
+
+
+.navbar .hotdog {
+    padding: 0;
+    line-height: 2em;
+    width: 10em;
+    position: relative;
+    transform: translateY(0.7em);
+    color:var(--color-neutral-dark);
+}
+
+
+
 @media (max-width:1000px) {
 	.navbar .display-flex {
 		display:block;

@@ -13,6 +13,17 @@ getData({type:'product_all'}).then(showResults);
 
 $(()=>{
 
+	if(location.search!=="") {
+		// https://developer.mozilla.org/en-US/docs/Web/API/URL/searchParams#Examples
+		let sp = (new URL(document.location)).searchParams;
+		let s = sp.get("s");
+		$("#product-search>input,#navbar-search>input").val(s);
+		getData({
+			type:'product_search',
+			search:$("#product-search>input").val()
+		}).then(showResults);
+	}
+
 	$("#product-search").on("submit",function(e){
 		console.log("honk")
 		e.preventDefault();
