@@ -3,3 +3,6 @@ a.sass-cache/
 *.sass.map
 *.scss.map
 *.DS_Store
+
+*sftp-config.json
+*auth.php
