@@ -5,100 +5,84 @@
 	<title>Landing Page</title>
 
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
 	<link rel="stylesheet" href="lib/css/styleguide.css">
 	<link rel="stylesheet" href="lib/css/gridsystem.css">
 	<link rel="stylesheet" href="css/storetheme.css">
 </head>
 <body>
 <header class="navbar">
-	<div class="container display-flex">
-		<div class="flex-stretch">
-			<h1>Store Page</h1>
-		</div>
-		<nav class="nav flex-none">
-			<ul class="display-flex">
-				<li><a href="#">Link 1</a></li>
-				<li><a href="#">Link 2</a></li>
-				<li><a href="#">Link 3</a></li>
-			</ul>
-		</nav>
-	</div>
-</header>
-
-		<div class="view-window display-flex flex-align-center flex-justify-center" style="background-image: url(img/placeholder.png)">
-		</div>
-<div class="container">
-	<div class="grid gap">
-		<div class="col-6">
-			<div class="card soft">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, doloremque.</div>
-		</div>
-		<div class="col-6">
-			<div class="card soft">Cum porro, nesciunt aperiam, architecto ad at id magni deleniti!</div>
-		</div>
-	</div>
-</div>
-
-
-<!-- 			<div class="container">
-				<div class="card soft dark">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam cum sapiente impedit voluptates ducimus debitis dolorem, est deleniti vero qui sit eos, asperiores molestias ut dolorum? Velit sint quos quidem, sequi blanditiis perferendis repellendus alias ex odit, quam adipisci.</p>
-				<p>Vitae numquam, totam soluta, cupiditate assumenda voluptates vero minus quo, molestiae quos nam harum beatae nesciunt minima sapiente enim maxime modi laudantium. Et, veniam sapiente placeat, dolor laborum magnam quisquam ratione praesentium quia ea atque, mollitia nam tempore dicta! Nobis.</p>
-				</div>
-			</div> -->
-			<div class="container">
-				<div class="display-flex">
-					<div class="flex-stretch">
-						<div class="card soft">
-							<p>
-								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quae est necessitatibus, dignissimos, ipsa possimus soluta optio voluptatum iste quod esse veniam pariatur, eius nostrum ratione eligendi sequi excepturi rerum.</span>
-								<span>Earum ipsam suscipit quod sequi, dolor perspiciatis eaque, illo quia assumenda beatae aliquid. Totam, soluta at consequatur perspiciatis saepe, quas! Provident perspiciatis similique nostrum, pariatur impedit iure expedita quos sequi.</span>
-								<span>Nulla minus, cupiditate suscipit facilis. Iste velit distinctio quo veniam aperiam quae ipsum nemo ducimus accusamus consectetur asperiores, soluta, quod voluptatum cum laborum sunt temporibus maxime in. Quam, totam odio?</span>
-							</p>
-							<p>
-								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus aperiam, consectetur quidem! Placeat minus facere debitis et voluptatibus voluptatum laudantium aspernatur, asperiores quam distinctio modi sapiente obcaecati quos impedit repellat.</span>
-								<span>Ut deleniti eaque officiis sunt itaque animi ad quas tenetur harum assumenda modi, dignissimos explicabo magni delectus unde porro autem quibusdam aspernatur minima distinctio quo saepe aliquid, non natus magnam.</span>
-								<span>Cupiditate necessitatibus quae magni maxime fugit recusandae perferendis distinctio quas, iure numquam unde obcaecati voluptas nobis inventore consequatur vitae suscipit dolorem sequi? Quos ad corporis accusantium neque necessitatibus accusamus deleniti.</span>
-							</p>
-						</div>
-					</div>
-					<div class="flex-none"style="width:1em;">&nbsp;</div>
-					<div class="flex-stretch">
-						<div class="card soft">
-							<p>
-								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque illo ex corporis ea voluptatum saepe, tempora accusantium quisquam. Quisquam eveniet, rerum, officia quo saepe omnis. Totam beatae repudiandae eum optio?</span>
-								<span>Aperiam natus laudantium distinctio inventore, eum accusamus officia, ex, neque fuga ipsum cum temporibus. Voluptatem impedit aperiam porro atque dolores necessitatibus quam quisquam ad ex cum, earum magnam eius maiores?</span>
-								<span>Ipsam ad nam facere. Ab fuga aliquid quae, cumque eius ex a molestiae quod culpa laudantium beatae vel ipsum tenetur reiciendis voluptatum delectus esse numquam amet, deserunt voluptate, sapiente accusantium!</span>
-							</p>
-							<p>
-								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet non quisquam ab quo, ipsa ad officia quidem doloribus sunt blanditiis, illo est! Totam accusantium quas doloribus ab, reiciendis ducimus accusamus.</span>
-								<span>Explicabo eum reiciendis quaerat laboriosam aperiam illo, voluptatem ex magnam harum voluptate quam, illum similique neque, veniam placeat hic? Voluptatibus libero officiis, cupiditate omnis amet, quis consequuntur doloremque magni minus.</span>
-								<span>Eius, non vero optio sequi, expedita iusto nesciunt beatae consequuntur repellat sit saepe itaque ullam omnis ut at! Provident doloribus asperiores voluptatibus aliquam minima iste neque libero suscipit perspiciatis expedita?</span>
-							</p>
-						</div>
-					</div>
-				</div>
+		<div class="container flex-parent-row flex-center-row flex-wrap" id="top-nav">
+			<div class="flex-child">
+				<img src="img/logo.jpg" style="width: 120px; height: 120px">
+				<a href="#" class="icon" onclick="navIconClick()">
+					<i class="fa fa-bars"></i>
+				</a>
 			</div>
 
-			<div class="container">
-				<div class="card soft normal">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam cum sapiente impedit voluptates ducimus debitis dolorem, est deleniti vero qui sit eos, asperiores molestias ut dolorum? Velit sint quos quidem, sequi blanditiis perferendis repellendus alias ex odit, quam adipisci.</p>
+			<nav class="nav nav-pills flex-parent-row flex-center-row" id="nav-bar">
+				<a href="#">Home</a>
+				<a href="#">Shop</a>
+				<a href="#">Gift Card</a>
+				<a href="#">Contact</a>
+				<a href="#">Our Story</a>
 
-					<p>Vitae numquam, totam soluta, cupiditate assumenda voluptates vero minus quo, molestiae quos nam harum beatae nesciunt minima sapiente enim maxime modi laudantium. Et, veniam sapiente placeat, dolor laborum magnam quisquam ratione praesentium quia ea atque, mollitia nam tempore dicta! Nobis.</p>
+				<a href="#" style="border: hidden"><img src="img/personal.png" style="width: 40px; height: 40px;"></a>
+				<a href="#" style="border: hidden"><img id="cart" src="img/cart.png"></a>
+			</nav>
+		</div>
+	</header>
+	<div class="view-window" style="background-image:url(img/welcome_page.png)">
+	</div>
+	<div class="container flex-parent-col" style="max-width: 700px">
+			<h2>Welcome to the Wonderful Ice Cream Hub!</h2>
+			<h3>Our handcrafted ice cream starts with natural, organic, and locally sourced ingredients.We know you'll find a delicious, cold treat to soothe your sweet tooth.We'll see you soon!</h3>
+			<div class="flex-parent-row" style="justify-content: space-between">
+				<a href="#">
+					<button type="button" class="main-button">
+						Shop Now
+					</button>
+				</a>
+				<a href="#">
+					<button type="button" class="main-button">
+						Pick a Perfect Gift
+					</button>
+				</a>
+			</div>
+
+		<div style="text-align: center; margin-top: 60px;">
+			<h2>The Latest Scoop</h2>
+		</div>
+
+		<div style="text-align: center">
+			<h4>Check us out on Instagram!</h4>
+		</div>
+
+		<div class="container">
+			<div class="row cookie-category-section">
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<a href="#"><img src="img/ins1.gif" class="media-image"></a>
+					<h3>Your package be dilivered.</h3>
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<a href="#"><img src="img/ins2.gif" class="media-image"></a>
+					<h3>Receiving your packing.</h3>
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<a href="#"><img src="img/ins3.gif" class="media-image"></a>
+					<h3>Enjoy your delicious.</h3>
 				</div>
 			</div>
-	<div class="footer">
-		<div class="container display-flex">
-			<div class="flex-stretch">
-					<p>
-						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet non quisquam ab quo, ipsa ad officia quidem doloribus sunt blanditiis, illo est! Totam accusantium quas doloribus ab, reiciendis ducimus accusamus.</span>
-						<span>Explicabo eum reiciendis quaerat laboriosam aperiam illo, voluptatem ex magnam harum voluptate quam, illum similique neque, veniam placeat hic? Voluptatibus libero officiis, cupiditate omnis amet, quis consequuntur doloremque magni minus.</span>
-						<span>Eius, non vero optio sequi, expedita iusto nesciunt beatae consequuntur repellat sit saepe itaque ullam omnis ut at! Provident doloribus asperiores voluptatibus aliquam minima iste neque libero suscipit perspiciatis expedita?</span>
-					</p>
-
-			 </div>
 		</div>
 	</div>
-
+		<footer>
+		<div class="container">
+			<div style="text-align: center; margin-top: 100px;">
+			©Designed and Coded by Huan Meng
+			</div>
+		</div>
+	</footer>
+	
 </body>
 </html>

@@ -2,6 +2,7 @@
 
 ## Links
 
-- http://hdraws.com
-- http://hdraws.com/aau/wnm608_02/cline.hamilton
-- http://hdraws.com/aau/wnm608_02/cline.hamilton/recipes
+- http://huanmengdesign.com
+- http://huanmengdesign.com/aau/wnm608_02/huan.meng/recipes/index.html
+- http://huanmengdesign.com/aau/wnm608_02/huan.meng/index.html
+http://huanmengdesign.com/aau/wnm608_02/huan.meng/styleguide/index.html

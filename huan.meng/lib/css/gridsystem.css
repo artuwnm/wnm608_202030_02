@@ -14,6 +14,36 @@
 	gap:var(--gap-size);
 }
 
+:root{
+	--gutter-size:20px;
+	--gutter-size-large: calc(2 * var(--gutter-size));
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.grid{
+	overflow: hidden;
+}
+
+.row.gutters{
+	margin-top:calc(-2 * var(--gutter-size));
+	margin-left: calc(-1 * var(--gutter-size));
+	margin-right: calc(-1 * var(--gutter-size));
+}
+
+[class*='col-']{
+	flex: 0 0 auto;
+}
+
+.gutters>[class*='col-']{
+	margin-top:calc(2 * var(--gutter-size));
+	padding-left: var(--gutter-size);
+	padding-right: var(--gutter-size);
+}
 
 
 .col-1 { grid-column: span 1; }
@@ -45,7 +75,7 @@
 	.col-xs-12 { grid-column: span 12 ; }
 	
 }
-/*SMALL SIZE*/
+/* Small Breakpoint */
 @media (min-width: 320px) {
 	.col-sm-1 { grid-column: span 1 ; }
 	.col-sm-2 { grid-column: span 2 ; }
@@ -61,7 +91,7 @@
 	.col-sm-12 { grid-column: span 12 ; }
 	
 }
-/*MEDIUM SIZE*/
+/* Medium Breakpoint */
 @media (min-width: 600px) {
 	.col-md-1 { grid-column: span 1 ; }
 	.col-md-2 { grid-column: span 2 ; }
@@ -77,7 +107,7 @@
 	.col-md-12 { grid-column: span 12 ; }
 	
 }
-/*LARGE SIZE*/
+/* Large Breakpoint */
 @media (min-width: 900px) {
 	.col-lg-1 { grid-column: span 1 ; }
 	.col-lg-2 { grid-column: span 2 ; }
@@ -93,7 +123,7 @@
 	.col-lg-12 { grid-column: span 12 ; }
 	
 }
-/*EXTRA LARGE SIZE*/
+/* Xtra Large Breakpoint */
 @media (min-width: 1200px) {
 	.col-xl-1 { grid-column: span 1 ; }
 	.col-xl-2 { grid-column: span 2 ; }
