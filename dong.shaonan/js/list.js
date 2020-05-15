@@ -25,6 +25,8 @@ $(()=>{
 	});
 
 
+ 
+
 	$(".js-filter").on("click",function(e){
 		getData(
 			$(this).data("value")==""?{
