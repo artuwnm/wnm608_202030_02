@@ -40,15 +40,21 @@ $result = getCartItems();
 
 	<div class="container">
 		
-		<div class="grid gap large">
+		<div class="grid gap">
 			
 			<div class="col-xs-12 col-xl-6">
+			<div class="card flat">
+				
+			
 			<h4>Contact Information</h4>
+			
 			<div class="form-control">
     <input type="text" class="form-input" name="Email" placeholder="Email" id="input-example1">
     		</div>
+    	
 
 			<h4>Shipping Address</h4>
+			
 			<div class="form-control">
     <input type="text" class="form-input" name="firstname" placeholder="First Name" id="input-example7">
 	<input type="text" class="form-input" name="firstname" placeholder="Last Name" id="input-example7">		
@@ -67,17 +73,21 @@ $result = getCartItems();
 	<input type="text" class="form-input" name="country" placeholder="Country" id="input-example8">	
 	<input type="text" class="form-input" name="zip" placeholder="Zip" id="input-example9">			
 			</div>
+			
 			<div class="display-flex flex-justify-end">
 			<a href="confirmation.php" class="linkbutton">
 				COUNTINUE
 			</a>
-</div>
+			</div>
+			</div>
 		</div>
-			
+
+
 			<div class="col-xs-12 col-xl-6">
-			<div class="card soft">
+				<div class="card flat">
+				
 				<?php
-				echo array_reduce($result,'addCartTemplate');
+				echo array_reduce($result,'checKoutTemplate');
 				?>
 				<?= cartTotals(); ?>
 

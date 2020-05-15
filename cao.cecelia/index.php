@@ -45,8 +45,8 @@ $result = getCartItems();
 						<img src="images/homerecommendation_1.jpg">
 					
 				
-						<h3>Creative Way to Stack Earings</h3>
-						<h5>From beloved pearl design for this summer</h5>
+						<h3 style="text-align: center;">Creative Way to Stack Earings</h3>
+						<h5 style="text-align: center;">From beloved pearl design for this summer</h5>
 					
 				</figure>
 				</a>
@@ -57,8 +57,8 @@ $result = getCartItems();
 				<figure class="product-figure">
 					<img src="images/homerecommendation.jpg" alt="">
 					
-						<h3>Creative Way to Stack Earings</h3>
-						<h5>From beloved pearl design for this summer</h5>
+						<h3 style="text-align: center;">Creative Way to Stack Earings</h3>
+						<h5 style="text-align: center;">From beloved pearl design for this summer</h5>
 					
 				</figure>
 			</a>
@@ -73,7 +73,7 @@ $result = getCartItems();
 		<div class="grid gap">
 			<div class="col-xs-12 col-xl-6">
 			<h4>Explore New accessories</h4>
-			<h2>New Beauty in urban environments</h2>
+			<h2>New Beauty in Urban Environments</h2>
 			<p style="font-size: 16px">PILE ON PEARLS provides a way for people who want to embrace their femininity and beauty through Eastern spiritual practices and mysticism, for young girls, for daily mix & match, for all kinds of occasions. The collection is comprised of earings, necklaces, rings and bracelets featuring with pearls or diamonds on most of them.</p>
 			<div class="display-flex flex-justify-center">
 			<a href="#" class="linkbutton">SHOP NOW</a>

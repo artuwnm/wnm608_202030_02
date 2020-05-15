@@ -21,31 +21,33 @@ $result = getCartItems();
 <body>
 
 	<?php include "parts/navbar.php" ?>
-
-	<div class="container">
-		<div class="card soft flat">
+		
+	<div class="containercart">
+		<div class="card soft">
 			<div class="card-section">
-				<h2>Already in your cart!</h2>
+				<h2 style="text-align: center;"><?= $o->name ?> is alreay in your the cart.</h2>
 				
-				<div>
+				<!-- <div class="thankyou">
 					Thank you for adding the <?= $o->name ?> into your the cart.
-					<?php
+					
+				</div> -->
+				
+			</div>
+			
+			<?php
 					echo array_reduce($result,'addCartTemplate');
 					?>
-				</div>
-			</div>
+			
 
-			<div class="card-section">
-				<div class="display-flex">
-					<div class="flex-none">
+		</div>
+		<div class="display-flex" style="font-size:1em">
+			<div class="flex-none">
 						<a href="product_list.php" class="form-button">Countinue Shopping</a>
 					</div>
-					<div class="flex-stretch"></div>
-					<div class="flex-none">
+			<div class="flex-stretch"></div>
+			<div class="flex-none">
 						<a href="cart.php" class="form-button">Checkout your Cart</a>
 					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 	<div class="container">

@@ -15,11 +15,14 @@ $empty_product = (object) [
 
 
 
+if(isset($_GET['id'])) {
 try{
 
 $conn = makePDOConn();
 
 switch(@$_GET['action']) {
+
+
 	case "update":
 		$statement = $conn->prepare("UPDATE
 		`product`
@@ -51,7 +54,7 @@ switch(@$_GET['action']) {
 		$statement = $conn->prepare("INSERT INTO
 		`product`
 		(
-			`nname`,
+			`name`,
 			`price`,
 			`category`,
 			`description`,
@@ -89,12 +92,7 @@ switch(@$_GET['action']) {
 } catch(PDOException $e) {
 	die($e->getMessage());
 }
-
-
-
-
-
-
+}
 
 
 function makeProductForm($o) {
@@ -113,10 +111,11 @@ $data_show = $id=='new' ? "" : <<<HTML
 
 <div class="card soft">
 
-<div class="product-image">
+<div class="big-image">
 	<img src="$o->thumbnail" alt="">
 </div>
-<div class="product-thumbs">$images</div>
+<div class="thumb-images"><img src="$o->thumbnail" alt=""></div>
+<div class="thumb-images">$images</div>
 
 <h2>$o->name</h2>
 <div>
@@ -143,15 +142,18 @@ HTML;
 
 
 echo <<<HTML
-<div class="card soft">
-	<nav class="nav-pills">
-		<ul>
-			<li class="flex-none"><a href="{$_SERVER['PHP_SELF']}">Back</a></li>
-			<li class="flex-stretch"></li>
-			$deletebutton
-		</ul>
-	</nav>
-</div>
+
+	<div class="form-control display-flex" style="font-size:1em">
+		<div class="flex-none">
+		<a class="form-button" href="{$_SERVER['PHP_SELF']}">Back</a>
+		</div>
+		<div class="flex-stretch"></div>
+		<div class="flex-none">
+		<div class="form-button" style="list-style-type:none;">$deletebutton</div>
+		</div>
+		</div>
+	
+
 <div class="grid gap">
 	<div class="col-xs-12 col-md-5">$data_show</div>
 	<form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate" class="col-xs-12 col-md-7">
@@ -206,11 +208,83 @@ HTML;
 </head>
 <body>
 
-  <div class="sidenav">
+ <!--  <div class="sidenav">
   <img  src="images/horizontallogowhite.png" alt="Nature" style="width: 80%">
   <h3 style="padding-left: 16px; color: white">Product Admin</h3>
   <a href="<?= $_SERVER['PHP_SELF'] ?>">Product List</a>
   <a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">Add New Product</a>
+</div> -->
+
+
+<style>
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #d1af94;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  color: white;
+}
+ 
+.sidebar a:active {
+  background-color: #555;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+.sidebar img{
+	width: 180px;
+    margin: 1em 0;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+  	float: left;
+	font-size: 10px;
+  }
+  .sidebar img{width:100px;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 200px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+	<a href="index.php"><img  src="images/logoblack.png" alt="Nature"></a>	
+    <a class="active" href="<?= $_SERVER['PHP_SELF'] ?>">Product List</a>
+    <a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">Add New Product</a>
 </div>
 
 	<!-- <header class="navbar">
@@ -226,7 +300,7 @@ HTML;
 			</nav>
 		</div>
 	</header> -->
-<div class="card side">
+<div class="content">
 	<div class="container">
 		
 		<?php
@@ -248,7 +322,7 @@ HTML;
 		?>
 		
 
-		<h2 style="margin-left: 180px">Product List</h2>
+		
 		
 		
 		<h2>Product</h2>

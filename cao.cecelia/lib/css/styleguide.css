@@ -272,9 +272,9 @@ code {
 	
 	color:var(--color-neutral-dark);
 	line-height: var(--header-height);
-	height: 8vh;
+	
 	font-size: 0.8em;
-    margin-top: 3vh;
+    
 }
 
 .navbar h1 {
@@ -672,7 +672,7 @@ code {
     cursor: pointer;
     text-decoration: none;
     outline:0;
-    margin-top: 5em;
+    margin-top: 3em;
     margin-bottom: 1em;
 }
 .form-button:hover {

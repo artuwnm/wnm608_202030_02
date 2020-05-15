@@ -69,11 +69,45 @@ function addCartTemplate($r,$o) {
 $pricefixed = number_format($o->total,2,'.','');
 $selectAmount = selectAmount($o->amount);
 return $r.<<<HTML
-<div class="display-flex">
-	<div class="flex-none product-thumbs">
+<div class="display-flex grid gap">
+
+	<div class="flex-none product-thumbs col-xs-12 col-xl-3">
 		<img src="$o->thumbnail">
 	</div>
-	<div class="flex-stretch">
+
+	<div class="col-xs-12 col-xl-1"></div>
+	
+	<div class="flex-stretch col-xs-12 col-xl-8">
+		<div class="display-flex">
+			<div class="flex-stretch">
+				<strong>$o->name</strong>
+			</div>
+			<div class="flex-none">
+				&dollar;$o->price
+			</div>
+		</div>
+		
+	</div>
+</div>
+HTML;
+}
+
+
+function checKoutTemplate($r,$o) {
+$pricefixed = number_format($o->total,2,'.','');
+$selectAmount = selectAmount($o->amount);
+return $r.<<<HTML
+<div class="card-section">
+<h4>Enjoy complimentary shipping and returns.</h4>
+<div class="display-flex grid gap">
+
+	<div class="flex-none product-thumbs col-xs-12 col-xl-3">
+		<img src="$o->thumbnail">
+	</div>
+
+	<div class="col-xs-12 col-xl-1"></div>
+	
+	<div class="flex-stretch col-xs-12 col-xl-8">
 		<div class="display-flex">
 			<div class="flex-stretch">
 				<strong>$o->name</strong>
@@ -84,9 +118,9 @@ return $r.<<<HTML
 		</div>
 	</div>
 </div>
+</div>
 HTML;
 }
-
 
 
 function selectAmount($amount=1,$total=10) {
@@ -113,7 +147,7 @@ $taxedfixed = number_format($cartprice*1.0725,2,'.','');
 
 return <<<HTML
 <div class="card-section">
-	<h2>Totals</h2>
+	<h3>Order Summary</h3>
 	<div class="display-flex">
 		<div class="flex-stretch">
 			<p style="font-size: 16px">Sub Total</p>
@@ -160,19 +194,34 @@ function makeCartBadge() {
 
 function makeListItemTemplate($r,$o) {
 return $r.<<<HTML
-<div class="itemlist-item display-flex">
-	<div class="flex-none">
-		<div class="product-thumbs">
-			<img src="$o->thumbnail">
-		</div>
+
+<div class="itemlist-item display-flex card soft">
+	<div class="flex-none product-admin">
+		<img src="$o->thumbnail">
 	</div>
 	<div class="flex-stretch">
-		<div><strong>$o->name</strong></div>
-		<div><span>$o->category</span></div>
-	</div>
-	<div class="flex-none display-flex">
-		<div><a href="admin/?id=$o->id" class="form-button">Edit</a></div>
-		<div><a href="product_item.php?id=$o->id" class="form-button">Details</a></div>
+		<div class="display-flex">
+			<div class="flex-stretch">
+				<div><strong><h4 style="margin:0;">$o->name</h4></strong></div>
+				<div><span><p>$o->category</p></span></div>
+				
+				
+			</div>
+			<div class="flex-none">
+			
+				
+			</div>
+		</div>
+		<div class="form-control display-flex" style="font-size:0.8em">
+		<div class="flex-none">
+		<a href="admin/?id=$o->id" class="form-button">Edit</a>
+		</div>
+		<div class="flex-stretch"></div>
+		<div class="flex-none">
+		<a href="product_item.php?id=$o->id" class="form-button">Details</a>
+		</div>
+		</div>
+		
 	</div>
 </div>
 HTML;

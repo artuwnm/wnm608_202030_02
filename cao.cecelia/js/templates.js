@@ -8,15 +8,13 @@ return `
 
 				<img src="${o.thumbnail}" alt="">
 			</div>
-			<div class="form-control display-flex">
-				<div class="flex-none">
-					<h4>${o.name}</h4>
-				</div>
-				<div class="flex-stretch"></div>
-				<div class="flex-none">
-					<h4>&dollar;${o.price.toFixed(2)}</h4>
-				</div>
-			</div>
+			
+				
+					<h4 class="name">${o.name}</h4>
+				
+					<h4 class="price">&dollar;${o.price.toFixed(2)}</h4>
+				
+			
 			
 		</figure>
 	</a>

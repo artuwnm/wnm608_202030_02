@@ -23,7 +23,7 @@ $result = getCartItems();
 	<div class="container">
 		<nav class="nav-crumbs" style="margin:1em 0">
 			<ul>
-				<li><a href="product_list.php">< Continue Shopping</a></li>
+				<li><a href="shop.php">< Continue Shopping</a></li>
 			</ul>
 		</nav>
 
