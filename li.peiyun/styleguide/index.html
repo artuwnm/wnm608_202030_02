@@ -1,0 +1,334 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Styleguide</title>
+
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../lib/css/styleguide.css">
+	<link rel="stylesheet" href="../lib/css/gridsystem.css">
+	<link rel="stylesheet" href="../css/storetheme.css">
+</head>
+<body>
+	<div class="nav-vertical-container">
+		<h2>Table of Contents</h2>
+
+		<ul class="nav-vertical">
+			<li><a href="#typography">Typography</a></li>
+			<li>
+				<ul>
+					<li><a href="#headings">Headings</a></li>
+					<li><a href="#paragraphs">Paragraphs</a></li>
+				</ul>
+			</li>
+			<li><a href="#navigations">Navigations</a></li>
+			<li><a href="#slides">Slides</a></li>
+			<li><a href="#images">Images</a></li>
+			<li><a href="#cards">Cards</a></li>
+			<li><a href="#viewwindow">View Window</a></li>
+			<li><a href="#tables">Tables</a></li>
+			<li><a href="#forms">Forms</a></li>
+			<li><a href="#checboxes">Checkboxes</a></li>
+			<li><a href="#grid">Grid System</a></li>
+			<li><a href="#flex">Flex System</a></li>
+		</ul>
+	</div>
+
+	<div class="container-right">
+
+		<section id="navigations">
+		<h2>Navigations</h2>
+			<h3>Top Block Navigation with Dropdown</h3>
+			<div class="tnav-drop">
+  				<a href="">Home</a>
+  				<a href="">About</a>
+  				<div class="tnav-dropdown">
+    			<button class="tnav-btn">Product
+    			</button>
+    			<div class="tnav-drop-content">
+      				<a href="">Bages</a>
+      				<a href="">Jewleries</a>
+      				<a href="">Shoes</a>
+      				<a href="">Toys</a>
+    				</div>
+  				</div>
+			</div>
+			<h3>Left Plain Navigation with Dropdown</h3>
+			<div class="lnav-container">
+			<div class="lnav-drop">
+				<button class="lnav-btn">Bages 
+  				</button>
+  				<div class="lnav-dropdown">
+    				<a href="">Handbag</a>
+    				<a href="">CoossBody</a>
+    				<a href="">Clutch</a>
+  				</div>
+      			<a href="">Jewleries</a>
+      			<a href="">Shoes</a>
+      			<a href="">Toys</a>
+			</div>
+			</div>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("lnav-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+
+		</section>
+
+
+
+		<section id="slides">
+		<h2>Slides</h2>
+		<div class="slideshow-container">
+  			<div class="mySlides fade">
+    		<img src="img/3.jpg">
+    		<div class="slide-btn"><a href="">Shop Now</a></div>
+  			</div>
+
+  			<div class="mySlides fade">
+    		<img src="img/4.jpg">
+    		<div class="slide-btn"><a href="">Shop Now</a></div>
+  			</div>
+
+  			<div class="mySlides fade">
+    		<img src="img/5.jpg">
+    		<div class="slide-btn"><a href="">Shop Now</a></div>
+  			</div>
+
+  			<a class="slide-prev" onclick="plusSlides(-1)">❮</a>
+  			<a class="slide-next" onclick="plusSlides(1)">❯</a>
+			</div>
+
+			<div style="text-align:center">
+  			<span class="dot" onclick="currentSlide(1)"></span>
+  			<span class="dot" onclick="currentSlide(2)"></span>
+  			<span class="dot" onclick="currentSlide(3)"></span>
+			</div>
+
+<script>let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}</script>
+
+		</section>
+
+
+		
+
+		<section id="Images">
+		<h2>Images</h2>
+		<div class="grid gap">
+			<div class="col-3">
+				<h3>Circle Image</h3>
+				<img class="img-circle" src="img/1.jpg">
+
+			</div>
+
+			<div class="col-3">
+				<h3>Image as link</h3>
+				<a href="img/1.jpg">
+  				<img src="img/1.jpg">
+				</a>
+			</div>
+
+			<div class="col-3">
+				<h3>Hover Border Image</h3>
+				<img class="img-hover-border" src="img/1.jpg">
+
+			</div>
+
+			<div class="col-3">
+				<h3>Card Image</h3>
+				<div class="img-card">
+				<img src="img/1.jpg">
+				<div class="img-card-text">Caption</div>
+
+				</div>
+			</div>
+
+			<div class="col-3">
+				<h3>Hover Button Image</h3>
+				<div class="img-button">
+				<img src="img/1.jpg">
+				<div class="img-button-mid">
+					<a href="">Link</a>
+				</div>
+				</div>
+			</div>
+
+			<div class="col-3">
+				<h3>Hover Darken Image</h3>
+				<div class="img-over">
+				<img src="img/1.jpg">
+				<div class="img-overlay">
+					<div class="img-overlay-text">Caption</div>
+				</div>
+				</div>
+			</div>
+
+			<div class="col-3">
+				<h3>Hover Change Image</h3>
+				<div class="img-change">
+				<img src="img/1.jpg">
+				<img class="img-change-after" src="img/2.jpg">
+				</div>
+				</div>
+			
+
+			<div class="col-3">
+				<h3>Hover Caption Image</h3>
+				<div class="img-hovcap">
+				<img src="img/1.jpg">
+				<div class="img-hovcap-bg">
+				<div class="img-hovcap-text">Caption</div>
+				</div>
+				</div>
+				</div>
+
+			
+
+
+
+		</section>
+
+		<section id="cards">
+		<h2>Cards</h2>
+		<div class="grid gap">
+		
+		<div class="col-3">
+			<h3>Basic card</h3>
+			<div class="card">Quick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat. Her bachelor honoured perceive securing but desirous ham required. Questions deficient acuteness to engrossed as. Entirely led ten humoured greatest and yourself. Besides ye country on observe. </div>
+		</div>
+
+		<div class="col-3">
+			<h3>Round Card</h3>
+			<div class="card-round">Quick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat. Her bachelor honoured perceive securing but desirous ham required. Questions deficient acuteness to engrossed as. Entirely led ten humoured greatest and yourself. Besides ye country on observe. </div>
+		</div>
+
+		<div class="col-3">
+			<h3>Border Card</h3>
+			<div class="card-border">Quick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat. Her bachelor honoured perceive securing but desirous ham required. Questions deficient acuteness to engrossed as. Entirely led ten humoured greatest and yourself. Besides ye country on observe. </div>
+		</div>
+
+		<div class="col-3">
+			<h3>Shadow Card</h3>
+			<div class="card-shadow">Quick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat. Her bachelor honoured perceive securing but desirous ham required. Questions deficient acuteness to engrossed as. Entirely led ten humoured greatest and yourself. Besides ye country on observe. </div>
+		</div>
+
+		</div>
+
+
+		<section id="tables">
+		<h2>Tables</h2>
+
+		<script>
+		// THIS IS JUST FOR EXAMPLES
+		const makeTable = (classes='') => {
+			const head = ["ID","Office","Name","Email","Phone"];
+			const body = [
+				["522","Hamilton Cline",	"hcline@academyart.edu",	"555-2424"],
+				["512","Fred McHale",		"fmchale@academyart.edu",	"555-2424"],
+				["522","Michael Catanzaro",	"jimmycats@academyart.edu",	"555-2424"],
+				["514","Andrea Pimentel",	"apimentel@academyart.edu",	"555-2424"],
+				["516","DC Scarpelli",		"dscarpelli@academyart.edu","555-2424"]
+			].sort(()=>Math.random()-.5);
+			return `
+			<div class="container">
+			<div class="card card-light">
+			<table class="${classes}">
+				<thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,"")}</tr></thead>
+				<tbody>${body.reduce((r,o,i)=>r+
+					`<tr>${
+						[i+1,...o].reduce((r,o)=>r+`<td>${o}</td>`,"")
+					}</tr>`
+				,"")}</tbody>
+			</table>
+			</div>
+			</div>
+			`;
+		}
+		</script>
+
+
+
+		<div class="card">
+			<h3>Basic Table</h3>
+
+			<script>document.write(makeTable("table"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Striped Table</h3>
+
+			<script>document.write(makeTable("table striped"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Horizontal Lined Table</h3>
+
+			<script>document.write(makeTable("table lined horizontal"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Vertical Lined Table</h3>
+
+			<script>document.write(makeTable("table lined vertical"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Outline Table</h3>
+
+			<script>document.write(makeTable("table lined outline"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Outlined striped vertical lined Table</h3>
+
+			<script>document.write(makeTable("table striped lined outline vertical"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Outlined striped vertical lined Table</h3>
+
+			<script>document.write(makeTable("table lined all"))</script>
+		</div>
+	</section>
+	</div>
+</body>
+</html>

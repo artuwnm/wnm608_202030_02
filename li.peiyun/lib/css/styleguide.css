@@ -1,0 +1,764 @@
+
+/*basic elements*/
+*, *::before, *::after {
+	box-sizing:border-box;
+}
+
+:root {
+	font-size: 16px;
+
+  --color-neutral-dark: #333;
+  --color-neutral-medium: #999;
+  --color-neutral-light: #eee;
+
+  --color-warm-dark: #333;
+  --color-warm-medium: #999;
+  --color-warm-light: #F2EBDC;
+
+  --color-main-dark: #034066;
+  --color-main-medium: #D98484;
+  --color-main-light: #F2C2C2;
+
+  --header-height:3rem;
+}
+
+body {
+	margin:0;
+	font-size:100%;
+	font-family:sans-serif;
+	background-color: white;
+}
+
+li{list-style-type: none;
+
+}
+
+a{
+  text-decoration: none;
+  color: black
+}
+
+.display-flex { display:flex; }
+.display-inline-flex { display:inline-flex; }
+.display-block { display:block; }
+.display-inline-block { display:inline-block; }
+
+.flex-stretch { flex: 1 1 auto; }
+.flex-none { flex: none; }
+
+.flex-align-center { align-items:center; }
+.flex-justify-center { justify-content:center; }
+
+
+
+
+
+
+
+/*text*/
+h1{
+  text-align: center;
+  padding-top: 30vh;
+}
+
+h2{
+  padding: 1em 0;
+  text-align: center;
+}
+
+h3{
+  text-align: center;
+  color: var(--color-main-medium);
+}
+
+h4{
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: 1.2rem;
+}
+
+/*button*/
+.btn-color{
+  display: block;
+  border: 2px solid var(--color-main-medium);
+  padding: 0.6em 1.2em;
+  border-radius: 0.15em;
+  background-color: none;
+  color: var(--color-main-medium);
+  font-size: 1.4rem;
+  text-align: center;
+  transition: all: 0.25s;
+}
+
+.btn-color:hover{
+  background-color: var(--color-main-medium);
+  color: white;
+}
+
+.btn-plain{
+  display: block;
+  font-size: 1.4rem;
+  color: black;
+  text-align: center;
+  padding: 0.6em 0;
+  transition: all: 0.25s;
+}
+
+.btn-plain:hover{
+  color: var(--color-main-medium);
+}
+
+
+.float-cart{
+  position:fixed;
+  width: 75px;
+  top: 80vh;
+  left: 10vw;
+  
+  border-radius: 50%;
+  z-index: 999;
+}
+/*containers*/
+
+.container{
+width: 80vw;
+margin: 0 auto;
+
+}
+
+.container-right{
+	width: 70vw;
+	margin-left: 23vw;
+	padding-top: 2vh;
+}
+
+
+.nav-vertical-container{
+	height: 100%;
+	width: 18vw;
+	float: left;
+	position: fixed;
+	background-color:var(--color-neutral-light);
+}
+
+.nav-vertical-container h2{
+	margin: 0;
+	padding-top: 1em;
+	padding-bottom: 0.5em;
+	text-align: center;
+}
+
+.nav-vertical {
+	position: fixed;
+  float: left;
+  margin-top:0;
+  height:100%;
+  z-index: 999;
+   
+}
+
+.nav-vertical li{
+	list-style-type: none;
+	line-height: 2em;
+	font-weight: bold
+}
+
+.nav-vertical ul li{
+	font-weight:400;
+}
+
+.nav-vertical a{
+	display:block;
+	text-decoration:none;
+	color: black;
+}
+
+
+/*Navigations*/
+.nav-crumbs{
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0.8em 0;
+}
+.nav-crumbs ul{
+   margin: 0;
+}
+.nav-crumbs a:hover{
+  color: var(--color-main-medium);
+}
+
+
+
+
+.tnav-drop {
+  overflow: hidden;
+  background-color: var(--color-neutral-light);
+  border: none;
+  outline: none;
+ 
+}
+
+.tnav-container{
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.tnav-drop a {
+  float: right;
+  font-size: 1.1rem;
+  color: black;
+  text-align: center;
+  padding: 0.9em 1.5em;
+  text-decoration: none;
+}
+
+.logo a{
+  float:left;
+}
+
+/* The dropdown container */
+.tnav-dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.tnav-dropdown .tnav-btn {
+  border: none;
+  outline: none;
+  color: black;
+  font-size: 1rem;
+  
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.tnav-drop a:hover, .tnav-dropdown:hover .tnav-btn {
+  color: var(--color-main-medium);
+
+}
+
+/* Dropdown content (hidden by default) */
+.tnav-drop-content {
+  display: none;
+  position: absolute;
+  background-color: var(--color-neutral-light);
+  min-width: 8em;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.tnav-drop-content a {
+  float: none;
+  color: black;
+  padding: 0.9em 1em;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.tnav-drop-content a:hover {
+  color: var(--color-main-medium);
+}
+
+/* Show the dropdown menu on hover */
+.tnav-dropdown:hover .tnav-drop-content {
+  display: block;
+}
+
+
+
+.lnav-container{
+	width:100%;
+	height: 40vh;
+}
+/* Fixed sidenav, full height */
+.lnav-drop {
+  height: 100%;
+  width: 200px;
+  position: relative;
+  z-index: 5;
+  top: 0;
+  left: 0;
+ 
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.lnav-drop a, .lnav-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.lnav-drop a:hover, .lnav-btn:hover {
+  color: var(--color-main-medium);
+}
+
+.lnav-btn.active{
+	background: none;
+}
+
+.active {
+  color: var(--color-main-medium);
+
+
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.lnav-dropdown {
+  display: none;
+  font-size: 1em;
+  padding-left: 8px;
+}
+
+.lnav-dropdown a{
+
+	font-size: 1.1em;
+}
+
+
+.product-main img {
+ width: 100%;
+}
+
+.product-thumbs img {
+ width: 80%;
+ float: right;
+ margin-bottom: 1.5rem;
+}
+
+.cart-thumbs img{
+  width: 100px;
+  height: 100px;
+}
+
+
+
+/*Slide*/
+.mySlides {display:none}
+
+.slideshow-container {
+  width:100%;
+
+  position: relative;
+  margin-left: 0;
+  margin-top: 1.5rem;
+  overflow: hidden;
+}
+
+.slideshow-container img{
+  width:100%;
+}
+
+.slide-prev, .slide-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.slide-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.slide-prev:hover, .slide-next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.slide-btn{
+  color: #f2f2f2;
+  padding:1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -2em;
+  margin-left: -7.5em;
+  width: 15em;
+  text-align: center;
+  border: solid;
+  border-radius: 0.2em;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.4s;
+}
+
+.slide-btn a{
+  color: #f2f2f2;
+  font-size: 1.8rem;
+  text-decoration: none;
+
+}
+
+.slide-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin-top: 10px;
+  margin-left: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/*images*/
+
+img{
+	width: 100%;
+	transition: all 0.4s ease;
+}
+
+.img-circle{
+	border-radius: 50%;
+}
+.img-hover-border{
+	border:3px solid var(--color-main-light);
+}
+.img-hover-border:hover {
+  border:3px solid var(--color-main-medium);
+}
+
+.img-card{
+	background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.img-card-text{
+	text-align: center;
+	font-size: 1.1rem;
+  padding: 10px 20px;
+}
+
+.img-button{
+	position: relative;
+}
+
+.img-button-mid{
+	transition: .5s ease;
+  opacity: 0;
+ 	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.img-button:hover .img-button-mid{
+	opacity: 1;
+}
+
+.img-button-mid a{
+	background-color: var(--color-main-medium);
+	color: white;
+	font-size: 1.1rem;
+	padding: 0.7em 1.5em;
+	text-decoration: none;
+}
+
+.img-over{
+	position: relative;
+}
+
+.img-overlay{
+	position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+ 	right: 0;
+ 	height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .4s ease;
+  background-color:black;
+}
+
+.img-over:hover .img-overlay{
+	opacity: 0.8;
+}
+
+.img-overlay-text{
+	color: white;
+	font-size: 1.3rem;
+	opacity: 1;
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);}
+
+.img-change{
+	position: relative;
+}
+
+.img-change-after{
+	position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+ 	right: 0;
+ 	height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .6s ease;
+}
+
+.img-change:hover .img-change-after{
+	opacity: 1;
+}
+
+.img-hovcap{
+	position:relative;
+}
+
+.img-hovcap img{
+	dispaly:block;
+}
+
+.img-hovcap-bg{
+	position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .4s ease;
+}
+
+.img-hovcap:hover .img-hovcap-bg{
+	height: 20%;
+}
+
+.img-hovcap-text{
+	white-space: nowrap; 
+  color: black;
+  font-size: 1.1rem;
+  position: absolute;
+  overflow: hidden;
+	top: 50%;
+	left: 50%;
+ 	transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+/*cards*/
+.card,
+.card-round,
+.card-border,
+.card-shadow {
+	background-color:white;
+	padding:1.5em;
+	overflow:hidden;
+	position:relative;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.card-round{
+	border-radius: 20px; 
+}
+
+.card-border{
+	border: 1px solid var(--color-main-medium);
+}
+
+.card-shadow{
+	box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-light{
+  background-color: var(--color-neutral-light);
+  padding: 1em;
+}
+
+/*tables*/
+.table {
+	width:100%;
+	border-collapse:collapse;
+}
+.table th,
+.table td {
+	padding: 0.5em;
+	text-align:left;
+}
+
+.table.striped tbody tr:nth-child(odd) {
+	background-color:var(--color-neutral-light);
+}
+
+.table.lined.all tbody tr,
+.table.lined.horizontal tbody tr {
+	border-top:1px solid var(--color-neutral-light);
+}
+
+.table.lined.all th:not(:first-child),
+.table.lined.all td:not(:first-child),
+.table.lined.vertical th:not(:first-child),
+.table.lined.vertical td:not(:first-child) {
+	border-left:1px solid var(--color-neutral-light);
+}
+
+	.table.lined.all,
+	.table.lined.outline {
+		border:1px solid var(--color-neutral-light);
+	}
+
+
+/* FORMS */
+.form{
+  margin: 0
+  padding: 0;
+  
+}
+
+.form-control {
+  margin: 1em 0;
+}
+.form-input {
+  display: inline-block;
+  width: 100%;
+  color: inherit;
+  font: inherit;
+  border-width: 0;
+  background-color: transparent;
+  border-bottom: 1px solid var(--color-neutral-light);
+  padding: 0.5em 1em;
+  outline: 0;
+}
+.form-input:focus {
+  border-bottom-color:var(--color-main-medium);
+}
+.form-label {
+  display: inline-block;
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--color-neutral-dark);
+}
+.form-btn-sm {
+  display: inline-block;
+  width: 2.8em;
+  margin: 0.5em 0;
+  border-width: 0;
+  background-color: var(--color-neutral-light);
+  padding: 0.3em 1em;
+  color: inherit;
+  font: inherit;
+  text-align: center;
+  border-radius: 0.3em;
+  cursor: pointer;
+  text-decoration: none;
+  outline:0;
+  -webkit-appearance: none;
+}
+
+.form-btn-sm:hover {
+  text-decoration: none;
+}
+.form-btn:active {
+  background-color:var(--color-main-medium);
+}
+
+.form-btn-color{
+  display: block;
+  border: 2px solid var(--color-main-medium);
+  padding: 0.6em 2em;
+  margin: 1em 0;
+  border-radius: 0.1em;
+  background-color: white;
+  color: var(--color-main-medium);
+  font-size: 1.4rem;
+  text-align: center;
+  transition: all: 0.25s;
+}
+
+.form-btn-color:hover{
+  background-color: var(--color-main-medium);
+  color: white;
+  outline: none;
+}
+
+
+.hotdog {
+  display: inline-block;
+  width: 100%;
+  border-width: 0;
+  background-color: var(--color-neutral-light);
+  padding: 0.5em 1em;
+  font: inherit;
+  color: inherit;
+  border-radius: 2em;
+  outline:0;
+  display:flex;
+}
+
+.hotdog input {
+  background-color:transparent;
+  color:inherit;
+  font:inherit;
+  border-width:0;
+  line-height:inherit;
+  width:100%;
+  display:block;
+  outline:0;
+  padding:0 1em;
+}
+.delete-btn{
+  border: none;
+  background-color:white;
+}
+.delete-btn svg{
+  width: 25px;
+  height: 25px;
+  fill: var(--color-neutral-medium);
+}
+
+.delete-btn svg:hover{
+  fill: var(--color-main-medium);
+}
