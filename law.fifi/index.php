@@ -45,24 +45,7 @@ $randProducts = getRows(
 		<h2 class="uppercase medium-color text-align-center flex-stretch text-align-center margin-bottom-5">Popular Items</h2>
 		<div class="grid gap margin-bottom-5">
 			<?= array_reduce($randProducts, "popularItems"); ?>
-			
-			<!-- <div class="col-md-4 col-sm-12">
-				<figure class="product-figure overlay">
-					<img src="images/meowie_logo_phone_case.png" alt="">
-					<figcaption>
-						<h4>Phone Case</h4>
-					</figcaption>
-				</figure>
-			</div>
-			
-			<div class="col-md-4 col-sm-12">
-				<figure class="product-figure overlay">
-					<img src="images/iconic_meow_stickers.png" alt="">
-					<figcaption>
-						<h4>Stickers</h4>
-					</figcaption>
-				</figure>
-			</div> -->
+
 		</div>
 	</div>
 

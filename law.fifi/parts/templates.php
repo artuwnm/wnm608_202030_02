@@ -5,7 +5,7 @@ function productListTemplate($r, $o){
 
 return $r.<<<HTML
 
-<figure class="product-figure col-md-4">
+<figure class="product-figure col-md-4 col-sm-6">
 	<a href="product_item.php?id=$o->id">
 	<img src="images/$o->thumbnail" alt="">
 				
@@ -127,10 +127,34 @@ return $r.<<<HTML
 			<img src="images/$o->thumbnail" alt="">
 			<figcaption>
 				<h4 class="popular-item-title">$o->productName</h4>
+				<p class="popular-item-title text-align-center">&dollar; $o->price</p>
 			</figcaption>
 		</a>
 	</figure>
 </div>
 
+HTML;
+}
+
+function makeListItemTemplate($r,$o) {
+return $r.<<<HTML
+<div class="display-flex product-list-page">
+	<div class="cart-img flex-none">
+		<img  src="images/$o->thumbnail" alt="">
+	</div>
+	<div class="flex-stretch">
+		<div class="display-flex">
+			<div class="flex-stretch product-name">
+				<h3 class="medium-color">$o->productName</h3>
+				<h5 class="medium-color">$o->category</h5>
+			</div>
+			<div class="flex-none" >
+				<a href="admin/?id=$o->id" class="btn dark">Edit</a>
+		
+				<a href="product_item.php?id=$o->id" class="btn light">Visit</a>
+			</div>
+		</div>
+	</div>
+</div>
 HTML;
 }

@@ -28,12 +28,12 @@ $result = getCartItems();
 			<div class="card transparent ">
 				<h2 class="text-align-center">CART</h2>
 				<div class="grid gap">
-					<div class="card flat col-md-8">				
+					<div class="card flat col-md-8 col-sm-12">				
 						<?php 						
 							echo array_reduce($result,"cartListTemplate");
 						 ?>
 					</div>
-				<div class="card flat col-md-4">
+				<div class="card flat col-md-4 col-sm-12">
 					<?= cartTotal(); ?>
 					<div>
 						<a href="checkout.php" class="btn dark form-button">Checkout</a>
