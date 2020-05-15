@@ -9,7 +9,7 @@
 						<nav class="nav flex-none" >
 				<!-- ul>li*3>a[href=#]>{Link $} -->
 				<ul class="display-flex ">
-					<li><a href="product_cart.php"><img src="image/cart.png" alt="" style="width: 60%" ></a></li>
+					<li><a href="product_cart.php"><img src="image/cart.png" alt="" style="height: 40%" ></a></li>
 				</ul>
 			
 			</nav>

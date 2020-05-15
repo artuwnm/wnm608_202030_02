@@ -111,14 +111,14 @@ $deletebutton = $id=='new' ? "" : "<li class='flex-none'><a href='{$_SERVER['PHP
 
 
 $images = array_reduce(explode(",",$o->images),function($r,$o){
-	return $r."<img src='/images/store/$o'>";
+	return $r."<img src='../li.han/$o'>";
 });
 
 $data_show = $id=='new' ? "" : <<<HTML
 <div class="card soft">
 
 <div class="product-main">
-	<img src="/images/store/$o->thumbnail" alt="">
+	<img src="../li.han/$o->thumbnail" alt="">
 </div>
 <div class="product-thumbs">$images</div>
 
