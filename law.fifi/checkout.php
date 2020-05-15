@@ -15,7 +15,7 @@ include_once "parts/templates.php";
 	</head>
 	<body>				
 
-			<div class="display-flex card checkout">
+			<div class="display-flex card checkout flex-direction-column-reverse">
 				<div class="flex-none">
 					<a href="product_cart.php" class="return-btn">return to cart</a>
 				</div>
@@ -26,7 +26,7 @@ include_once "parts/templates.php";
 
 		<div class="container">
 			<div class="grid gap">
-				<div class="card transparent col-md-8">					
+				<div class="card transparent col-md-8 col-sm-12">					
 					<div>
 						<form class="form" action="">
 							<label class="form-label" for="email">Email Address</label>
@@ -39,20 +39,20 @@ include_once "parts/templates.php";
 						<form class="form" action="">
 							<label class="form-label" for="shipping">Shipping Address</label>
 							<div class="grid">
-								<input class="form-basic col-md-6 margin-right-2" type="text" placeholder="First Name" id="firstname" name="firstname">
-								<input class="form-basic col-md-6" type="text" placeholder="Last Name" id="lastname" name="lastname">
-								<input class="form-basic col-md-12" type="text" placeholder="Street Address" id="streetAddress" name="Street Address">
-								<input class="form-basic col-md-12" type="text" placeholder="Apt, Suite (Optional)" id="apt" name="apt">
-								<input class="form-basic col-md-6 margin-right-2" type="text" placeholder="ZIP Code" id="zip" name="zip">
-								<input class="form-basic col-md-6" type="text" placeholder="City" id="city" name="city">
-								<select name="state" id="state" class="dropdown-selection inline-block col-md-6 margin-right-2">
+								<input class="form-basic col-md-6 col-sm-12 margin-right-2" type="text" placeholder="First Name" id="firstname" name="firstname">
+								<input class="form-basic col-md-6 col-sm-12" type="text" placeholder="Last Name" id="lastname" name="lastname">
+								<input class="form-basic col-md-12 col-sm-12" type="text" placeholder="Street Address" id="streetAddress" name="Street Address">
+								<input class="form-basic col-md-12 col-sm-12" type="text" placeholder="Apt, Suite (Optional)" id="apt" name="apt">
+								<input class="form-basic col-md-6 col-sm-12 margin-right-2" type="text" placeholder="ZIP Code" id="zip" name="zip">
+								<input class="form-basic col-md-6 col-sm-12" type="text" placeholder="City" id="city" name="city">
+								<select name="state" id="state" class="dropdown-selection inline-block col-md-6 col-sm-6 margin-right-2">
 									<option  class="options"  value="option1">State</option>
 									<option  class="options" value="option2">AL</option>
 									<option  class="options" value="option3">AK</option>
 									<option  class="options" value="option4">AZ</option>
 									<option  class="options" value="option5">CA</option>
 								</select>
-								<select name="country" id="country" class="dropdown-selection inline-block col-md-6">
+								<select name="country" id="country" class="dropdown-selection inline-block col-md-6 col-sm-6">
 									<option  class="options"  value="option1">Country</option>
 									<option  class="options" value="option2">USA</option>
 									<option  class="options" value="option3">China</option>
@@ -72,12 +72,12 @@ include_once "parts/templates.php";
 							<label for="radio-example2" class="radiobox">
 								<input type="radio" id="radio-example2" name="radio">
 								<span class="radiomark"></span>
-								<label for="radio-example2" class="form-content">Option 2</label>
+								<label for="radio-example2" class="form-content">Express Shipping</label>
 							</label>
 							<label for="radio-example3" class="radiobox">
 								<input type="radio" id="radio-example3" name="radio">
 								<span class="radiomark"></span>
-								<label for="radio-example3" class="form-content">Option 3</label>
+								<label for="radio-example3" class="form-content">1-Day Shipping</label>
 							</label>
 						</div>
 						<div class="form-control">
@@ -101,11 +101,11 @@ include_once "parts/templates.php";
 							</label>
 							<br>
 							<div>
-								<a href="confirmation.php" class="btn dark form-button">Place my order</a>
+								<a href="confirmation.php" class="btn dark form-button order-btn">Place my order</a>
 							</div>
 					</form>
 				</div>
-				<div class="col-md-4 card flat">
+				<div class="col-md-4 col-sm-12 card flat">
 					<div><a href="confirmation.php" class="btn dark form-button">Place my order</a></div>
 					<?= cartTotal(); ?>
 				</div>

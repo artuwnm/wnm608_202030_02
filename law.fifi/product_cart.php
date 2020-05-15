@@ -28,12 +28,20 @@ $result = getCartItems();
 			<div class="card transparent ">
 				<h2 class="text-align-center">CART</h2>
 				<div class="grid gap">
-					<div class="card flat col-md-8 col-sm-12">				
-						<?php 						
+					<div class="card transparent col-md-12 col-sm-12">				
+						<?php
+
+							$cart = getCart();
+
+							if(!empty($cart)) {
+
 							echo array_reduce($result,"cartListTemplate");
+							}else{
+								echo "<div class='text-align-center padding-top-2 padding-bottom-2'>Your cart is empty! Add an item to the cart!</div>";
+							}						
 						 ?>
 					</div>
-				<div class="card flat col-md-4 col-sm-12">
+				<div class="card transparent col-md-12 col-sm-12 text-align-right" style="border-top: 1px solid var(--color-neutral-medium);">
 					<?= cartTotal(); ?>
 					<div>
 						<a href="checkout.php" class="btn dark form-button">Checkout</a>

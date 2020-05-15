@@ -44,41 +44,41 @@ $pricefixed = number_format($o->total,2,'.','');
 $selectAmount = selectAmount($o->amount);
 
 return $r.<<<HTML
+<div class="display-flex product-list-page">
+	<div class="cart-img flex-none">
+		<img  src="images/$o->thumbnail" alt="">
+	</div>
+	<div class="flex-stretch">
+		<div class="display-flex flex-direction-column cartList">
+			<div class="flex-stretch product-name">
+				<h3 class="medium-color">$o->productName ($o->amount)</h3>
 
-	<div class="display-flex">		
-		<div class="image flex-none cart-img">
-			<img src="images/$o->thumbnail" alt="">
-		</div>
-		<div class="flex-stretch">
-			<div class="display-flex">
-				<div class="flex-stretch">
-					<h4>$o->productName ($o->amount)</h4>
-															
-					<form method="get" action="data/form_actions.php">
-						<input type="hidden" name="action" value="delete-cart-item">
+				<form method="get" action="data/form_actions.php" class="inline-block form-delete">
+					<input type="hidden" name="action" value="delete-cart-item">
+					<input type="hidden" name="id" value="$o->id">
+					<button type="submit" class="btn delete">Delete</button>
+				</form>
+			</div>
+			<div class="flex-none" >
+				<h5 class="inline-flex" >&dollar; $pricefixed</h5>
+				<div class="select-amount inline-flex">
+					<form  method="get" action="data/form_actions.php" onchange="this.submit()">
+						<input type="hidden" name="action" value="update-cart-amount">
 						<input type="hidden" name="id" value="$o->id">
-						<button type="submit" class="btn delete">Delete</button>
+						$selectAmount
 					</form>
 				</div>
-				<div class="flex-none">
-					<h5>&dollar; $pricefixed</h5>
-					<div class="select-amount">
-						<form  method="get" action="data/form_actions.php" onchange="this.submit()">
-							<input type="hidden" name="action" value="update-cart-amount">
-							<input type="hidden" name="id" value="$o->id">
-							$selectAmount
-						</form>
-					</div>
-				</div>
-			</div>			
+			</div>
 		</div>
 	</div>
+</div>
+
 
 HTML;
 }
 
 function selectAmount($amount=1,$total=10) {
-	$output = "<select name='amount' class='form-button'>";
+	$output = "<select name='amount' class='form-select'>";
 	for($i=1;$i<=$total;$i++) {
 		$output .= "<option ".($i==$amount?"selected":"").">$i</option>";
 	}
@@ -97,14 +97,14 @@ function cartTotal(){
 	$total = number_format($cartprice*1.0725,2,'.','');
 
 return<<<HTML
-<div>
+<div class="color-dark uppercase">
 	<h2>Subtotal</h2>
 </div>
-<div>
+<div class="color-dark">
 	<p>Products: &dollar;$cartprice</p>
 </div>
-<div><p>Tax: &dollar;$taxfixed</p>	</div>				
-<div>
+<div class="color-dark"><p>Tax: &dollar;$taxfixed</p>	</div>				
+<div class="color-dark">
 	<p>Total: &dollar;$total</p>
 </div>
 HTML;
@@ -138,6 +138,8 @@ HTML;
 
 function makeListItemTemplate($r,$o) {
 return $r.<<<HTML
+
+
 <div class="display-flex product-list-page">
 	<div class="cart-img flex-none">
 		<img  src="images/$o->thumbnail" alt="">

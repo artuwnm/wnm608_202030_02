@@ -9,32 +9,138 @@ $empty_product =(object)[
 	"description"=>"",
 	"price"=>"",
 	"quantity"=>"",
+	"colors"=>"",
+	"weight"=>"",
 	"thumbnail"=>"",
 	"images"=>"",
-	"colors"=>"",
-	"weight"=>""
+	"suggestedProducts"=>""
 ];
+
+if(isset($_GET['id'])){
+try{
+$conn = makePDOConn();
+
+switch (@$_GET['action']) {
+	case 'update':
+		
+		$statement = $conn->prepare("UPDATE
+			`products`
+			SET
+				`productName`=?,
+				`category`=?,
+				`description`=?,
+				`price`=?,
+				`quantity`=?,
+				`colors`=?,
+				`weight`=?,
+				`thumbnail`=?,
+				`images`=?,
+				`suggestedProducts`=?,
+				`date_modified`=NOW()
+			WHERE `id`= ?
+			");
+		$statement->execute([
+			$_POST["product-productName"],
+			$_POST["product-category"],
+			$_POST["product-description"],
+			$_POST["product-price"],
+			$_POST["product-quantity"],
+			$_POST["product-colors"],
+			$_POST["product-weight"],
+			$_POST["product-thumbnail"],
+			$_POST["product-images"],
+			$_POST["product-suggestedProducts"],
+			$_GET['id']
+		]);
+		header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
+		break;
+	case 'create':
+		// print_p([$_GET,$_POST]);
+		// die;
+		$statement = $conn->prepare("INSERT INTO
+			`products`
+			(
+				`productName`,
+				`category`,
+				`description`,
+				`price`,
+				`quantity`,
+				`colors`,
+				`weight`,
+				`thumbnail`,
+				`images`,
+				`suggestedProducts`,
+				`date_modified`,
+				`date_created`
+				)
+			VALUES 
+			(?,?,?,?,?,?,?,?,?,?,NOW(),NOW())
+			
+			");
+		$statement->execute([
+			$_POST["product-productName"],
+			$_POST["product-category"],
+			$_POST["product-description"],
+			$_POST["product-price"],
+			$_POST["product-quantity"],
+			$_POST["product-colors"],
+			$_POST["product-weight"],
+			$_POST["product-thumbnail"],
+			$_POST["product-images"],
+			$_POST["product-suggestedProducts"]
+		]);
+		$id = $conn->lastInsertId();
+
+		header("location:{$_SERVER['PHP_SELF']}?id=$id");
+		
+		break;
+	case 'delete':
+		$statement = $conn->prepare("DELETE FROM `products` WHERE `id` =?");
+		$statement->execute([$_GET['id']]);
+
+		header("location:{$_SERVER['PHP_SELF']}");
+		break;
+	
+	default:
+		# code...
+		break;
+}
+
+}catch(PDOException $e){
+	die($e->getMessage());
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function makeProductForm($o){
 
 $id = $_GET['id'];
 $addoredit = $id =='new' ? 'Add': 'Edit';
-$createorupdate= $id=='new'?'Create':'Update';
+$createorupdate= $id=='new'?'create':'update';
 $deletebutton = $id == 'new' ? "": "<a href='{$_SERVER['PHP_SELF']}?id=$id&action=delete' class='flex-none' style='padding-right:0;'>Delete</a>";
 $images = array_reduce(explode(",",$o->images),function($r,$o){return $r."<img src='images/$o'>";});
 
 $data_show = $id=='new'?"":<<<HTML
 
-<div class="card soft" style="margin-top: 0;">
+<div class="card flat" style="margin-top: 0;">
 	
 	
-	<div class="product-main">
-		<img src="/images/store/$o->thumbnail" alt="">
-	</div>
-	<div class="product-thumbs">$images</div>
+<div class="display-flex">
 
-
-
+	
+<div class="flex-stretch">
 	<div>
 	<h4>Product Name</h4>
 	<span>$o->productName</span>
@@ -44,13 +150,12 @@ $data_show = $id=='new'?"":<<<HTML
 	<h4>Category</h4>
 	<span>$o->category</span>
 	</div>
-
 	
 	<div>
 	<h4>Price</h4>
-	<span>$o->price</span>
+	<span>&dollar; $o->price</span>
 	</div>
-
+	
 	<div>
 	<h4>Quantity</h4>
 	<span>$o->quantity</span>
@@ -60,11 +165,25 @@ $data_show = $id=='new'?"":<<<HTML
 	<h4>Colors Available</h4>
 	<span>$o->colors</span>
 	</div>
-
+	
 	<div>
 	<h4>Description</h4>
 	<span>$o->description</span>
 	</div>
+	
+	<div>
+	<h4>Suggested Products</h4>
+	<span>$o->suggestedProducts</span>
+	</div>
+</div>
+
+	<div class="flex-none">
+		<div class="product-main">
+			<img src="images/$o->thumbnail" alt="">
+		</div>
+		<div class="product-thumbs">$images</div>
+	</div>
+</div>
 </div>
 
 HTML;
@@ -81,13 +200,13 @@ echo <<<HTML
 
 <div class="grid gap">
 
-	<div class=" col-md-5 col-sm-12" >$data_show</div>
-	<div class="card flat col-md-7 col-sm-12" style="margin-top: 0;">
+	<div class=" col-md-12 col-sm-12" >$data_show</div>
+	<div class="card flat col-md-12 col-sm-12" style="margin-top: 0;">
 		<h2>$addoredit Product</h2>
-		<form class="form" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
+		<form method="post" class="form" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
 			<div class="form-control">
-				<label for="product-name" class="form-label">Product Name</label>
-				<input type="text" class="form-input" type="text" placeholder="Product Name" id="product-name" name="product-name" value="$o->productName">
+				<label for="product-productName" class="form-label">Product Name</label>
+				<input type="text" class="form-input" type="text" placeholder="Product Name" id="product-productName" name="product-productName" value="$o->productName">
 			</div>
 			<div class="form-control">
 				<label for="product-category" class="form-label">Category</label>
@@ -121,9 +240,13 @@ echo <<<HTML
 				<label for="product-weight" class="form-label">Weight (kg)</label>
 				<input type="text" class="form-input" type="text" placeholder="Weight" id="product-weight" name="product-weight" value="$o->weight">
 			</div>
+			<div class="form-control">
+				<label for="product-suggestedProducts" class="form-label">Suggested Products</label>
+				<input type="text" class="form-input" type="text" placeholder="Suggested Products" id="product-suggestedProducts" name="product-suggestedProducts" value="$o->suggestedProducts">
+			</div>
 
 			<div class="form-control">
-				<button type="submit" class="form-button uppercase">Submit</button>
+				<input type="submit" value="submit" class="form-button uppercase">
 			</div>
 		</form>
 	</div>
@@ -161,7 +284,7 @@ HTML;
 		
 		<div class="container">
 			
-				
+			
 				<?php 
 					$conn = makeConn();
 
@@ -179,7 +302,7 @@ HTML;
 				 ?>
 
 				<div class="display-flex">
-					<h2 class="flex-stretch margin-auto">Products</h2>
+					<h2 class="flex-stretch margin-auto uppercase medium-color">Product list</h2>
 					<h3 class="flex-none"> <a class="btn dark" href="<?= $_SERVER['PHP_SELF'] ?>?id=new">Add New Product</a> </h3>
 				</div>
 

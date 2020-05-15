@@ -5,7 +5,7 @@
 			
 				<div class="container">
 					<div class="flex-stretch text-align-center logo center-logo">
-						<img src="images/Meowie-logo.svg" alt="">
+						<a href="index.php" style="padding:0;"><img src="images/Meowie-logo.svg" alt=""></a>
 					</div>
 					<div class="ham-icon">
 						<div class="line line-1"></div>

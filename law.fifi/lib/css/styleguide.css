@@ -128,21 +128,28 @@ form>button{
 		margin: 1.5em 0;
 	}
 	.form-button{
+		background-color: var(--color-neutral-dark);
+		color: var(--color-neutral-light);
+
+	}
+	.form-button,.form-select{
 		display: inline-block;
 		width: 100%;
 		border-width: 0;
-		background-color: var(--color-neutral-dark);
 		text-decoration: none;
 		cursor: pointer;
 		padding: 0.5em 1em;
 		text-align: center;
-		color: var(--color-neutral-light);
 		font:inherit;
 		outline: 0;
 		border-radius: 0.3em;
 		border: 1px solid var(--color-neutral-medium);
 		/*transition: 0.3s all ease;*/
 
+	}
+	.form-select{
+		background-color: var(--color-neutral-light);
+		color:var(--color-neutral-dark);
 	}
 	.form-button:hover{
 		text-decoration: none;
@@ -288,7 +295,7 @@ form>button{
 	.promo-label-input,
 	.signup-label-input{
 		display: inline-block;
-		width: 100%;
+		/*width: 100%;*/
 		border-width: 0;
 		background-color: var(--color-neutral-white);
 		padding: 0.1em 0.3em;
@@ -364,6 +371,8 @@ form>button{
 
 .text-align-center{text-align: center;}
 .text-align-left{text-align: left;}
+.text-align-right{text-align: right;}
+
 
 .margin-auto{margin:auto;}
 .margin-top-2{margin-top: 2rem;}
@@ -425,12 +434,7 @@ form>button{
 		top: 10%;
     	right: 10%;
 	}
-	.search-icon:hover,
-	.cart-icon:hover{
-		fill: var(--color-neutral-dark);
-		transition: 0.3s fill ease;
-		cursor: pointer;
-	}
+
 
 
 .navbar h1{
@@ -476,13 +480,16 @@ form>button{
 		max-height: 0;
 		transition: max-height 0.6s ease;
 	}
-	.navbar .menu-icon{
-		display:none;
+	.navbar .dropmenu-icon{
+		
 		padding: 30px 20px;
 		position: relative;
 		float: right;
 		cursor: pointer;
 
+	}
+	.navbar .menu-icon{
+		display:none;
 	}
 	.navbar.nav-center{
 		display:block;
@@ -493,7 +500,7 @@ form>button{
 	
 
 
-	.navbar .menu-icon .nav-icon{
+	.navbar .menu-icon .nav-icon, .navbar .dropmenu-icon .nav-icon{
 		display: block;
 		background: var(--color-neutral-medium);
 		height: 5px;
@@ -503,7 +510,7 @@ form>button{
 
 	}
 
-	.navbar .menu-icon .nav-icon:before{
+	.navbar .dropmenu-icon .nav-icon:before{
 		background: var(--color-neutral-medium);
 		content: "";
 		display: block;
@@ -514,7 +521,7 @@ form>button{
 		transition: all 0.2s ease-out;
 	}
 
-	.navbar .menu-icon .nav-icon:after{
+	.navbar .dropmenu-icon .nav-icon:after{
 		background: var(--color-neutral-medium);
 		content: "";
 		display: block;
@@ -534,16 +541,16 @@ form>button{
 		max-height: 300px;
 	}
 
-	.navbar .menu-btn:checked ~.menu-icon .nav-icon{
+	.navbar .menu-btn:checked ~.dropmenu-icon .nav-icon{
 		background: transparent;
 	}
 
-	.navbar .menu-btn:checked ~.menu-icon .nav-icon:before{
+	.navbar .menu-btn:checked ~.dropmenu-icon .nav-icon:before{
 		transform: rotate(-45deg);
 		top: 0;
 		
 	}
-	.navbar .menu-btn:checked ~.menu-icon .nav-icon:after{
+	.navbar .menu-btn:checked ~.dropmenu-icon .nav-icon:after{
 		transform: rotate(45deg);
 		top: 0;
 		
@@ -743,16 +750,16 @@ form>button{
 
 /*Image Picker*/
 .image-picker{
-	width: 600px;
+	/*width: 600px;*/
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 1em;
 }
 .main-image{
-    position: absolute;
-	/*width: 600px;*/
+   /* position: absolute;
+	width: 600px;
     background-color: inherit;
-    left: 150px;
+    left: 150px;*/
 }
 
 .main-image img{
@@ -760,17 +767,19 @@ form>button{
 	margin: 5px;
 }
 .thumbstrip{
-	position: relative;
-	width: 100px;
-
-
-
+	/*position: relative;*/
+	width: 105px;
 }
 .thumbstrip img{
 	width: 90px;
 	margin: 5px;
 	cursor: pointer;
-
+}
+.product-thumbs img{
+	/* height: 6vh; */
+    width: 70px;
+    /* padding: 0.1em; */
+    margin: 0.2em 0.4em 0.2em 0;
 }
 
 .section-title{
@@ -849,7 +858,7 @@ input[type="submit" i]{
 	}
 	.btn.delete{
 		padding: 0.5em 0;
-		color:var(--color-neutral-medium);
+		color:var(--color-neutral-dark);
 		text-transform: none;
 		background-color: inherit;
 		border-width: 0px;
@@ -1006,12 +1015,16 @@ input[type="submit" i]{
 		display:none;
 	}
 	.view-window>.container>.card{
-		position: absolute;
 		text-align: center;
-		width: 500px;
-		margin: 1em auto;
-		z-index: 2;
-		left: 10%;
+	    width: 350px;
+	    /* margin: 1em auto; */
+	    z-index: 2;
+	    /* left: 10%; */
+	    /* top: 11em; */
+	    left: 12em;
+	    /* right: 2em; */
+	    padding: 0;
+	    transform: translate(-50%,-50%);
 
 	}
 	.window-msg{
@@ -1026,9 +1039,9 @@ input[type="submit" i]{
 		height:60vh;
 
 	}
-	.view-window>.container>.card {
+/*	.view-window>.container>.card {
     left: -16%;
-}
+}*/
 }
 
 
@@ -1122,7 +1135,7 @@ input[type="submit" i]{
     	width: 12px;
     	height: 12px;
     	border-radius: 15px;
-    	left: 33px;
+    	left: 34px;
     	margin: 2px 0;
 	}
 .toggle label{
@@ -1309,7 +1322,6 @@ input[type=range]::-webkit-slider-thumb{
 
 .title{
 	color:var(--color-neutral-medium);
-	width: 750px;
 }
 
 
@@ -1511,7 +1523,69 @@ ol li span a:hover{
 		.navbar{
 			padding-bottom: 1em;
 		}
-
-
+		.passion-p{
+			padding:0;
+			text-align: center;
+		}
+		.card{
+			padding:1em;
+		}
+		.filterandsort{
+			display: flex;
+		}
+		.filterandsort .filter-form{
+			flex:none;
+		}
+		.nav-breadcrumb2 li {
+			font-size: 0.6em;
+		}
+		.thumbstrip{
+			width: 60px;
+		}
+		.main-image img {
+		    width: 242px;
+		    margin: 5px;
+		}
+		.thumbstrip img {
+		    width: 50px;
+		    margin: 5px;
+		    cursor: pointer;
+		}
+		hr{
+			margin-top: 1em;
+   			margin-bottom: 1em;
+   			width: 25%;
+		}
+		.added-to-cart,.added-to-cart-msg{
+			flex-direction: column;
+			text-align: center;
+		}
+		.cart-img {
+			margin:auto;
+		}
+		.flex-direction-column{
+			flex-direction: column;
+			
+		}
+		.flex-direction-column-reverse{
+			flex-direction: column-reverse;
+			
+		}
+		.inline-flex{
+			display: inline-flex;
+		}
+		.cartList h3,.cartList h5 {
+			font-size: 0.8em;
+			padding:0 1.2em;
+		}
+		.cartList .form-delete{
+			padding: 0 1em;
+		}
+		.order-btn{
+			display:none;
+		}
+		.product-name{
+			padding:0;
+		}
 
 	}

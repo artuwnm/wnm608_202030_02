@@ -54,6 +54,10 @@
 	.col-sm-10 { grid-column: span 10; }
 	.col-sm-11 { grid-column: span 11; }
 	.col-sm-12 { grid-column: span 12; }
+	.grid{
+	--gap-size:1.5em;
+
+	}
 }
 
 /* MEDIUM SIZE */

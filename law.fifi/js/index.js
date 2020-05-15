@@ -52,7 +52,7 @@ $(".thumbstrip img").click(function(){
 // });
 
 $(".ham-icon").click(function(){
-	$(this).parent().toggleClass("active");
+	$(this).parent().toggleClass(".active");
 })
 
 $(".product-thumbs img").on("mouseenter",function(e){

@@ -117,7 +117,7 @@ figure:hover{
     overflow: hidden;
 }
 
-@media screen and (max-width: 650px){
+@media (max-width: 650px){
 
 	.product-figure.overlay a{
 		display:flex;
@@ -140,6 +140,7 @@ figure:hover{
 		font-size:1em;
 		text-transform: none;
 	}
+
 
 
 }

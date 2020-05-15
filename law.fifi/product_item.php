@@ -48,32 +48,34 @@ $color = explode(",",$o->colors);
 	
 		<div class="container">
 			
-			<div class="card transparent">
+			
 				<div class="grid gap">
-					<div class="col-md-6 image-picker">
+					<div class="col-md-6 col-sm-12 image-picker">
 												
-							<div class="main-image">
-									<img src = images/<?= $o->thumbnail?>>
-																	
+							
+							<div class="display-flex">
+								<div class="thumbstrip">
+									<?php
+								
+									echo array_reduce($thumbs,function($r,$o){
+										return $r."<img src='images/$o'>";
+									})
+									?>
+								
+								</div>						
+														 	<div class="main-image">
+										<img src = images/<?= $o->thumbnail?>>
+																		
+								</div>
 							</div>
-							<div class="thumbstrip">
-								<?php
-
-								echo array_reduce($thumbs,function($r,$o){
-									return $r."<img src='images/$o'>";
-								})
-								?>
-
-							</div>						
-						 	
 					</div>
 
-					 <div class="col-md-6 color-dark position-relative" >
+					 <div class="col-md-6 col-sm-12 color-dark card transparent " >
 					 	<form action="data/form_actions.php" method="get">
-					 		<h2 class="">
+					 		<h2 class="color-dark">
  									<?= $o->productName  ?>
  								</h2>
- 								<h3>
+ 								<h3 class="color-dark">
  									$ <?= $o->price  ?>
  								</h3>
  								
@@ -129,7 +131,7 @@ $color = explode(",",$o->colors);
 						<!-- <a href="product_addedtocart.php?id=<?= $o->id ?>" class="btn dark uppercase">Add to Cart</a> -->
 					 </div>
 				</div>
-			</div>
+			
 
 			<div class="card soft">
 				<h3>Description</h3>

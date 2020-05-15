@@ -43,13 +43,13 @@ $(".thumbstrip img").click(function(){
 	$(this).closest(".image-picker").find(".main-image img").attr({src:newscr});
 })
 
-var width = $(window).width();
-$(window).resize(function(){
-	console.log(width);
-	if(width <= 600){
-		$('nav-center').addClass('dropdown');
-	}
-});
+// var width = $(window).width();
+// $(window).resize(function(){
+// 	console.log(width);
+// 	if(width <= 600){
+// 		$('nav-center').addClass('dropdown');
+// 	}
+// });
 
 $(".ham-icon").click(function(){
 	$(this).parent().toggleClass("active");

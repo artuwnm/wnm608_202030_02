@@ -54,7 +54,7 @@ $thumbs = explode(",",$o->images);
 						<img src="images/<?= $o->thumbnail ?>" alt="">
 					</div>
 					<div class="flex-stretch">
-						<div class="display-flex">
+						<div class="display-flex added-to-cart-msg">
 							<div class="flex-stretch">
 								<h3 class="medium-color">Thank you! <?= $p->amount ?> of <?= $o->productName?> has been added to cart.</h3>
 							</div>
