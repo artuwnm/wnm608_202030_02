@@ -4,6 +4,7 @@
 
 - https://hdraws.com
 - https://hdraws.com/aau/wnm608_02/cline.hamilton
+- https://hdraws.com/aau/wnm608_02/cline.hamilton/admin
 - https://hdraws.com/aau/wnm608_02/cline.hamilton/recipes
 - https://hdraws.com/aau/wnm608_02/cline.hamilton/styleguide
 - https://hdraws.com/aau/wnm608_02/cline.hamilton/admin/users.php
