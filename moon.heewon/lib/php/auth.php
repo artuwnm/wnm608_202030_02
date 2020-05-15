@@ -8,3 +8,11 @@ function makeAuth() {
 		"aauwnmcode", 	// Database host database name
 	];
 }
+function makePDOAuth() {
+	return [
+		"mysql:host=localhost;dbname=aauwnmcode", // host and database name
+		"aauwnmcode", // database USER name
+		"aauwnmcode", //database USER password
+		[PDO::MYSQL_ATTR_INIT_COMMAND=>"SET NAMES utf8"]
+	];
+}
