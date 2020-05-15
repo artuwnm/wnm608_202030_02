@@ -51,6 +51,8 @@ include_once "lib/php/functions.php";
 		</div>
 
 		<div class="grid gap productlist"></div>
+
+		<div><a href="admin">Product Admin</a></div>
 	</div>
 	
 </body>

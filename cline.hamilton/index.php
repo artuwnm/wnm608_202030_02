@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Landing Page</title>
@@ -41,7 +46,17 @@
 		</div>
 	</div>
 
-	<div class="view-window display-flex flex-align-center flex-justify-center" style="background-image:url(img/mountains01.jpg)">
+	<div class="container">
+		<h2>Latest Fruits</h2>
+		<?php recommendedCategory("fruit"); ?>
+	</div>
+
+	<div class="container">
+		<h2>Latest Vegetables</h2>
+		<?php recommendedCategory("vegetable"); ?>
+	</div>
+
+	<div class="view-window display-flex flex-align-center flex-justify-center" style="background-image:url(img/mountains01.jpg);">
 		<div class="card soft">
 			<h2>PRODUCT</h2>
 		</div>
