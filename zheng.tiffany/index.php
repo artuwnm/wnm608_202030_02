@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Stylista Store</title>
@@ -23,61 +28,22 @@
 
 	<div class="featured-items container">
 		<h1 class="center">Featured Items</h1>
-		<h2>Women</h2>
+		
+		<h3>Women</h3>
 		<div class="grid gap">
-			<div class="col-xs-12 col-md-6 col-lg-4">
-				<div class="product-figure card light">
-					<a href="item_details.php?id=3">
-						<button><h3>Shop</h3></button>
-					</a>
-					<img src="images/sundaze_dress_thumbnail.jpg" alt="Sundaze Dress">
-				</div>
-			</div>
-			<div class="col-xs-12 col-md-6 col-lg-4">
-				<div class="product-figure card light">
-					<a href="item_details.php?id=6">
-						<button><h3>Shop</h3></button>
-					</a>
-					<img src="images/bliss_dress_thumbnail.jpg" alt="Bliss Dress">
-				</div>
-			</div>
-			<div class="col-xs-12 col-md-6 col-lg-4">
-				<div class="product-figure card light">
-					<a href="item_details.php?id=4">
-						<button><h3>Shop</h3></button>
-					</a>
-					<img src="images/beachy_top_thumbnail.jpg" alt="Beachy Top">
-				</div>
-			</div>
+			<?php recommendedCategory("Women"); ?>
 		</div>
-		<h2>Men</h2>
+		
+		<h3>Men</h3>
 		<div class="grid gap">
-			<div class="col-xs-12 col-md-6 col-lg-4">
-				<div class="product-figure card light">
-					<a href="item_details.php?id=12">
-						<button><h3>Shop</h3></button>
-					</a>
-					<img src="images/desert_shirt_thumbnail.jpg" alt="Desert Shirt">
-				</div>
-			</div>
-			<div class="col-xs-12 col-md-6 col-lg-4">
-				<div class="product-figure card light">
-					<a href="item_details.php?id=10">
-						<button><h3>Shop</h3></button>
-					</a>
-					<img src="images/heavens_above_shirt_thumbnail.jpg" alt="Heavens Above Shirt">
-				</div>
-			</div>
-			<div class="col-xs-12 col-md-6 col-lg-4">
-				<div class="product-figure card light">
-					<a href="item_details.php?id=11">
-						<button><h3>Shop</h3></button>
-					</a>
-					<img src="images/boho_shirt_thumbnail.jpg" alt="Boho Shirt">
-				</div>
-			</div>
+			<?php recommendedCategory("Men"); ?>
 		</div>
-		<a href="shop_all.php"><button class="hollow-button round"><h4>Shop All</h4></button></a>
+
+		<div class="center">
+			<a href="shop_all.php">
+				<button class="hollow-button round"><h4>Shop All</h4></button>
+			</a>
+		</div>
 	</div>
 
 	<?php include "parts/footer.php" ?>

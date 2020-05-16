@@ -18,7 +18,7 @@ $result = getCartItems();
 <div class="grid gap full-height">
 
 	<div class="col-3">
-		<div class="bag-container">
+		<div class="bag-container fixed">
 			<div class="back-link small-link">
 				<a href="bag.php"><span class="chevron left"></span> Return to Bag</a>
 			</div>
@@ -69,7 +69,7 @@ $result = getCartItems();
 				<div class="checkout-row display-flex">
 					<div class="form-control">
 						<label for="checkout-country" class="form-label">Country</label>
-						<select name="amount" class="checkout-button">
+						<select name="amount" class="checkout-dropdown">
 							<option>United States</option>
 							<option>Canada</option>
 							<option>Mexico</option>
@@ -77,7 +77,7 @@ $result = getCartItems();
 					</div>
 					<div class="form-control">
 						<label for="checkout-state" class="form-label">State</label>
-						<select name="amount" class="checkout-button">
+						<select name="amount" class="checkout-dropdown">
 							<option>AL</option>
 							<option>AK</option>
 							<option>AZ</option>
@@ -153,8 +153,10 @@ $result = getCartItems();
 
 			</form>
 
-			<div class="checkout-button pay-now">
-				<a href="order_confirmation.php" class="form-button">Pay Now</a>
+			<div class="pay-now">
+				<a href="order_confirmation.php">
+					<button class="solid-button round"><h4>Pay Now</h4></button>
+				</a>
 			</div>
 
 		</div>

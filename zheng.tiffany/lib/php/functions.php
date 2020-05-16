@@ -70,7 +70,7 @@ function getCart() {
 
 
 
-function addToCart($id,$amount,$price) {
+function addToCart($id,$size,$amount,$price) {
 
 	$cart = getCart();
 
@@ -82,6 +82,7 @@ function addToCart($id,$amount,$price) {
 		$price = getRows(makeConn(),"SELECT `price` FROM `products` WHERE `id` = $id")[0]->price;
 		$_SESSION['cart'][] = (object) [
 			"id"=>$id,
+			"size"=>$size,
 			"amount"=>$amount,
 			"price"=>$price
 		];
@@ -106,6 +107,7 @@ function getCartItems() {
 	return array_map(function($o) use ($cart){
 		$cart_o = array_find($cart,function($c) use($o) { return $c->id==$o->id; });
 		$o->amount = $cart_o->amount;
+		$o->size = $cart_o->size;
 		$o->total = $o->price * $cart_o->amount;
 		return $o;
 	},$database_result);

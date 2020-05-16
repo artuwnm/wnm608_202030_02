@@ -16,18 +16,19 @@ $_SESSION['cart'] = [];
 
 	<?php include "parts/header.php" ?>
 
-	<div class="container">
-		<div class="card soft">
+	<hr class="center container">
 
-			<h2>Order Confirmation</h2>
+	<div class="medium-container">
 
-			<div>Thank you for your order!</div>
+		<h1 class="center">Thanks for shopping with us!</h1>
 
-			<div>
-				<a href="shop_all.php" class="form-button">Back to shopping</a>
-			</div>
-		
+		<div class="card center confirmation-page">
+			<p>We have received your order, and will be processing your order as soon as possible!</p>
+			<a href="shop_all.php">
+				<button class="hollow-button round"><h4>Back to Shopping</h4></button>
+			</a>
 		</div>
+
 	</div>
 
 	<?php include "parts/footer.php" ?>

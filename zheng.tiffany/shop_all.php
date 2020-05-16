@@ -29,7 +29,7 @@ include_once "lib/php/functions.php";
 				<form id="product-search">
 					<input type="search" class="search" placeholder="Search Products">
 				</form>
-				<div class="search-icon">
+				<div class="search-icon hover">
 					<img src="images/search.svg" width="20px" height="20px" alt="Search">
 				</div>
 			</div>

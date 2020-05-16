@@ -20,29 +20,56 @@ $o = getRows(makeConn(),"SELECT * FROM `products` WHERE `id`={$_GET['id']}")[0];
 
 	<?php include "parts/header.php" ?>
 
-	<div class="container">
-		<div class="card soft">
-			<div class="card-section">
-				<h2>Cart Confirmation</h2>
-				
-				<div>
-					Thank you for adding <?= $p->amount ?> of <?= $o->name ?> to the cart.
-				</div>
+	<hr class="center container">
+
+	<div class="medium-container">
+		<h1 class="center">Item added to shopping bag</h1>
+		<div class="card soft center">
+			<div class="checkout-bag-item">
+				<ul class="display-flex">
+					<li class="product-thumbs flex-none">
+						<img src="<?= $o->thumbnail ?>">
+					</li>
+					<li class="bag-item-info flex-stretch">
+						<h5><?= $o->name ?></h5>
+						<table class="bag-item-info-table">
+							<tbody>
+								<tr>
+									<td>Size</td>
+									<td class="bold"><?= $p->size ?></td>
+								</tr>
+								<tr>
+									<td>Quantity</td>
+									<td class="bold"><?= $p->amount ?></td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li class="bag-item-price flex-none"><h3>&dollar;<?= $o->price ?></h3></li>
+				</ul>
 			</div>
 
-			<div class="card-section">
-				<div class="display-flex">
+			<hr class="center container">
+
+			
+				<div class="card row">
 					<div class="flex-none">
-						<a href="shop_all.php" class="form-button">Back to Shopping</a>
+						<a href="shop_all.php">
+							<button class="hollow-button round"><h4>Back to Shopping</h4></button>
+						</a>
 					</div>
 					<div class="flex-stretch"></div>
 					<div class="flex-none">
-						<a href="bag.php" class="form-button">Go to Bag</a>
+						<a href="bag.php">
+							<button class="solid-button round"><h4>Go to Bag</h4></button>
+						</a>
 					</div>
 				</div>
-			</div>
+
 		</div>
 	</div>
+
+	<?php include "parts/footer.php" ?>
 	
 </body>
 </html>

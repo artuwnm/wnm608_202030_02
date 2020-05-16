@@ -1,22 +1,31 @@
 <?php 
 
-function productListTemplate($r,$o) {
+function featuredListTemplate($r,$o) {
 return $r.<<<HTML
-<div class="col-xs-6 col-md-4">
-	<a href="item_details.php?id=$o->id" class="display-block">
-		<figure class="product-figure soft">
-			<div class="product-image">
-				<img src="$o->thumbnail" alt="">
-			</div>
-			<figcaption class="product-description">
-				<div class="product-name">$o->name</div>
-				<div class="product-price">&dollar;$o->price</div>
-			</figcaption>
-		</figure>
+<div class="col-xs-12 col-md-6 col-lg-4">
+	<a href="item_details.php?id=$o->id">
+		<div class="product-figure card">
+			<button><h3>Shop</h3></button>
+			<img src="$o->thumbnail" alt="$o->name">
+		</div>
 	</a>
 </div>
 HTML;
 }
+
+
+function productList($rows) {
+	$products = array_reduce($rows,'featuredListTemplate');
+	echo "$products";
+}
+
+function recommendedCategory($cat,$limit=3) {
+	$sql = "SELECT * FROM `products` WHERE `category`='$cat' ORDER BY `featured` DESC LIMIT $limit";
+	productList(getRows(makeConn(),$sql));
+}
+
+
+
 
 function cartListTemplate($r,$o) {
 // $hascase = rand(0,1) ? "case: big" : "";
@@ -25,72 +34,46 @@ $pricefixed = number_format($o->total,2,'.','');
 $selectAmount = selectAmount($o->amount);
 return $r.<<<HTML
 
-<div class="bag-item">
-	<ul class="display-flex">
-		<li class="product-thumbs"><img src="$o->thumbnail"></li>
-		<li class="bag-item-info">$o->name</li>
-		<li class="bag-item-quantity">
-			<form method="get" action="data/form_actions.php" onchange="this.submit()">
-				<input type="hidden" name="action" value="update-cart-amount">
-				<input type="hidden" name="id" value="$o->id">
-				$selectAmount
-			</form>
-		</li>
-		<li class="bag-item-price bold">&dollar;$pricefixed</li>
-		<li class="bag-item-delete">
-			<form method="get" action="data/form_actions.php">
-				<input type="hidden" name="action" value="delete-cart-item">
-				<input type="hidden" name="id" value="$o->id">
-				<button type="submit">
-					<img src="images/delete.svg" width="20px" height="20px" alt="Delete Item">
-				</button>
-			</form>
-		</li>
-	</ul>
+<div class="bag-item row">
+	<div class="product-thumbs flex-none">
+		<img src="$o->thumbnail">
+	</div>
+	<div class="flex-stretch">
+		<ul class="display-flex">
+			<li class="bag-item-info">$o->name</li>
+			<li class="bag-item-size">$o->size</li>
+			<li class="bag-item-quantity">
+				<form method="get" action="data/form_actions.php" onchange="this.submit()">
+					<input type="hidden" name="action" value="update-cart-amount">
+					<input type="hidden" name="id" value="$o->id">
+					$selectAmount
+				</form>
+			</li>
+			<li class="bag-item-price bold">&dollar;$pricefixed</li>
+		</ul>
+	</div>
+	<div class="bag-item-delete flex-none">
+		<form method="get" action="data/form_actions.php">
+			<input type="hidden" name="action" value="delete-cart-item">
+			<input type="hidden" name="id" value="$o->id">
+			<button type="submit" class="hover">
+				<img src="images/delete.svg" width="20px" height="20px" alt="Delete Item">
+			</button>
+		</form>
+	</div>
 </div>
 HTML;
 }
 
-// <div class="display-flex card-section">
-// 	<div class="flex-none product-thumbs">
-// 		<img src="$o->thumbnail">
-// 	</div>
-// 	<div class="flex-stretch">
-// 		<div class="display-flex">
-// 			<div class="flex-stretch">
-// 				<strong>$o->name ($o->amount)</strong>
-// 			</div>
-// 			<div class="flex-none">
-// 				&dollar;$pricefixed
-// 			</div>
-// 		</div>
-// 		<div class="display-flex" style="font-size:0.8em">
-// 			<form class="flex-none" method="get" action="data/form_actions.php">
-// 				<input type="hidden" name="action" value="delete-cart-item">
-// 				<input type="hidden" name="id" value="$o->id">
-// 				<button type="submit" class="form-button">Delete</button>
-// 			</form>
-// 			<div class="flex-stretch"></div>
-// 			<form class="flex-none" method="get" action="data/form_actions.php" onchange="this.submit()">
-// 				<input type="hidden" name="action" value="update-cart-amount">
-// 				<input type="hidden" name="id" value="$o->id">
-// 				$selectAmount
-// 			</form>
-// 		</div>
-// 	</div>
-// </div>
-
 
 function selectAmount($amount=1,$total=10) {
-	$output = "<select name='amount' class='select-button bag'>";
+	$output = "<select name='amount' class='select-button'>";
 	for($i=1;$i<=$total;$i++) {
 		$output .= "<option ".($i==$amount?"selected":"").">$i</option>";
 	}
 	$output .= "</select>";
 	return $output;
 }
-
-
 
 
 function cartTotals() {
@@ -104,56 +87,29 @@ $taxedfixed = number_format($cartprice*1.0725,2,'.','');
 
 return <<<HTML
 
-<div class="bag-totals">
-	<table class="bag-item-totals-table">
-		<tbody>
-			<tr>
-				<td>Subtotal</td>
-				<td class="bold">&dollar;$pricefixed</td>
-			</tr>
-			<tr>
-				<td>Tax</td>
-				<td class="bold">&dollar;$taxfixed</td>
-			</tr>
-			<tr>
-				<td style="font-size: 1em">Total</td>
-				<td class="bold">&dollar;$taxedfixed</td>
-			</tr>
-		</tbody>
-	</table>
+<div class="bag-totals display-flex">
+	<div class="flex-stretch"></div>
+	<div class="flex-none">
+		<table class="bag-item-totals-table">
+			<tbody>
+				<tr>
+					<td>Subtotal</td>
+					<td class="bold">&dollar;$pricefixed</td>
+				</tr>
+				<tr>
+					<td>Tax</td>
+					<td class="bold">&dollar;$taxfixed</td>
+				</tr>
+				<tr>
+					<td style="font-size: 1em">Total</td>
+					<td class="bold">&dollar;$taxedfixed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </div>
 HTML;
 }
-
-// <div class="bag-totals">
-
-// 	<div class="display-flex">
-// 		<div class="flex-stretch">
-// 			<strong>Sub Total</strong>
-// 		</div>
-// 		<div class="flex-none">
-// 			<span>&dollar;$pricefixed</span>
-// 		</div>
-// 	</div>
-// 	<div class="display-flex">
-// 		<div class="flex-stretch">
-// 			<strong>Tax</strong>
-// 		</div>
-// 		<div class="flex-none">
-// 			<span>&dollar;$taxfixed</span>
-// 		</div>
-// 	</div>
-// </div>
-// <div class="card-section">
-// 	<div class="display-flex">
-// 		<div class="flex-stretch">
-// 			<strong>Total</strong>
-// 		</div>
-// 		<div class="flex-none">
-// 			<span>&dollar;$taxedfixed</span>
-// 		</div>
-// 	</div>
-// </div>
 
 
 function makeCartBadge() {
@@ -192,15 +148,17 @@ $pricefixed = number_format($o->total,2,'.','');
 $selectAmount = selectAmount($o->amount);
 return $r.<<<HTML
 <div class="checkout-bag-item">
-	<ul class="display-flex relative">
-		<li class="product-thumbs"><img src="$o->thumbnail"></li>
-		<li class="bag-item-info relative">
+	<ul class="display-flex">
+		<li class="product-thumbs flex-none">
+			<img src="$o->thumbnail">
+		</li>
+		<li class="bag-item-info flex-stretch">
 			<h5>$o->name</h5>
-			<table class="bag-item-info-table absolute">
+			<table class="bag-item-info-table">
 				<tbody>
 					<tr>
 						<td>Size</td>
-						<td class="bold">NA</td>
+						<td class="bold">$o->size</td>
 					</tr>
 					<tr>
 						<td>Quantity</td>
@@ -209,7 +167,7 @@ return $r.<<<HTML
 				</tbody>
 			</table>
 		</li>
-		<li class="bag-item-price absolute"><h3>&dollar;$pricefixed</h3></li>
+		<li class="bag-item-price flex-none"><h3>&dollar;$pricefixed</h3></li>
 	</ul>
 </div>
 HTML;

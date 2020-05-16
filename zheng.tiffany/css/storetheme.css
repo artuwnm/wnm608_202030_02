@@ -24,10 +24,11 @@ h1 {
 }
 
 h2 {
-	font-family: 'Elsie', cursive;
-	font-size: 1.25em;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
 	color: var(--color-neutral-dark);
 	margin-top: 2em;
+	margin-bottom: 0.25em;
 }
 
 h3 {
@@ -46,6 +47,7 @@ h5 {
 	color: var(--color-neutral-dark);
 	letter-spacing: 0.025em;
 	margin: 0;
+	text-align: left;
 }
 
 h6 {
@@ -56,9 +58,13 @@ h6 {
 	color: var(--color-neutral-dark);
 }
 
+p {
+	line-height: var(--body-height);
+}
+
 hr {
-	margin-top: 2em;
-	margin-bottom: 1.5em;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
 }
 
 /* Navbar */
@@ -68,36 +74,16 @@ hr {
 }
 
 .store-header .row .logo {
-	width: 15%;
+	height: 4em;
 }
 
-/*.store-header .row .logo {
-	position: relative;
-	text-align: center;
-	margin: 1.25rem auto 0;
-	width: 15%;
-}*/
+.store-header .flex-none {
+	width: 4em;
+}
 
 .logo img {
-	width: 100%;
-	height: auto;
-}
-
-.store-header .row .ctas {
-	position: absolute;
-	right: 20px;
-	margin: 1rem auto 0;
-}
-
-.store-header .row .ctas li {
-	vertical-align: middle;
-	display: inline-block;
-	padding: 5px 0 0 20px;
-}
-
-.store-header nav ul > li:hover {
-	cursor: pointer;
-	/*border-bottom: 3px solid var(--color-main-medium);*/
+	width: auto;
+	height: 100%;
 }
 
 
@@ -109,11 +95,6 @@ hr {
 
 /* Component Classes */
 
-.featured-items button {
-	display: block;
-	margin: 2rem auto 4rem;
-}
-
 .products-header {
 	margin: 4rem auto 2rem;
 }
@@ -124,22 +105,46 @@ hr {
 
 /*Bag Classes*/
 
-.bag-item>ul>li {
-	padding: 2em 5em;
+.add-to-bag-button h4 {
+	font-size: 1.5em;
+}
+
+.bag h1 {
+	margin-top: 0;
+	margin-bottom: 2em;
+}
+
+.bag-item {
+	margin-bottom: 2em;
+}
+
+.bag-item ul {
+	padding-left: 1.5em;
+	margin: 0;
+}
+
+.bag-item ul li {
+	padding: 2em;
+	width: 7.5em;
+    text-align: right;
+}
+
+.bag-item ul li:first-child {
+	width: 15em;
 	padding-left: 0;
+	text-align: left;
 }
 
-.bag-item>ul>li:first-child {
-	padding-top: 0;
-	margin-right: 2em;
+.bag-item ul li:nth-child(3) {
+	padding-top: 1.5em;
 }
 
-.bag-item>ul>li:nth-child(2) {
-	min-width: 40%;
+.bag-item-quantity form {
+	width: 3.25em;
 }
 
-.bag-item>ul>li:last-child {
-	padding-right: 0;
+.bag-item-delete form {
+	padding: 2em 0;
 }
 
 .bag-item-delete button {
@@ -149,21 +154,17 @@ hr {
     cursor: pointer;
 }
 
-.bag-totals {
+.bag-totals, .checkout-button {
+	margin: 2em 4.5em 0 0;
+	text-align: right;
+}
+
+.bag-totals>div:last-child {
 	width: 40%;
-	height: 20vh;
-	float: right;
-	margin-right: 20%;
 }
 
 .bag-item-totals-table td {
 	text-align: right;
-}
-
-.checkout-button {
-	clear: both;
-	float: right;
-	width: 50%;
 }
 
 
@@ -175,7 +176,7 @@ hr {
 }
 
 .back-link a:hover {
-	opacity: 50%;
+	color: var(--color-neutral-medium);
 }
 
 .small-link a {
@@ -184,14 +185,11 @@ hr {
 }
 
 .bag-container {
+	width: 24%;
 	background-color: var(--color-neutral-light);
 	padding: 1em;
-	min-height: 100%;
+	min-height: 100vh;
 }
-
-/*.bag-item ul {
-	padding-left: 1em;
-}*/
 
 .checkout-bag-item {
 	font-size: 0.9em;
@@ -199,15 +197,17 @@ hr {
 }
 
 .bag-item-info {
-	padding: 0 1.25em;
+	padding-left: 1.25em;
 }
 
 .bag-item-info-table {
-	bottom: 0.25em;
+	margin-top: 1.5em;
+	width: 9em;
 }
 
 .bag-item-price {
-	right: 1em;
+	padding: 1em;
+	text-align: right;
 }
 
 .bag-subtotal-table td, .bag-total-table td {
@@ -225,11 +225,16 @@ hr {
 	width: 15%;
 }
 
+.checkout .logo img {
+	width: 100%;
+	height: auto;
+}
+
 .checkout-form>h5 {
 	margin-top: 3rem;
 }
 
-.checkout-button {
+.checkout-dropdown {
 	background-color: #fff;
 	padding: 0.5em 1em;
 	color: var(--color-neutral-dark);
@@ -264,11 +269,16 @@ hr {
 	width: 100%;
 }
 
-.checkout-button.pay-now {
-	clear: none;
-	float: none;
+.pay-now {
 	padding: 1em 0 10em;
-    width: 30%;
+}
+
+.confirmation-page {
+	margin-bottom: 8em;
+}
+
+.confirmation-page p {
+	padding-bottom: 1em;
 }
 
 /*Admin*/
@@ -319,6 +329,11 @@ hr {
 	width: 85px;
 }
 
+.product-images .product-thumbs img:hover {
+	opacity: 50%;
+	cursor: pointer;
+}
+
 .product-thumbs img {
     height: 100px;
     width: 75px;
@@ -335,12 +350,23 @@ hr {
     margin-bottom: 0.25em;
 }
 
-.product-name {
-	font-weight: 700;
+.product-details form {
+	margin-top: 4em;
 }
 
-.product-description {
-	line-height: var(--body-height);
+.product-details form>div {
+	margin-bottom: 4.85em;
+}
+
+.product-details form div.row:first-child {
+	width: 6.5em;
+    height: 2.5em;
+    margin-right: 6.25em;
+}
+
+.product-details form div.row:last-child {
+	width: 8.5em;
+    height: 2.5em;
 }
 
 /*Products Admin*/

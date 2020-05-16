@@ -1,7 +1,7 @@
 
 
 $(()=>{
-	$(".product-thumbs img").on("mouseenter",function(e){
+	$(".product-thumbs img").on("click",function(e){
 		$(".product-main img").attr("src",$(this).attr("src"));
 	})
 })

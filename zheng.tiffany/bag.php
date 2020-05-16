@@ -5,7 +5,7 @@ include_once "parts/templates.php";
 
 $result = getCartItems();
 
-// print_p($result);
+// print_p([$result,$_SESSION]);
 
  ?><!DOCTYPE html>
 <html lang="en">
@@ -21,7 +21,13 @@ $result = getCartItems();
 
 	<hr class="center container">
 
-	<div class="medium-container">
+	<div class="container">
+		<div class="back-link">
+			<a href="shop_all.php"><span class="chevron left"></span> Back to Shop</a>
+		</div>
+	</div>
+
+	<div class="bag medium-container">
 		<h1 class="center">Shopping Bag</h1>
 		
 			<div class="card flat">
@@ -34,7 +40,9 @@ $result = getCartItems();
 				<?= cartTotals(); ?>
 				
 				<div class="checkout-button">
-					<a href="checkout.php" class="form-button">Checkout</a>
+					<a href="checkout.php">
+						<button class="solid-button round"><h4>Checkout</h4></button>
+					</a>
 				</div>
 			
 			</div>

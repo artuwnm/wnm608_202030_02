@@ -14,8 +14,8 @@ if(!isset($data->type)) {
 			getRows(makeConn(),"SELECT
 			*
 			FROM `products`
-			ORDER BY `date_create` DESC
-			LIMIT 12
+			ORDER BY `id` ASC
+			LIMIT 15
 			");
 	break;
 
@@ -33,11 +33,11 @@ if(!isset($data->type)) {
 			*
 			FROM `products`
 			WHERE 
-				`title` LIKE '%{$data->search}%' OR
+				`name` LIKE '%{$data->search}%' OR
 				`description` LIKE '%{$data->search}%' OR
 				`category` LIKE '%{$data->search}%'
 			ORDER BY `date_create` DESC
-			LIMIT 12
+			LIMIT 15
 			");
 	break;
 
@@ -47,7 +47,7 @@ if(!isset($data->type)) {
 			FROM `products`
 			WHERE `$data->column` = '$data->value'
 			ORDER BY `date_create` DESC
-			LIMIT 12
+			LIMIT 15
 			");
 	break;
 
@@ -56,7 +56,7 @@ if(!isset($data->type)) {
 			*
 			FROM `products`
 			ORDER BY `$data->column` $data->dir
-			LIMIT 12
+			LIMIT 15
 			");
 	break;
 
