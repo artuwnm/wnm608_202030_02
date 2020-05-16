@@ -1,32 +1,46 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
  <?php include_once "parts/templates.php" ?>
- <header>
- 	
- 		
-
-	
-		
-		<input type="checkbox" id="overlay-input" />
-		<label for="overlay-input" id="overlay-button"><span></span></label>
-
-  		<div id="overlay">
-
-   			 <ul>
-      			<li><a href="#">Home</a></li>
-      			<li><a href="#">About</a></li>
-      			<li><a href="#">Contact</a></li>
-    		</ul>
-    
-  		</div>
-  		
-  		
-  		
-<a href="index.php" style="flex: 1 1 auto;">
+ <header class="navbar">
+		<nav class="nav-right-flex">
+			<div class="topnav" id="myTopnav" style="display: flex;">
+			
+			<a href="index.php" style="flex: 1 1 auto;">
 				<img src="images/horizontallogo.png" alt="Nature" class="responsiveimage logo">
-		</a>
-	
-  </div>
+			</a>
+				<ul style="order: 2;">
+				<li>
+				<div class="animated-search-form" id="product-search">
+			<!-- <input type="text" name="search" placeholder="SEARCH"> -->
+			<input type="search" class="search" placeholder="SEARCH">
+						</div>
+				</li>
+				<li>
+				 <a href="cart.php"><div class="cart"><?= makeCartBadge() ?><div class="cart"></div></a>
+				 </li>
+
+				 </ul>
+				<ul id="displaynone" style="order: 1;">
+					<li>
+				 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    					 <i class="fa fa-bars"></i>
+  						 </a>
+					</li>
+					<li>
+						<a href="shop.php">SHOP</a>
+					</li>
+					<li>
+						<a href="read.php">READ</a>
+					</li>
+					<li>
+						<a href="store.php">STORE</a>
+					</li>
+
+					
+				</ul>
+				
+			</div>
+			</nav>
 			<script>
 			function myFunction() {
 			  var x = document.getElementById("myTopnav");

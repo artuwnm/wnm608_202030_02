@@ -186,6 +186,7 @@ section h2 {
 		 padding: 0;
 	}
 }
+
  @-webkit-keyframes bugfix {
 	 from {
 		 padding: 0;
@@ -194,6 +195,7 @@ section h2 {
 		 padding: 0;
 	}
 }
+
  #overlay-button {
 	 position: absolute;
 	 right: 2em;
