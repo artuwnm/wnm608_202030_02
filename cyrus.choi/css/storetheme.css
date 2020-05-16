@@ -2,6 +2,7 @@
     --color-neutral-dark: #272b26;
     --color-neutral-medium: #7f877d;
     --color-neutral-light: #e6eae5;
+    --color-neutral-medium-light: #c5cbc3;
 }
 
 
@@ -16,6 +17,22 @@ body {
 	margin:0;
 	height:100%;
 }
+
+.form-select select,
+.form-button {
+	background-color:var(--color-neutral-medium-light);
+}
+
+.productlist {
+	margin:1em 0;
+}
+.productlist a:hover {
+	text-decoration:none;
+}
+.productlist .product-price {
+	text-align:right;
+}
+
 
 
 
@@ -76,6 +93,35 @@ body {
 	height:100px;
 	width:100px;
 	object-fit:cover;
+}
+
+.product-title {
+	margin:0;
+	font-size:2em;
+}
+.product-category {
+	font-size:0.8em;
+	color:var(--color-neutral-medium);
+	margin-bottom:1rem;
+}
+
+.image-square img {
+	width:5em;
+	height:5em;
+	object-fit:contain;
+	object-position:center;
+}
+
+
+.itemlist {
+	display:grid;
+	grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+}
+.itemlist-item {
+	margin:1em;
+	padding:1em;
+	border: 1px solid var(--color-neutral-light);
+	border-radius:0.5em;
 }
 
 

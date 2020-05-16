@@ -26,6 +26,14 @@ function makeConn() {
 
 	return $conn;
 }
+function makePDOConn() {
+	try {
+		$conn = new PDO(...makePDOAuth());
+	} catch(PDOException $e) {
+		die($e->getMessage());
+	}
+	return $conn;
+}
 
 
 function getRows($conn,$sql) {
@@ -43,7 +51,19 @@ function getRows($conn,$sql) {
 }
 
 
+function getPDORows($conn,$sql) {
+	$a = [];
 
+	$result = $conn->query($sql);
+
+	if($conn->errno) die($conn->error);
+
+	while($row = $result->fetch_object()) {
+		$a[] = $row;
+	}
+
+	return $a;
+}
 
 
 
