@@ -1,21 +1,24 @@
+<?php
+
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-<header>
-	<?php include "parts/header.html"?>
-</header>
 <head>
-		<meta charset="UTF-8">
 		<title>Cart</title>
-		<?php include "parts/head.html"?>
+		<?php include "parts/meta.php" ?>
 </head>
 <body>
+<?php include "parts/navbar.php" ?>
 	<div style="margin-top: 60px"></div>
-
 	<div class="cart-container row">
 		<div class="cart-title col-sm-6 col-md-6 col-lg-6">
 		</div>
 		<div class="cart-continue col-sm-6 col-md-6 col-lg-6">
-			<a href="product-list.php">Continue Shopping</a>
+			<a href="product_list.php">Continue Shopping</a>
 		</div>
 	</div>
 
@@ -44,11 +47,11 @@
 					<img src="img/row_2_3.png"style="width: 200px; height: 200px;">
 				</div>
 				<div class="col-sm-4 col-md-4 col-lg-4 cart-description">
-						<div class="description-title">Ice cream cake</div>
-						<div class="description-name">Lorem ipsum dolor sit amet</div>
+						<div class="description-title">Birthday Ice Cream Cakes</div>
+						<div class="description-name">Macarons Peanut Chocolate Cone</div>
 				</div>
 				<div class="col-sm-2 col-md-2 col-lg-2 cart-price">
-					<div>$60</div>
+					<div>$52</div>
 				</div>
 				<div class="col-sm-3 col-md-3 col-lg-3 cart-detail">
 					<div>Size: one size</div>
@@ -64,11 +67,11 @@
 					<img src="img/row_3_2.png"style="width: 200px; height: 200px;">
 				</div>
 				<div class="col-sm-4 col-md-4 col-lg-4 cart-description">
-						<div class="description-title">cookie</div>
-						<div class="description-name">Lorem ipsum dolor sit amet</div>
+						<div class="description-title">Pocket Ice Cream Cookie</div>
+						<div class="description-name">Mini Limon</div>
 				</div>
 				<div class="col-sm-2 col-md-2 col-lg-2 cart-price">
-					<div>$10</div>
+					<div>$6</div>
 				</div>
 				<div class="col-sm-3 col-md-3 col-lg-3 cart-detail">
 					<div>Size: one size</div>
@@ -84,11 +87,11 @@
 					<img src="img/row_1_2.png" style="width: 200px; height: 200px;">
 				</div>
 				<div class="col-sm-4 col-md-4 col-lg-4 cart-description">
-						<div class="description-title">collection</div>
-						<div class="description-name">Lorem ipsum dolor sit amet</div>
+						<div class="description-title">Cup Ice Cream Cakes</div>
+						<div class="description-name">Small Balls Ice Cream Cup Cake</div>
 				</div>
 				<div class="col-sm-2 col-md-2 col-lg-2 cart-price">
-					<div>$25</div>
+					<div>$16</div>
 				</div>
 				<div class="col-sm-3 col-md-3 col-lg-3 cart-detail">
 					<div>Size: one size</div>
@@ -108,7 +111,7 @@
 						<div class="summary-detail">Subtotal</div>
 					</div>
 					<div class="col-sm-6 col-md-6 col-lg-6">
-						<div class="summary-price">$95</div>
+						<div class="summary-price">$87</div>
 					</div>
 				</div>
 				<div class="row">
@@ -116,7 +119,7 @@
 						<div class="summary-detail">Tax</div>
 					</div>
 					<div class="col-sm-6 col-md-6 col-lg-6">
-						<div class="summary-price">$9.5</div>
+						<div class="summary-price">$84.4</div>
 					</div>
 				</div>
 				<hr class="summary-breaker">

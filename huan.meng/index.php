@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
-	<?php include "parts/header.html"?>
-</header>
 <head>
-		<meta charset="UTF-8">
-		<title>Home</title>
-		<?php include "parts/head.html"?>
+		<title>Welcome Page</title>
+		<?php include "parts/meta.php" ?>
 </head>
 <body class="view-window" style="background-image: url(img/homepage.jpg);">
 	<div class="vertical-horizontal-center">
@@ -15,7 +11,7 @@
 				<div class="col-sm-12 col-md-12 col-lg-6 flex-parent-col flex-center-col">
 					<h2>Now You Can Order Ice cream Online!</h2>
 					<h4>Pick your favourite ice cream, We'll ready for pick up.</h4>
-					<a href="advertisement.php" style="align-self: start;">
+					<a href="home.php" style="align-self: start;">
 						<button type="button" class="main-button">
 							ORDER ONLINE
 						</button>

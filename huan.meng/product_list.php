@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
-	<?php include "parts/header.html"?>
-</header>
 <head>
-		<meta charset="UTF-8">
 		<title>Product List</title>
-		<?php include "parts/head.html"?>
+		<?php include "parts/meta.php" ?>
 </head>
 
 <body>
+	<?php include "parts/navbar.php" ?>
 	<div class="view-window" style="background-image: url(img/welcome_page2.png)">
 	</div>
 <main>
@@ -24,7 +21,7 @@
 				<div class="row">
 					<div class="col-sm-6 col-md-4 col-lg-3">
 						<div class="product-check">
-					<a href="product-item.php">
+					<a href="product_item.php">
 						<img src="img/row_1_1.png">
 					</a>
 					<div class="product-quick-check">
@@ -42,7 +39,7 @@
 					</div>
 					<div class="col-sm-6 col-md-4 col-lg-3">
 						<div class="product-check">
-					<a href="product-item.php">
+					<a href="product_item.php">
 						<img src="img/row_1_2.png">
 					</a>
 					<div class="product-quick-check">
@@ -60,7 +57,7 @@
 					</div>
 					<div class="col-sm-6 col-md-4 col-lg-3">
 						<div class="product-check">
-					<a href="product-item.php">
+					<a href="product_item.php">
 						<img src="img/row_1_3.png">
 					</a>
 					<div class="product-quick-check">
@@ -78,7 +75,7 @@
 					</div>
 					<div class="col-sm-6 col-md-4 col-lg-3">
 						<div class="product-check">
-					<a href="product-item.php">
+					<a href="product_item.php">
 						<img src="img/row_2_1.png">
 					</a>
 					<div class="product-quick-check">
@@ -96,7 +93,7 @@
 					</div>
 					<div class="col-sm-6 col-md-4 col-lg-3">
 						<div class="product-check">
-					<a href="product-item.php">
+					<a href="product_item.php">
 						<img src="img/row_2_2.png">
 					</a>
 					<div class="product-quick-check">
@@ -114,7 +111,7 @@
 					</div>
 					<div class="col-sm-6 col-md-4 col-lg-3">
 						<div class="product-check">
-					<a href="product-item.php">
+					<a href="product_item.php">
 						<img src="img/row_2_3.png">
 					</a>
 					<div class="product-quick-check">
@@ -132,7 +129,7 @@
 					</div>
 					<div class="col-sm-6 col-md-4 col-lg-3">
 						<div class="product-check">
-					<a href="product-item.php">
+					<a href="product_item.php">
 						<img src="img/row_3_1.png">
 					</a>
 					<div class="product-quick-check">
@@ -150,7 +147,7 @@
 					</div>
 					<div class="col-sm-6 col-md-4 col-lg-3">
 						<div class="product-check">
-					<a href="product-item.php">
+					<a href="product_item.php">
 						<img src="img/row_3_2.png">
 					</a>
 					<div class="product-quick-check">
@@ -168,7 +165,7 @@
 					</div>
 					<div class="col-sm-6 col-md-4 col-lg-3">
 						<div class="product-check">
-					<a href="product-item.php">
+					<a href="product_item.php">
 						<img src="img/row_3_3.png">
 					</a>
 					<div class="product-quick-check">
@@ -186,7 +183,7 @@
 					</div>
 					<div class="col-sm-6 col-md-4 col-lg-3">
 						<div class="product-check">
-					<a href="product-item.php">
+					<a href="product_item.php">
 						<img src="img/row_4_1.png">
 					</a>
 					<div class="product-quick-check">
@@ -204,7 +201,7 @@
 					</div>
 					<div class="col-sm-6 col-md-4 col-lg-3">
 						<div class="product-check">
-					<a href="product-item.php">
+					<a href="product_item.php">
 						<img src="img/row_4_1.png">
 					</a>
 					<div class="product-quick-check">
@@ -222,7 +219,7 @@
 					</div>
 					<div class="col-sm-6 col-md-4 col-lg-3">
 						<div class="product-check">
-					<a href="product-item.php">
+					<a href="product_item.php">
 						<img src="img/row_4_1.png">
 					</a>
 					<div class="product-quick-check">

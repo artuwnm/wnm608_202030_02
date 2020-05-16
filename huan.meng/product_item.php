@@ -1,14 +1,11 @@
  <!DOCTYPE html>
 <html lang="en">
-<header>
-	<?php include "parts/header.html"?>
-</header>
 <head>
-		<meta charset="UTF-8">
 		<title>Product Item</title>
-		<?php include "parts/head.html"?>
+		<?php include "parts/meta.php" ?>
 </head>
 <body>
+	<?php include "parts/navbar.php" ?>
 	<div class="container">
 		<div class="space"></div>
 		<div class="row">

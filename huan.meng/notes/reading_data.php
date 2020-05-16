@@ -51,7 +51,7 @@ $users = getData("../data/users.json");
 				echo "<li>
 					<strong>{$users[$i]->name}</strong>
 					<span>[{$users[$i]->type}]</span>
-					</li>";
+				</li>";
 			}
 
 			?>
