@@ -1446,7 +1446,15 @@ ol li span a:hover{
 	margin-top: 0.6em;
 }
 
+@media (max-width: 1280px){
+	.view-window{
+		height: 95vh;
 
+	}
+	.view-window-img img{
+		height: 450px;
+	}
+}
 
 
 @media (max-width: 650px) {
@@ -1587,5 +1595,9 @@ ol li span a:hover{
 		.product-name{
 			padding:0;
 		}
+		.view-window{
+		height: 60vh;
+
+	}
 
 	}

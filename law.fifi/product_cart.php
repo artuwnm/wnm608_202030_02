@@ -35,7 +35,8 @@ $result = getCartItems();
 
 							if(!empty($cart)) {
 
-							echo array_reduce($result,"cartListTemplate");
+								echo array_reduce($result,"cartListTemplate");
+								
 							}else{
 								echo "<div class='text-align-center padding-top-2 padding-bottom-2'>Your cart is empty! Add an item to the cart!</div>";
 							}						

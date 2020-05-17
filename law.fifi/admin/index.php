@@ -306,7 +306,9 @@ HTML;
 					<h3 class="flex-none"> <a class="btn dark" href="<?= $_SERVER['PHP_SELF'] ?>?id=new">Add New Product</a> </h3>
 				</div>
 
+
 				<div>
+					<p>Choose a product to edit, or click to view their individual pages.</p>
 					<?php 
 					
 						$rows = getRows($conn,"SELECT * FROM `products`");

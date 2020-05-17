@@ -111,12 +111,20 @@ figure:hover{
 	}
 
 .product-figure.overlay figcaption h4.popular-item-title{
-	font-size: 1.8em;
-    line-height: 1.5em;
+	font-size: 1.5em;
+    /*line-height: 1.5em;*/
     font-weight: 700;
     overflow: hidden;
+    vertical-align: middle;
 }
+@media (max-width: 1280px){
+	.product-figure.overlay figcaption h4.popular-item-title {
+		font-size:1em;
+		text-transform: none;
+	}
 
+
+}
 @media (max-width: 650px){
 
 	.product-figure.overlay a{

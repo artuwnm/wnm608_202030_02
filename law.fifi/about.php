@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php 
+include_once "lib/php/function.php";
+include_once "parts/templates.php";
+
+
+
+ ?><!DOCTYPE html>
 <html>
 <head>
 	<title>About Meowie</title>
@@ -11,7 +17,7 @@
 
 		<div class="container title color-dark">
 			<h2 class="uppercase margin-bottom-2 margin-top-5">About Meowie</h2>
-			<div class="display-flex">
+			<div class="display-flex flex-direction-column">
 				<div class="flex-none image boxshadow"><img src="images/venus.png" alt=""></div>
 				<div class="card transparent flex-stretch padding-left-0" >
 					<p class="color-dark">Meowie is created in 2020 and aims to produce neat and clean cat-related designs to all the cat lovers in the world. </p>
@@ -22,11 +28,11 @@
 		<hr>
 		<div class="container title color-dark">
 			<h2 class="uppercase margin-bottom-2 margin-top-5">Our Mission</h2>
-			<div class="display-flex">
+			<div class="display-flex flex-direction-column">
 				<div class="card transparent flex-stretch" style="padding-left:0;">
 					<p class="color-dark">Before Meowie was launched, we found that all the cats-related accessories are often cute and have an organic look. However, most of them do not give us the clean and simple feeling that we are looking for. So we decided to create our own cat-related products and share them with the public.</p>
 				</div>
-				<div class="flex-none image boxshadow"><img src="images/suju-2.png" alt=""></div>
+				<div class="flex-none image boxshadow"><img src="images/design.png" alt=""></div>
 			</div>
 		</div>
 		

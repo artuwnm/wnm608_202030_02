@@ -43,6 +43,8 @@ function cartListTemplate($r, $o){
 $pricefixed = number_format($o->total,2,'.','');
 $selectAmount = selectAmount($o->amount);
 
+// print_p([$_SESSION]);
+
 return $r.<<<HTML
 <div class="display-flex product-list-page">
 	<div class="cart-img flex-none">
@@ -52,6 +54,7 @@ return $r.<<<HTML
 		<div class="display-flex flex-direction-column cartList">
 			<div class="flex-stretch product-name">
 				<h3 class="medium-color">$o->productName ($o->amount)</h3>
+				<h5 class="medium-color" style="font-size: 0.8em;">Color: $o->color </h5>
 
 				<form method="get" action="data/form_actions.php" class="inline-block form-delete">
 					<input type="hidden" name="action" value="delete-cart-item">
@@ -97,15 +100,13 @@ function cartTotal(){
 	$total = number_format($cartprice*1.0725,2,'.','');
 
 return<<<HTML
-<div class="color-dark uppercase">
-	<h2>Subtotal</h2>
-</div>
+
 <div class="color-dark">
-	<p>Products: &dollar;$cartprice</p>
+	<p>Subtotal: &dollar; $cartprice</p>
 </div>
-<div class="color-dark"><p>Tax: &dollar;$taxfixed</p>	</div>				
+<div class="color-dark"><p>Tax: &dollar; $taxfixed</p>	</div>				
 <div class="color-dark">
-	<p>Total: &dollar;$total</p>
+	<p>Total: &dollar; $total</p>
 </div>
 HTML;
 }

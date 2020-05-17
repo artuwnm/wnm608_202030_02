@@ -121,8 +121,7 @@ function addToCart($id,$amount,$price,$color) {
 		$_SESSION['cart'][] = (object) [
 			"id"=>$id,
 			"amount"=>$amount,
-			"price"=>$price,
-			
+			"price"=>$price,			
 			"color"=>$color
 	];
 }
@@ -147,7 +146,8 @@ function getCartItems(){
 	return array_map(function($o) use ($cart){
 		$cart_o = array_find($cart, function($c) use($o){return $c->id==$o->id;});
 		$o->amount = $cart_o->amount;
-		$o->color= $cart_o->color;
+		$o->color = $cart_o->color;
+		
 		$o->total = $o->price*$cart_o->amount;
 		return $o;
 	}, $database_result);

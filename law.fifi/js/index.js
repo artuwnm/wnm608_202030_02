@@ -1,5 +1,7 @@
 // Hamburger Menu
 $(()=>{
+
+console.log("Hi")
 $(".hamburger-menu").click(function(){
 		$(this).parent().toggleClass("activated");
 	});

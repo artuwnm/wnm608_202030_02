@@ -93,6 +93,7 @@ include_once "lib/php/function.php";
 									<a class="form-link products_sort" data-column="date_created" data-value="4">Old to New</a>
 								</form>
 						</div>
+						<h5><a href="admin/index.php">Link to Product Admin page </a></h5>
 					
 					
 				</div>
