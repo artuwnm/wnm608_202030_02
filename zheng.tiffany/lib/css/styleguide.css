@@ -146,12 +146,44 @@ code {
 	font-weight: 700;
 }
 
+.margin {
+	margin: 1em;
+}
+
+.margin-top {
+	margin-top: 1em;
+}
+
+.margin-left {
+	margin-left: 1em;
+}
+
+.margin-right {
+	margin-right: 1em;
+}
+
+.margin-bottom {
+	margin-bottom: 1em;
+}
+
 .padding {
 	padding: 1em;
 }
 
+.padding-top {
+	padding-top: 1em;
+}
+
 .padding-left {
 	padding-left: 1em;
+}
+
+.padding-right {
+	padding-right: 1em;
+}
+
+.padding-bottom {
+	padding-bottom: 1em;
 }
 
 .small-p {
@@ -512,9 +544,9 @@ nav ul li a:hover {
 	margin-bottom: 1em;
 }
 
-.card > :first-child {
+/*.card > :first-child {
 	margin-top: 0;
-}
+}*/
 
 .card.soft.center {
 	margin-top: 2em;
@@ -553,11 +585,11 @@ nav ul li a:hover {
 	padding: 0;
 }
 
-[class*='col-']>.card {
+/*[class*='col-']>.card {
 	margin: 0;
 	width: 300px;
 	height: 400px;
-}
+}*/
 
 .card-section {
 	padding-top: 1em;
@@ -586,11 +618,11 @@ table {
 	width:100%;
 	border-collapse:collapse;
 }
-	table th,
+	/*table th,
 	table td {
 		padding: 0.25em 0;
 		text-align: left;
-	}
+	}*/
 
 	.table.striped tbody tr:nth-child(odd) {
 		background-color:var(--color-neutral-light);

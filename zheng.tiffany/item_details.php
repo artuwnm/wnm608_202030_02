@@ -57,7 +57,7 @@ $thumbs = explode(", ", $o->images);
 					<h1><?= $o->name ?></h1>
 					<h3 class="product-price">&dollar;<?= $o->price ?></h3>
 					<p class="product-description"><?= $o->description ?></p>
-					<h2>Details</h2>
+					<h5>Details</h5>
 					<p class="small-p"><?= $o->material ?></p>
 
 					<form method="get" action="data/form_actions.php">

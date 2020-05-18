@@ -132,8 +132,8 @@ return $r.<<<HTML
 		<h6>$o->category</h6>
 	</div>
 	<div class="flex-none display-flex admin-edit">
-		<div><a href="admin/?id=$o->id">Edit</a></div>
-		<div><a href="item_details.php?id=$o->id">See Item</a></div>
+		<a href="admin/?id=$o->id">Edit</a>
+		<a href="item_details.php?id=$o->id">View Item</a>
 	</div>
 </div>
 HTML;

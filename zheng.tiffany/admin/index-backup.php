@@ -18,11 +18,6 @@ $empty_product = (object) [
 
 
 
-
-
-
-
-
 if(isset($_GET['id'])) {
 try{
 
@@ -30,11 +25,10 @@ $conn = makePDOConn();
 
 switch(@$_GET['action']) {
 
-
 	case "update":
 
-	// print_p([$_GET,$_POST]); 
-	// die;
+	print_p([$_GET,$_POST]); 
+	die;
 
 		$statement = $conn->prepare("UPDATE
 		`products`
@@ -69,6 +63,10 @@ switch(@$_GET['action']) {
 		header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
 		break;
 	case "create":
+
+		// print_p([$_GET,$_POST]); 
+		// die;
+
 		$statement = $conn->prepare("INSERT INTO
 		`products`
 		(
@@ -122,73 +120,56 @@ switch(@$_GET['action']) {
 
 
 
-
-
 function makeProductForm($o) {
 
 $id = $_GET['id'];
 $addoredit = $id=='new' ? 'Add New' : 'Edit';
 $createorupdate = $id=='new' ? 'create' : 'update';
-$deletebutton = $id=='new' ? "" : "<a href='{$_SERVER['PHP_SELF']}?id=$id&action=delete'><button class='hollow-button neutral round'><h4>Delete Product</h4></button></a>";
+$deletebutton = $id=='new' ? "" : "<a href='{$_SERVER['PHP_SELF']}?id=$id&action=delete'>Delete Product</a>";
 $newproductorchanges = $id=='new' ? 'New Product' : 'Changes';
 
-$images = array_reduce(explode(",",$o->images),function($r,$o){
+$images = array_reduce(explode(", ",$o->images),function($r,$o){
 	return $r."<img src='$o'>";
 });
 
-$data_show = $id=='new' ? "" : <<<HTML
-<div class="admin-preview">
-	<h2>Preview</h2>
-	<div class="product-images display-flex">
-		<div class="product-thumbs flex-none">$images</div>
-		<div class="product-main">
-			<img src="$o->thumbnail" alt="">
-		</div>
-	</div>
-	<h1 class="margin-top">$o->name</h1>
-	<h3 class="product-price">&dollar;$o->price</h3>
-	<p class="description">$o->description</p>
-	<h5>Details</h5>
-	<p class="small-p">$o->material</p>
-</div>
-HTML;
-
-
-
 echo <<<HTML
-<hr class=" center">
+
+<hr class="container center">
 
 <div class="back-link">
 	<a href="{$_SERVER['PHP_SELF']}"><span class="chevron left"></span> Back</a>
 </div>
 
-<div class="row">
-	<h1 class="flex-none margin-top">$addoredit Product</h1>
-	<div class="flex-none margin-top right">$deletebutton</div>
-</div>
+<div class="medium-container">
 
-<div class="grid gap">
-	<form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate" class="col-xs-12 col-md-8">
-		<div class="card soft margin-right">
+	<div class="row">
+		<h1 class="flex-none margin-top">$addoredit Product</h1>
+		<div class="flex-none margin-top padding-top hover">$deletebutton</div>
+	</div>
+
+	
+	<form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
+
+		<div class="card soft">
 
 			<h2>Basic Info</h2>
 			<table class="admin-form-table">
 				<tbody>
 					<tr>
 						<td><label for="product-name" class="admin-form-label">Name</label></td>
-						<td><input type="text" class="admin-form-input" placeholder="Name of Product" id="product-name" name="product-name" value="$o->name"></td>
+						<td><input type="text" class="admin-form-input" value="$o->name" id="product-name" name="product-name"></td>
 					</tr>
 					<tr>
 						<td><label for="product-price" class="admin-form-label">Price</label></td>
-						<td><input type="number" class="admin-form-input" placeholder="0.00" id="product-price" name="product-price" value="$o->price" step="1.00" min="0.00" max="1000"></td>
+						<td><input type="text" class="admin-form-input" value="$o->price" id="product-price" name="product-price"></td>
 					</tr>
 					<tr>
 						<td><label for="product-description" class="admin-form-label">Description</label></td>
-						<td><textarea class="admin-form-input" placeholder="Write a short blurb (2-3 sentences)" id="product-description" name="product-description">$o->description</textarea></td>
+						<td><textarea type="text" class="admin-form-input" id="product-description" name="product-description" wrap="soft">$o->description</textarea></td>
 					</tr>
 					<tr>
 						<td><label for="product-material" class="admin-form-label">Material</label></td>
-						<td><textarea class="admin-form-input" placeholder="Info found on the clothing tag" id="product-material" name="product-material">$o->material</textarea></td>
+						<td><input type="text" class="admin-form-input" value="$o->material" id="product-material" name="product-material"></td>
 					</tr>
 				</tbody>
 			</table>
@@ -198,27 +179,27 @@ echo <<<HTML
 				<tbody>
 					<tr>
 						<td><label for="product-thumbnail" class="admin-form-label">Thumbnail</label></td>
-						<td><input type="text" class="admin-form-input" placeholder="Thumbnail URL" id="product-thumbnail" name="product-thumbnail" value="$o->thumbnail"></td>
+						<td><input type="text" class="admin-form-input" value="$o->thumbnail" id="product-thumbnail" name="product-thumbnail"></td>
 					</tr>
 					<tr>
 						<td><label for="product-images" class="admin-form-label">Images</label></td>
-						<td><textarea class="admin-form-input" placeholder="Image URLs" id="product-images" name="product-images">$o->images</textarea></td>
+						<td><textarea type="text" class="admin-form-input" id="product-description" name="product-description" wrap="soft">$o->images</textarea></td>
 					</tr>
 					<tr>
 						<td><label for="product-category" class="admin-form-label">Category</label></td>
-						<td><input type="text" class="admin-form-input" placeholder="Men or Women" id="product-category" name="product-category" value="$o->category"></td>
+						<td><input type="text" class="admin-form-input" value="$o->category" id="product-category" name="product-category"></td>
 					</tr>
 					<tr>
 						<td><label for="product-type" class="admin-form-label">Type</label></td>
-						<td><input type="text" class="admin-form-input" placeholder="i.e. Top, Bottom, Dress" id="product-type" name="product-type" value="$o->type"></td>
+						<td><input type="text" class="admin-form-input" value="$o->type" id="product-type" name="product-type"></td>
 					</tr>
 					<tr>
 						<td><label for="product-color" class="admin-form-label">Color</label></td>
-						<td><input type="text" class="admin-form-input" placeholder="Neutral, Warm, or Cool" id="product-color" name="product-color" value="$o->color"></td>
+						<td><input type="text" class="admin-form-input" value="$o->color" id="product-color" name="product-color"></td>
 					</tr>
 					<tr>
 						<td><label for="product-featured" class="admin-form-label">Featured</label></td>
-						<td><input type="text" class="admin-form-input" placeholder="0 or 1" id="product-featured" name="product-featured" value="$o->featured"></td>
+						<td><input type="text" class="admin-form-input" value="$o->featured" id="product-featured" name="product-featured"></td>
 					</tr>
 				</tbody>
 			</table>
@@ -228,15 +209,12 @@ echo <<<HTML
 			</div>
 
 		</div>
-	</form>
 
-	<div class="col-xs-12 col-md-4">$data_show</div>
+	</form>
 
 </div>
 HTML;
 }
-
-
 
 
 ?><!DOCTYPE html>
@@ -267,7 +245,7 @@ HTML;
 
 <div class="container admin">
 
-	<?php
+	<?php 
 
 	$conn = makeConn();
 
@@ -281,7 +259,6 @@ HTML;
 		}
 
 	} else {
-
 
 	?>
 		<div class="row">

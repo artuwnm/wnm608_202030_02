@@ -25,10 +25,9 @@ h1 {
 
 h2 {
 	font-family: 'Roboto', sans-serif;
-	font-size: 1em;
-	color: var(--color-neutral-dark);
-	margin-top: 2em;
-	margin-bottom: 0.25em;
+	font-size: 1.5em;
+	color: var(--color-neutral-medium);
+	margin: 0.5em;
 }
 
 h3 {
@@ -283,8 +282,16 @@ hr {
 
 /*Admin*/
 
-.admin-form-table  tbody tr td:first-child {
-	width: 10%;
+.admin-form-table {
+	margin-bottom: 2em;
+}
+
+.admin-form-table tr {
+	height: 4em;
+}
+
+.admin-form-table td:first-child {
+	width: 8em;
 }
 
 
@@ -297,18 +304,18 @@ hr {
 }
 
 .admin-form-input {
-	width: 50%;
-	display: inline;
+	width: 90%;
 	font: inherit;
+	color: var(--color-neutral-dark);
 	border: 1px solid var(--color-neutral-medium);
+	border-radius: 0.3em;
     height: 2em;
-    max-width: 100%;
-    text-indent: 0.5em;
+    padding: 0.25em 0.5em;
     outline: none;
 }
 
 .admin-form-input:focus {
-	border-bottom: 1px solid var(--color-main-medium);
+	border: 1px solid var(--color-main-medium);
 }
 
 .user-name {
@@ -321,7 +328,7 @@ hr {
 
 .product-main img {
     width: 100%;
-    height: auto%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -350,6 +357,14 @@ hr {
     margin-bottom: 0.25em;
 }
 
+.product-details h5 {
+	font-size: 1em;
+} 
+
+.product-description {
+	margin-bottom: 2.25em;
+}
+
 .product-details form {
 	margin-top: 4em;
 }
@@ -371,8 +386,8 @@ hr {
 
 /*Products Admin*/
 
-.store-header.admin a:hover{
-	color: var(--color-neutral-medium);
+.store-header.admin .flex-none {
+	width: 15em;
 }
 
 .itemlist-item {
@@ -399,15 +414,37 @@ hr {
     padding-left: 1em;
 }
 
-.admin-edit div:first-child {
+.admin-edit a:first-child {
 	margin-right: 2em;
 }
 
-.admin-edit div:last-child {
+.admin-edit a:last-child {
 	margin-right: 1em;
 }
 
 .admin-edit a:hover {
+	color: var(--color-neutral-medium);
+}
+
+.admin-preview h2 {
+	margin: 1em 0;
+}
+
+.admin-preview .product-thumbs {
+	width: 60px;
+}
+
+.admin-preview .product-thumbs img {
+	height: 75px;
+    width: 56px;
+}
+
+.admin-preview .product-main {
+	width: 15em;
+}
+
+::placeholder {
+	font-weight: 300;
 	color: var(--color-neutral-medium);
 }
 
