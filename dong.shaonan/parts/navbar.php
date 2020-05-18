@@ -1,19 +1,18 @@
 <?php include_once "parts/templates.php" ?>
-<header class="navbar">
-	<div class="container display-flex">
-		<div class="flex-stretch">
-			<h1>Store</h1>
-		</div>
-		<nav class="nav flex-none">
-			<ul class="display-flex">
-				<li><a href="index.php">Home</a></li>
-				<li><a href="product_list.php">Store</a></li>
-				<li><a href="about.php">About</a></li>
-				<li><a href="product_cart.php">
-					<span>Cart</span>
-					<span class="badge"><?= makeCartBadge() ?></span>
-				</a></li>
-			</ul>
-		</nav>
-	</div>
-</header>
+
+
+<main>
+  <div class="logo">
+     <a href="index.php" style="height: 80px;">
+        <img src="images/logo.png" style="height: 70px">
+      </a>
+  </div>
+ 
+  <ul class="museum" role="navigation">
+  	<li><a href="index.php">Home</a></li>
+    <li class="active"><a href="product_list.php">Store</a></li>
+    <li><a href="about.php">About</a></li>
+    <li><a href="product_cart.php">Cart</a></li>
+  </ul>
+</main>
+<!-- <script src="js/index.js"></script> -->

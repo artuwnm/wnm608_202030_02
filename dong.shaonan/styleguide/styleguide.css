@@ -57,9 +57,9 @@ a {
 	font-weight:bold;
 	text-decoration: none;
 }
-a:hover {
+/*a:hover {
 	text-decoration: underline;
-}
+}*/
 
 code {
 	display:block;

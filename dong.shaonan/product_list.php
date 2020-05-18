@@ -13,42 +13,27 @@ include_once "lib/php/functions.php";
     <script src="lib/js/functions.js"></script>
     <script src="js/list.js"></script>
     <script src="js/products.js"></script>
-	
 	<script src="js/templates.js"></script>
 	
 <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins|Roboto&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="lib/css/gridsystem.css">
-<link rel="stylesheet" type="text/css" href="lib/css/styleguide.css">
-<link rel="stylesheet" type="text/css" href="lib/css/style.css">
-<link rel="stylesheet" type="text/css" href="css/storetheme.css">
 </head>
 
-
-
-
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="js/products.js"></script>
-<body>
 <main>
   <div class="logo">
      <a href="index.php" style="height: 80px;">
         <img src="images/logo.png" style="height: 70px">
       </a>
   </div>
-  <!-- <nav class="museum">Asian Art Museum</nav> -->
-  <ul class="museum" role="navigation">
+    <ul class="museum" role="navigation">
   	<li><a href="index.php">Home</a></li>
     <li class="active"><a href="product_list.php">Store</a></li>
     <li><a href="about.php">About</a></li>
     <li><a href="product_cart.php">Cart</a></li>
   </ul>
-<!-- slideshow -->
-</main><!-- 
-<script src="js/index.js"></script> -->
 
-	
+</main>
 
-	<div class="container">
+<div class="container">
 		<div class="card soft">
 			<div class="product_list_title">
 				<h2>Film Roll</h2>
@@ -65,14 +50,21 @@ include_once "lib/php/functions.php";
 				<button type="button" class="form-button js-filter" data-column="category" data-value="">All</button>
 			</div>
 			<div class="flex-none">
-				<button type="button" class="form-button js-filter" data-column="category" data-value="filmroll">filmroll</button>
-			</div>
-			<div class="flex-none">
 				<button type="button" class="form-button js-filter" data-column="category" data-value="35mm">35mm</button>
 			</div>
 			<div class="flex-none">
 				<button type="button" class="form-button js-filter" data-column="category" data-value="Color">Color</button>
 			</div>
+			<div class="flex-none">
+				<button type="button" class="form-button js-filter" data-column="brand" data-value="Kodak">Kodak</button>
+			</div>
+			<div class="flex-none">
+				<button type="button" class="form-button js-filter" data-column="brand" data-value="Ilford">Ilford</button>
+			</div>
+			<div class="flex-none">
+				<button type="button" class="form-button js-filter" data-column="mode" data-value="black&white">black&white</button>
+			</div>
+
 		</div>
 
 			<!-- <div class="form-control display-flex filter-bar">

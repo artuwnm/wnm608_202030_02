@@ -9,10 +9,7 @@
 	<script src="js/templates.js"></script>
 	<script src="js/list.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins|Roboto&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="lib/css/gridsystem.css">
-<link rel="stylesheet" type="text/css" href="lib/css/styleguide.css">
-<link rel="stylesheet" type="text/css" href="lib/css/style.css">
-<link rel="stylesheet" type="text/css" href="lib/css/style.css">
+
 </head>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="js/products.js"></script>
@@ -31,7 +28,7 @@
     <li class="active"><a href="product_cart.php">Cart</a></li>
   </ul>
 	</main>
-	<script src="js/index.js"></script>
+	<!-- <script src="js/index.js"></script> -->
 
 
 	<div class="container">
