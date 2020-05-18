@@ -32,11 +32,11 @@ $result = getCartItems();
 	<h4>Enjoy every moment in your life</h4>
 	</div>
 	</div>
-	<!-- <div class="form-control">
-			<form class="hotdog light" id="product-search">
-				<input type="search" class="search" placeholder="Search Products">
+	<div class="form-control">
+			<form class="animated-search-form" id="product-search">
+				<input type="hidden" class="search" placeholder="Search Products">
 			</form>
-		</div> -->
+		</div> 
 		
 		<!-- <div class="form-control display-flex">
 			<div class="flex-none">

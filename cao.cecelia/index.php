@@ -29,12 +29,14 @@ $result = getCartItems();
 	<h1>HAVE AN EXCLAMATION POINT FOR YOU</h1>
 	<h4>Enjoy every moment in your life</h4>
 	</div>
+	
 	</div>
 
 	<div class="selectionstyle">
 	<h1 align="center">A Selection for This Season</h1>
 	<h4 align="center">From beloved pearl design for this summer</h4>
 	</div>	
+<
 
 	<div class="container flex-justify-center display-flex">
 		<div class="grid gap">
@@ -76,7 +78,7 @@ $result = getCartItems();
 			<h2>New Beauty in Urban Environments</h2>
 			<p style="font-size: 16px">PILE ON PEARLS provides a way for people who want to embrace their femininity and beauty through Eastern spiritual practices and mysticism, for young girls, for daily mix & match, for all kinds of occasions. The collection is comprised of earings, necklaces, rings and bracelets featuring with pearls or diamonds on most of them.</p>
 			<div class="display-flex flex-justify-center">
-			<a href="#" class="linkbutton">SHOP NOW</a>
+			<a href="shop.php" class="linkbutton">SHOP NOW</a>
 			</div>
 		</div>
 			<div class="col-xs-12 col-xl-6">
@@ -104,7 +106,7 @@ $result = getCartItems();
 			<h2>Know More About Our Brand</h2>
 			<p style="font-size: 16px">PILES ON PEARLS wants to create special styles for young girls in daily use. The different geometry shapes in the logo are combined together to show the precise and demanding attitude of this brand. The three main color in this logo display the taste of this brand.</p>
 			<div class="display-flex flex-justify-center">
-			<a href="#" class="linkbutton">SHOP NOW</a>
+			<a href="shop.php" class="linkbutton">SHOP NOW</a>
 			</div>
 			</div>
 		</div>

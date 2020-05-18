@@ -2,7 +2,7 @@
  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
  <?php include_once "parts/templates.php" ?>
  <?php include "parts/meta.php" ?>
-
+<!-- <script src="js/list.js"></script> -->
  <header>
  	
 
@@ -12,14 +12,15 @@
     <li class="item"><a href="shop.php">SHOP</a></li>
     <li class="item"><a href="read.php">READ</a></li>
     <li class="item"><a href="store.php">STORE</a></li>
-    <li class="item"><div class="animated-search-form" id="product-search">
+    <li class="item">
+    	<form class="animated-search-form" action="shop.php" method="get" id="navbar-search">
 			<!-- <input type="text" name="search" placeholder="SEARCH"> -->
-			<input type="search" class="search" placeholder="SEARCH">
-						</div>
+			<input type="search" name="s" placeholder="SEARCH">
+		</form>
 </li>
 <!-- <div class="display-flex flex-justify-end"> -->
     <li class="item" style="">
-    	<a href="cart.php">
+    	<a href="cart.php"> 
     		<div class="text">CART</div>
     		<div class="cart">
     			<?= makeCartBadge() ?>   				
