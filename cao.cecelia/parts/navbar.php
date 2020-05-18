@@ -1,55 +1,51 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
  <?php include_once "parts/templates.php" ?>
- <header class="navbar">
-		<nav class="nav-right-flex">
-			<div class="topnav" id="myTopnav" style="display: flex;">
-			
-			<a href="index.php" style="flex: 1 1 auto;">
-				<img src="images/horizontallogo.png" alt="Nature" class="responsiveimage logo">
-			</a>
-				<ul style="order: 2;">
-				<li>
-				<div class="animated-search-form" id="product-search">
+ <?php include "parts/meta.php" ?>
+
+ <header>
+ 	
+
+<nav>
+  <ul class="menu">
+    <li class="logo"><a href="index.php" style="flex: 1 1 auto;"><img src="images/horizontallogo.png" alt="Nature"></a></li>
+    <li class="item"><a href="shop.php">SHOP</a></li>
+    <li class="item"><a href="read.php">READ</a></li>
+    <li class="item"><a href="store.php">STORE</a></li>
+    <li class="item"><div class="animated-search-form" id="product-search">
 			<!-- <input type="text" name="search" placeholder="SEARCH"> -->
 			<input type="search" class="search" placeholder="SEARCH">
 						</div>
-				</li>
-				<li>
-				 <a href="cart.php"><div class="cart"><?= makeCartBadge() ?><div class="cart"></div></a>
-				 </li>
+</li>
+<!-- <div class="display-flex flex-justify-end"> -->
+    <li class="item" style="">
+    	<a href="cart.php">
+    		<div class="text">CART</div>
+    		<div class="cart">
+    			<?= makeCartBadge() ?>   				
+    		</div>
+    	</a>
+    </li>
+    
+   
+    <li class="toggle"><a><i class="fas fa-bars"></i></a></li>
+</div>
+  </ul>
+</nav>
 
-				 </ul>
-				<ul id="displaynone" style="order: 1;">
-					<li>
-				 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    					 <i class="fa fa-bars"></i>
-  						 </a>
-					</li>
-					<li>
-						<a href="shop.php">SHOP</a>
-					</li>
-					<li>
-						<a href="read.php">READ</a>
-					</li>
-					<li>
-						<a href="store.php">STORE</a>
-					</li>
 
-					
-				</ul>
-				
-			</div>
-			</nav>
-			<script>
-			function myFunction() {
-			  var x = document.getElementById("myTopnav");
-			  if (x.className === "topnav") {
-			    x.className += " responsive";
-			  } else {
-			    x.className = "topnav";
-			  }
-			}
-			</script>
 
-	</header>
+<script type="text/javascript">
+	$(function() {
+    $(".toggle").on("click", function() {
+        if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+            $(this).find("a").html("<i class='fas fa-bars'></i>");
+        } else {
+            $(".item").addClass("active");
+            $(this).find("a").html("<i class='fas fa-times'></i>");
+        }
+    });
+});
+</script>
+ </header>

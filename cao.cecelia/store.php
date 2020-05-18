@@ -23,11 +23,11 @@ $result = getCartItems();
 
 		<div class="container">
 		<h2>Find Our Store!</h2>
-		<div class="grid gap large">
+		<div class="grid gap">
 			
 			<div class="col-xs-12 col-xl-6">
 			<div class="imagealign flex-start">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.2304147757163!2d-122.40866428468206!3d37.784639579757595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085816a9105e97d%3A0x1e394bd7f371deb!2sAPM%20Monaco%20San%20Francisco!5e0!3m2!1szh-CN!2sus!4v1589178675707!5m2!1szh-CN!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.2304147757163!2d-122.40866428468206!3d37.784639579757595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085816a9105e97d%3A0x1e394bd7f371deb!2sAPM%20Monaco%20San%20Francisco!5e0!3m2!1szh-CN!2sus!4v1589178675707!5m2!1szh-CN!2sus"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 		</div>
 			</div>
 			<div class="col-xs-12 col-xl-6">

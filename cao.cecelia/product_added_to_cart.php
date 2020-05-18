@@ -42,7 +42,7 @@ $result = getCartItems();
 		</div>
 		<div class="display-flex" style="font-size:1em">
 			<div class="flex-none">
-						<a href="product_list.php" class="form-button">Countinue Shopping</a>
+						<a href="shop.php" class="form-button">Countinue Shopping</a>
 					</div>
 			<div class="flex-stretch"></div>
 			<div class="flex-none">
