@@ -14,7 +14,7 @@ if(!isset($data->type)) {
 			getRows(makeConn(),"SELECT
 			*
 			FROM `products`
-			ORDER BY `id` ASC
+			ORDER BY `featured` DESC
 			LIMIT 15
 			");
 	break;

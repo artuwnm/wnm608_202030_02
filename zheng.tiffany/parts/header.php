@@ -15,7 +15,7 @@
 		</div>
 	</div>
 	<nav class="container display-flex">
-		<ul>
+		<ul class="display-flex">
 			<li><a href="index.php">Home</a></li>
 			<li><a href="shop_all.php">Shop</a></li>
 		  	<li><a href="about.php">Our Story</a></li>

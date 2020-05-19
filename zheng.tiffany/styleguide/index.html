@@ -9,13 +9,14 @@
 	<link rel="stylesheet" href="../lib/css/gridsystem.css">
 	<link rel="stylesheet" href="../css/storetheme.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="../js/list.js"></script>
 </head>
 <body>
 	
-	<header class="styleguide-header">
+	<header class="styleguide-header padding-bottom">
 		<h1>CSS Style Guide</h1>
-		<nav class="container display-flex">
-			<ul>
+		<nav class="medium-container">
+			<ul class="row" style="width: 500px">
 				<li>Stylista Store</li>
 				<li>Tiffany Zheng</li>
 				<li>WNM 608-02</li>
@@ -30,11 +31,12 @@
 					<ul>
 						<li><a href="#typography">Typography</a></li>
 						<li><a href="#navigations">Navigations</a></li>
-						<li><a href="#tables">Tables</a></li>
+						<li><a href="#figures">Figures</a></li>
+						<li><a href="#dropdown">Dropdowns</a></li>
 						<li><a href="#forms">Forms</a></li>
+						<li><a href="#tables">Tables</a></li>
 						<li><a href="#checkboxes">Checkboxes</a></li>
 						<li><a href="#accordion">Accordion</a></li>
-						<li><a href="#figures">Figures</a></li>
 					</ul>
 				</dd>				
 		</dl>
@@ -44,13 +46,13 @@
 	<section id="typography" class="container">
 		<h2 class="section-title">Typography</h2>
 
-		<div id="headings" class="card">
-			<h1>Heading 1</h1>
-			<h2>Heading 2</h2>
-			<h3>Heading 3</h3>
-			<button class="hollow-button round"><h4>Heading 4</h4></button>
-			<h5>Heading 5</h5>
-			<h6>Heading 6</h6>
+		<div id="headings" class="row padding">
+			<h1 class="margin-none">Heading 1</h1>
+			<h2 class="margin-none">Heading 2</h2>
+			<h3 class="margin-none">Heading 3</h3>
+			<h4 class="margin-none">Heading 4</h4>
+			<h5 class="margin-none">Heading 5</h5>
+			<h6 class="margin-none">Heading 6</h6>
 		</div>
 
 		<!-- <code>
@@ -63,12 +65,30 @@
 		</code> -->
 
 		<div id="paragraphs" class="card">
-			<h3>Paragraphs</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio unde, officia voluptate dolorum est, distinctio modi. Labore quis earum dolorem saepe. Dolore, quos repellat ad minima quod id vitae quam laudantium fuga maiores expedita voluptas consequatur ex dolorem facere minus!</p>
-			<p>Nulla ab corrupti mollitia provident delectus quas tempore commodi, pariatur dignissimos ratione eveniet cumque sint quasi. Recusandae, provident assumenda odio minima id a pariatur culpa rerum, magni exercitationem asperiores quas illum accusamus tempore totam ea! In pariatur vero similique neque.</p>
-			<p>Quisquam recusandae magni quis saepe labore dicta itaque minus esse tenetur minima, tempora rerum vero autem blanditiis. Quia quam vitae beatae sit voluptatum suscipit illo ab ipsum, alias explicabo incidunt pariatur consequuntur, aperiam ea fugit aliquid! Enim, atque eius incidunt.</p>
+			<div class="row margin-bottom">
+				<h3 class="flex-none margin-right padding-right">Body Text</h3>
+				<p class="flex-stretch margin-left padding-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio unde, officia voluptate dolorum est, distinctio modi. Labore quis earum dolorem saepe. Dolore, quos repellat ad minima quod id vitae quam laudantium fuga maiores expedita voluptas consequatur ex dolorem facere minus!</p>
+			</div>
+			<div class="row">
+				<h3 class="flex-none margin-right padding-right">Small Body</h3>
+				<p class="small-p flex-stretch margin-left padding-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio unde, officia voluptate dolorum est, distinctio modi. Labore quis earum dolorem saepe. Dolore, quos repellat ad minima quod id vitae quam laudantium fuga maiores expedita voluptas consequatur ex dolorem facere minus!</p>
+			</div>
+		</div>
+		<div id="links" class="card">
+			<div class="row">
+				<h3 class="flex-none margin-right padding-right">Hyperlinks</h3>
+				<ul class="row flex-stretch margin-left padding-left">
+					<li><a href="#" class="hover">Link 1</a></li>
+					<li><a href="#" class="hover">Link 2</a></li>
+					<li><a href="#" class="hover">Link 3</a></li>
+					<li><a href="#" class="hover">Link 4</a></li>
+					<li><a href="#" class="hover">Link 5</a></li>
+					<li><a href="#" class="hover">Link 6</a></li>
+				</ul>
+			</div>
 		</div>
 	</section>
+
 	<hr class="divider">
 
 	<section id="navigations" class="container">
@@ -76,7 +96,7 @@
 	
 		<script>
 		const makeNav = (classes="") => {
-			const links = ["Shop","Our Story","FAQs"];
+			const links = ["Home","Shop","Our Story","FAQs"];
 			let ran = Math.floor(Math.random()*links.length);
 			return `
 			<div class="card soft">
@@ -100,7 +120,14 @@
 
 		<div class="card">
 			<h3>Flex Nav</h3>
-			<script>document.write(makeNav("nav-flex"))</script>
+			<nav class="container display-flex">
+				<ul class="display-flex">
+					<li><a href="index.php">Home</a></li>
+					<li><a href="shop_all.php">Shop</a></li>
+				  	<li><a href="about.php">Our Story</a></li>
+				  	<li><a href="faqs.php">FAQs</a></li>
+				</ul>
+			</nav>
 		</div>
 
 		<div class="card">
@@ -122,6 +149,266 @@
 			<h3>Material Tab Nav</h3>
 			<script>document.write(makeNav("nav-material"))</script>
 		</div>
+	</section>
+		<hr class="divider">
+
+	<section id="figures" class="container">
+		<h2 class="section-title">Figures</h2>
+		<div class="card">
+			<h3>Product Figure</h3>
+			<div class="grid gap">
+				<div class="col-xs-6 col-md-4">
+					<a href="#" class="display-block">
+						<figure class="product-figure card">
+							<button><h3>See Details</h3></button>
+							<div class="product-image">
+								<img src="https://via.placeholder.com/300x400" alt="">
+							</div>
+							<figcaption class="product-description">
+								<div class="product-name bold">Item Name</div>
+								<div class="product-price">&dollar;20.00</div>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+				<div class="col-xs-6 col-md-4">
+					<a href="#" class="display-block">
+						<figure class="product-figure card">
+							<button><h3>See Details</h3></button>
+							<div class="product-image">
+								<img src="https://via.placeholder.com/300x400" alt="">
+							</div>
+							<figcaption class="product-description">
+								<div class="product-name bold">Item Name</div>
+								<div class="product-price">&dollar;20.00</div>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+				<div class="col-xs-6 col-md-4">
+					<a href="#" class="display-block">
+						<figure class="product-figure card">
+							<button><h3>See Details</h3></button>
+							<div class="product-image">
+								<img src="https://via.placeholder.com/300x400" alt="">
+							</div>
+							<figcaption class="product-description">
+								<div class="product-name bold">Item Name</div>
+								<div class="product-price">&dollar;20.00</div>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<h3>Featured Figure</h3>
+			<div class="grid gap">
+				<div class="col-xs-12 col-md-6 col-lg-4">
+					<a href="#">
+						<div class="product-figure card">
+							<button><h3>Shop</h3></button>
+							<img src="https://via.placeholder.com/360x480" alt="Item Name">
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-12 col-md-6 col-lg-4">
+					<a href="#">
+						<div class="product-figure card">
+							<button><h3>Shop</h3></button>
+							<img src="https://via.placeholder.com/360x480" alt="Item Name">
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-12 col-md-6 col-lg-4">
+					<a href="#">
+						<div class="product-figure card">
+							<button><h3>Shop</h3></button>
+							<img src="https://via.placeholder.com/360x480" alt="Item Name">
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	<hr class="divider">
+
+	<section id="dropdown" class="filters container">
+		<h2 class="section-title">Dropdowns</h2>
+
+		<h3>Hover Dropdown</h3>
+		<ul>
+			<li class="dropdown category">Hover<span class="chevron bottom"></span>
+				<ul class="dropdown-content">
+					<li>Link 2</li>
+					<li>Link 2</li>
+					<li>Link 3</li>
+				</ul>
+		  	</li>
+		  	<li class="dropdown category">Hover<span class="chevron bottom"></span>
+				<ul class="dropdown-content">
+					<li>Link 2</li>
+					<li>Link 2</li>
+					<li>Link 3</li>
+				</ul>
+		  	</li>
+		  	<li class="dropdown category">Hover<span class="chevron bottom"></span>
+				<ul class="dropdown-content">
+					<li>Link 2</li>
+					<li>Link 2</li>
+					<li>Link 3</li>
+				</ul>
+		  	</li>
+	  	</ul>
+	  	<div class="card">
+	  		<h3>Select Dropdown 1</h3>
+  		  	<div class="sort-dropdown">
+  				<div class="form-select">
+  					<select>
+  						<option value="1">Option 1</option>
+  						<option value="2">Option 2</option>
+  						<option value="3">Option 3</option>
+  						<option value="3">Option 4</option>
+  						<option value="3">Option 5</option>
+  						<option value="3">Option 6</option>
+  					</select>
+  				</div>
+  			</div>
+	  	</div>
+	  	<div class="card">
+			<h3>Select Dropdown 2</h3>
+		  	<div class="row">
+				<label class="form-label">Label</label>
+				<select name="amount" class="select-button">
+					<!-- option*10>{$} -->
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+				</select>
+			</div>
+		</div>
+
+	</section>
+	<hr class="divider">
+
+	<section id="forms" class="container">
+		<h2 class="section-title">Forms</h2>
+		<div class="card">
+			<h3>Borderless Input</h3>
+			<input type="text" class="form-input" placeholder="Text">
+			<input type="password" class="form-input" placeholder="Password">
+			<input type="number" class="form-input" placeholder="Number">
+			<input type="search" class="form-input" placeholder="Search">
+		</div>
+		<div id="checkout-input" class="card">
+			<h3>Checkout Input</h3>
+			<input type="text" class="checkout-input" placeholder="Text">
+			<input type="password" class="checkout-input" placeholder="Password">
+			<input type="number" class="checkout-input" placeholder="Number">
+			<input type="search" class="checkout-input" placeholder="Search">
+		</div>
+		<div id="admin-form-input" class="card">
+			<h3>Admin Form Input</h3>
+			<input type="text" class="admin-form-input" placeholder="Text">
+			<input type="password" class="admin-form-input" placeholder="Password">
+			<input type="number" class="admin-form-input" placeholder="Number">
+			<input type="search" class="admin-form-input" placeholder="Search">
+		</div>
+		<div class="card">
+			<h3>Label + Input</h3>
+			<div class="form-control">
+				<label for="input-example-c1" class="form-label">Example</label>
+				<input type="text" class="form-input" placeholder="Text" id="input-example-c1">
+			</div>
+			<div class="form-control">
+				<label for="input-example-c2" class="form-label">Example</label>
+				<input type="text" class="form-input" placeholder="Text" id="input-example-c2">
+			</div>
+			<div class="form-control">
+				<label for="input-example-c3" class="form-label">Example</label>
+				<input type="text" class="form-input" placeholder="Text" id="input-example-c3">
+			</div>
+		</div>
+		<div class="card">
+			<h3>Buttons</h3>
+			<div class="form-control">
+				<button type="button" class="form-button">Button</button>
+			</div>
+			<div class="form-control">
+				<input type="submit" class="form-button" value="Submit">
+			</div>
+			<div class="form-control">
+				<a href="#" class="form-button">Link</a>
+			</div>
+			<div class="form-control">
+				<button class="hollow-button round"><h4>Hollow Button</h4></button>
+			</div>
+			<div class="form-control">
+				<button class="solid-button round"><h4>Solid Button</h4></button>
+			</div>
+		</div>
+		<div class="card">
+			<h3>Hotdog Search</h3>
+			<div class="form-control">
+				<input type="search" class="hotdog" placeholder="Search">
+			</div>
+			<div class="form-control">
+				<label class="hotdog">
+					<div class="flex-none">&clubs;</div>
+					<div class="flex-stretch">
+						<input type="search" placeholder="Search">
+					</div>
+				</label>
+			</div>
+			<div class="form-control display-flex">
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<input type="search" class="hotdog" placeholder="Search">
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<h3>Toggle Search</h3>
+			<div id="toggle-search" class="relative">
+				<form id="product-search">
+					<input type="search" class="search" placeholder="Search Products">
+				</form>
+				<div class="search-icon hover">
+					<img src="../images/search.svg" width="20px" height="20px" alt="Search">
+				</div>
+			</div>
+		</div>
+	</section>
+	<hr class="divider">
+
+	<section id="accordion" class="container">
+		<h2 class="section-title">Accordion</h2>
+		<dl class="accordion padding">
+			<dt><h3>+ <span>What is your exchange / return policy?</span></h3></dt>
+				<dd>
+					<p>All U.S. returns and exchanges are free within 60 days of purchase. If the item you are returning is eligible for an exchange, you may request an exchange at the time you process your return. </p>
+				</dd>		
+			<dt><h3>+ <span>How soon will I get my refund?</span></h3></dt>
+				<dd>
+					<p>Refunds are issued to your original form of payment 10-20 days after your return is received at our warehouse. </p>
+				</dd>		
+			<dt><h3>+ <span>What payment methods do you accept?</span></h3></dt>
+				<dd>
+					<p>We accept the following payment methods: Visa, MasterCard, American Express, Discover, Paypal, Amazon Pay, and Apple Pay. </p>
+				</dd>				
+			<dt><h3>+ <span>Where do you ship?</span></h3></dt>
+				<dd>
+					<p>We currently ship to the United States, Canada, and Mexico!</p>
+				</dd>	
+		</dl>
 	</section>
 	<hr class="divider">
 
@@ -166,76 +453,49 @@
 
 			<script>document.write(makeTable("table striped"))</script>
 		</div>
-	</section>
-	<hr class="divider">
 
-	<section id="forms" class="container">
-		<h2 class="section-title">Forms</h2>
 		<div class="card">
-			<h3>Form Input</h3>
-			<input type="text" class="form-input" placeholder="Text">
-			<input type="password" class="form-input" placeholder="Password">
-			<input type="number" class="form-input" placeholder="Number">
-			<input type="search" class="form-input" placeholder="Search">
+			<h3>Item Info Table</h3>
+			<table class="bag-item-info-table">
+				<tbody>
+					<tr>
+						<td>Size</td>
+						<td class="bold">XS</td>
+					</tr>
+					<tr>
+						<td>Quantity</td>
+						<td class="bold">1</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
+
 		<div class="card">
-			<h3>Form Label</h3>
-			<label for="input-example1" class="form-label">Example</label>
-			<input type="text" class="form-input" placeholder="Text" id="input-example1">
-			<label for="input-example2" class="form-label">Example</label>
-			<input type="text" class="form-input" placeholder="Text" id="input-example2">
-			<label for="input-example3" class="form-label">Example</label>
-			<input type="text" class="form-input" placeholder="Text" id="input-example3">
-			<label for="input-example4" class="form-label">Example</label>
-			<input type="text" class="form-input" placeholder="Text" id="input-example4">
-		</div>
-		<div class="card">
-			<h3>Form Control</h3>
-			<div class="form-control">
-				<label for="input-example-c1" class="form-label">Example</label>
-				<input type="text" class="form-input" placeholder="Text" id="input-example-c1">
-			</div>
-			<div class="form-control">
-				<label for="input-example-c2" class="form-label">Example</label>
-				<input type="text" class="form-input" placeholder="Text" id="input-example-c2">
-			</div>
-			<div class="form-control">
-				<label for="input-example-c3" class="form-label">Example</label>
-				<input type="text" class="form-input" placeholder="Text" id="input-example-c3">
-			</div>
-		</div>
-		<div class="card">
-			<h3>Form Buttons</h3>
-			<div class="form-control">
-				<button type="button" class="form-button">Button</button>
-			</div>
-			<div class="form-control">
-				<input type="submit" class="form-button" value="Submit">
-			</div>
-			<div class="form-control">
-				<a href="#" class="form-button">Button</a>
-			</div>
-		</div>
-		<div class="card">
-			<h3>Hotdog</h3>
-			<div class="form-control">
-				<input type="search" class="hotdog" placeholder="Search">
-			</div>
-			<div class="form-control">
-				<label class="hotdog">
-					<div class="flex-none">&clubs;</div>
-					<div class="flex-stretch">
-						<input type="search" placeholder="Search">
-					</div>
-				</label>
-			</div>
-			<div class="form-control display-flex">
+			<h3>Totals Table</h3>
+			<div class="bag-totals display-flex">
 				<div class="flex-stretch"></div>
 				<div class="flex-none">
-					<input type="search" class="hotdog" placeholder="Search">
+					<table class="bag-item-totals-table">
+						<tbody>
+							<tr>
+								<td>Subtotal</td>
+								<td class="bold">&dollar;20.00</td>
+							</tr>
+							<tr>
+								<td>Tax</td>
+								<td class="bold">&dollar;1.60</td>
+							</tr>
+							<tr>
+								<td style="font-size: 1em">Total</td>
+								<td class="bold">&dollar;21.60</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
+
+
 	</section>
 	<hr class="divider">
 
@@ -262,81 +522,6 @@
 				<div class="toggle">
 					<input type="checkbox" id="toggle1" class="hidden">
 					<label for="toggle1"></label>
-				</div>
-			</div>
-		</div>
-	</section>
-	<hr class="divider">
-
-	<section id="accordion" class="container">
-		<h2 class="section-title">Accordion</h2>
-		<dl class="accordion">
-			<dt><h3>+ <span>What is your exchange / return policy?</span></h3></dt>
-				<dd>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis minus sunt unde amet dicta corrupti obcaecati quas natus molestiae aspernatur.</p>
-				</dd>		
-			<dt><h3>+ <span>What payment methods do you accept?</span></h3></dt>
-				<dd>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis minus sunt unde amet dicta corrupti obcaecati quas natus molestiae aspernatur.</p>
-				</dd>		
-			<dt><h3>+ <span>How do I check my size?</span></h3></dt>
-				<dd>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis minus sunt unde amet dicta corrupti obcaecati quas natus molestiae aspernatur.</p>
-				</dd>				
-		</dl>
-	</section>
-	<hr class="divider">
-
-	<section id="figures" class="container">
-		<h2 class="section-title">Figures</h2>
-		<div class="card">
-			<h3>Basic Figure</h3>
-
-			<figure class="product-figure">
-				<img src="https://via.placeholder.com/300" alt="">
-				<figcaption>Product</figcaption>
-			</figure>
-			<figure class="product-figure soft">
-				<img src="https://via.placeholder.com/300" alt="">
-				<figcaption>Product</figcaption>
-			</figure>
-			<figure class="product-figure overlay">
-				<img src="https://via.placeholder.com/300" alt="">
-				<figcaption>Product</figcaption>
-			</figure>
-		</div>
-		<h3>Products</h3>
-		<div class="featured-items container">
-			<div class="grid gap">
-				<div class="col-xs-12 col-md-6 col-lg-4">
-					<div class="card light">
-						<button><h3>+ <span>Shop Item</span></h3></button>
-					</div>
-				</div>
-				<div class="col-xs-12 col-md-6 col-lg-4">
-					<div class="card light">
-						<button><h3>+ <span>Shop Item</span></h3></button>
-					</div>
-				</div>
-				<div class="col-xs-12 col-md-6 col-lg-4">
-					<div class="card light">
-						<button><h3>+ <span>Shop Item</span></h3></button>
-					</div>
-				</div>
-				<div class="col-xs-12 col-md-6 col-lg-4">
-					<div class="card light">
-						<button><h3>+ <span>Shop Item</span></h3></button>
-					</div>
-				</div>
-				<div class="col-xs-12 col-md-6 col-lg-4">
-					<div class="card light">
-						<button><h3>+ <span>Shop Item</span></h3></button>
-					</div>
-				</div>
-				<div class="col-xs-12 col-md-6 col-lg-4">
-					<div class="card light">
-						<button><h3>+ <span>Shop Item</span></h3></button>
-					</div>
 				</div>
 			</div>
 		</div>

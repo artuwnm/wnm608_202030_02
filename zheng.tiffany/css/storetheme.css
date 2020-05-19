@@ -449,6 +449,186 @@ hr {
 }
 
 
+/*About*/
+
+.about-us {
+	max-width: 35em;
+	padding-left: 5em;
+}
+
+.yellow-strip {
+	background-color: var(--color-main-light);
+}
+
+.yellow-strip .row {
+	position: relative;
+    margin-top: 10em;
+    height: 18em;
+}
+
+.yellow-strip .about-us {
+	padding-left: 0;
+    margin-right: 45%;
+}
+
+.yellow-strip .row div:last-child {
+	position: absolute;
+	top: -10em;
+	right: 24%;
+}
+
+/*Mobile*/
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+		
+		.hero {
+			width: 100vh;
+			height: 50vh;
+		}
+
+		.hero img {
+			width: auto;
+			height: 100%;
+		}
+
+		.hero__content {
+			width: 40%;
+			left: 4%;
+			top: 10%;
+		}
+
+		.featured-items {
+		    width: 50vh;
+		}
+
+		.featured-items h1 {
+			margin: 1em;
+		}
+
+		.store-header div.flex-none {
+			display: none;
+		}
+
+		.store-footer .container {
+			display: block;
+			padding: 0 2em;
+		}
+
+		.footer__menu--explore {
+			padding: 1em 0 2em;
+		}
+
+		.products-header {
+			display: block;
+			margin-bottom: 5em;
+		}
+
+		.products-header .search {
+			top: 3.5em;
+			left: 1em;
+		}
+
+		.products-header #product-search {
+			left: 35px;
+		}
+
+		.products-header #product-search input {
+			top: 0;
+			left: 0;
+		}
+
+		.filters {
+			display: block;
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+
+		.filters select {
+			background-color: var(--color-neutral-light);
+		}
+
+		.product-images {
+			padding-left: 1.25em;
+		}
+
+		.product-thumbs {
+			width: 70px;
+		}
+
+		.product-thumbs img {
+			width: 60px;
+			height: 80px;
+		}
+
+		.product-main img {
+			width: auto;
+			height: 342px;
+		}
+
+		.medium-container h1 {
+			font-size: 1.5em;
+		}
+
+		.card.soft.center div.card.row {
+			display: block;
+		}
+
+		.card.soft.center div.card.row div.flex-none {
+			padding-bottom: 1em;
+		}
+
+		.bag-item {
+			padding: 1em;
+		}
+
+		.bag-item div.flex-stretch {
+			flex: none;
+		}
+
+		.bag-item div.flex-stretch ul {
+			display: block;
+			padding-left: 1em;
+		}
+
+		.bag-item ul li {
+			text-align: left;
+			padding: 0;
+		}
+
+		.bag-item ul li:first-child {
+			padding-bottom: 1em;
+		}
+
+		.bag-item ul li:nth-child(3) {
+			padding-top: 0;
+		}
+
+		.bag-totals>div:last-child {
+		    width: 100%;
+		}
+
+		.col-lg-3.col-xs-12 {
+			display: none;
+		}
+
+		.checkout.container {
+			width: 63vh;
+			padding: 0 1.5em;
+		}
+
+		.checkout.container .logo{
+			width: 10em;
+		}
+
+
+
+
+}
+
 
 
 

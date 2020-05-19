@@ -17,7 +17,7 @@ $result = getCartItems();
 
 <div class="grid gap full-height">
 
-	<div class="col-3">
+	<div class="col-lg-3 col-xs-12">
 		<div class="bag-container fixed">
 			<div class="back-link small-link">
 				<a href="bag.php"><span class="chevron left"></span> Return to Bag</a>
@@ -34,7 +34,7 @@ $result = getCartItems();
 		</div>
 	</div>
 
-	<div class="col-9">
+	<div class="col-lg-9 col-xs-12">
 		<div class="checkout container">
 			<div class="logo">
 				<img src="images/stylista.png" alt="Stylista">

@@ -16,7 +16,7 @@ include_once "parts/templates.php";
 	<?php include "parts/header.php" ?>
 
 	<div class="hero">
-		<img src="images/hero_background.png" alt="Hero Image">
+		<img src="images/hero_background.jpg" alt="Hero Image">
 		<div class="container">
 			<div class="hero__content">
 				<h1>Introducing our Spring Collection</h1>

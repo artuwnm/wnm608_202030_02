@@ -138,6 +138,10 @@ code {
 	text-align: center;
 }
 
+.left {
+	text-align: left;
+}
+
 .right {
 	text-align: right;
 }
@@ -164,6 +168,10 @@ code {
 
 .margin-bottom {
 	margin-bottom: 1em;
+}
+
+.margin-none {
+	margin: 0;
 }
 
 .padding {
@@ -221,7 +229,6 @@ nav {
 }
 
 nav ul {
-	display: flex;
 	padding-left: 0;
 	margin: 0 auto 1rem;
 	line-height: 0.5rem;
@@ -243,6 +250,11 @@ nav ul li a:hover {
 	cursor: pointer;
 }
 
+.nav ul li {
+	padding: 0.25rem;
+	margin: 0;
+}
+
 .nav ul,
 .nav-flex ul,
 .nav-stretch ul,
@@ -257,20 +269,33 @@ nav ul li a:hover {
 
 .nav-material a,
 .nav-pills a,
-.nav-stretch a,
 .nav-flex a,
 .nav a {
 	display: block;
-	padding: 0.2em 0.5em;
+	padding: 0.5em;
 	text-decoration: none;
 }
 
-.nav-pills a:hover,
+.nav-pills a {
+	border-radius: 2em;
+	padding: 1em 1.5em;
+}
+
+.nav-stretch a {
+	padding: 0.5em 1em;
+}
+
 .nav-stretch a:hover,
-.nav-flex a:hover,
+.nav-flex a:hover {
+	color: var(--color-main-dark);
+	font-weight: 700;
+}
+
+.nav-pills a:hover,
 .nav a:hover {
-	background-color: var(--color-neutral-medium);
-	color: var(--color-neutral-light);
+	background-color: var(--color-main-dark);
+	color: #fff;
+	font-weight: 700;
 }
 
 .nav-pills li.active a,
@@ -284,8 +309,8 @@ nav ul li a:hover {
 .nav-stretch li.active a:hover,
 .nav-flex li.active a:hover,
 .nav li.active a:hover {
-	background-color: var(--color-neutral-dark);
-	color: var(--color-neutral-light);
+	background-color: var(--color-main-dark);
+	color: #fff;
 }
 
 .nav-material ul,
@@ -302,9 +327,8 @@ nav ul li a:hover {
 	text-align: center;
 }
 
-.nav-pills a {
-	border-radius: 2em;
-	padding: 0.5em 1em;
+.nav-crumbs ul li {
+	margin: 0;
 }
 
 .nav-crumbs li:not(:first-child)::before {
@@ -320,6 +344,7 @@ nav ul li a:hover {
 
 .nav-material a:hover {
 	background-color: var(--color-neutral-light);
+	color: var(--color-neutral-dark);
 }
 
 .nav-material a::after {
@@ -627,6 +652,10 @@ table {
 	.table.striped tbody tr:nth-child(odd) {
 		background-color:var(--color-neutral-light);
 	}
+
+thead, tbody {
+	text-align: left;
+}
 
 /* Button Classes */
 
@@ -936,30 +965,15 @@ table {
 
 /* Accordion */
 
-dt {
-	border: 2px solid var(--color-neutral-medium);
-	color: var(--color-neutral-dark);
-	border-radius: 10px;
-	cursor: pointer;
-}
-
-dt h3:hover span {
-	color: var(--color-neutral-dark);
-}
-
-dd {
-	padding: 10px;
-	border: 2px solid var(--color-neutral-medium);
-	border-top: none;
-	border-radius: 10px;
-	margin-left: 0;
-	display: none;
-}
-
 dl, dt, dd {
-	width: 75%;
+	width: 80%;
 	margin: 0 auto;
 	box-sizing: border-box;
+}
+
+dt {
+	color: var(--color-neutral-dark);
+	cursor: pointer;
 }
 
 dt h3 {
@@ -970,7 +984,13 @@ dt h3 {
 
 dt h3 span {
 	padding-left: 0.75em;
-	color: var(--color-neutral-medium);
+	color: var(--color-neutral-dark);
+    font-size: 0.9em;
+}
+
+dd {
+	padding: 0.5em 0 1em 3em;
+	display: none;
 }
 
 dd li a {
@@ -1062,6 +1082,20 @@ span.inline-button a:hover,
     background-color: var(--color-neutral-light);
 }
 
+
+/*Styleguide*/
+
+#headings {
+	margin: 4em 0 2em;
+}
+
+#checkout-input input, #admin-form-input input {
+	margin: 1em 0;
+}
+
+#toggle-search form {
+	left: 35px;
+}
 
 
 
