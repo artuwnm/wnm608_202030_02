@@ -19,9 +19,12 @@ $result = getCartItems();
 </head>
 
 <body>
-	<a href="index.php"><img  src="images/horizontallogo.png" alt="Nature" class="responsiveimage logo"></a>
+	<div class="logo"><a href="index.php"><img  src="images/horizontallogo.png" alt="Nature" ></a></div>
 	
-	<div class="containerflat">
+	
+
+	<div class="container">
+		<div class="containerflat">
 	<nav class="nav-crumbs">
 				<ul>
 					<li>
@@ -37,8 +40,6 @@ $result = getCartItems();
 				</ul>
 			</nav>
 	</div>
-
-	<div class="container">
 		
 		<div class="grid gap">
 			

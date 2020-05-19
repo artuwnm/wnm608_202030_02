@@ -4,21 +4,19 @@
 function productListTemplate($r,$o) {
 return $r.<<<HTML
 <div class="col-xs-6 col-md-4">
-	<a href="product_item.php?id=$o->id" class="display-block">
+	<a href="product_item.php?i$o->id" class="display-block">
 		<figure class="product-figure">
 			<div class="product-image">
 
 				<img src="$o->thumbnail" alt="">
 			</div>
-			<div class="form-control display-flex">
-				<div class="flex-none">
-					<h4>$o->name</h4>
-				</div>
-				<div class="flex-stretch"></div>
-				<div class="flex-none">
-					<h4>&dollar;$o->price</h4>
-				</div>
-			</div>
+			
+				
+					<h4 class="name">$o->name</h4>
+				
+					<h4 class="price">&dollar;$o->price</h4>
+				
+			
 			
 		</figure>
 	</a>
@@ -41,24 +39,34 @@ return $r.<<<HTML
 			<div class="flex-stretch">
 				<strong>$o->name</strong>
 			</div>
-			<div class="flex-none">
 			
-				&dollar;$o->price
-			</div>
-		</div>
-		<div class="display-flex" style="font-size:0.8em">
 			<form class="flex-none" method="get" action="data/form_actions.php">
 				<input type="hidden" name="action" value="delete-cart-item">
 				<input type="hidden" name="id" value="$o->id">
-				<button type="submit" class="form-button">Delete</button>
-			</form>
-			<div class="flex-stretch"></div>
+				<button type="submit" class="closeicon" style="font-weight: bold;">X</button>
+			</form>	
+			</div>
+		
+		<div class="display-flex" style="margin-top: 2em;">
+		<div class="quantity">
+		<label style="font-size: 14px; color: light grey;">Qty</label>
 			<form class="flex-none" method="get" action="data/form_actions.php" onchange="this.submit()">
 				<input type="hidden" name="action" value="update-cart-amount">
-				<input type="hidden" name="id" value="$o->id">
+				<input type="hidden" name="id" value="$o->id" >
 				$selectAmount
 			</form>
+			 <div class="amount-icon">
+    	<svg  width="24" height="24" viewBox="0 0 20 45" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="icon">
+    	<path d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z"/>
+    	</svg>
+     </div>
 		</div>
+			<div class="flex-stretch"></div>
+			<div class="flex-none" style="margin-top: 1em; font-size: 16px;">
+			&dollar;$o->price
+			</div>	
+		</div>
+
 	</div>
 </div>
 <hr align="center" width="100%" color="grey" size="1">
@@ -124,7 +132,7 @@ HTML;
 
 
 function selectAmount($amount=1,$total=10) {
-	$output = "<select name='amount' class='form-button'>";
+	$output = "<select name='amount' class='amountselect'>";
 	for($i=1;$i<=$total;$i++) {
 		$output .= "<option ".($i==$amount?"selected":"").">$i</option>";
 	}
@@ -233,7 +241,7 @@ HTML;
 
 function productList($rows) {
 	$product = array_reduce($rows,'productListTemplate');
-	echo "<div class='grid gap productlist'>$product</div>
+	echo "$product
 		
 	";
 }

@@ -28,7 +28,7 @@ $result = getCartItems();
 	<div class="homebgimageshop">
 
 	<div class="advertisement">
-	<h1>HAVE AN EXCLAMATION POINT FOR YOU</h1>
+	<h2>HAVE AN EXCLAMATION POINT FOR YOU</h2>
 	<h4>Enjoy every moment in your life</h4>
 	</div>
 	</div>
@@ -50,19 +50,25 @@ $result = getCartItems();
 			</div>
 		</div> -->
 		
+		
+	<div class="container">
 		<div class="selectbox display-flex flex-direction-rowreverce">
-			<div class="dropdown">
-    <select name="one" class="dropdown-select js-sort">
+			<div class="dropdown-container">
+    <select class="js-sort">
       <option value="">Filter By</option>
       <option value="1">Newest</option>
 	  <option value="2">Oldest</option>
 	  <option value="3">Most Expensive</option>
 	  <option value="4">Least Expensive</option>
     </select>
+    <div class="select-icon">
+    	<svg  width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="icon">
+    	<path d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z"/>
+    	</svg>
+     </div>
+    </div>
   </div>
-		</div>
 
-	<div class="container">
 	
 
 

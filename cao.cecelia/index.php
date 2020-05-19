@@ -20,23 +20,24 @@ $result = getCartItems();
 </head>
 
 <body>
+	<?php include "parts/navbar.php" ?>
 	<div class="homebgimage">
 
 
-	<?php include "parts/navbar.php" ?>
+	
 
 	<div class="advertisement">
-	<h1>HAVE AN EXCLAMATION POINT FOR YOU</h1>
+	<h2>HAVE AN EXCLAMATION POINT FOR YOU</h2>
 	<h4>Enjoy every moment in your life</h4>
 	</div>
 	
 	</div>
 
 	<div class="selectionstyle">
-	<h1 align="center">A Selection for This Season</h1>
+	<h2 align="center">A Selection for This Season</h2>
 	<h4 align="center">From beloved pearl design for this summer</h4>
 	</div>	
-<
+
 
 	<div class="container flex-justify-center display-flex">
 		<div class="grid gap">
@@ -76,7 +77,7 @@ $result = getCartItems();
 			<div class="col-xs-12 col-xl-6">
 			<h4>Explore New accessories</h4>
 			<h2>New Beauty in Urban Environments</h2>
-			<p style="font-size: 16px">PILE ON PEARLS provides a way for people who want to embrace their femininity and beauty through Eastern spiritual practices and mysticism, for young girls, for daily mix & match, for all kinds of occasions. The collection is comprised of earings, necklaces, rings and bracelets featuring with pearls or diamonds on most of them.</p>
+			<p style="margin-bottom: 3em;">PILE ON PEARLS provides a way for people who want to embrace their femininity and beauty through Eastern spiritual practices and mysticism, for young girls, for daily mix & match, for all kinds of occasions. The collection is comprised of earings, necklaces, rings and bracelets featuring with pearls or diamonds on most of them.</p>
 			<div class="display-flex flex-justify-center">
 			<a href="shop.php" class="linkbutton">SHOP NOW</a>
 			</div>
@@ -89,7 +90,7 @@ $result = getCartItems();
 
 		</div>	
 
-		  <h2 align="center">"We provides a way for people who want to embrace their femininity and beauty through Eastern spiritual practices and mysticism."</h2>
+		  <h2 align="center" style="margin:0 3em;">"We provides a way for people who want to embrace their femininity and beauty through Eastern spiritual practices and mysticism."</h2>
 
 		
 		<div class="containerstretch">
@@ -104,7 +105,7 @@ $result = getCartItems();
 			<div class="col-xs-12 col-xl-6">
 			<h4>About Us</h4>
 			<h2>Know More About Our Brand</h2>
-			<p style="font-size: 16px">PILES ON PEARLS wants to create special styles for young girls in daily use. The different geometry shapes in the logo are combined together to show the precise and demanding attitude of this brand. The three main color in this logo display the taste of this brand.</p>
+			<p style="margin-bottom: 3em;">PILES ON PEARLS wants to create special styles for young girls in daily use. The different geometry shapes in the logo are combined together to show the precise and demanding attitude of this brand. The three main color in this logo display the taste of this brand.</p>
 			<div class="display-flex flex-justify-center">
 			<a href="shop.php" class="linkbutton">SHOP NOW</a>
 			</div>

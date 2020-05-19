@@ -25,6 +25,44 @@ body {
 	color: var(--color-neutral-dark);
 }
 
+body {
+  /* Never get smaller than this */
+  font-size: 14px;
+}
+
+h1 {
+	font-size: 32px !important; 
+}
+
+@media (min-width:400px) {
+  body {
+    font-size: 16px;
+  }
+  h1{
+  	font-size:34px !important;
+  }
+}
+
+@media (min-width:800px) {
+  body {
+    font-size: 18px;
+  }
+  h1{
+  	font-size: 48px !important;
+  }
+}
+
+@media (min-width:1000px) {
+  body {
+    /* Never get larger than this */
+    font-size: 20px;
+  }
+  h1{
+  	font-size: 48px !important;
+  }
+}
+
+
 
 h1,
 h2,
@@ -38,7 +76,7 @@ h6 {
 
 p{
 	font-family: 'Source Sans Pro';
-	font-size: 0.8em;
+	/*font-size: 0.8em;*/
 }
 
 a {
@@ -98,8 +136,8 @@ code {
 .containerstretch p{
 	margin-left: 10%;
 	margin-right:10%;
-	font-size: 14px;
-	
+	/*font-size: 14px;*/
+	line-height: 30px;
 }
 
 .containerstretch h2{
@@ -749,7 +787,7 @@ code {
 /*selectbox*/
 
 
-.selectbox > .dropdown {
+/*.selectbox > .dropdown {
   
   vertical-align: top;
 }
@@ -817,8 +855,77 @@ code {
   text-shadow: none;
  /* background: #f2f2f2;*/
   
-  cursor: pointer;
+  /*cursor: pointer;*/
+}*/
+
+.selectbox {
+      
+    }
+
+    .dropdown-container {
+      width: 200px; 
+      position: relative;
+    }
+
+    select {
+      width: 100%;
+    height: 50px;
+    font-size: 100%;
+    /* font-weight: bold; */
+    cursor: pointer;
+    border-radius: 0;
+    background-color: var(--color-neutral-light);
+    border: 1px solid var(--color-neutral-dark);
+    /* border-bottom: 2px solid #962d22; */
+    color: var(--color-neutral-dark);
+    appearance: none;
+    padding: 10px;
+    padding-right: 38px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: color 0.3s ease, background-color 0.3s ease, border-bottom-color 0.3s ease;
+      transition: color 0.3s ease, background-color 0.3s ease, border-bottom-color 0.3s ease;
+    }
+
+ select::-ms-expand {
+  display: none; 
 }
+select:hover,
+select:focus {
+  /*color: #c0392b;
+  background-color: white;
+  border-bottom-color: #DCDCDC;*/
+}
+
+.select-icon {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 30px;
+  height: 36px;
+  pointer-events: none;
+  
+  
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.select-icon svg.icon {
+  transition: fill 0.3s ease;
+  fill: black;
+  margin-top: 10px;
+  margin-right: 4px;
+}
+
+select:hover ~ .select-icon,
+select:focus ~ .select-icon {
+ /* background-color: white;*/
+  border-color: #DCDCDC;
+}
+select:hover ~ .select-icon svg.icon,
+select:focus ~ .select-icon svg.icon {
+ /* fill: #c0392b;*/
+}
+    
+
 
 /* Fix for IE 8 putting the arrows behind the select element. */
 

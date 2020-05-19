@@ -12,6 +12,44 @@
 
 body {
 	background-color:var(--color-neutral-light);
+
+}
+
+body {
+  /* Never get smaller than this */
+  font-size: 14px;
+}
+
+h1 {
+	font-size: 32px !important;
+}
+
+@media (min-width:400px) {
+  body {
+    font-size: 16px;
+  }
+  h1{
+  	font-size:34px !important;
+  }
+}
+
+@media (min-width:800px) {
+  body {
+    font-size: 18px;
+  }
+  h1{
+  	font-size: 48px !important;
+  }
+}
+
+@media (min-width:1000px) {
+  body {
+    /* Never get larger than this */
+    font-size: 20px;
+  }
+  h1{
+  	font-size: 48px !important;
+  }
 }
 
 section h2 {
@@ -207,6 +245,7 @@ a:hover {
   color:var(--color-main-dark);
   font-family: 'Crimson Pro', serif;
 
+
 }
 .logo a,
 .toggle a {
@@ -227,7 +266,6 @@ a:hover {
   padding: 0;
   margin: 0;
   background-color: var(--color-neutral-light);
-
 }
 
 
@@ -330,7 +368,7 @@ a:hover {
     padding: 15px 10px;
   }
   .menu{
-
+ background-color: transparent;
   }
   .menu li.button {
     padding-right: 0;
@@ -381,11 +419,11 @@ a:hover {
 }
 
 .advertisement h1{
-	font-size: 2vw;
+	/*font-size: 2vw;*/
 }
 
 .advertisement h4{
-	font-size: 2vw;
+	/*font-size: 2vw;*/
 	font-weight:normal;
 }
 
@@ -413,11 +451,11 @@ a:hover {
 }
 
 .selectionstyle h1{
-	font-size: 5vw;
+	/*font-size: 5vw;*/
 }
 
 .selectionstyle h4{
-	font-size: 1.5vw;
+	/*font-size: 1.5vw;*/
 	font-weight:normal;
 }
 
@@ -429,8 +467,9 @@ a:hover {
 /*filter*/
 
 .selectbox {
-    margin-top: 1em;
-    margin-right: 5em;
+  /*  margin-top: 1em;
+    margin-right: 5em;*/
+   margin: 0 1em 1em 1em;
    }
 
 /*recommendation*/
@@ -515,3 +554,42 @@ iframe {
     width: 100%;
     height: 30vh;
 }
+
+
+.amountselect {
+   border: none;
+    border-bottom: solid 1px;
+    border-width: 20px font-size: 14px;
+    width: 30px;
+    /* text-align: center; */
+    padding: 0 0 0 0;
+    font-size: 14px;
+    height: 31px;
+   }
+
+.closeicon{
+
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+
+
+.quantity{
+	display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+.amount-icon{
+	position: absolute;
+    top: 30px;
+    right: -2px;
+    height: 36px;
+    pointer-events: none;
+    transition: background-color 0.3s ease, border-colo;
+    /*viewbox:0 0 60 55;
+*/}
+
