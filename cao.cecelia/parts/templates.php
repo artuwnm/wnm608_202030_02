@@ -106,7 +106,8 @@ $selectAmount = selectAmount($o->amount);
 return $r.<<<HTML
 <div class="display-flex flex-justify-center">
           <div class="product-admin"><img src="$o->thumbnail"></div>
-          <div>
+          
+          <div class="cartdetailbox">
           <strong><h4 style="margin:0;">$o->name</h4></strong>
           <span><h6>$o->category</h6></span>
          

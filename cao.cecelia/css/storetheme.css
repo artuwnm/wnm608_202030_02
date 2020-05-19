@@ -606,3 +606,8 @@ iframe {
   .mobiletext {display:none}
 }
 
+.cartdetailbox{
+  width: 200px;
+  margin-bottom: 3em;
+}
+
