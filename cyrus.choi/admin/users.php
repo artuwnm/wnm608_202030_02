@@ -1,6 +1,8 @@
 <?php
 
 include "../lib/php/functions.php";
+include "../parts/templates.php";
+include "../parts/meta.php";
 
 $users = getData("../data/users.json");
 

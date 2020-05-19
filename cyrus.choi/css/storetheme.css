@@ -97,7 +97,7 @@ body {
 
 .product-title {
 	margin:0;
-	font-size:2em;
+	font-size:1em;
 }
 .product-category {
 	font-size:0.8em;
@@ -145,3 +145,4 @@ body {
 		display:block;
 	}
 }
+

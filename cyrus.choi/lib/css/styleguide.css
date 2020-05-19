@@ -26,6 +26,7 @@ body {
 h1 {font-family: 'Poppins', sans-serif;
     font-size: 45px;
     font-weight: bold;
+    margin-top: 2em;
     } 
 h2 {font-family: 'Poppins', sans-serif;
     font-size: 36px;
@@ -295,6 +296,10 @@ code {
 		background-color:var(--color-neutral-dark);
 		color:var(--color-neutral-light);
 	}
+
+	.card.description {
+		background-color:#f7f6f6;
+	}
 	.card.medium {
 		background-color:var(--color-neutral-medium);
 	}
@@ -310,18 +315,6 @@ code {
 		border-top:1px solid var(--color-neutral-light);
 	}
 
-
-
-/* VIEW WINDOW */
-
-.view-window {
-	height:100vh;
-	position:relative;
-	overflow:hidden;
-	background-size:cover;
-	background-position:center;
-	background-attachment: fixed;
-}
 
 
 
@@ -516,4 +509,44 @@ code {
 }
 .toggle input:checked + label::after {
     transform: translateX(1em);
+}
+
+/* VIEW WINDOW */
+
+.view-window {
+	height:100vh;
+	position:relative;
+	overflow:hidden;
+	background-size:cover;
+	background-position:center;
+	background-attachment: fixed;
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+
+
+	.container {
+	margin-left: 1em;
+	margin-right: 1em;
+	}
+
+	.image-width {
+	width:100%;
+	}
+}
+
+@media (max-width: 800px) {
+  .flex-container > div {
+  	flex: 45%;
+   	max-width: 45%;
+	}
+}
+@media (max-width: 500px) {
+  .flex-container > div {
+  	flex: 100%;
+   	max-width: 100%;
+	}
 }

@@ -10,8 +10,9 @@ return $r.<<<HTML
 				<img src="$o->thumbnail" alt="">
 			</div>
 			<figcaption class="product-description">
+			    <div class="product-title">$o->name</div>
 				<div class="product-price">&dollar;$o->price</div>
-				<div class="product-title">$o->name</div>
+				
 			</figcaption>
 		</figure>
 	</a>

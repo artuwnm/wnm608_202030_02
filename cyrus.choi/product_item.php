@@ -82,10 +82,10 @@ $thumbs = explode(",", $o->images);
 			</div>
 		</div>
 
-		<div class="card soft dark">
+		<div class="card soft description">
 			<h3>Description</h3>
 			<div class="product-description">
-				<?= $o->description ?>
+				<h5><?= $o->description ?></h5>
 			</div>
 		</div>
 	</div>

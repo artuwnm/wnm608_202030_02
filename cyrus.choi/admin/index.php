@@ -45,8 +45,6 @@ switch(@$_GET['action']) {
 		WHERE `id`=?
 		");
 
-		print_p([$_GET,$_POST]);
-		die;
 
 		$statement->execute([
 			$_POST["product-name"],
@@ -59,7 +57,7 @@ switch(@$_GET['action']) {
 			$_GET['id']
 		]);
 
-		die($conn->insert_id);
+
 
 		header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
 		break;
