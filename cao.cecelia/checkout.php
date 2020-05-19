@@ -99,6 +99,6 @@ $result = getCartItems();
 		</div>
 			</div>
 		</div>
-		
+
 </body>	
 </html>
