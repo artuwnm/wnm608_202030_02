@@ -1054,7 +1054,7 @@ select:focus ~ .select-icon svg.icon {
 }
 
 .a-content {
-  padding-bottom: 1em;
+  /*padding-bottom: 1em;*/
   display: none;
 
 }

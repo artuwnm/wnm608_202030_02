@@ -88,7 +88,7 @@ $(".thumb-images img").on("click",function(){
     <input type="radio" name="ac" id="a2" class="hidden"/>
     <label for="a2">Shipping & Returning</label>
     <div class="a-content">
-      <p>Pile on Pearls fine jewelry is handmade to order. Due to the current closure of non-essential businesses in Los Angeles we cannot guarantee our regular lead time of 1-4 weeks. We are still accepting orders despite these delays and encourage customers to browse our index of in stock pieces which are able to ship in 1-2 days. </p>
+      <p>Pile on Pearls fine jewelry is handmade to order. We are still accepting orders in stock pieces which are able to ship in 1-2 days. </p>
     </div>
   </li>
   
@@ -130,21 +130,24 @@ $(".thumb-images img").on("click",function(){
 	
 	
 
-		
+		<div class="mobiletext">	<h3>RECOMMENDATIONS</h3> </div>
 		<div class='grid gap productlist'>
-			<div class="col-xs-12 col-md-4">
+			<div class="col-xs-12 col-md-4 desktoptext">
 	<a href="product_item.php?id=$o->id" class="display-block">
 		<figure class="product-figure">
 			<div class="imagedecorarionrecommendation display-flex flex-align-center flex-justify-center">
-					<h3>RECOMMENDATIONS</h3>
+				<div class="">	<h3>RECOMMENDATIONS</h3> </div>
 					
 				</div>
 			
 		</figure>
 	</a>
 </div>
+
+	
 		<?php recommendedCategory("Earrings"); ?>
 	</div>
+</div>
 </body>
 <?php include "parts/footer.php" ?>
 </html>

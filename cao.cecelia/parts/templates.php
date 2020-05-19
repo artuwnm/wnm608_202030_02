@@ -4,7 +4,7 @@
 function productListTemplate($r,$o) {
 return $r.<<<HTML
 <div class="col-xs-6 col-md-4">
-	<a href="product_item.php?i$o->id" class="display-block">
+	<a href="product_item.php?id=$o->id" class="display-block">
 		<figure class="product-figure">
 			<div class="product-image">
 
@@ -100,6 +100,23 @@ return $r.<<<HTML
 HTML;
 }
 
+function addCartListTemplate($r,$o) {
+$pricefixed = number_format($o->total,2,'.','');
+$selectAmount = selectAmount($o->amount);
+return $r.<<<HTML
+<div class="display-flex flex-justify-center">
+          <div class="product-admin"><img src="$o->thumbnail"></div>
+          <div>
+          <strong><h4 style="margin:0;">$o->name</h4></strong>
+          <span><h6>$o->category</h6></span>
+         
+          </div>
+				
+         
+        </div>
+
+HTML;
+}
 
 function checKoutTemplate($r,$o) {
 $pricefixed = number_format($o->total,2,'.','');
@@ -211,7 +228,7 @@ return $r.<<<HTML
 		<div class="display-flex">
 			<div class="flex-stretch">
 				<div><strong><h4 style="margin:0;">$o->name</h4></strong></div>
-				<div><span><p>$o->category</p></span></div>
+				<div><span><h6>$o->category</h6></span></div>
 				
 				
 			</div>
@@ -222,11 +239,11 @@ return $r.<<<HTML
 		</div>
 		<div class="form-control display-flex" style="font-size:0.8em">
 		<div class="flex-none">
-		<a href="admin/?id=$o->id" class="form-button">Edit</a>
+		<a href="admin/?id=$o->id" style="text-decoration: underline;">Edit</a>
 		</div>
 		<div class="flex-stretch"></div>
 		<div class="flex-none">
-		<a href="product_item.php?id=$o->id" class="form-button">Details</a>
+		<a href="product_item.php?id=$o->id" style="text-decoration: underline;">Details</a>
 		</div>
 		</div>
 		

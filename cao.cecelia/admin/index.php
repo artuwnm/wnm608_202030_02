@@ -282,9 +282,9 @@ div.content {
 <body>
 
 <div class="sidebar">
-	<a href="index.php"><img  src="images/logoblack.png" alt="Nature"></a>	
-    <a class="active" href="<?= $_SERVER['PHP_SELF'] ?>">Product List</a>
-    <a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">Add New Product</a>
+	<a href="index.php" style="flex: 1 1 auto;"><img  src="images/logoblack.png" alt="Nature"></a>	
+    <a class="active" href="<?= $_SERVER['PHP_SELF'] ?>" style="margin-top: 2em;">Product List</a>
+    <a href="<?= $_SERVER['PHP_SELF'] ?>?id=new" style="margin-top: 2em;">Add New Product</a>
 </div>
 
 	<!-- <header class="navbar">

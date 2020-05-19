@@ -35,7 +35,7 @@ $result = getCartItems();
 			</div>
 			
 			<?php
-					echo array_reduce($result,'addCartTemplate');
+					echo array_reduce($result,'addCartListTemplate');
 					?>
 			
 
@@ -53,12 +53,14 @@ $result = getCartItems();
 	<div class="container">
 	
 	
-<div class="grid gap">
-	<div class="col-xs-12 col-md-4">
+
+		<div class="mobiletext">	<h3>RECOMMENDATIONS</h3> </div>
+		<div class='grid gap productlist'>
+			<div class="col-xs-12 col-md-4 desktoptext">
 	<a href="product_item.php?id=$o->id" class="display-block">
 		<figure class="product-figure">
 			<div class="imagedecorarionrecommendation display-flex flex-align-center flex-justify-center">
-					<h3>RECOMMENDATIONS</h3>
+				<div class="">	<h3>RECOMMENDATIONS</h3> </div>
 					
 				</div>
 			
@@ -66,38 +68,9 @@ $result = getCartItems();
 	</a>
 </div>
 
-	<div class="col-xs-12 col-md-4">
-	<a href="product_item.php?id=$o->id" class="display-block">
-		<figure class="product-figure">
-			<div class="product-image">
-				<img src="images/aquamarineearrings_thumbnail.jpg" alt="">
-			</div>
-			<div class="form-control display-flex">
-				<div class="flex-none">Baby Earrings</div>
-				<div class="flex-stretch"></div>
-				<div class="flex-none">$98.98</div>
-			</div>
-			
-		</figure>
-	</a>
-</div>
 	
-	<div class="col-xs-12 col-md-4">
-	<a href="product_item.php?id=$o->id" class="display-block">
-		<figure class="product-figure">
-			<div class="product-image">
-				<img src="images/doublelonglinkearrings_pc_1.jpg" alt="">
-			</div>
-			<div class="form-control display-flex">
-				<div class="flex-none">Baby Earrings</div>
-				<div class="flex-stretch"></div>
-				<div class="flex-none">$98.98</div>
-			</div>
-			
-		</figure>
-	</a>
-</div>
-		</div>
+		<?php recommendedCategory("Earrings"); ?>
+	</div>
 </div>
 	
 </body>

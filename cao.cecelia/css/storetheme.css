@@ -555,7 +555,7 @@ iframe {
     height: 30vh;
 }
 
-
+/*cartamount*/
 .amountselect {
    border: none;
     border-bottom: solid 1px;
@@ -592,4 +592,17 @@ iframe {
     transition: background-color 0.3s ease, border-colo;
     /*viewbox:0 0 60 55;
 */}
+
+/*recommendation*/
+/*mobile*/
+.desktoptext {display:none}
+.mobiletext {display:inline-block}
+
+/*Desktop*/
+
+@media all and (min-width: 900px) {
+  
+  .desktoptext {display:inline-block}
+  .mobiletext {display:none}
+}
 
