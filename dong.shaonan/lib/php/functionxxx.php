@@ -1,8 +1,11 @@
 <?php
 
-
 session_start();
 
+
+function getData($f) {
+	return json_decode(file_get_contents($f));
+}
 
 
 function print_p($v) {
@@ -10,14 +13,9 @@ function print_p($v) {
 }
 
 
-function getData($str) {
-	return json_decode(file_get_contents($str));
-}
-
-
-// include, require, include_once, require_once
-include_once "auth.php";
+include_once "auth_example.php";
 function makeConn() {
+
 	@$conn = new mysqli(...makeAuth());
 
 	if($conn->connect_errno) die($conn->connect_error);
@@ -26,8 +24,9 @@ function makeConn() {
 
 	return $conn;
 }
+
 function makePDOConn() {
-	@$conn = new mysqli(...makeAuth());
+    @$conn = new mysqli(...makeAuth());
 
     if($conn->connect_errno) die($conn->connect_error);
 
@@ -39,28 +38,16 @@ function makePDOConn() {
 
 function getRows($conn,$sql) {
 	$a = [];
-
 	$result = $conn->query($sql);
-
 	if($conn->errno) die($conn->error);
-
-	while($row = $result->fetch_object()) {
-		$a[] = $row;
-	}
-
+    $a = $result->fetch_all(MYSQLI_ASSOC);
 	return $a;
 }
 
 
-
-
-
-
-
-
-
 // CART FUNCTIONS
 
+// Array find loops an array looking for the first object that matches a boolean function
 function array_find($array,$fn) {
 	foreach($array as $o) if($fn($o)) return $o;
 	return false;
@@ -93,8 +80,6 @@ function addToCart($id,$amount,$price) {
 	}
 }
 
-
-
 function getCartItems() {
 	$cart = getCart();
 	if(empty($cart)) return [];
@@ -113,6 +98,8 @@ function getCartItems() {
 		return $o;
 	},$data);
 }
+
+
 @$category = $_GET['category'];
 function getData_s(){
     global $category;
@@ -122,6 +109,8 @@ function getData_s(){
     }
     return getRows(makeConn(),$sql);
 }
+
+
 function indexData(){
     $data = getData_s();
     $html = "";

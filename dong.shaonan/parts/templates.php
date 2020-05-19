@@ -155,6 +155,7 @@ function productList($rows) {
 	echo "<div class='grid gap productlist'>$products</div>";
 }
 
+
 function recommendedCategory($cat,$limit=3) {
 	$sql = "SELECT * FROM `products` WHERE `category`='$cat' ORDER BY `date_create` DESC LIMIT $limit";
 	productList(getRows(makeConn(),$sql));
