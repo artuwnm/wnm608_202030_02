@@ -86,7 +86,8 @@ $result = getCartItems();
 
 			<div class="col-xs-12 col-xl-6">
 				<div class="card flat">
-				
+				<div class="card-section">
+	<h4>Enjoy complimentary shipping and returns.</h4>
 				<?php
 				echo array_reduce($result,'checKoutTemplate');
 				?>
@@ -98,5 +99,6 @@ $result = getCartItems();
 		</div>
 			</div>
 		</div>
+		
 </body>	
 </html>

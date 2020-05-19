@@ -104,7 +104,7 @@ function addCartListTemplate($r,$o) {
 $pricefixed = number_format($o->total,2,'.','');
 $selectAmount = selectAmount($o->amount);
 return $r.<<<HTML
-<div class="display-flex flex-justify-center">
+<div class="display-flex flex-justify-center shoplist">
           <div class="product-admin"><img src="$o->thumbnail"></div>
           
           <div class="cartdetailbox">
@@ -123,28 +123,19 @@ function checKoutTemplate($r,$o) {
 $pricefixed = number_format($o->total,2,'.','');
 $selectAmount = selectAmount($o->amount);
 return $r.<<<HTML
-<div class="card-section">
-<h4>Enjoy complimentary shipping and returns.</h4>
-<div class="display-flex grid gap">
 
-	<div class="flex-none product-thumbs col-xs-12 col-xl-3">
-		<img src="$o->thumbnail">
-	</div>
+<div class="display-flex flex-justify-center shoplist">
+          <div class="product-admin"><img src="$o->thumbnail"></div>
+          
+          <div class="cartdetailbox">
+          <strong><h4 style="margin:0;">$o->name</h4></strong>
+          <span><h6>$o->category</h6></span>
+         
+          </div>
+				
+         
+        </div>
 
-	<div class="col-xs-12 col-xl-1"></div>
-	
-	<div class="flex-stretch col-xs-12 col-xl-8">
-		<div class="display-flex">
-			<div class="flex-stretch">
-				<strong>$o->name</strong>
-			</div>
-			<div class="flex-none">
-				&dollar;$o->price
-			</div>
-		</div>
-	</div>
-</div>
-</div>
 HTML;
 }
 
