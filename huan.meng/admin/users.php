@@ -95,14 +95,14 @@ echo <<<HTML
 <div class="card soft">
 	<nav class="nav-pills">
 		<ul>
-			<li class="flex-none"><a href="{$_SERVER['PHP_SELF']}">Back</a></li>
-			<li class="flex-stretch"></li>
-			<li class="flex-none"><a href="{$_SERVER['PHP_SELF']}?id=$id&action=delete">Delete</a></li>
+			<ol class="flex-none"><a href="{$_SERVER['PHP_SELF']}">Back</a></ol>
+			<ol class="flex-stretch"></ol>
+			<ol class="flex-none"><a href="{$_SERVER['PHP_SELF']}?id=$id&action=delete">Delete</a></ol>
 		</ul>
 	</nav>
 </div>
 <div class="grid gap">
-	<div class="col-xs-12 col-md-4">$userdata</div>
+	<div class="col-xs-12 col-md-8">$userdata</div>
 	<form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate" class="col-xs-12 col-md-8">
 		<div class="card soft">
 		<h2>$addoredit User</h2>

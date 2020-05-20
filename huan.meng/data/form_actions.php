@@ -1,4 +1,3 @@
-  
 <?php
 
 include_once "../lib/php/functions.php";
@@ -15,11 +14,11 @@ switch($_GET['action']) {
 		break;
 	case "update-cart-amount":
 		cartItemByID($_GET['id'])->amount = $_GET['amount'];
-		header("location:../product-cart.php");
+		header("location:../product_cart.php");
 		break;
 	case "delete-cart-item":
 		$_SESSION['cart'] = array_filter($_SESSION['cart'],function($o){ return $o->id!=$_GET['id']; });
-		header("location:../product-cart.php");
+		header("location:../product_cart.php");
 		break;
 	case "update-cart-choice": break;
 }

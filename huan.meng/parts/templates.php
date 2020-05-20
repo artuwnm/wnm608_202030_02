@@ -3,17 +3,18 @@
 
 function productListTemplate($r,$o) {
 return $r.<<<HTML
+
 <div class="col-xs-6 col-md-4">
 	<a href="product_item.php?id=$o->id" class="display-block">
-		<figure class="product-figure soft">
-			<div class="product-image">
-				<img src="/images/store/$o->thumbnail" alt="">
-			</div>
-			<figcaption class="product-description">
-				<div class="product-price">&dollar;$o->price</div>
-				<div class="product-title">$o->title</div>
-			</figcaption>
-		</figure>
+			<figure class="product-figure soft">
+				<div class="product-image">
+					<img src="../huan.meng/$o->thumbnail" alt="">
+				</div>
+				<figcaption class="product-description">
+					<div class="product-price">&dollar;$o->price</div>
+					<div class="product-title">$o->name</div>
+				</figcaption>
+			</figure>
 	</a>
 </div>
 HTML;
@@ -28,12 +29,11 @@ $selectAmount = selectAmount($o->amount);
 return $r.<<<HTML
 <div class="display-flex card-section">
 	<div class="flex-none product-thumbs">
-		<img src="/images/store/$o->thumbnail">
 	</div>
 	<div class="flex-stretch">
 		<div class="display-flex">
 			<div class="flex-stretch">
-				<strong>$o->title ($o->amount)</strong>
+				<strong>$o->name ($o->amount)</strong>
 			</div>
 			<div class="flex-none">
 				&dollar;$pricefixed
@@ -131,11 +131,11 @@ return $r.<<<HTML
 <div class="itemlist-item display-flex">
 	<div class="flex-none">
 		<div class="image-square">
-			<img src="/images/store/$o->thumbnail">
+			<img src="../huan.meng/$o->thumbnail">
 		</div>
 	</div>
 	<div class="flex-stretch">
-		<div><strong>$o->title</strong></div>
+		<div><strong>$o->name</strong></div>
 		<div><span>$o->category</span></div>
 	</div>
 	<div class="flex-none">
@@ -144,23 +144,4 @@ return $r.<<<HTML
 	</div>
 </div>
 HTML;
-}
-
-
-
-
-
-function productList($rows) {
-	$products = array_reduce($rows,'productListTemplate');
-	echo "<div class='grid gap productlist'>$products</div>";
-}
-
-function recommendedCategory($cat,$limit=3) {
-	$sql = "SELECT * FROM `products` WHERE `category`='$cat' ORDER BY `date_create` DESC LIMIT $limit";
-	productList(getRows(makeConn(),$sql));
-}
-
-function recommendedProducts($cat,$id=0,$limit=3) {
-	$sql = "SELECT * FROM `products` WHERE `category`='$cat' AND `id`<>$id ORDER BY rand() DESC LIMIT $limit";
-	productList(getRows(makeConn(),$sql));
 }

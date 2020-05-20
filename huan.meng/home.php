@@ -3,9 +3,7 @@
 include_once "lib/php/functions.php";
 include_once "parts/templates.php";
 
-?>
-
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 		<title>Wonderland Icecream</title>
@@ -59,13 +57,8 @@ include_once "parts/templates.php";
 			</div>
 		</div>
 	</div>
-		<footer>
-		<div class="container">
-			<div style="text-align: center; margin-top: 100px;">
-			©Designed and Coded by Huan Meng
-			</div>
-		</div>
-	</footer>
-	
+<footer>
+	<?php include "parts/footer.php" ?>
+</footer>
 </body>
 </html>

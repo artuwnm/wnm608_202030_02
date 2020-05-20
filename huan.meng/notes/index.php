@@ -63,8 +63,8 @@
 	<div>
 	<?php
 
-	$firstname = "Hamilton";
-	$lastname = "Cline";
+	$firstname = "Huan";
+	$lastname = "Meng";
 	$fullname = "$firstname $lastname";
 	echo $fullname;
 
@@ -75,20 +75,20 @@
 	<hr>
 
 	<div>
-		<a href="?name=Hamilton">Hamilton</a>
+		<a href="?name=Huan">Huan</a>
 		<a href="?name=Jimmy">Jimmy</a>
 	</div>
 
 	<?php
 
 	// Superglobal
-	echo "<div>My name is {$_GET['name']}</div>";
+	echo "<{$_GET['type']}>My name is {$_GET['name']}</{$_GET['type']}>";
 
 	?>
 
 	<div>
-		<a href="?name=Ham&type=h1">H1</a>
-		<a href="?name=Ham&type=textarea">textarea</a>
+		<a href="?name=Huan&type=h1">H1</a>
+		<a href="?name=Huan&type=textarea">textarea</a>
 	</div>
 
 	<?php

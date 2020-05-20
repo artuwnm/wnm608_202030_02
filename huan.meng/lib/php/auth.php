@@ -3,7 +3,7 @@
 function makeAuth() {
 	return [
 		"localhost", // Database host location
-		"w9rtfjx0awvu", // Database user name
+		"huan_aauwnm608", // Database user name
 		"mEnG13050507887", // Database user password
 		"huan_aauwnm608", // Database database name
 	];

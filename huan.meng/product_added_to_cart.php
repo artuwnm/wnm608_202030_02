@@ -1,62 +1,48 @@
-  <?php
+<?php
 
-	include_once "lib/php/functions.php";
-	$p = cartItemByID($_GET['id']);
-	$o = getRows(makeConn(), "SELECT * FROM products WHERE id = '{$_GET['id']}'")[0];
-	?>
+include_once "lib/php/functions.php";
 
-  <!DOCTYPE html>
-  <html lang="en">
+$p = cartItemByID($_GET['id']);
 
-  <head>
-      <title>Item Added to Cart</title>
+$o = getRows(makeConn(),"SELECT * FROM `products` WHERE `id`={$_GET['id']}")[0];
 
-      <?php include "parts/meta.php" ?>
+// print_p([getCart(),$p,$o]);
 
-  </head>
+?><!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Product Added To Cart</title>
 
-  <body>
+  <?php include "parts/meta.php" ?>
 
-     <?php include "parts/navbar.php" ?>
+</head>
+<body>
 
-      <div class="container">
-          <div class="nav-crumbs uppercase margin-top-2">
-              <ul>
-                  <li><a href="home.php">Home</a></li>
-                  <li><a href="product_cart.php">My Cart</a></li>
+  <?php include "parts/navbar.php" ?>
 
-              </ul>
-          </div>
-          <div class="card">
-              <div class="card">
-                  <h2>Cart Confirmation</h2>
-                  <div>
-                      Thank you for adding <?= $p->amount ?> of the <?= $o->name ?> to the cart.
-                  </div>
-              </div>
-
-              <div class="card">
-                  <div class="display-flex">
-                      <div class="flex-none">
-                          <form action="product_list.php">
-                              <input type="submit" class="site-button" value="Back to Shopping" />
-                          </form>
-
-                      </div>
-                      <div class="flex-stretch"></div>
-                      <div class="flex-none">
-                          <form action="product_cart.php">
-                              <input type="submit" class="site-button" value="Check Cart" />
-                          </form>
-
-                      </div>
-                  </div>
-              </div>
-          </div>
+  <div class="container">
+    <div class="card soft flat">
+      <div class="card-section">
+        <h2>Cart Confirmation</h2>
+        
+        <div>
+          Thank you for adding <?= $p->amount ?> of the <?= $o->title ?> to the cart.
+        </div>
       </div>
-<!-- 
-      <?php include "parts/footer.php" ?> -->
 
-  </body>
-
-  </html>
+      <div class="card-section">
+        <div class="display-flex">
+          <div class="flex-none">
+            <a href="product_list.php" class="form-button">Back to Shopping</a>
+          </div>
+          <div class="flex-stretch"></div>
+          <div class="flex-none">
+            <a href="product_cart.php" class="form-button">Check Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
