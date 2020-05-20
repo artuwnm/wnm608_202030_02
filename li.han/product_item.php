@@ -101,6 +101,8 @@ $thumbs = explode(",", $o->images);
 			<?php recommendedProducts($o->category,$o->id) ?>
 		</div>
 	</div>
-	
+		<footer>
+		<?php include "parts/footer.php" ?>
+	</footer>
 </body>
 </html>

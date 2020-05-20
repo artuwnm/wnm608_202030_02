@@ -34,7 +34,7 @@ h6 {
 h1{
 	font-family:'Raleway Dots', cursive;
 	color:var(--color-neutral-dark);
-	font-size: 2.3em;
+	font-size: 2.3vw;
 }
 a {
 	color:inherit;
@@ -53,9 +53,15 @@ code {
 	color:var(--color-neutral-light);
 }
 
-
-
-
+.cls-0:hover {
+	fill: white;
+}
+.cls-0::after {
+	fill: white;
+}
+svg{
+	height: 2vw;
+}
 
 
 /* SMALL CLASSES */
@@ -99,10 +105,10 @@ code {
 }
 .navbar h1 {
 	margin:0;
-	font-size:1.5em;
+	font-size:2.5vw;
 }
 .navbar a {
-	padding:0 1em;
+	padding:0 0.1em;
 }
 
 
@@ -187,6 +193,52 @@ code {
 	.form-lable{
 		font-weight: bold;
 	}
+
+	/*Footer */
+footer{
+	width: 100%;
+    color: var(--color-neutral-medium);
+    background-color: var(--color-neutral-dark);
+    padding: 1em;
+    margin-bottom:0;
+    position: absolute;
+}
+footer h4{
+	font-size: 0.8vw;
+	color: var(--color-neutral-medium);
+    margin: 0;
+    font-weight: 200;
+}
+footer p{
+font-size: 0.5vw;
+position: absolute;
+margin-bottom: 10px;
+}
+ footer li a{
+ 	display: block;
+ 	color: var(--color-neutral-medium);
+ 	font-weight: 500;
+ 	padding:0.4em 0;
+ 	font-size: 0.8vw;
+
+ }
+  footer li{
+  	 	list-style-type:none;
+  }
+
+ footer li>a:hover{
+ 	color: white;
+ 	transition: 0.8s all ease;
+ }
+footer h3 {
+	color: var(--color-neutral-medium);
+	font-size: 1vw;
+}
+footer h1{
+	color: var(--color-neutral-medium);
+	font-size: 2vw;
+    margin-top:-0.1px;
+}
 
 /* CARD */
 .card {
@@ -323,7 +375,7 @@ min-height: 100%;
     display: inline-block;
     width: 100%;
     border-width: 0;
-    background-color: var(--color-neutral-light);
+    background-color: var(--color-neutral-medium);
     padding: 0.5em 1em;
     color: inherit;
     font: inherit;
@@ -337,12 +389,12 @@ min-height: 100%;
     text-decoration: none;
 }
 .form-button:active {
-    background-color:var(--color-main-light);
+    background-color:var(--color-main-medium);
 }
 .form-select {
     position: relative;
 }
-.form-select::after {
+/*.form-select::after {*/
     content: '▼';
     position: absolute;
     color:var(--color-neutral-dark);
@@ -351,6 +403,7 @@ min-height: 100%;
     transform: translateY(-50%);
     pointer-events:none;
     font-size:0.7em;
+    border-color: var(--color-neutral-light);
 }
 
 .hotdog {
@@ -419,4 +472,26 @@ min-height: 100%;
 }
 .toggle input:checked + label::after {
     transform: translateX(1em);
+}
+/*social midia icons*/
+.fa {
+  padding-top: 18px;
+  width: 70px;
+  text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.fa-facebook {
+  color: white;
+ }
+
+.fa-twitter {
+  color: white;
+}
+.fa-instagram {
+  color: white;
 }

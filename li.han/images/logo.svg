@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="77.2" height="38.6" viewBox="0 0 77.2 38.6">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #048abf;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        opacity: 0.77;
+      }
+
+      .cls-2 {
+        fill: #04b2d9;
+      }
+
+      .cls-3 {
+        fill: #05dbf2;
+      }
+
+      .cls-4 {
+        fill: #07f2f2;
+      }
+    </style>
+  </defs>
+  <g id="Group_92" data-name="Group 92" transform="translate(-747.371 -43.656)">
+    <g id="Group_91" data-name="Group 91">
+      <g id="Group_90" data-name="Group 90" transform="translate(-43.521 -326.736)">
+        <g id="circle5" transform="translate(790.892 370.392)">
+          <path id="Path_209" data-name="Path 209" class="cls-1" d="M829.492,370.392a38.6,38.6,0,0,0-38.6,38.6h77.2A38.6,38.6,0,0,0,829.492,370.392Z" transform="translate(-790.892 -370.392)"/>
+        </g>
+        <g id="circle4" transform="translate(797.224 376.723)">
+          <path id="Path_210" data-name="Path 210" class="cls-2" d="M850.981,398.212a32.269,32.269,0,0,0-32.269,32.269h64.537A32.269,32.269,0,0,0,850.981,398.212Z" transform="translate(-818.712 -398.212)"/>
+        </g>
+        <g id="circle3" transform="translate(804.722 384.222)">
+          <path id="Path_211" data-name="Path 211" class="cls-3" d="M876.431,431.161a24.77,24.77,0,0,0-24.77,24.77H901.2A24.77,24.77,0,0,0,876.431,431.161Z" transform="translate(-851.661 -431.161)"/>
+        </g>
+        <g id="circle2" transform="translate(812.26 391.76)">
+          <path id="Path_212" data-name="Path 212" class="cls-4" d="M902.015,464.283a17.232,17.232,0,0,0-17.232,17.232h34.464A17.232,17.232,0,0,0,902.015,464.283Z" transform="translate(-884.783 -464.283)"/>
+        </g>
+        <g id="rainbow_4" data-name="rainbow 4" transform="translate(797.224 376.723)">
+          <path id="Path_213" data-name="Path 213" class="cls-2" d="M850.981,398.212a32.269,32.269,0,0,0-32.269,32.269h7.5a24.77,24.77,0,1,1,49.54,0h7.5A32.269,32.269,0,0,0,850.981,398.212Z" transform="translate(-818.712 -398.212)"/>
+        </g>
+        <g id="rainbow_3" data-name="rainbow 3" transform="translate(804.722 384.222)">
+          <path id="Path_214" data-name="Path 214" class="cls-3" d="M876.431,431.161a24.77,24.77,0,0,0-24.77,24.77H859.2a17.232,17.232,0,0,1,34.464,0H901.2A24.77,24.77,0,0,0,876.431,431.161Z" transform="translate(-851.661 -431.161)"/>
+        </g>
+        <g id="rainbow_2" data-name="rainbow 2" transform="translate(812.26 391.76)">
+          <path id="Path_215" data-name="Path 215" class="cls-4" d="M902.015,464.283a17.232,17.232,0,0,0-17.232,17.232H893.4a8.616,8.616,0,1,1,17.232,0h8.616A17.232,17.232,0,0,0,902.015,464.283Z" transform="translate(-884.783 -464.283)"/>
+        </g>
+        <g id="rainbow_5" data-name="rainbow 5" transform="translate(790.892 370.392)">
+          <path id="Path_216" data-name="Path 216" class="cls-1" d="M829.492,370.392a38.6,38.6,0,0,0-38.6,38.6h6.331a32.269,32.269,0,0,1,64.538,0h6.332A38.6,38.6,0,0,0,829.492,370.392Z" transform="translate(-790.892 -370.392)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

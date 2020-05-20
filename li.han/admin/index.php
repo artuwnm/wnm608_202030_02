@@ -241,7 +241,7 @@ HTML;
 
 		?>
 		<div class="card soft">
-		<h2>User List</h2>
+		<h2>Product List</h2>
 
 		<div class="itemlist">
 		<?php

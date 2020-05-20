@@ -29,7 +29,7 @@ section h2 {
 }
 
 .form-button{
-	background-color:  var(--color-neutral-light);
+	background-color:  var(--color-neutral-medium);
 }
 
 
@@ -79,13 +79,13 @@ section h2 {
 		transform:scale(1.4,1.4);
 	}
 
-input[type=text] {
+/*.search {*/
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
   border-radius: 100px;
   border: 1px solid #074476;
   background-color: #F5FBFF;
-  background-image: url("../image/magnifier.png");
+  background-image: url("../image/magnifier.svg");
   background-repeat: no-repeat;
   background-size: 15px;
   background-position: 8px 1px;
@@ -131,4 +131,10 @@ input[type=text]:focus {
 	.navbar .display-flex {
 		display:block;
 	}
+	.logo img{
+			height: 1em;
+		}
+		 svg{
+		 	height: 1em;
+		 }
 }

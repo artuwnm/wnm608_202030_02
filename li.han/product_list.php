@@ -62,6 +62,8 @@ include_once "lib/php/functions.php";
 
 		<div class="grid gap productlist"></div>
 	</div>
-	
+		<footer>
+		<?php include "parts/footer.php" ?>
+	</footer>
 </body>
 </html>

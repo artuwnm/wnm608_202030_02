@@ -17,13 +17,6 @@ $empty_poduct=(object)[
 	<!-- .container>p*2>lorem40 -->
 	
 
-<div class="container">
-	<div class="card medium" >
-	<div class="card transparent" >
-		
-	</div>		
-	</div>
-	
 	<div class="container" style="margin-top: 20px">
 	<div class="grid gap" >
 	          <div class="col-2"><img src="images/shiseido.png" alt="shiseido.png" style="width: 50%">
@@ -37,6 +30,13 @@ $empty_poduct=(object)[
 	          <div class="col-2"><img src="images/erno.png" alt="erno laszro" style="width: 45%"></div>
 	</div>	
 	</div>
+<div class="container">
+	<div class="card medium" >
+	<div class="card transparent" >
+		
+	</div>		
+	</div>
+	
 	<div class="container">
 		<div class="card ">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt tempora laboriosam suscipit consequuntur nemo vitae eos, obcaecati doloribus rem labore animi porro necessitatibus mollitia autem sequi accusantium facere minima ducimus. Fugiat dignissimos quod perspiciatis mollitia facere voluptas culpa eligendi praesentium.</p>
@@ -121,7 +121,10 @@ $empty_poduct=(object)[
 			</div>
 		</div>
 	</div>
-
-	
+<div>
+	<footer>
+		<?php include "parts/footer.php" ?>
+	</footer>
+</div>
 </body>
 </html>

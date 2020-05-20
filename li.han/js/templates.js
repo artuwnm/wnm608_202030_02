@@ -10,8 +10,9 @@ return `
 				<img src="../li.han/${o.thumbnail}" alt="">
 			</div>
 			<figcaption class="product-description">
+				<div class="product-name">${o.name}</div>
 				<div class="product-price">&dollar;${o.price.toFixed(2)}</div>
-				<div class="product-title">${o.title}</div>
+				
 			</figcaption>
 		</figure>
 	</a>

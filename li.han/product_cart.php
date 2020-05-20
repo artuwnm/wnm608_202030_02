@@ -45,6 +45,8 @@ $result = getCartItems();
 			</div>
 		</div>
 	</div>
-	
+		<footer>
+		<?php include "parts/footer.php" ?>
+	</footer>
 </body>
 </html>
