@@ -36,7 +36,9 @@
 						<h4 class="uppercase">Explore</h4>
 						<ul>
 							<li><a href="product_list.php">Shop Skills</a></li>
-							<li><a href="about.php">About Skillbank</a></li>						
+							<li><a href="about.php">About Skillbank</a></li>	
+							<li><a href="admin/index.php">Product Admin</a></li>						
+					
 						</ul>
 					
 			</div>
