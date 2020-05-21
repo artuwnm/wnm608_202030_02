@@ -35,8 +35,8 @@
 			<li><a href="#viewwindow">View Window</a></li>
 			<li><a href="#navigations">Navigations</a></li>
 			<ul>
-				<li><a href="#navs">Navs</a></li>
-				<li><a href="#navbar">Navbar</a></li>
+				<li><a href="#navigations">Navs</a></li>
+				<li><a href="#navigations">Navbar</a></li>
 			</ul>
 			<li><a href="#tables">Tables</a></li>
 			<li><a href="#grid">Grid System</a></li>
@@ -578,20 +578,26 @@ $(".thumb-images img").on("click",function(){
 		</div>
 	</div>
 
-		<div class="selectbox">
-			
+		<!-- <div class="selectbox">
+			 -->
 
 			<div class="card">
 			<h3>Select Box</h3>
-			<div class="selectbox">
-			<div class="dropdown">
-    <select name="one" class="dropdown-select">
+			<div class="selectbox display-flex flex-direction-rowreverce">
+			<div class="dropdown-container">
+    <select class="js-sort">
       <option value="">Filter By</option>
-      <option value="1">Option #1</option>
-      <option value="2">Option #2</option>
-      <option value="3">Option #3</option>
+      <option value="1">Newest</option>
+	  <option value="2">Oldest</option>
+	  <option value="3">Most Expensive</option>
+	  <option value="4">Least Expensive</option>
     </select>
-  </div>
+    <div class="select-icon">
+    	<svg  width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="icon">
+    	<path d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z"/>
+    	</svg>
+     </div>
+    </div>
 		</div>
 		<p> * This Select Box will be used in Product List Page. </p>
 </div>
@@ -673,7 +679,20 @@ $(".thumb-images img").on("click",function(){
 			</div>
 			
 			<h3>Number Input</h3>
-			<input id="number" type="number">
+			<div class="quantity">
+		<label style="font-size: 14px; color: light grey;">Qty</label>
+			<form class="flex-none" method="get" >
+				<input type="hidden" name="action" >
+				<input type="hidden" name="id" >
+				<input id="number" type="number">
+			</form>
+			 <div class="amount-icon">
+    	<svg  width="24" height="24" viewBox="0 0 20 45" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="icon">
+    	<path d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z"/>
+    	</svg>
+     </div>
+		</div>
+			
 			<p> * This Number Input Box will be used in Cart Page. </p>
 		</div>
 	</section>
