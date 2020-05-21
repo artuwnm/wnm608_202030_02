@@ -103,7 +103,7 @@ include_once "lib/php/functions.php";
 
     </div>
 
-    <?php include "parts/footer.php" ?>
+
 
 </body>
 
