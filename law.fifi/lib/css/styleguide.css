@@ -1598,7 +1598,10 @@ ol li span a:hover{
 		.view-window{
 		height: 60vh;
 
-	}
+		}
+		.filter-form{
+			display: none;
+		}
 
 	}
 
