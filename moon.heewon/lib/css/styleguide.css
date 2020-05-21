@@ -81,6 +81,15 @@ footer {
 	border-radius: 25px;
 }
 
+.container-gray{
+	background-color:#FCF6EF;
+	max-width:1600px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+}
+
+
 .hidden { display:none; }
 
 
@@ -103,6 +112,7 @@ footer {
 
 .margin-top-1{margin-top: 1rem;}
 .margin-top-2{margin-top: 2rem;}
+.margin-top-3{margin-top: 3rem;}
 .margin-top-5{margin-top: 5rem;}
 .margin-bottom-2{margin-bottom: 2rem;}
 .margin-bottom-5{margin-bottom: 5rem;}

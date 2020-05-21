@@ -232,7 +232,7 @@ HTML;
 
 		?>
 		<div class="card soft">
-		<h2>User List</h2>
+		<p>Choose a product to edit, or click to view their individual pages.</p>
 
 		<div class="itemlist">
 		<?php
