@@ -11,7 +11,7 @@ function productListTemplate($r, $o)
 			</div>
 			<figcaption class="product-description">
 				<div class="product-price">&dollar;$o->price</div>
-				<div class="product-title">$o->name</div>
+				<div class="product-name">$o->name</div>
 			</figcaption>
 		</figure>
 	</a>
@@ -133,7 +133,7 @@ function makeListItemTemplate($r,$o) {
 		</div>
 		<div class="flex-none">
 			<div><a href="?id=$o->id" class="form-button">Edit</a></div>
-			<div><a href="product_item.php?id=$o->id" class="form-button">Visit</a></div>
+			<div><a href="../product_item.php?id=$o->id" class="form-button">Visit</a></div>
 		</div>
 	</div>
 	HTML;

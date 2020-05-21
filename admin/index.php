@@ -4,7 +4,7 @@ include "../lib/php/functions.php";
 include "../parts/templates.php";
 
 $empty_product = (object) [
-    "title" => "",
+    "name" => "",
     "price" => "",
     "category" => "",
     "description" => "",
@@ -50,7 +50,7 @@ if (isset($_GET['id'])) {
                     $_POST["product-thumbnail"],
                     $_POST["product-images"],
                     $_POST["product-quantity"],
-                    $_GET['id']
+                    $_GET["id"]
                 ]);
 
                 header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
@@ -147,24 +147,16 @@ HTML;
 
 
 
-    echo <<<HTML
-<div class="card soft">
-	<nav class="nav-pills">
-		<ul>
-			<li class="flex-none"><a href="{$_SERVER['PHP_SELF']}">Back</a></li>
-			<li class="flex-stretch"></li>
-			$deletebutton
-		</ul>
-	</nav>
-</div>
+echo <<<HTML
+ 
 <div class="grid gap">
 	<div class="col-xs-12 col-md-5">$data_show</div>
 	<form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate" class="col-xs-12 col-md-7">
 		<div class="card soft">
 		<h2>$addoredit Product</h2>
 		<div class="form-control">
-			<label for="product-title" class="form-label">Title</label>
-			<input type="text" class="form-input" placeholder="A Product Title" id="product-name" name="product-name" value="$o->name">
+			<label for="product-name" class="form-label">Name</label>
+			<input type="text" class="form-input" placeholder="A Product Name" id="product-name" name="product-name" value="$o->name">
 		</div>
 		<div class="form-control">
 			<label for="product-price" class="form-label">Price</label>
@@ -217,58 +209,66 @@ HTML;
 
 <body>
 
-    <header class="navbar">
-        <div class="container display-flex">
-            <div class="flex-stretch">
-                <h1>Product Admin</h1>
-            </div>
-            <nav class="nav flex-none">
-                <ul class="display-flex">
-                    <li><a href="./">Store</a></li>
-                    <li><a href="<?= $_SERVER['PHP_SELF'] ?>">Product List</a></li>
-                    <li><a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">Add New Product</a></li>
-                </ul>
-            </nav>
+
+    <div class="topnav nav-container">
+        <a href="../">Back to Store</a>
+        <div class="topnav-admin-right">
+            <a href="<?= $_SERVER['PHP_SELF'] ?>">Product List</a>
         </div>
+    </div>
+
+    <header class="header">
+        <div class="logo">
+            <a href="index.php">
+                <img src="../img/logo.png" alt="fenfong logo">
+            </a>
+        </div>
+
     </header>
-
     <div class="container">
+        <div class="card">
+            <div class="row">
+                <h2 class="flex-none margin-top">Admin: Product List</h2>
+                <div class="flex-none margin-top right">
+                    <a class="btn dark site-button uppercase right" href="<?= $_SERVER['PHP_SELF'] ?>?id=new">Add New Product</a>
+                </div>
+            </div>
 
-        <?php
 
-        $conn = makeConn();
+            <?php
 
-        if (isset($_GET['id'])) {
+            $conn = makeConn();
 
-            if ($_GET['id'] == "new") {
-                makeProductForm($empty_product);
+            if (isset($_GET['id'])) {
+
+                if ($_GET['id'] == "new") {
+                    makeProductForm($empty_product);
+                } else {
+                    $rows = getRows($conn, "SELECT * FROM `products` WHERE `id`='{$_GET['id']}'");
+                    makeProductForm($rows[0]);
+                }
             } else {
-                $rows = getRows($conn, "SELECT * FROM `products` WHERE `id`='{$_GET['id']}'");
-                makeProductForm($rows[0]);
-            }
-        } else {
 
 
-        ?>
-            <div class="card soft">
-                <p>Choose a product to edit, or click to view their individual pages.</p>
+            ?>
+
 
                 <div class="itemlist">
                     <?php
 
                     $rows = getRows($conn, "SELECT * FROM `products`");
-
                     echo array_reduce($rows, 'makeListItemTemplate');
-
                     ?>
                 </div>
-            </div>
-        <?php
+            <?php
 
-        }
+            }
 
-        ?>
+            ?>
+        </div>
+
     </div>
+
 
 </body>
 

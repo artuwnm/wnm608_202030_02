@@ -82,6 +82,12 @@ code {
 
 
 /* SMALL CLASSES */
+.nav-container {
+	max-width: 1000px;
+	height: 60px;
+	margin-right: auto;
+	margin-left: auto;
+}
 
 .container {
 	max-width: 1000px;
@@ -130,9 +136,44 @@ code {
 	justify-content: center;
 }
 
+.row {
+    display: flex;
+    justify-content: space-between;
+}
 
+.topnav-right {
+	float: right;
+	margin-top: -10px;
+}
 
+.topnav-admin-right {
+	float: right;
+ }
 
+/* Add a black background color to the top navigation */
+.topnav {
+	overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+	float: left;
+	color: #3C3838;
+	text-align: center;
+	padding: 20px 0;
+	text-decoration: none;
+	font-size: 17px;
+
+}
+
+.topnav input[type=text] {
+	float: right;
+	padding: 6px;
+	border: none;
+	margin-top: 8px;
+	margin-right: 16px;
+	font-size: 17px;
+  }
 
 /* COMPONENT CLASSES */
 
@@ -247,6 +288,8 @@ code {
 
 .main-image img {
 	width: 350px;
+	height: 400px;
+	object-fit: scale-down;
 	padding-left: 60px;
 
 }
@@ -273,8 +316,8 @@ code {
 
 .transparent {
 	background-color: inherit;
-    color: var(--color-neutral-medium);
-    padding-top: 0;
+	color: var(--color-neutral-medium);
+	padding-top: 0;
 }
 
 .card>:first-child {
@@ -359,7 +402,9 @@ code {
 }
 
 
-
+.flex-none {
+    flex: none;
+}
 
 
 /* FORMS */
@@ -407,8 +452,7 @@ code {
 .form-button:hover {
 	text-decoration: none;
 }
-
-
+ 
 .hotdog {
 	display: inline-block;
 	width: 100%;

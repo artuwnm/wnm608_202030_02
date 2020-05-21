@@ -1,7 +1,7 @@
   <?php
 
   include_once "lib/php/functions.php";
-   
+
   ?>
 
   <!DOCTYPE html>
@@ -23,52 +23,39 @@
 
 
 
-
-    <div class="container">
-      <div class="nav-crumbs uppercase margin-top-2">
-        <ul>
-          <li><a href="index.php">Home</a></li>
-          <li><a href="product_list.php">Products</a></li>
-          <li><a href="product_item.php">Hand Soaps
-            </a></li>
-        </ul>
-      </div>
-    </div>
-
     <div class="container">
       <div class="card">
         <h2>All Hand Soaps</h2>
-         
-        
-        <div class="form-control">
-			<form class="hotdog light" id="product-search">
-				<input type="search" class="search" placeholder="Search Products">
-			</form>
-		</div>
-		<div class="form-control display-flex">
-			<div class="flex-none">
-				<button type="button" class="form-button js-filter" data-column="category" data-value="">All</button>
-			</div>
-			<div class="flex-none">
-				<button type="button" class="form-button js-filter" data-column="category" data-value="Handmade Soap">Handmade Soap</button>
-			</div>
-			<div class="flex-none">
-				<button type="button" class="form-button js-filter" data-column="category" data-value="Hand Wash">Hand Wash</button>
-			</div>
-        </div>
-        <div class="form-control">
-			<!-- .form-select>select>option -->
-			<div class="form-select">
-				<select class="js-sort">
-					<option value="1">Newest</option>
-					<option value="2">Oldest</option>
-					<option value="3">Most Expensive</option>
-					<option value="4">Least Expensive</option>
-				</select>
-			</div>
-		</div>
 
-		<div class="grid gap productlist"></div>
+
+        <div class="row">
+          <div class="dropdown">
+            <button class="dropbtn">Categories</button>
+            <div class="dropdown-content">
+              <a href="#" class="form-button js-filter" data-column="category" data-value="">All</a>
+              <a href="#" class="form-button js-filter" data-column="category" data-value="Handmade Soap">Handmade Soap</a>
+              <a href="#" class="form-button js-filter" data-column="category" data-value="Hand Wash">Hand Wash</a>
+              <a href="#" class="form-button js-filter" data-column="category" data-value="Candles">Candles</a>
+            </div>
+          </div>
+       
+          <div class="form-control">
+            <!-- .form-select>select>option -->
+            <div class="form-select">
+              <strong>Sort by</strong>
+              <select class="js-sort">
+                <option value="1">Newest</option>
+                <option value="2">Oldest</option>
+                <option value="3">High Price</option>
+                <option value="4">Low Price</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        </br>
+
+
+        <div class="grid gap productlist"></div>
       </div>
     </div>
 

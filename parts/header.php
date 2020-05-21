@@ -1,16 +1,16 @@
-<div class="top-nav container">
-	<ul class="ctas display-flex">
-		<li class="search">
-			<a href="#" class="search-icon">
-				<img src="img/search.png" width="40px" height="40px" alt="Search">
-			</a>
-		</li>
-		<li>
-			<a href="product_cart.php" class="bag-icon">
-				<img src="img/bag.png" width="40px" height="40px" alt="Cart">
-			</a>
-		</li>
-	</ul>
+
+
+
+<div class="topnav nav-container">
+ 	<a href="admin/">Admin Panel</a>
+ 	<div class="topnav-right">
+		<a href="#" class="search-icon">
+			<img src="img/search.png" width="40px" height="40px" alt="Search">
+		</a>
+		<a href="product_cart.php" class="bag-icon">
+			<img src="img/bag.png" width="40px" height="40px" alt="Cart">
+		</a>
+	</div>
 </div>
 
 <header class="header">

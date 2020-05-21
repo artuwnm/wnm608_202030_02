@@ -9,10 +9,13 @@ const makeProductList = templater(o=>{
                 </div>
                 <figcaption class="product-description">
                     <div class="product-price">&dollar;${o.price.toFixed(2)}</div>
-                    <div class="product-title">${o.name}</div>
+                    <div class="product-name">${o.name}</div>
                 </figcaption>
             </figure>
         </a>
     </div>
     `;
     })
+
+
+    

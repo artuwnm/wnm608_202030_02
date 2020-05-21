@@ -70,14 +70,7 @@ $thumbs = explode(",", $o->images);
 						</h3>
 
 
-						<div class="form-input">
-							<label class="form-label">Color:</label>
-							<select name="color" class="dropdown-selection display-block ">
-								<option data-value="white">white</option>
-								<option data-value="beige">beige</option>
-
-							</select>
-						</div>
+					 
 
 						<div class="form-input">
 							<label class="form-label">Quantity:</label>
