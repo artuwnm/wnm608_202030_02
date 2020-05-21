@@ -30,18 +30,7 @@ $thumbs = explode(",", $o->images);
 
 	<?php include "parts/header.php" ?>
 
-
-
-	<div class="container">
-		<div class="nav-crumbs uppercase margin-top-2">
-			<ul>
-				<li><a href="index.php">Home</a></li>
-				<li><a href="product_list.php">Products</a></li>
-				<li><a href="product_item.php?id=10">Hand Soaps
-					</a></li>
-			</ul>
-		</div>
-	</div>
+ 
 	<div class="container">
 
 		<div class="card transparent">
