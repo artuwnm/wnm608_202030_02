@@ -37,6 +37,7 @@ $o = getRows(makeConn(),"SELECT * FROM `products` WHERE `id`={$_GET['id']}")[0];
     <li><a href="product_list.php">Store</a></li>
     <li><a href="about.php">About</a></li>
     <li class="active"><a href="product_cart.php">Cart</a></li>
+    <li><a href="admin/index.php">Admin</a></li>
   </ul>
 	</main>
 	<!-- <script src="js/index.js"></script> -->

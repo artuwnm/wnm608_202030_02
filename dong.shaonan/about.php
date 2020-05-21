@@ -28,52 +28,42 @@
     <li><a href="product_list.php">Store</a></li>
     <li class="active"><a href="about.php">About</a></li>
     <li><a href="product_cart.php">Cart</a></li>
+    <li><a href="admin/index.php">Admin</a></li>
   </ul>
 	</main>
-	<!-- <script src="js/index.js"></script> -->
-
 <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-6">
-                <img class="centered-child" src="images/camera.JPG" alt="Film Roll">
-            </div>
-            <div class="col-sm-12 col-md-6">
-                <div class="gridcontetnt">
-                    <h2 class="specialfont">Call Us: <br>123-042-1900</h2>
-                    <br>
-                    <h2 class="specialfont">Email Us:<br>contact@shootfilmnmore.com</h2>
-                    <br>
-                    <h2 class="specialfont">Visit Us:<br>42 Lorem St, Ipsum City, Earth</h2>
-                </div>
-            </div>
+    <div class="card soft">
+            <div class="card grid gap">
+          <div class="col-lg-6 col-sm-12">
+            <img src="images/about.jpg" class="photo">
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <div class="contact">
+            <h3>Why we use filmroll?</h3>
+            <p>Fast forward to today and we’re not only making fewer albums, we’re taking more photographs to get that perfect shot. </p>
+            <p>Even our smartphones are littered with countless portraits of our children, nieces and nephews, because the photo before could have been just a little bit better.</p>
+
+            <p>Back in the day of film photography we didn’t worry about that, and those photo albums that we look back on are still as perfect today as when our parents first stuck them down.</p>
+            <p><strong>Info</strong></p>
+            <p>Tel: 415-920-3818</p>
+
+            <p>Email: contacts@rollix.com</p>
+
+            
+          </div>
         </div>
     </div>
+  </div>
 
-<!--END_CONTACT INFO -->
-<br>
-    <div class="view-window" style="background-image:url(images/bck01.png)">
-        <p class="specialfont colorfont">Stay in Touch with Us</p>
-    </div>
-    <br>
-<!-- Product Recommends -->
-<br>
+</div>
 
-<!--END_Product Recommends -->
-
-
-<!-- Footer -->
-  
-
-
-<!-- Java Script
-================================================== -->
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/main.js"></script>
 
 </body>
 </html>
 
-			<h2>About Us</h2>
+			
 		
 		</div>
 	</div>

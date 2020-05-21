@@ -66,10 +66,11 @@ body{
 }
 .footer {
   background-color: #6BB7B9
-  height: 200px;
+  height: 50px;
+  
   width: 100%;
   position: relative;
-  margin-top: 100px;
+  margin-top: 0px;
   margin-left: 0;
   left: 0;
   bottom: 0;
@@ -80,6 +81,7 @@ body{
   display: flex;
   justify-content: space-around;
 }
+
 .logo{
   display: flex;
 }
@@ -139,8 +141,8 @@ li a:hover:not(.active) {
 }
 /* The dots/bullets/indicators */
 .dot{
-  cursor: pointer;
-  height: 15px;
+  /*cursor: pointer;
+*/  height: 15px;
   width: 15px;
   margin: 0 2px;
   background-color: #bbb;
@@ -398,13 +400,15 @@ img {
     float: right;
 }
 h3{
-  font-size: 60px;
+  font-size: 40px;
   word-break: break-all;
-  padding-left: 250px;
+  /*padding-left: 250px;*/
   font-family: rubik;
   color:#889DE0;
 }
-
+.contact{
+  padding:10px 10px 10px 10px;
+}
 .h7{
   text-align: center;
 }
@@ -421,7 +425,7 @@ p{
     float: left;
     font-family: rubik;
 }
-/*for artwork page*/
+
  .maininfo {
             width:900px;
             margin-left:auto;

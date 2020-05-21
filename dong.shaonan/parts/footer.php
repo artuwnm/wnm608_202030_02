@@ -31,6 +31,7 @@
             <div><a href="product_list.php">STORE</a></div>
             <div><a href="about.php">ABOUT</a></div>
             <div><a href="product_cart.php">CART</a></div>
+            <div><a href="admin/index.php">ADMIN</a></div>
         </div> 
         
         <div>    

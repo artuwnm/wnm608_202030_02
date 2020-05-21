@@ -22,6 +22,7 @@
     <li><a href="product_list.php">Store</a></li>
     <li><a href="about.php">About</a></li>
     <li><a href="product_cart.php">Cart</a></li>
+    <li><a href="admin/index.php">Admin</a></li>
   </ul>
 </main>
 <div class="slideshow-container">

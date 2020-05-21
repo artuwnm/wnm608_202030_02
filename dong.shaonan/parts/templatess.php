@@ -28,7 +28,7 @@ $selectAmount = selectAmount($o->amount);
 return $r.<<<HTML
 <div class="display-flex card-section">
 	<div class="flex-none product-thumbs">
-		<img src="$o->thumbnail">
+	<img src="$o->thumbnail">
 	</div>
 	<div class="flex-stretch">
 		<div class="display-flex">
@@ -138,7 +138,7 @@ return $r.<<<HTML
 		<div><strong>$o->name</strong></div>
 		<div><span>$o->category</span></div>
 	</div>
-	<div class="flex-none">
+	<div class="flex-none display-flex">
 		<div><a href="admin/index.php?id=$o->id" class="form-button">Edit</a></div>
 		<div><a href="product_item.php?id=$o->id" class="form-button">Visit</a></div>
 	</div>
@@ -154,6 +154,7 @@ function productList($rows) {
 	$products = array_reduce($rows,'productListTemplate');
 	echo "<div class='grid gap productlist'>$products</div>";
 }
+
 
 function recommendedCategory($cat,$limit=3) {
 	$sql = "SELECT * FROM `products` WHERE `category`='$cat' ORDER BY `date_create` DESC LIMIT $limit";
