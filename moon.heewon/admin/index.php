@@ -64,7 +64,7 @@ switch(@$_GET['action']) {
 			`date_modify`
 		)
 		VALUES
-		(?,?,?,?,?,?,NOW(),NOW())
+		(?,?,?,?,?,?,?,NOW(),NOW())
 		");
 		$statement->execute([
 			$_POST["product-name"],

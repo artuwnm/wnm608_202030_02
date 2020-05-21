@@ -57,7 +57,7 @@
 	<div class="grid gap">
 		<div class="col-lg-4 col-sm-12 info flex-align-center text-align-center">
 			<div>
-				<img src="img/yoga.png" style="height:50vh">
+				<img src="img/yoga.png" style="height:40vh">
 			</div>	
 				<h3>Yoga Lesson</h3>
 				<p>$50 / 1hr</p>
@@ -67,7 +67,7 @@
 
 		<div class="col-lg-4 col-sm-12 info flex-align-center text-align-center">
 			<div>
-				<img src="img/flower.png" style="height:50vh">
+				<img src="img/flower.png" style="height:40vh">
 			</div>	
 				<h3>Flower Arrangement</h3>
 				<p>$40 / bundle</p>
@@ -78,7 +78,7 @@
 
 		<div class="col-lg-4 col-sm-12 info flex-align-center text-align-center">
 			<div>
-				<img src="img/sing.png" style="height:50vh">
+				<img src="img/sing.png" style="height:40vh">
 			</div>	
 				<h3>Singing Lesson</h3>
 				<p>$80 / 1hr</p>

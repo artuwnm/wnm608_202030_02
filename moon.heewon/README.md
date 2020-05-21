@@ -6,6 +6,7 @@
 - http://moonmoon94.com/aau/wnm608_02/moon.heewon/recipes
 - http://moonmoon94.com/aau/wnm608_02/moon.heewon/styleguide
 - http://moonmoon94.com/aau/wnm608_02/moon.heewon/admin/users.php
+- http://moonmoon94.com/aau/wnm608_02/moon.heewon/admin/index.php
 
 ## Git
 - git status
