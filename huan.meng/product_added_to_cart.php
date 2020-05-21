@@ -11,7 +11,7 @@ $o = getRows(makeConn(),"SELECT * FROM `products` WHERE `id`={$_GET['id']}")[0];
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Product Added To Cart</title>
+  <title>Store: Product Added To Cart</title>
 
   <?php include "parts/meta.php" ?>
 
@@ -24,9 +24,8 @@ $o = getRows(makeConn(),"SELECT * FROM `products` WHERE `id`={$_GET['id']}")[0];
     <div class="card soft flat">
       <div class="card-section">
         <h2>Cart Confirmation</h2>
-        
         <div>
-          Thank you for adding <?= $p->amount ?> of the <?= $o->title ?> to the cart.
+          Thank you for adding <?= $p->amount ?> of the <?= $o->name ?> to the cart.
         </div>
       </div>
 
@@ -43,6 +42,9 @@ $o = getRows(makeConn(),"SELECT * FROM `products` WHERE `id`={$_GET['id']}")[0];
       </div>
     </div>
   </div>
+  <footer>
+    <?php include "parts/footer.php" ?>
+  </footer>
   
 </body>
 </html>

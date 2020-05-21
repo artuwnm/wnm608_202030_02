@@ -22,6 +22,11 @@ $thumbs = explode(",", $o->images);
 	<title>Store: Product Item</title>
 
 	<?php include "parts/meta.php" ?>
+	<script src="lib/js/functions.js"></script>
+	<script src="js/templates.js"></script>
+	<script src="js/list.js"></script>
+	<script src="js/products.js"></script>
+
 
 </head>
 <body>
@@ -72,12 +77,12 @@ $thumbs = explode(",", $o->images);
 							<option>5</option>
 						</select>
 					</div>
-
 					<div class="card-section">
-						<input type="hidden" name="action" value="add-to-cart">
-						<input type="hidden" name="id" value="<?= $o->id ?>">
-						<input type="hidden" name="price" value="<?= $o->price ?>">
-						<input type="submit" class="form-button" value="Add To Cart">
+							<input type="hidden" name="action" value="add-to-cart">
+							<input type="hidden" name="id" value="<?= $o->id ?>">
+							&dollar;<?= $o->price ?>
+							<input type="hidden" name="price" value="<?= $o->price ?>">
+							<input type="submit" class="form-button" value="Add To Cart">
 					</div>
 				</form>
 			</div>

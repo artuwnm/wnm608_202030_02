@@ -95,9 +95,9 @@ function getCartItems() {
 
 	$ids = empty($cart) ? 0 : implode(",",array_map(function($o){return $o->id;},$cart));
 	$sql = "SELECT *
-		FROM `products`
-		WHERE `id` IN ($ids)
-		";
+			FROM `products`
+			WHERE `id` IN ($ids)
+			";
 
 	$database_result = getRows(
 		makeConn(),

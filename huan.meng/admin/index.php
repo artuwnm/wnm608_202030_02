@@ -171,7 +171,7 @@ echo <<<HTML
 		</div>
 		<div class="form-control">
 			<label for="product-description" class="form-label">Description</label>
-			<textarea class="form-input" placeholder="A Product Description" id="product-description" name="product-description">$o->description</textarea>
+			<textarea class="form-input" placeholder="A Product Description" id="product-description" name="product-description" value="$o->description"> </textarea>
 		</div>
 		<div class="form-control">
 			<label for="product-thumbnail" class="form-label">Thumbnail</label>
@@ -239,7 +239,7 @@ HTML;
 
 		?>
 		<div class="card soft">
-		<h2>User List</h2>
+		<h2>Product List</h2>
 
 		<div class="itemlist">
 		<?php

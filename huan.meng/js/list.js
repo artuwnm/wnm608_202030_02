@@ -39,7 +39,7 @@ $(()=>{
 	});
 
 
-	$(".js-sort").on("click",function(e){
+	$(".js-sort").on("change",function(e){
 		getData(
 			$(this).data("value")==1 ?
 				{type:'product_sort',column:'date_create',dir:'DESC'} :

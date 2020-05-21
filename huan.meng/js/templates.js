@@ -1,3 +1,5 @@
+
+
 // javascript backtick templates
 const makeProductList = templater(o=>{
 return `
@@ -8,8 +10,8 @@ return `
 				<img src="../huan.meng/${o.thumbnail}" alt="">
 			</div>
 			<figcaption class="product-description">
-				<div class="product-price">&dollar;${o.price}</div>
-				<div class="product-title">${o.name}</div>
+				<div class="product-name">${o.name}</div>
+				<div class="product-price">&dollar;${o.price.toFixed(2)}</div>
 			</figcaption>
 		</figure>
 	</a>

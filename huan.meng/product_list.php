@@ -1,7 +1,6 @@
 <?php
 
 include_once "lib/php/functions.php";
-include_once"parts/templates.php";
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -25,7 +24,7 @@ include_once"parts/templates.php";
 		<div class="card soft">
 			<div class="product_list_title">
 				<h2>Product List</h2>
-				The wonderland handmade ice cream store have different kinds of ice cream. We are looking forward you with the best ice cream! Welcome to consult us!<p>
+					<p>The wonderland handmade ice cream store have different kinds of ice cream. We are looking forward you with the best ice cream! Welcome to consult us!</p>
 			</div>
 
 			<div class="form-control">
@@ -33,31 +32,34 @@ include_once"parts/templates.php";
 					<input type="search" class="search" placeholder="Search Products">
 				</form>
 			</div>
-
-			<div class="form-control display-flex filter-bar">
-				<div class="flex-none filter-item">
-					<p class="filter-text">Sort by</p>
-					<p class="filter-text num-sort-item"></p>
-				</div>
-				<div class="filter-item">
-					<button type="button" class="filter-button form-button js-sort" data-value=1>Newest</button>
-				</div>
-				<div class="filter-item">
-					<button type="button" class="filter-button form-button js-sort" data-value=2>Oldest</button>
-				</div>
-				<div class="filter-item">
-					<button type="button" class="filter-button form-button js-sort" data-value=3>
-					Most Expensive</button>
-				</div>
-				<div class="filter-item">
-					<button type="button" class="filter-button form-button js-sort" data-value=4>Least Expensive</button>
-				</div>
+		 <div class="form-control display-flex">
+			<div class="flex-none">
+				<button type="button" class="form-button js-filter" data-column="category" data-value="">All</button>
 			</div>
-			<a href="../huan.meng/admin/index.php">Product Admain</a>
-			
-			<div class="grid gap productlist"></div>
+			<div class="flex-none">
+				<button type="button" class="form-button js-filter" data-column="category" data-value="Ice cream cup">Ice Cream Cup</button>
+			</div>
+			<div class="flex-none">
+				<button type="button" class="form-button js-filter" data-column="category" data-value="Birthday ice cream">Birthday ice cream</button>
+			</div>
+			<div class="flex-none">
+				<button type="button" class="form-button js-filter" data-column="category" data-value="Ice cream set">Ice cream set</button>
+			</div>
 		</div>
-	</div>
+
+		<div class="form-control display-flex">
+			<div class="form-select">
+				<select class="form-button js-filter">
+					<option data-value="Ice cream cup">Newest</option>
+					<option data-value="Ice cream collaction">Oldest</option>
+					<option data-value="Birthdat Ice Cream Cakes">Most Expensive</option>
+					<option data-value="Ice cream cup">Least Expensive</option>
+				</select>
+			</div>
+		</div>
+	</div>		
+	<div class="grid gap productlist"></div>
+</div>
 <footer>
 	<?php include "parts/footer.php" ?>
 </footer>

@@ -195,75 +195,6 @@ parts
 	background-color: rgba(0,0,0,0);
 	cursor:pointer;
 }
-/*.checkout-button {
-	box-sizing: border-box;
-	margin:0 auto;
-	background-color: red;
-	color:#ffffff;
-	font-family: "Avenir",sans-serif;
-	font-weight:300;
-	font-size:1em;
-	text-align: center;
-	text-decoration: none;
-	padding-left:10px;
-	padding-right:10px;
-	width:auto;
-	height:40px;
-	border-radius: 24px;
-	border: 2px solid #1D3D36;
-	cursor:pointer;
-}*/
-.qty-input {
-	height:24px;
-}
-
-.qty-input i {
-	height:24px;
-	line-height: 24px;
-}
-
-.qty-input input {
-	font-size: 0.8em;
- 	height: 24px;
- 	width: 36px;
-}
-
-}
-.qty-input {
-	height: 32px;
-	position: relative;
- 	width: 122px;
- 	border-radius: 24px;
- 	margin-bottom: 10px;
-}
-
-.qty-input i {
- 	cursor: pointer;
- 	font-family: "Avenir", sans-serif;
-	font-weight: 500;
-	font-size:0.8em;
- 	height: 32px;
- 	line-height: 32px;
- 	text-align: center;
- 	-webkit-user-select: none;
- 	    -moz-user-select: none;
- 		    -ms-user-select: none;
-         	    user-select: none;
-  	transition: all 150ms ease-out;
- 	width: 33px;
-}
-.qty-input i:active {
-  	background-color: #F1F1F1;
-  	transition: none;
-}
-.qty-input input {
- 	border: 0px solid;
- 	font-size: 1em;
- 	height: 30px;
- 	text-align: center;
- 	outline: none;
- 	width: 54px;
-}
 
 /*Krisky's Button*/
 .product-check{
@@ -294,10 +225,6 @@ parts
     cursor: pointer;
     transition:all 0.2s;
 }
-/*.cart-button-wishlist label:hover,
-.cart-button label:hover {
-	box-shadow:1px 1px 5px rgba(0,0,0,0.25);
-}*/
 
 .cart-button-wishlist,
 .cart-button{
@@ -520,7 +447,6 @@ header p {
 /*
 Get inspirations from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav
 */
-
 .icon {
 	display: none;
 }
@@ -531,19 +457,28 @@ Get inspirations from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_
 	margin-left: -40px;
 }
 
-/*.navbar {
-	background-color:var(--color-neutral-dark);
-	color:var(--color-neutral-light);
-	line-height: var(--header-height);
+@media screen and (max-width: 600px) {
+	.nav a {
+		display: none;
+	}
+	a.icon {
+		float: right;
+		display: block;
+		position: absolute;
+		right: 40px;
+		top: 60px;
+	}
+	#top-nav {
+		display: block;
+	}
+	#nav-bar {
+		display: block;
+	}
+	#cart {
+		margin-left: 0;
+	}
 }
-.navbar h1 {
-	margin:0;
-	font-size:1em;
-}
-.navbar a {
-	padding:0 1em;
-}
-*/
+
 
 .nav-material ul,
 .nav-crumbs ul,

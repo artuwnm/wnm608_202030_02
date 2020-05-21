@@ -276,7 +276,10 @@ h3{
 	border-radius:0.5em;
 }
 
-
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  width: 100%;
+}
 @media (max-width:1000px) {
 	.navbar .display-flex {
 		display:block;
@@ -287,15 +290,3 @@ h3{
 		font-size:1.25em;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-

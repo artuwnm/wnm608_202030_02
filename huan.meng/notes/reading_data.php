@@ -2,13 +2,6 @@
 
 include "../lib/php/functions.php";
 
-// $filename = "notes.json";
-// $file = file_get_contents($filename);
-// $notes = json_decode($file);
-
-// $filename = "../data/users.json";
-// $file = file_get_contents($filename);
-// $users = json_decode($file);
 
 $notes = getData("notes.json");
 $users = getData("../data/users.json");
