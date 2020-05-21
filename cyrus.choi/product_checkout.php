@@ -1,3 +1,15 @@
+<?php
+
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+
+$result = getCartItems();
+
+// print_p($result);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,15 +89,20 @@
 			</div>
 			<div class="col-xs-12 col-md-4">
 				<div class="card soft">
-					
+					<?= cartTotals(); ?>
 					<div>
-						<a href="product_confirmation.php" class="form-button">Complete Payment</a>
+						<a href="product_confirmation.php">
+						<button type="button" class="form-button">Complete Payment</a>
+						</button>
 					</div>
 				</div>
 			</div>
 		</div>
 		
 	</div>
-	
+  <div class="main_title">
+      <h3>©2020 Cyrus Choi All Rights Reserved</h3>
+  </div>
+   	
 </body>
 </html>

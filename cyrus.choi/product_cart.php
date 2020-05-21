@@ -39,12 +39,17 @@ $result = getCartItems();
 				<div class="card flat">
 					<?= cartTotals(); ?>
 					<div class="card-section">
-						<a href="product_checkout.php" class="form-button">Checkout</a>
+						<a href="product_checkout.php">
+						<button type="button" class="form-button">Checkout</a>
+						</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
+  <div class="main_title">
+      <h3>©2020 Cyrus Choi All Rights Reserved</h3>
+  </div>
+   	
 </body>
 </html>

@@ -58,6 +58,30 @@ return $r.<<<HTML
 HTML;
 }
 
+function cartListCompleteTemplate($r,$o) {
+// $hascase = rand(0,1) ? "case: big" : "";
+// $amount = rand(1,5);
+$pricefixed = number_format($o->total,2,'.','');
+$selectAmount = selectAmount($o->amount);
+return $r.<<<HTML
+<div class="display-flex card-section">
+	<div class="flex-none product-thumbs">
+		<img src="$o->thumbnail">
+	</div>
+	<div class="flex-stretch">
+		<div class="display-flex">
+			<div class="flex-stretch">
+				<strong>$o->name ($o->amount)</strong>
+			</div>
+			<div class="flex-none">
+				&dollar;$pricefixed
+			</div>
+		</div>
+	</div>
+</div>
+HTML;
+}
+
 
 
 function selectAmount($amount=1,$total=10) {
@@ -124,6 +148,8 @@ function makeCartBadge() {
 	} else return "(".array_reduce($_SESSION['cart'],function($r,$o){ return $r + $o->amount; },0).")";
 }
 
+
+
 function makeListItemTemplate($r,$o) {
 return $r.<<<HTML
 <div class="itemlist-item display-flex">
@@ -132,17 +158,50 @@ return $r.<<<HTML
 			<img src="$o->thumbnail">
 		</div>
 	</div>
-	<div class="flex-stretch">
+	<div class="flex-stretch text-alight">
 		<div><strong>$o->name</strong></div>
 		<div><span>$o->category</span></div>
 	</div>
 	<div class="flex-none display-flex">
-		<div><a href="admin/?id=$o->id" class="form-button">Edit</a></div>
-		<div><a href="product_item.php?id=$o->id" class="form-button">Visit</a></div>
+	  <div style="margin-right: 0.5rem;">
+	  <a href="admin/?id=$o->id"><button type="button" class="form-button">Edit</a></button></div>
+		<div><a href="product_item.php?id=$o->id"><button type="button" class="form-button">Visit</a></button></div>
+
 	</div>
+ 
+
 </div>
 HTML;
 }
+
+
+/*function makeListItemTemplate($r,$o) {
+return $r.<<<HTML
+ <div class="col-xs-6 col-md-4">
+		<figure class="product-figure soft">
+			<div class="product-image">
+				<img src="$o->thumbnail" alt="">
+			</div>
+			<figcaption class="product-description">
+			    <div class="product-title"><strong>$o->name</strong></div>
+				<div class="product-price"><span>$o->category</span></div>
+				
+			</figcaption>
+		</figure>
+	</a>
+ </div>
+
+		<div class="form-control display-flex">
+			<div class="flex-none">
+				<a href="admin/?id=$o->id"><button type="button">Edit</button></a>
+			</div>
+			<div class="flex-none">
+				<a href="product_item.php?id=$o->id"><button type="button">Visit</button></a>
+			</div>			
+		</div>
+HTML;
+}
+*/
 
 
 

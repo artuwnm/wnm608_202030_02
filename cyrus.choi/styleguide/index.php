@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -304,15 +306,6 @@
 				<div class="card soft">
 					<div class="product-main">
 						<img src="https://via.placeholder.com/300" alt="">
-					</div>
-					<div class="product-thumbs">
-					<?php
-
-					echo array_reduce($thumbs,function($r,$o){
-						return $r."<img src='$o'>";
-					})
-
-					?>
 					</div>
 				</div>
 			</div>

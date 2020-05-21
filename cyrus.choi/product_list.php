@@ -1,11 +1,11 @@
 <?php
 
 include_once "lib/php/functions.php";
+include_once "parts/templates.php";
 
+?>
 
-
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Store: Product List</title>
@@ -22,9 +22,14 @@ include_once "lib/php/functions.php";
 
 	<?php include "parts/navbar.php" ?>
 
+<div class="main_title">
+<h2>Product List</h2>
+</div>
+<hr width="50%">
+<br>
+
 
 	<div class="container">
-		<h2>Product List</h2>
 
 		<div class="form-control">
 			<form class="hotdog light" id="product-search">
@@ -56,12 +61,13 @@ include_once "lib/php/functions.php";
 				</select>
 			</div>
 		</div>
+   </div>
 
+
+   <div class="container"> 
 		<div class="grid gap productlist"></div>
+   </div>
 
-		<div><a href="admin">Product Admin</a></div>
-	</div>
-	
 
 	      <hr width="50%">
 <br>

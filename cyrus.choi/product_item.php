@@ -89,6 +89,9 @@ $thumbs = explode(",", $o->images);
 			</div>
 		</div>
 	</div>
-	
+  <div class="main_title">
+      <h3>©2020 Cyrus Choi All Rights Reserved</h3>
+  </div>
+   	
 </body>
 </html>

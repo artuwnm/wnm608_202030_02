@@ -161,10 +161,12 @@ code {
 .display-inline-block { display:inline-block; }
 
 .flex-stretch { flex: 1 1 auto; }
-.flex-none { flex: none; }
+.flex-none { flex: none; 
+             margin-right: 0.5em;}
 
 .flex-align-center { align-items:center; }
 .flex-justify-center { justify-content:center; }
+.flex-direction-column{flex-direction: column;}
 
 
 
@@ -239,35 +241,6 @@ code {
 		border-radius:2em;
 		padding:0.5em 1em;
 	}
-	
-
-	.nav-crumbs li:not(:first-child)::before {
-		content:'/';
-		margin:0 0.5em;
-	}
-
-
-	.nav-material a {
-		position:relative;
-		line-height:var(--header-height);
-	}
-	.nav-material a:hover {
-		background-color:var(--color-neutral-light);
-	}
-	.nav-material a::after {
-		content:'';
-		position:absolute;
-		bottom:0;
-		left:0;
-		width:100%;
-		height:0;
-		background-color:var(--color-main-medium);
-		transition:all 0.3s;
-	}
-	.nav-material li.active a::after {
-		height:3px;
-	}
-
 
 
 
@@ -282,10 +255,7 @@ code {
 }
 
 	.card>:first-child { margin-top:0; }
-	.card>:last-child { margin-bottom:0; 
-		                margin-left: 2em;
-		                margin-right: 2em;
-		            }
+
 
 	.card.soft {
     	box-shadow: 4px 4px 10px 10px rgba(39,43,38,0.1);
@@ -403,7 +373,8 @@ code {
 }
 .form-label {
     display: block;
-    font-size: 0.7em;
+    font-family: 'Raleway', sans-serif;
+	font-size: 20px;
     margin: 0.2em 0;
     color: var(--color-neutral-medium);
 }
@@ -411,7 +382,7 @@ code {
     display: inline-block;
     width: 100%;
     border-width: 0;
-    background-color: var(--color-neutral-light);
+    background-color:#ffffff;
     padding: 0.5em 1em;
     color: inherit;
     font: inherit;
@@ -424,6 +395,8 @@ code {
 }
 .form-button:hover {
     text-decoration: none;
+    background-color: #e01f3cff;
+	color:white;
 }
 .form-button:active {
     background-color:var(--color-main-light);
@@ -431,6 +404,7 @@ code {
 
 .form-select {
     position: relative;
+
 }
 .form-select::after {
     content: '▼';
@@ -470,6 +444,8 @@ code {
 
 .hotdog.light {
 		background-color:white;
+        border-radius: 0.3em;
+        border:0.5px solid #c5cbc3;
 }
 
 
@@ -545,8 +521,4 @@ code {
 	}
 }
 @media (max-width: 500px) {
-  .flex-container > div {
-  	flex: 100%;
-   	max-width: 100%;
-	}
-}
+.display-flex { display:block; }

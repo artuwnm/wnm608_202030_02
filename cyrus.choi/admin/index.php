@@ -221,7 +221,7 @@ HTML;
 	<header class="navbar">
 		<div class="container display-flex">
 			<div class="flex-stretch">
-				<h1>Product Admin</h1>
+				
 			</div>
 			<nav class="nav flex-none">
 				<ul class="display-flex">
@@ -253,7 +253,7 @@ HTML;
 
 		?>
 		<div class="card soft">
-		<h2>User List</h2>
+		<h2>Product Admin</h2>
 		<p>Choose a product to edit, or click to view their individual pages.</p>
 
 		<div class="itemlist">
@@ -272,6 +272,9 @@ HTML;
 
 		?>
 	</div>
-	
+  <div class="main_title">
+      <h3>©2020 Cyrus Choi All Rights Reserved</h3>
+  </div>
+   	
 </body>
 </html>

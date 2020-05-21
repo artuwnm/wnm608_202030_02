@@ -9,11 +9,11 @@
 			<ul class="display-flex header">
 				<li><a href="index.php">Home</a></li>
 				<li><a href="product_list.php">Shop</a></li>
-				<li><a href="about.php">About</a></li>
 				<li><a href="product_cart.php">
 					<span>Cart</span>
 					<span class="badge"><?= makeCartBadge() ?></span>
 				</a></li>
+				<li><a href="admin">Product Admin</a></li>
 			</ul>
 		</nav>
 	</div>
