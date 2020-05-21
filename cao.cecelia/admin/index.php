@@ -145,11 +145,11 @@ echo <<<HTML
 
 	<div class="form-control display-flex" style="font-size:1em">
 		<div class="flex-none">
-		<a class="form-button" href="{$_SERVER['PHP_SELF']}">Back</a>
+		<a class="" href="{$_SERVER['PHP_SELF']}" >Back</a>
 		</div>
 		<div class="flex-stretch"></div>
 		<div class="flex-none">
-		<div class="form-button" style="list-style-type:none;">$deletebutton</div>
+		<div class="" style="list-style-type:none;" style="text-decoration: underline;">$deletebutton</div>
 		</div>
 		</div>
 	
