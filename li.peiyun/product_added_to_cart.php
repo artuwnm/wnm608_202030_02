@@ -22,26 +22,25 @@ $o = getRows(makeConn(),"SELECT * FROM `products` WHERE `id`={$_GET['id']}")[0];
 
 	<div class="added-container">
 	
-			<div class="card-section">
-				<h2>Cart Confirmation</h2>
-				
-				<div class="thankyou">
-					Thank you for adding <?= $o->product_name ?> to the cart.
+			<div class="card-shadow card-round">
+				<div class="message">
+					<h2>Item has been added to cart</h2>
+					<h5>Thank you for adding <?= $o->product_name ?> to the cart.</h5>
 				</div>
-			</div>
+			
 
-			<div class="card-section">
+			<div>
 				<div class="display-flex">
 					<div class="flex-none">
-						<a href="product_list.php" class="btn-plain">Back to Shopping</a>
+						<a href="product_list.php" class="added-btn-color">Back to Shopping</a>
 					</div>
 					<div class="flex-stretch"></div>
 					<div class="flex-none">
-						<a href="product_cart.php" class="btn-color">Go To Cart</a>
+						<a href="product_cart.php" class="added-btn-fill">Go To Cart</a>
 					</div>
 				</div>
 			</div>
-		
+		</div>
 	</div>
 	
 </body>

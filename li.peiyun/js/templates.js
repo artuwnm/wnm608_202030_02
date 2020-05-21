@@ -1,7 +1,7 @@
 // javascript backtick templates
 const makeProductList = templater(o=>{
 return `
-<div class="col-3">
+<div class="col-xs-6 col-md-6 col-lg-3">
 <a href="product_item.php?id=${o.id}" class="display-block">
 				
 	<div class="img-change">

@@ -38,9 +38,9 @@ $(()=>{
 	$(".js-sort").on("change",function(e){
 		getData(
 			this.value==1 ?
-				{type:'product_sort',column:'date_create',dir:'DESC'} :
+				{type:'product_sort',column:'year_bought',dir:'DESC'} :
 			this.value==2 ?
-				{type:'product_sort',column:'date_create',dir:'ASC'} :
+				{type:'product_sort',column:'year_bought',dir:'ASC'} :
 			this.value==3 ?
 				{type:'product_sort',column:'price',dir:'DESC'} :
 			this.value==4 ?

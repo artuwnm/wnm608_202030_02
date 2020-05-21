@@ -28,14 +28,14 @@ $result = getCartItems();
 		</nav>
 
 		<div class="grid gap">
-			<div class="col-xs-12 col-md-9">
+			<div class="col-xs-12 col-lg-9">
 				<div>
 				<?php
 				echo array_reduce($result,'cartListTemplate');
 				?>
 				</div>
 			</div>
-			<div class="col-xs-12 col-md-3">
+			<div class="col-xs-12 col-lg-3">
 				<div>
 					<?= cartTotals(); ?>
 					

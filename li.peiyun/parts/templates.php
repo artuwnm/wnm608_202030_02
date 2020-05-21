@@ -3,7 +3,7 @@
 function productListTemplate($r,$o) {
 return $r.<<<HTML
 
-<div class="col-3">
+<div class="col-xs-6 col-md-4 col-lg-3">
 <a href="product_item.php?id=$o->id" class="display-block">
 				
 	<div class="img-change">
@@ -34,22 +34,14 @@ return $r.<<<HTML
 	<div class="cart-caption">
 		<div class="display-flex">
 			<div class="flex-stretch">
-				<strong>$o->product_name ($o->amount)</strong>
+				<h6>$o->product_name ($o->amount)</h6>
 			</div>
 			<div class="flex-none">
 				&dollar;$pricefixed
 			</div>
 		</div>
 
-		<div class="display-flex">
-		<div class="flex-stretch"></div>
-		<form class="flex-none" method="get" action="data/form_actions.php" onchange="this.submit()">
-				<input type="hidden" name="action" value="update-cart-amount">
-				<input type="hidden" name="id" value="$o->id">
-				$selectAmount
-			</form>
-		</div>
-
+		<div class="display-flex cart-interact">
 		<div class="display-flex">	
 			<form class="flex-none" method="get" action="data/form_actions.php">
 				<input type="hidden" name="action" value="delete-cart-item">
@@ -66,6 +58,15 @@ return $r.<<<HTML
 			<div class="flex-stretch"></div>
 
 		</div>
+		<div class="flex-stretch"></div>
+		<form class="flex-none" method="get" action="data/form_actions.php" onchange="this.submit()">
+				<input type="hidden" name="action" value="update-cart-amount">
+				<input type="hidden" name="id" value="$o->id">
+				$selectAmount
+		</form>
+		</div>
+
+		
 	</div>
 </div>
 HTML;
@@ -129,7 +130,7 @@ return <<<HTML
 	</div>
 </div>
 <div>
-	<a href="product_checkout.php" class="btn-color">Checkout</a>
+	<a href="product_checkout.php" class="btn-fill">Checkout</a>
 </div>
 </div>
 HTML;
@@ -147,19 +148,19 @@ function makeCartBadge() {
 
 function makeListItemTemplate($r,$o) {
 return $r.<<<HTML
-<div class="itemlist-item display-flex">
+<div class="admin-list display-flex">
 	<div class="flex-none">
 		<div class="cart-thumbs">
 			<img src="images/sm/$o->thumbnail_a">
 		</div>
 	</div>
-	<div class="flex-stretch">
+	<div class="admin-caption flex-stretch">
 		<div><strong>$o->product_name</strong></div>
-		<div><span>$o->category</span></div>
+		<div><span>$o->style</span></div>
 	</div>
 	<div class="flex-none">
-		<div><a href="admin/?id=$o->id" class="form-button">Edit</a></div>
-		<div><a href="product_item.php?id=$o->id" class="form-button">Visit</a></div>
+		<div><a href="admin/?id=$o->id" class="form-btn-md">Edit</a></div>
+		<div><a href="product_item.php?id=$o->id" class="form-btn-md">Visit</a></div>
 	</div>
 </div>
 HTML;

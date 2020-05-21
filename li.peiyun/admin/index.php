@@ -134,11 +134,11 @@ $images = array_reduce(explode(",",$o->images),function($r,$o){
 });
 
 $data_show = $id=='new' ? "" : <<<HTML
-<div class="card soft">
+<div class="admin-text">
 
-<div class="product-thumbs">$images</div>
+<div class="admin-img">$images</div>
 
-<h2>$o->product_name</h2>
+<h6>$o->product_name</h6>
 <div>
 	<strong>Category</strong>
 	<span>$o->category</span>
@@ -150,11 +150,11 @@ $data_show = $id=='new' ? "" : <<<HTML
 
 <div>
 	<strong>Style</strong>
-	<div>$o->style</div>
+	<span>$o->style</span>
 </div>
 <div>
 	<strong>Color</strong>
-	<div>$o->color</div>
+	<span>$o->color</span>
 </div>
 <div>
 	<strong>Amount</strong>
@@ -167,11 +167,11 @@ HTML;
 
 
 echo <<<HTML
-<div class="card soft">
-	<nav class="nav-pills">
+<div>
+	<nav class="admin-crumbs">
 		<ul>
-			<li class="flex-none"><a href="{$_SERVER['PHP_SELF']}">Back</a></li>
-			<li class="flex-stretch"></li>
+			<li><a href="{$_SERVER['PHP_SELF']}">Back</a></li>
+			<li></li>
 			$deletebutton
 		</ul>
 	</nav>
@@ -179,8 +179,8 @@ echo <<<HTML
 <div class="grid gap">
 	<div class="col-xs-12 col-md-5">$data_show</div>
 	<form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate" class="col-xs-12 col-md-7">
-		<div class="card soft">
-		<h2>$addoredit Product</h2>
+		<div>
+		<h3>$addoredit Product</h3>
 		<div class="form-control">
 			<label for="product-name" class="form-label">Name</label>
 			<input type="text" class="form-input" placeholder="A Product Name" id="product-name" name="product-name" value="$o->product_name">
@@ -193,10 +193,12 @@ echo <<<HTML
 			<label for="product-category" class="form-label">Category</label>
 			<input type="text" class="form-input" placeholder="A Product Category" id="product-category" name="product-category" value="$o->category">
 		</div>
+
 		<div class="form-control">
 			<label for="product-brand" class="form-label">Brand</label>
-			<textarea class="form-input" placeholder="Product Brand" id="product-brand" name="product-brand">$o->brand</textarea>
+			<input type="text" class="form-input" placeholder="Product Brand" id="product-brand" name="product-brand" value="$o->brand">
 		</div>
+		
 		<div class="form-control">
 			<label for="product-style" class="form-label">Style</label>
 			<input type="text" class="form-input" placeholder="Product Style" id="product-style" name="product-style" value="$o->style">
@@ -230,7 +232,7 @@ echo <<<HTML
 			<input type="number" class="form-input" placeholder="Product Amount" id="product-amount" name="product-amount" value="$o->amount">
 		</div>
 		<div class="form-control">
-			<input type="submit" value="Submit" class="form-button">
+			<input type="submit" value="Submit" class="form-btn-color">
 		</div>
 		</div>
 	</form>
@@ -249,22 +251,19 @@ HTML;
 </head>
 <body>
 
-	<header class="navbar">
-		<div class="container display-flex">
-			<div class="flex-stretch">
-				<h>Product Admin</h>
-			</div>
-			<nav class="nav flex-none">
-				<ul class="display-flex">
-					<li><a href="./">Store</a></li>
-					<li><a href="<?= $_SERVER['PHP_SELF'] ?>">Product List</a></li>
-					<li><a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">Add New Product</a></li>
-				</ul>
+	<header>
+			<div class="tnav-drop">
+				<div class="tnav-container">
+					
+					<a href="./">Store</a>
+					<a href="<?= $_SERVER['PHP_SELF'] ?>">Product List</a>
+					<a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">Add New Product</a>
+				</div>
 			</nav>
 		</div>
 	</header>
 
-	<div class="container">
+	<div class="admin-container">
 
 		<?php
 
@@ -283,8 +282,7 @@ HTML;
 
 
 		?>
-		<div class="card soft">
-		<p>Choose a product to edit, or click to view their individual pages.</p>
+		<div>
 
 		<div class="itemlist">
 		<?php

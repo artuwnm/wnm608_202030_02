@@ -7,15 +7,6 @@
     <span class="badge"><?= makeCartBadge() ?></span>
   </a>
   	<a href="about.php">About</a>
-  		<div class="tnav-dropdown">
-    		<button class="tnav-btn"><a href="product_list.php">Product</a></button>
-    			<div class="tnav-drop-content">
-      			<a href="product_list.php">Bags</a>
-      			<a href="product_list.php">Jewleries</a>
-      			<a href="product_list.php">Shoes</a>
-      			<a href="product_list.php">Toys</a>
-    	    </div>
-    </div>
-
+    <a href="product_list.php">Shop</a>
   </div>
 </div>

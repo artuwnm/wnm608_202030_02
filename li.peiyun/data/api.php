@@ -17,8 +17,8 @@ if(!isset($data->type)) {
 		$output['result'] = getRows(makeConn(),"SELECT
 			*
 			FROM `products`
-			ORDER BY `date_create` DESC
-			LIMIT 12
+			ORDER BY `price` ASC
+			LIMIT 16
 			");
 	break;
 
@@ -41,18 +41,19 @@ if(!isset($data->type)) {
 				`color` LIKE '%{$data->search}%' OR
 				`style` LIKE '%{$data->search}%' OR
 				`category` LIKE '%{$data->search}%'
-			ORDER BY `date_create` DESC
-			LIMIT 12
+			ORDER BY `price` ASC
+			LIMIT 16
 			");
 	break;
 
 	case "product_filter":
+	
 		$output['result'] = getRows(makeConn(),"SELECT
 			*
 			FROM `products`
 			WHERE `$data->column` = '$data->value'
-			ORDER BY `date_create` DESC
-			LIMIT 12
+			ORDER BY `price` ASC
+			LIMIT 16
 			");
 	break;
 
@@ -61,7 +62,7 @@ if(!isset($data->type)) {
 			*
 			FROM `products`
 			ORDER BY `$data->column` $data->dir
-			LIMIT 12
+			LIMIT 16
 			");
 	break;
 

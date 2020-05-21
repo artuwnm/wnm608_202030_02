@@ -39,7 +39,7 @@ $thumbs = explode(",", $o->images);
 
 	<div class="grid gap">
 		<!-- small product images-->
-		<div class="col-2">
+		<div class="col-xs-3 col-lg-2">
 			<div class="product-thumbs">
 				<?php
 
@@ -51,13 +51,13 @@ $thumbs = explode(",", $o->images);
 			</div>
 		</div>
 		<!-- large product image-->	
-		<div class="col-6">			
+		<div class="col-xs-9 col-lg-6">			
 			<div class="product-main">
 				<img src="images/sm/<?= $o->thumbnail_b ?>" alt="">
 			</div>						
 		</div>
 		<!-- text section-->
-		<div class="col-xs-12 col-md-4">
+		<div class="col-xs-12 col-lg-4">
 			<div class="product-about">
 				<div class="product-name"><?= $o->product_name ?></div>
 				<div class="product-description">
@@ -83,7 +83,7 @@ $thumbs = explode(",", $o->images);
 						<input type="hidden" name="action" value="add-to-cart">
 						<input type="hidden" name="id" value="<?= $o->id ?>">
 						<input type="hidden" name="price" value="<?= $o->price ?>">
-						<input type="submit" class="form-btn-color" value="Add To Cart">
+						<input type="submit" class="item-btn-color" value="Add To Cart">
 					
 				</form>
 			</div>

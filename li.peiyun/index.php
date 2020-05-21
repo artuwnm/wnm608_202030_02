@@ -19,11 +19,11 @@ include_once "parts/templates.php";
   <div class ="float-cart"><a href="product_cart.php"><img src="images/cart.png"></div></a>
 
 	<div class="grid">
-		<div class="col-6">
+		<div class="col-lg-6 col-xs-12">
 		<h1>Welcome to Vivi's Yard Sale</h1>
-		<h3>Shop bags, shoes Jewleries and More</h3>
+		<h3>Shop Vivi's bag collection!</h3>
 		</div>
-		<div class="col-5">
+		<div class="col-lg-5 col-xs-12">
 
 	<div class="slideshow-container">
   			<div class="mySlides fade">
@@ -51,6 +51,8 @@ include_once "parts/templates.php";
   			<span class="dot" onclick="currentSlide(3)"></span>
 			</div>
 		</div>
+
+    
 
 <script>let slideIndex = 1;
 showSlides(slideIndex);
