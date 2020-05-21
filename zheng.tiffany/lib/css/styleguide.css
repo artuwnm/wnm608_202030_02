@@ -734,6 +734,7 @@ thead, tbody {
 	outline: 0;
 	padding: 0.3em 0.8em 0.25em;
 	border-radius: 0.5em;
+	border-width: 0.05em;
 }
 
 .form-label {
