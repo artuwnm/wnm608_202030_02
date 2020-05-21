@@ -114,14 +114,14 @@ function makeProductForm($o)
 
 
     $images = array_reduce(explode(",", $o->images), function ($r, $o) {
-        return $r . "<img src='/wnm608_202030_02/img/products/$o'>";
+        return $r . "<img src='../img/products/$o'>";
     });
 
     $data_show = $id == 'new' ? "" : <<<HTML
 <div class="card soft">
 
 <div class="product-main">
-	<img src="/wnm608_202030_02/img/products/$o->thumbnail" alt="">
+	<img src="../img/products/$o->thumbnail" alt="">
 </div>
 <div class="product-thumbs">$images</div>
 
@@ -183,7 +183,7 @@ echo <<<HTML
 			<input type="number" class="form-input" placeholder="A Product Quantity" id="product-quantity" name="product-quantity" value="$o->quantity">
 		</div>
 		<div class="form-control">
-			<input type="submit" value="Submit" class="form-button">
+			<input type="submit" value="Submit" class="site-button">
 		</div>
 		</div>
 	</form>

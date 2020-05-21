@@ -24,7 +24,8 @@
 		<div class="card  ">
 
 			<h2>Contact Us</h2>
-
+			<p> For more information please email us at info@emilynienn.com</p>
+</br></br></br></br></br>
 		</div>
 	</div>
 
