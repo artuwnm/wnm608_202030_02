@@ -34,9 +34,7 @@ body {
 .productlist a:hover {
 	text-decoration:none;
 }
-.productlist .product-price {
-	text-align:right;
-}
+
 .hero-image{
 	text-align: center;
 }
@@ -271,4 +269,5 @@ body {
 }
 
 }
+
 
