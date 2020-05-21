@@ -13,7 +13,8 @@ $empty_product =(object)[
 	"weight"=>"",
 	"thumbnail"=>"",
 	"images"=>"",
-	"suggestedProducts"=>""
+	"suggestedProducts"=>"",
+	"isactive"=>""
 ];
 
 if(isset($_GET['id'])){
@@ -36,6 +37,7 @@ switch (@$_GET['action']) {
 				`thumbnail`=?,
 				`images`=?,
 				`suggestedProducts`=?,
+				`isactive`=?,
 				`date_modified`=NOW()
 			WHERE `id`= ?
 			");
@@ -50,6 +52,7 @@ switch (@$_GET['action']) {
 			$_POST["product-thumbnail"],
 			$_POST["product-images"],
 			$_POST["product-suggestedProducts"],
+			$_POST["product-isactive"],
 			$_GET['id']
 		]);
 		header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
@@ -70,11 +73,12 @@ switch (@$_GET['action']) {
 				`thumbnail`,
 				`images`,
 				`suggestedProducts`,
+				`isactive`,
 				`date_modified`,
 				`date_created`
 				)
 			VALUES 
-			(?,?,?,?,?,?,?,?,?,?,NOW(),NOW())
+			(?,?,?,?,?,?,?,?,?,?,?,NOW(),NOW())
 			
 			");
 		$statement->execute([
@@ -87,7 +91,8 @@ switch (@$_GET['action']) {
 			$_POST["product-weight"],
 			$_POST["product-thumbnail"],
 			$_POST["product-images"],
-			$_POST["product-suggestedProducts"]
+			$_POST["product-suggestedProducts"],
+			$_POST["product-isactive"]
 		]);
 		$id = $conn->lastInsertId();
 
@@ -175,6 +180,11 @@ $data_show = $id=='new'?"":<<<HTML
 	<h4>Suggested Products</h4>
 	<span>$o->suggestedProducts</span>
 	</div>
+
+	<div>
+	<h4>Active Products</h4>
+	<span>$o->isactive</span>
+	</div>
 </div>
 
 	<div class="flex-none">
@@ -243,6 +253,10 @@ echo <<<HTML
 			<div class="form-control">
 				<label for="product-suggestedProducts" class="form-label">Suggested Products</label>
 				<input type="text" class="form-input" type="text" placeholder="Suggested Products" id="product-suggestedProducts" name="product-suggestedProducts" value="$o->suggestedProducts">
+			</div>
+			<div class="form-control">
+				<label for="product-isactive" class="form-label">Active Product</label>
+				<input type="number" class="form-input" type="text" placeholder="0 or 1" id="product-isactive" name="product-isactive" value="$o->isactive">
 			</div>
 
 			<div class="form-control">
