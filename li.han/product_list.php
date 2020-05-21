@@ -1,6 +1,7 @@
 <?php
 
 include_once "lib/php/functions.php";
+include_once "parts/templates.php";
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -21,11 +22,8 @@ include_once "lib/php/functions.php";
 
 	<div class="container">
 		<h2>Product List</h2>
+		<div><a href="admin" style="color: #074476; text-align: center;">Product Admin</a></div>
 
-		<div class="form-control">
-			<form class="hotdog light" id="product-search">
-				<input type="search" class="search" placeholder="Search Products">
-			</form>
 		</div>
 		<!-- <div class="form-control display-flex"> -->
 			<div class="flex-none">
@@ -41,6 +39,9 @@ include_once "lib/php/functions.php";
 		<!-- </div> -->
 		<div class="form-control display-flex ">
 			<!-- .form-select>select>option -->
+			<form class="hotdog light" id="product-search">
+				<input type="search" class="search" placeholder="Search Products">
+			</form>
 			<div class="form-select">
 				<select class="js-sort">
 					<option value="1">Newest</option>
@@ -49,21 +50,15 @@ include_once "lib/php/functions.php";
 					<option value="4">Least Expensive</option>
 				</select>
 			</div>
+			
 			<!-- .form-select>select>option -->
-			<div class="form-select">
-				<select class="form-button js-filter">
-					<option data-value="">All</option>
-					<option data-value="sun Care">Sun Care</option>
-					<option data-value="moisturizers">Moisturizers</option>
-					<option data-value="cleansers">Cleansers</option>
-				</select>
-			</div>
 		</div>
 
 		<div class="grid gap productlist"></div>
 	</div>
-		<footer>
+		
+</body>
+<footer>
 		<?php include "parts/footer.php" ?>
 	</footer>
-</body>
 </html>

@@ -1,4 +1,4 @@
-f<?php
+<?php
 
 
 session_start();
@@ -49,6 +49,7 @@ function getRows($conn,$sql) {
 
 	return $a;
 }
+
 
 
 

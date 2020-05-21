@@ -10,6 +10,7 @@ $empty_product = (object) [
 	"description"=>"",
 	"thumbnail"=>"",
 	"images"=>"",
+	"size"=>"",
 	"quantity"=>""
 ];
 
@@ -20,12 +21,15 @@ $empty_product = (object) [
 
 
 
+if(isset($_GET['id'])) {
 try{
 
 $conn = makePDOConn();
 
 switch(@$_GET['action']) {
+
 	case "update":
+
 		$statement = $conn->prepare("UPDATE
 		`products`
 		SET
@@ -35,6 +39,7 @@ switch(@$_GET['action']) {
 			`description`=?,
 			`thumbnail`=?,
 			`images`=?,
+			`size`=?,
 			`quantity`=?,
 			`date_modify`=NOW()
 		WHERE `id`=?
@@ -46,6 +51,7 @@ switch(@$_GET['action']) {
 			$_POST["product-description"],
 			$_POST["product-thumbnail"],
 			$_POST["product-images"],
+			$_POST["product-size"],
 			$_POST["product-quantity"],
 			$_GET['id']
 		]);
@@ -62,12 +68,14 @@ switch(@$_GET['action']) {
 			`description`,
 			`thumbnail`,
 			`images`,
+			`size`,
 			`quantity`,
 			`date_create`,
 			`date_modify`
 		)
 		VALUES
-		(?,?,?,?,?,?,?,NOW(),NOW())
+		(?,?,?,?,?,?,?,?,NOW(),NOW())
+		
 		");
 		$statement->execute([
 			$_POST["product-name"],
@@ -76,13 +84,14 @@ switch(@$_GET['action']) {
 			$_POST["product-description"],
 			$_POST["product-thumbnail"],
 			$_POST["product-images"],
+            $_POST["product-size"],
 			$_POST["product-quantity"]
 		]);
 		$id = $conn->lastInsertId();
 
 		header("location:{$_SERVER['PHP_SELF']}?id=$id");
+		
 		break;
-
 	case "delete":
 		$statement = $conn->prepare("DELETE FROM `products` WHERE `id`=?");
 		$statement->execute([$_GET['id']]);
@@ -94,7 +103,7 @@ switch(@$_GET['action']) {
 } catch(PDOException $e) {
 	die($e->getMessage());
 }
-
+}
 
 
 
@@ -188,6 +197,10 @@ echo <<<HTML
 			<input type="number" class="form-input" placeholder="A Product Quantity" id="product-quantity" name="product-quantity" value="$o->quantity">
 		</div>
 		<div class="form-control">
+			<label for="product-size" class="form-label">Size</label>
+			<input type="text" class="form-input" placeholder="Size" id="size" name="size" value="$o->size">
+		</div>
+		<div class="form-control">
 			<input type="submit" value="Submit" class="form-button">
 		</div>
 		</div>
@@ -202,7 +215,7 @@ HTML;
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-
+	
 	<?php include "../parts/meta.php" ?>
 </head>
 <body>
@@ -214,6 +227,7 @@ HTML;
 			</div>
 			<nav class="nav flex-none">
 				<ul class="display-flex">
+					<li><a href="./">Store</a></li>
 					<li><a href="<?= $_SERVER['PHP_SELF'] ?>">Product List</a></li>
 					<li><a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">Add New Product</a></li>
 				</ul>
@@ -241,7 +255,7 @@ HTML;
 
 		?>
 		<div class="card soft">
-		<h2>Product List</h2>
+		<p>Choose a product to edit, or click to view their individual pages.</p>
 
 		<div class="itemlist">
 		<?php

@@ -9,12 +9,18 @@
 .grid.gap {
 	grid-gap:var(--gap-size);
 	gap:var(--gap-size);
-	background-color:white;
+	background-color:transparent;
 }
  .col-6.ad{
  	display:grid;
  	--gap-size:3em;
 }
+.col-xs-12.col-md-4{
+	padding-right: 5vw;
+	margin-top: 4vw; 
+}
+
+.grid.gap.productlist {    padding: 1vw;}
 
 .col-1 { grid-column: span 1; }
 .col-2 { grid-column: span 2; }

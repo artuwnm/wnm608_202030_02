@@ -18,6 +18,7 @@ body {
 	font-size:130%;
 	font-family:Varela;
 }
+
 h2,
 h3,
 h4,
@@ -202,6 +203,7 @@ footer{
     padding: 1em;
     margin-bottom:0;
     position: absolute;
+    font-size: 150%;
 }
 footer h4{
 	font-size: 0.8vw;
@@ -212,7 +214,7 @@ footer h4{
 footer p{
 font-size: 0.5vw;
 position: absolute;
-margin-bottom: 10px;
+margin-top: 50px;
 }
  footer li a{
  	display: block;
@@ -237,7 +239,8 @@ footer h3 {
 footer h1{
 	color: var(--color-neutral-medium);
 	font-size: 2vw;
-    margin-top:-0.1px;
+    padding-bottom: 1vw;
+    padding-top: -1vw;
 }
 
 /* CARD */
@@ -253,9 +256,14 @@ footer h1{
 	.card>:first-child { margin-top:0; }
 	.card>:last-child { margin-bottom:0; }
 
-	.card.soft {
+	.card.soft.home {
 		border-radius:0.3em;
 		background-color: white;
+		height: 40vw;
+		width: 50vw;
+		background-image: url("../../images/summer.png");
+     opacity: 90%;
+  
 	}
 
 	.card.dark {
@@ -263,10 +271,10 @@ footer h1{
 		color:var(--color-neutral-light);
 	}
 	.card.medium {
-		background-image: url("../../images/bk.jpg");
+		background-image: url("../../images/set.png");
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 800px;
+	height: 50vw;
 	padding: 0px;
 	}
 
@@ -280,10 +288,10 @@ footer h1{
 }
 
 .card.transparent{
-	background-color: #BCF0FF40;
-	margin: 0 400px;
-	height: 800px;
-   
+	background-color:var(--color-neutral-medium);
+	margin: 0 30vw;
+	height: 50vw;
+	opacity: 60%;  
 }
 /* VIEW WINDOW */
 
@@ -367,7 +375,7 @@ min-height: 100%;
 .form-label {
     display: block;
     font-size: 0.7em;
-    margin: 0.2em 0;
+    margin-top: 5em;
     color: var(--color-neutral-medium);
 }
 .form-select select,
@@ -384,6 +392,17 @@ min-height: 100%;
     text-decoration: none;
     outline:0;
     color:var(--color-neutral-dark);
+
+}
+.form-label.amount{
+    margin-top: 8vw;
+    color: var(--color-neutral-dark);
+}
+.form-button.shop{
+	background-color: var(--color-neutral-dark);
+	color: white;
+	width: auto;
+
 }
 .form-button:hover {
     text-decoration: none;
@@ -417,6 +436,7 @@ min-height: 100%;
     border-radius: 2em;
     outline:0;
     display:flex;
+
 }
 .hotdog input {
 	background-color:transparent;
@@ -428,12 +448,17 @@ min-height: 100%;
 	display:block;
 	outline:0;
 	padding:0 1em;
+	  border-color: var(--color-neutral-medium);
 }
 .hotdog.light {
 		background-color:white;
 	}
 
-
+.product-description
+{
+	color: white;
+	font-weight: 200;
+	font-size: 0.8vw;}
 
 
 
@@ -476,7 +501,7 @@ min-height: 100%;
 /*social midia icons*/
 .fa {
   padding-top: 18px;
-  width: 70px;
+  width: 35px;
   text-decoration: none;
 }
 
@@ -494,4 +519,16 @@ min-height: 100%;
 }
 .fa-instagram {
   color: white;
+}
+/*about*/
+.container.about{
+background-image:url("../../images/hero.jpg");
+height: 40vw;
+background-repeat: no-repeat;
+}
+.quote{
+	font-family: 'Meie Script', cursive;
+	font-size: 5vw;
+	color: white;
+    text-align:center;
 }

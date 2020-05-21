@@ -4,7 +4,7 @@
         
         <h1 id="head" ><a href="index.php">GLOWING BEAUTY</a></h1>
             <h4>Follow us!</h4>
-            <div class="grid gap" style="background-color: transparent;">
+            <div class="grid gap">
               <div class="display-none col-md-4">
               <a href="#" class="fa fa-facebook"></a>
               <a href="#" class="fa fa-twitter"></a>
@@ -19,7 +19,7 @@
       <div class="col-md-4 col-sm-12">
         
           
-            <h3 class="uppercase">ABOUT GLOWING BEAUTY</h3>
+            <h3 class="">ABOUT GLOWING BEAUTY</h3>
             <ul>
               <li><a href="article1">About us</a></li>
               <li><a href="article2">Careers</a></li>
@@ -33,7 +33,7 @@
       <div class="col-md-3 col-sm-12">
         
           
-            <h3 class="uppercase">CUSTOMER SERVICE</h>
+            <h3 class="">CUSTOMER SERVICE</h>
             <ul>
               <li><a href="article1">Help & Contact Us</a></li>
               <li><a href="article2">Orders & Shipping</a></li>
