@@ -509,9 +509,9 @@ hr {
 			margin: 1em;
 		}
 
-		.store-header div.flex-none {
+		/*.store-header div.flex-none {
 			display: none;
-		}
+		}*/
 
 		.store-footer .container {
 			display: block;

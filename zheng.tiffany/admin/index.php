@@ -132,6 +132,18 @@ $createorupdate = $id=='new' ? 'create' : 'update';
 $deletebutton = $id=='new' ? "" : "<a href='{$_SERVER['PHP_SELF']}?id=$id&action=delete'><button class='hollow-button neutral round'><h4>Delete Product</h4></button></a>";
 $newproductorchanges = $id=='new' ? 'New Product' : 'Changes';
 
+$o->name = $id=='new' ? 'Clouds Sweater' : $o->name;
+$o->price = $id=='new' ? '78.00' : $o->price;
+$o->description = $id=='new' ? 'A sweater so soft you will even want to sleep in it! Our Clouds Sweater is made with extra fine Italian merino wool, with a flattering turtleneck design. The sweater fits true to size, with some stretch.' : $o->description;
+$o->material = $id=='new' ? '100% Merino Wool' : $o->material;
+$o->thumbnail = $id=='new' ? 'images/clouds_sweater_full_1.jpg' : $o->thumbnail;
+$o->images = $id=='new' ? 'images/clouds_sweater_full_1.jpg, images/clouds_sweater_full_2.jpg, images/clouds_sweater_full_3.jpg, images/clouds_sweater_full_4.jpg' : $o->images;
+$o->category = $id=='new' ? 'Men' : $o->category;
+$o->type = $id=='new' ? 'Top' : $o->type;
+$o->color = $id=='new' ? 'Neutral' : $o->color;
+$o->featured = $id=='new' ? '0' : $o->featured;
+
+
 $images = array_reduce(explode(",",$o->images),function($r,$o){
 	return $r."<img src='$o'>";
 });
