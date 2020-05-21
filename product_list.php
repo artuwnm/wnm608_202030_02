@@ -1,19 +1,7 @@
   <?php
 
   include_once "lib/php/functions.php";
-  include_once "parts/templates.php";
-
-  $result = getRows(
-    makeConn(),
-    "SELECT *
-	FROM `products`
-	ORDER BY `date_create` DESC
-	LIMIT 12
-	"
-  );
-
-  // print_p($result);
-
+   
   ?>
 
   <!DOCTYPE html>
@@ -23,6 +11,9 @@
     <title>FenFong: Handsoaps</title>
 
     <?php include "parts/meta.php" ?>
+    <script src="lib/js/functions.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/list.js"></script>
 
   </head>
 
@@ -47,30 +38,37 @@
     <div class="container">
       <div class="card">
         <h2>All Hand Soaps</h2>
-        <div class="sort">
-
-          <div class="collection-sort">
-            <label>Filter by:</label>
-            <select>
-              <option value="/">All Jackets</option>
-            </select>
-          </div>
-
-          <div class="collection-sort">
-            <label>Sort by:</label>
-            <select>
-              <option value="/">Featured</option>
-            </select>
-          </div>
-
+         
+        
+        <div class="form-control">
+			<form class="hotdog light" id="product-search">
+				<input type="search" class="search" placeholder="Search Products">
+			</form>
+		</div>
+		<div class="form-control display-flex">
+			<div class="flex-none">
+				<button type="button" class="form-button js-filter" data-column="category" data-value="">All</button>
+			</div>
+			<div class="flex-none">
+				<button type="button" class="form-button js-filter" data-column="category" data-value="Handmade Soap">Handmade Soap</button>
+			</div>
+			<div class="flex-none">
+				<button type="button" class="form-button js-filter" data-column="category" data-value="Hand Wash">Hand Wash</button>
+			</div>
         </div>
-        <div class="grid gap">
-          <?php
+        <div class="form-control">
+			<!-- .form-select>select>option -->
+			<div class="form-select">
+				<select class="js-sort">
+					<option value="1">Newest</option>
+					<option value="2">Oldest</option>
+					<option value="3">Most Expensive</option>
+					<option value="4">Least Expensive</option>
+				</select>
+			</div>
+		</div>
 
-          echo array_reduce($result, 'productListTemplate');
-
-          ?>
-        </div>
+		<div class="grid gap productlist"></div>
       </div>
     </div>
 

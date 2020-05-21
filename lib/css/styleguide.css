@@ -33,26 +33,27 @@ h6 {
 	font-family: Josefin Sans;
 	letter-spacing: 2px;
 }
+
 li {
-    display: list-item;
-    text-align: -webkit-match-parent;
+	display: list-item;
+	text-align: -webkit-match-parent;
 }
 
 ul li {
-    list-style: none;
+	list-style: none;
 }
 
 .top-nav {
 	text-align: center;
-    width: 100%;
-    height: 60px;
-    background: #fff;
+	width: 100%;
+	height: 60px;
+	background: #fff;
 }
 
 header {
-    background-color: #fff;
-    color: var(--color-neutral-dark);
-    line-height: var(--header-height);
+	background-color: #fff;
+	color: var(--color-neutral-dark);
+	line-height: var(--header-height);
 }
 
 a {
@@ -173,9 +174,8 @@ code {
 	font-weight: normal;
 	font-size: 24px;
 	line-height: 55px;
-	text-align:center
-
-	/* identical to box height */
+	text-align: center
+		/* identical to box height */
 }
 
 .nav-pills a:hover,
@@ -246,17 +246,18 @@ code {
 }
 
 .main-image img {
-   width: 350px;
-    height: 450px;
-    padding-left: 60px;
+	width: 350px;
+	padding-left: 60px;
+
 }
 
 .thumbstrip img {
-    width: 90px;
-    height: 110px;
-    margin: 6px;
-    margin-top: 30px;
-    cursor: pointer;
+	width: 90px;
+	height: 100px;
+	object-fit: scale-down;
+	margin: 6px;
+	margin-top: 30px;
+	cursor: pointer;
 }
 
 /* CARD */
@@ -267,9 +268,14 @@ code {
 	position: relative;
 	margin-top: 1em;
 	margin-bottom: 1em;
-	
+
 }
 
+.transparent {
+	background-color: inherit;
+    color: var(--color-neutral-medium);
+    padding-top: 0;
+}
 
 .card>:first-child {
 	margin-top: 0;
@@ -296,10 +302,11 @@ code {
 .card.flat {
 	padding: 0;
 }
+
 .card.transparent {
-    background-color: inherit;
-    color: var(--color-neutral-medium);
-    padding-top: 0;
+	background-color: inherit;
+	color: var(--color-neutral-medium);
+	padding-top: 0;
 }
 
 
@@ -390,7 +397,7 @@ code {
 	border-width: 1;
 	background-color: white;
 	padding: 0.5em 1em;
- 	text-align: center;
+	text-align: center;
 	border-radius: 0.3em;
 	cursor: pointer;
 	text-decoration: none;
@@ -400,7 +407,7 @@ code {
 .form-button:hover {
 	text-decoration: none;
 }
- 
+
 
 .hotdog {
 	display: inline-block;
