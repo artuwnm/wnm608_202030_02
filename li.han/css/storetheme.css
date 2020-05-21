@@ -141,6 +141,7 @@ p{
 	.navbar .display-flex {
 		display:block;
 	}
+	
 	.logo img{
 			height: 1em;
 		}
@@ -171,5 +172,13 @@ p{
 	}
 footer p{
 		font-size: 1vw;
+	}
+	.navbar a {
+		font-size: 2vw;
+	}
+	.navbar h1 a {font-size: 3vw;
+	}
+	.erno{
+	 width: 4vw;
 	}
 }

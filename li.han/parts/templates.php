@@ -3,7 +3,7 @@
 
 function productListTemplate($r,$o) {
 return $r.<<<HTML
-<div class="col-xs-6 col-sm-5">
+<div class="col-xs-6 col-sm-4 col-lg-3">
 	<a href="product_item.php?id=$o->id" class="display-block">
 		<figure class="product-figure soft">
 			<div class="product-image">

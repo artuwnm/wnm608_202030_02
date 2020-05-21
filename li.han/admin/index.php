@@ -255,7 +255,7 @@ HTML;
 
 		?>
 		<div class="card soft">
-		<p>Choose a product to edit, or click to view their individual pages.</p>
+		<p style="color: #074476">Product List</p>
 
 		<div class="itemlist">
 		<?php

@@ -34,11 +34,8 @@ $empty_poduct=(object)[
 <div class="container">
 	<div class="card medium" >
 		<div class="grid gap">
-			<div class="col-xs-12 col-md-4">
-			</div>
-			<div class="col-xs-12 col-md-4">
-			</div>
-				<div class="col-xs-12 col-md-4 ">
+			
+			<div class="col-xs-12 col-md-4 ">
 		
        <h2>Erno Laszlo </h2>  
 		<h4>
@@ -47,7 +44,12 @@ $empty_poduct=(object)[
 		<p>Healthy skin starts with a commitment to a regular skin care regimen, using high quality skin care and facial products every day. While we often think of the face first when it comes to caring for the skin, the skin on the body also needs attention.  
   </p>
 	 <p><a class="form-button" href="product_list.php" style="background-color:#074476; color: white">Learn More</a></p>
+	 <div class="col-3"> <a href=""> <img class="erno" src="images/ernologo.png" alt="erno laszro" style=""></div></a>
 	</div>
+	<div class="col-xs-12 col-md-4">
+			</div>
+			<div class="col-xs-12 col-md-4">
+			</div>
 </div>
 </div>
 </div>

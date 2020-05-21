@@ -63,6 +63,10 @@ code {
 svg{
 	height: 2vw;
 }
+.erno{
+	 width: 8vw;
+  height: auto;
+}
 
 
 /* SMALL CLASSES */
@@ -259,10 +263,12 @@ footer h1{
 	.card.soft.home {
 		border-radius:0.3em;
 		background-color: white;
-		height: 40vw;
-		width: 50vw;
+  width: 100%;
+  height: auto;
 		background-image: url("../../images/summer.png");
      opacity: 90%;
+     
+     background-repeat: no-repeat;
   
 	}
 
@@ -275,7 +281,7 @@ footer h1{
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 50vw;
-	padding: 0px;
+	padding-left: 3vw;
 	}
 
 	.card.flat {
