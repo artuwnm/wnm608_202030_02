@@ -1,7 +1,7 @@
 .sass-cache/
 *.css.map
-*.sass.map
 *.scss.map
+*.sass.map
 
 *.DS_Store
 *sftp-config.json
