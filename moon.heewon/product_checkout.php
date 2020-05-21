@@ -11,17 +11,17 @@
 	<div class="container">
 		<nav class="nav-crumbs" style="margin:1em 0">
 			<ul>
-				<li><a href="product_list.php">Back</a></li>
+				<li><a href="product_list.php">👈 Back</a></li>
 			</ul>
 		</nav>
 		<div class="grid gap">
 			<div class="col-xs-12 col-md-8">
 				<div class="card soft">
 
-					<h2>Checkout Information</h2>
+					<h1>Checkout Information</h1>
 
 					<form>
-						<h3>Credit Card</h3>
+						<h2>Credit Card</h2>
 						<div class="form-control">
 							<label for="checkout-card-name" class="form-label">Name On Card</label>
 							<input type="text" class="form-input" id="checkout-card-name" name="checkout-card-name">
@@ -43,7 +43,7 @@
 							<input type="text" class="form-input" id="checkout-card-cvv" name="checkout-card-cvv">
 						</div>
 						
-						<h3>Billing Address</h3>
+						<h2>Billing Address</h2>
 
 						<div class="form-control">
 							<label for="checkout-address-name" class="form-label">Full Name</label>
@@ -86,6 +86,6 @@
 		</div>
 		
 	</div>
-	
+
 </body>
 </html>

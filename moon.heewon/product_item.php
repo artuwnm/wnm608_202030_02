@@ -31,7 +31,7 @@ $thumbs = explode(",", $o->images);
 	<div class="container">
 		<nav class="nav-crumbs" style="margin:1em 0">
 			<ul>
-				<li><a href="product_list.php">Back</a></li>
+				<li><a href="product_list.php">👈 Back</a></li>
 			</ul>
 		</nav> 
 
@@ -40,15 +40,6 @@ $thumbs = explode(",", $o->images);
 				<div class="card soft">
 					<div class="product-main">
 						<img src="<?= $o->thumbnail ?>" alt="">
-					</div>
-					<div class="product-thumbs">
-					<?php
-
-					echo array_reduce($thumbs,function($r,$o){
-						return $r."<img src='$o'>";
-					})
-
-					?>
 					</div>
 				</div>
 			</div>
@@ -62,7 +53,7 @@ $thumbs = explode(",", $o->images);
 					</div>
 
 					<div class="card-section">
-						<label class="form-label">Amount</label>
+						<label class="form-label">Amount ▼</label>
 						<select name="amount" class="form-button">
 							<!-- option*10>{$} -->
 							<option value="1">1hr</option>
@@ -74,6 +65,16 @@ $thumbs = explode(",", $o->images);
 					</div>
 
 					<div class="card-section">
+						<label class="form-label">Description</label>
+						<br>
+			            <div class="product-description">
+				        <?= $o->description ?>
+			            </div>
+					</div>
+
+					<br>
+
+					<div class="card-section">
 						<input type="hidden" name="action" value="add-to-cart">
 						<input type="hidden" name="id" value="<?= $o->id ?>">
 						<input type="hidden" name="price" value="<?= $o->price ?>">
@@ -83,13 +84,11 @@ $thumbs = explode(",", $o->images);
 			</div>
 		</div>
 
-		<div class="card soft dark">
-			<h1>Description</h1>
-			<div class="product-description">
-				<?= $o->description ?>
-			</div>
-		</div>
 	</div>
+	<footer>
+	<?php include "parts/footer.php" ?>
 	
+	</footer>
+
 </body>
 </html>

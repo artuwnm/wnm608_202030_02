@@ -11,7 +11,7 @@
 				<li><a href="product_list.php">Store</a></li>
 				<li><a href="about.php">About</a></li>
 				<li><a href="product_cart.php">
-						<span>Cart</span>
+						<img src="img/cart.png" alt="cart" class="cart">
 						<span class="badge"><?=makeCartBadge() ?></span>
 					</a></li>
 			</ul>

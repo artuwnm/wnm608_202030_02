@@ -9,8 +9,10 @@ return `
 				<img src="${o.thumbnail}" alt="">
 			</div>
 			<figcaption class="product-description">
-				<div class="product-price">&dollar;${o.price}</div>
 				<div class="product-title">${o.name}</div>
+				<br>
+				<div class="product-price">&dollar;${o.price}</div>
+
 			</figcaption>
 		</figure>
 	</a>

@@ -42,6 +42,7 @@ switch(@$_GET['action']) {
 			$_POST["product-category"],
 			$_POST["product-description"],
 			$_POST["product-thumbnail"],
+			$_POST["product-availability"],
 			$_POST["product-images"],
 			$_GET['id']
 		]);
@@ -57,6 +58,7 @@ switch(@$_GET['action']) {
 			`category`,
 			`description`,
 			`thumbnail`,
+			`avaiability`,
 			`images`,
 			`date_create`,
 			`date_modify`
@@ -70,6 +72,7 @@ switch(@$_GET['action']) {
 			$_POST["product-category"],
 			$_POST["product-description"],
 			$_POST["product-thumbnail"],
+			$_POST["product-availability"],
 			$_POST["product-images"]
 		]);
 		$id = $conn->lastInsertId();
@@ -107,7 +110,7 @@ $images = array_reduce(explode(",",$o->images),function($r,$o){
 $data_show = $id=='new' ? "" : <<<HTML
 <div class="card soft">
 <div class="product-main">
-	<img src="img/$o->thumbnail" alt="">
+	<img src="$o->thumbnail" alt="">
 </div>
 <div class="product-thumbs">$images</div>
 <h2>$o->name</h2>
@@ -169,7 +172,7 @@ echo <<<HTML
 		</div>
 		<div class="form-control">
 			<label for="product-availability" class="form-label">Avaiability</label>
-			<input type="number" class="form-input" placeholder="A Product Thumbnail" id="product-thumbnail" name="product-availability" value="$o->avaiability">
+			<input type="text" class="form-input" placeholder="Weekdays/Weekends" id="product-thumbnail" name="product-availability" value="$o->avaiability">
 		<div class="form-control">
 			<label for="product-images" class="form-label">Images</label>
 			<input type="text" class="form-input" placeholder="A Product Images" id="product-images" name="product-images" value="$o->images">

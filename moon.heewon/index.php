@@ -25,11 +25,9 @@
 
 	<div class="view-window display-flex flex-align-center flex-justify-center" style="background-image:url(img/welcome.jpg)">
 	</div>
-
 <footer>
-	<div class="container">
-		<p class="text-align-center">Hee Won Moon</p>
-	</div>
+	<?php include "parts/footer.php" ?>
+	
 </footer>
 </body>
 </html>

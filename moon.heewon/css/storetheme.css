@@ -13,7 +13,6 @@
 
 body {
 	background-color:white;
-	padding-bottom:10em;
 }
 section h2 {
 	margin-top:6em;
@@ -28,9 +27,13 @@ section h2 {
 	height:100%;
 }
 
-.form-select select,
+.form-select select{
+	background-color:white;
+	border:1px solid #DD6243;
+}
+
 .form-button{
-	background-color:var(--color-neutral-medium-light);
+	background-color:white;
 }
 
 
@@ -47,11 +50,11 @@ section h2 {
 	vertical-align:text-bottom;
 }
 .product-figure figcaption {
-	padding:1em;
+	padding:1.5em;
 	background-color:white;
+	text-align: center;
 }
 	.product-figure.soft {
-		border-radius:1em;
 		overflow:hidden;
 		box-shadow:0 2px 5px rgba(0,0,0,0.1);
 	}
@@ -85,6 +88,7 @@ section h2 {
 	width:80%;
 	height: 80%;
 	object-fit:cover;
+	margin-left: 4em;
 }
 .product-thumbs img {
 	height:75px;

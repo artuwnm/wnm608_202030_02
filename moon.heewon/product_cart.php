@@ -22,7 +22,7 @@ $result = getCartItems();
 	<div class="container">
 		<nav class="nav-crumbs" style="margin:1em 0">
 			<ul>
-				<li><a href="product_list.php">Back</a></li>
+				<li><a href="product_list.php">👈 Back</a></li>
 			</ul>
 		</nav>
 
@@ -44,6 +44,10 @@ $result = getCartItems();
 			</div>
 		</div>
 	</div>
+	<footer>
+	<?php include "parts/footer.php" ?>
 	
+	</footer>
+
 </body>
 </html>
