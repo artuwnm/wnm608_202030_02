@@ -1601,3 +1601,10 @@ ol li span a:hover{
 	}
 
 	}
+
+@media (min-width: 2049px){
+	.view-window-img {
+    
+    top: 210px;
+}
+}
