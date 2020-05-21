@@ -22,7 +22,7 @@ include_once "parts/templates.php";
 
 <div class="view-window hero-image display-flex flex-direction-column flex-align-center flex-justify-center" style="background-image:url(images/sl2.jpg)">
 		<div class="hpt">
-      <h2>There are good deals on Game Store everyday!</h2>
+      <h2>There are many good deals on Game Store everyday!</h2>
     </div>
     <div class="order">
        <a class="btn dark display-inline-block" href="product_list.php"><h2>SHOP NOW</h2></a>
@@ -188,9 +188,31 @@ include_once "parts/templates.php";
 
   <br>
 
-  <div class="main_title">
-      <h3>©2020 Cyrus Choi All Rights Reserved</h3>
+
+
+<footer class="footer-category">
+  <div class="container display-flex">
+    <div class="flex-none">
+      <ul class="down-category">
+        <li><h3>Categories</h3></li>
+        <li><a href="product_list.php">Playstations</a></li>
+        <li><a href="product_list.php">Nintendo Switch</a></li>
+        <li><a href="product_list.php">Game Accessories</a></li>
+      </ul>
+    </div>
+    <div class="product_list.php"></div>
+    <div class="product_list.php">
+      <ul class="product_list.php">
+        <li><h3>Contact Us</h3></li>
+        <li><p>Many good deals are waiting for you!</p></li>
+      </ul>
+    </div>
   </div>
+    <div class="footer_title">
+      <h3>©2020 Cyrus Choi All Rights Reserved</h3>
+
+  </div>
+</footer>
    
   </body>
 

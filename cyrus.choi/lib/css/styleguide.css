@@ -1,3 +1,4 @@
+
 /* ELEMENT RESETS */
 
 *, *::before, *::after {
@@ -520,5 +521,5 @@ code {
    	max-width: 45%;
 	}
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 .display-flex { display:block; }

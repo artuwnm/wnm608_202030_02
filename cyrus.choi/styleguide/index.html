@@ -29,19 +29,20 @@
 				<li><a href="#paragraphs">Paragraphs</a></li>
 			</ul>
 			<li><a href="#colorscheme">Color Scheme</a></li>
-			<li><a href="#images">Images</a></li>
-			<li><a href="#cards">Cards</a></li>
-			<li><a href="#viewwindow">View Window</a></li>
 			<li><a href="#navigations">Navigations</a></li>
 			<ul>
-				<li><a href="#navs">Navs</a></li>
-				<li><a href="#navbar">Navbar</a></li>
+				<li><a href="#navbar">Basic Nav</a></li>
+				<li><a href="#navbar">Categories Bar</a></li>
+				<li><a href="#navbar">Search Bar</a></li>
+				<li><a href="#navbar">Drop Down</a></li>
 			</ul>
 			<li><a href="#checboxes">Checkboxes</a></li>		
-			<li><a href="#forms">Forms</a></li>
-			<li><a href="#tables">Tables</a></li>
-			<li><a href="#grid">Grid System</a></li>
-			<li><a href="#tables">Figures</a></li>
+			<li><a href="#figures">Figures</a></li>
+			<ul>
+				<li><a href="#figures">Gridded Figure</a></li>
+				<li><a href="#figures">Product Admin Figure</a></li>
+				<li><a href="#figures">Product Item Figure</a></li>
+			</ul>
 		</ul>
 	</div>
 
@@ -83,6 +84,7 @@
 
 	<section id="color" class="container">
 		<h2>Color Scheme</h2>
+		<div class="card">
 		<div class="grid gap ">
 		<div class="col-8 ">
 		<div class="grid">		
@@ -123,7 +125,8 @@
         </div>        
         </div>
          <div class="col-4 ">
-        </div>       
+        </div>  
+        </div>     
        </div>
 		
 	</section>
@@ -179,7 +182,25 @@
 		   </div>
 		</div>
     </div>
-
+		<code>
+		   &lt;div class="container">
+			
+		    &lt;div class="form-control display-flex">
+			 &lt;div class="flex-none">
+				&lt;button type="button" class="form-button js-filter" data-column="category" data-value="">All&lt;/button>
+			&lt;/div>
+			 &lt;div class="flex-none">
+				&lt;button type="button" class="form-button js-filter" data-column="category" data-value="PS4 Games">PS4 Games&lt;/button>
+			 &lt;/div>
+			 &lt;div class="flex-none">
+				&lt;button type="button" class="form-button js-filter" data-column="category" data-value="Nintendo Switch Games">Nintendo Switch Games&lt;/button>
+			 &lt;/div>
+			 &lt;div class="flex-none">
+				&lt;button type="button" class="form-button js-filter" data-column="category" data-value="Games Accessories">Games Accessories&lt;/button>
+			 &lt;/div>			
+		   &lt;/div>
+		&lt;/div>			
+		</code>
 		<div class="card">
 			<h3>Search Bar</h3>
 		<div class="form-control">
@@ -188,7 +209,35 @@
 			</form>
 		</div>
 		</div>
-	
+		<code>
+			&lt;div class="form-control">
+			&lt;form class="hotdog light" id="product-search">
+				&lt;input type="search" class="search" placeholder="Search Products">
+			&lt;/form>
+		&lt;/div>
+		</code>
+
+		<div class="card">
+			<h3>Drop Down</h3>
+		   <div class="form-select">
+				<select class="js-sort">
+					<option value="1">Newest</option>
+					<option value="2">Oldest</option>
+					<option value="3">Most Expensive</option>
+					<option value="4">Least Expensive</option>
+				</select>
+			</div>
+		</div>
+	 <code>
+	 	&lt;div class="form-select">
+				&lt;select class="js-sort">
+					&lt;option value="1">Newest&lt;/option>
+					&lt;option value="2">Oldest&lt;/option>
+					&lt;option value="3">Most Expensive&lt;/option>
+					&lt;option value="4">Least Expensive&lt;/option>
+				&lt;/select>
+			&lt;/div>
+	 </code>
 	<section id="checkboxes" class="container">
 		<h2>Checkboxes</h2>
 
@@ -203,6 +252,17 @@
 				</label>
 			</div>
 
+		<code>
+			&lt;div class="form-control">
+				&lt;label for="check-example1">Label&lt;/label>
+				&lt;label>
+					&lt;input type="checkbox" id="check-example1">
+					Label
+				&lt;/label>
+			&lt;/div>	
+
+		</code>
+
 			<h3>Favourite</h3>
 
 			<div class="form-control">
@@ -211,7 +271,15 @@
 					<label for="heart-example1">&hearts;</label>
 				</div>
 			</div>
+        <code>
+ 			&lt;div class="form-control">
+				&lt;div class="heart-toggle">
+					&lt;input type="checkbox" id="heart-example1" class="hidden">
+					&lt;label for="heart-example1">&hearts;&lt;/label>
+				&lt;/div>
+			&lt;/div>       	
 
+        </code>
 			<h3>Toggle</h3>
 
 			<div class="form-control">
@@ -225,17 +293,23 @@
 				</div>
 			</div>
 		</div>
+       <code>
+       	&lt;div class="form-control">
+				&lt;div class="toggle">
+					&lt;input type="checkbox" id="toggle1" class="hidden">
+					&lt;label for="toggle1">&lt;/label>
+				&lt;/div>
+				&lt;div class="toggle" style="font-size:2em">
+					&lt;input type="checkbox" id="toggle2" class="hidden">
+					&lt;label for="toggle2">&lt;/label>
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+       </code>
 	</section>
 
 
-			<div class="form-select">
-				<select class="js-sort">
-					<option value="1">Newest</option>
-					<option value="2">Oldest</option>
-					<option value="3">Most Expensive</option>
-					<option value="4">Least Expensive</option>
-				</select>
-			</div>
+
 
 
 		<h2>Figures</h2>
@@ -253,7 +327,7 @@
         </figure>
        </a>
       </div>
-
+  
       <div class="col-xs-6 col-md-4">
         <figure class="product-figure soft">
         <div class="product-image">
@@ -277,7 +351,21 @@
       </div>  
       </div>
     </div>
-
+<code>
+	  &lt;div class="container">  
+     &lt;div class="grid gap productlist">  
+      &lt;div class="col-xs-6 col-md-4">
+        &lt;figure class="product-figure soft">
+        &lt;div class="product-image">
+          &lt;img src="https://via.placeholder.com/300" alt="Product Item" width="100%">&lt;/div>
+        &lt;figcaption class="product-description">
+            &lt;div>&lt;h3 class="title">Name&lt;/h3>&lt;/div>
+        &lt;/figcaption>
+        &lt;/figure>
+       &lt;/a>
+      &lt;/div>
+  &lt;/div>
+</code>
  <div class="card">
     <h3>Product Admin Figure</h3>
 <div class="itemlist-item display-flex">
@@ -291,12 +379,29 @@
 		<div><span>category</span></div>
 	</div>
 	<div class="flex-none display-flex">
-		<div><a href="admin/?id=$o->id" class="form-button">Edit</a></div>
-		<div><a href="product_item.php?id=$o->id" class="form-button">Visit</a></div>
-	</div>
+	  <div style="margin-right: 0.5rem;">
+	  <a href="admin/?id=$o->id"><button type="button" class="form-button">Edit</a></button></div>
+		<div><a href="product_item.php?id=$o->id"><button type="button" class="form-button">Visit</a></button></div>
 </div>
     </div>
+<code>
+&lt;div class="itemlist-item display-flex">
+	&lt;div class="flex-none">
+		&lt;div class="image-square">
+			&lt;img src="https://via.placeholder.com/300">
+		&lt;/div>
+	&lt;/div>
+	&lt;div class="flex-stretch">
+		&lt;div>&lt;strong>name&lt;/strong>&lt;/div>
+		&lt;div>&lt;span>category&lt;/span>&lt;/div>
+	&lt;/div>
+	&lt;div class="flex-none display-flex">
+	  &lt;div style="margin-right: 0.5rem;">
+	  &lt;a href="admin/?id=$o->id">&lt;button type="button" class="form-button">Edit&lt;/a>&lt;/button><&lt;/div>
+		&lt;div>&lt;a href="product_item.php?id=$o->id">&lt;button type="button" class="form-button">Visit&lt;/a>&lt;/button>&lt;/div>
+&lt;/div>
 
+</code>
 		<div class="card">
 			<h3>Product Item Figure</h3>
 		<div class="grid gap">
@@ -305,15 +410,7 @@
 					<div class="product-main">
 						<img src="https://via.placeholder.com/300" alt="">
 					</div>
-					<div class="product-thumbs">
-					<?php
 
-					echo array_reduce($thumbs,function($r,$o){
-						return $r."<img src='$o'>";
-					})
-
-					?>
-					</div>
 				</div>
 			</div>
 
