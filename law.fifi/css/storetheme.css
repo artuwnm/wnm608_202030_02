@@ -35,10 +35,10 @@ figure:hover{
 }
 
 .product-figure img{
-	width: 105%;
+	/*width: 105%;*/
 	/*max-height: 30vh;*/
 	object-fit: cover;
-
+	max-width: 100%;
 	vertical-align: text-bottom; 
 
 }

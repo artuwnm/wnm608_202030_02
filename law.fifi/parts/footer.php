@@ -19,11 +19,11 @@
 			<div class="col-md-4 col-sm-12">
 				
 					
-						<h2 class="uppercase">Categories</h2>
+						<h2 class="uppercase">Links</h2>
 						<ul>
-							<li><a href="article1">Pillows</a></li>
-							<li><a href="article2">Phone Cases</a></li>
-							<li><a href="article3">Stickers</a></li>
+							<li><a href="index.php">Home</a></li>
+							<li><a href="product_list.php">Products</a></li>
+							<li><a href="about.php">About</a></li>
 						
 						</ul>
 					

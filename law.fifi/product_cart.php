@@ -43,9 +43,14 @@ $result = getCartItems();
 						 ?>
 					</div>
 				<div class="card transparent col-md-12 col-sm-12 text-align-right" style="border-top: 1px solid var(--color-neutral-medium);">
-					<?= cartTotal(); ?>
-					<div>
-						<a href="checkout.php" class="btn dark form-button">Checkout</a>
+					<div class="grid">
+						<div class="col-md-8 col-sm-1"></div>
+						<div class="col-md-4 col-sm-11">
+							<?= cartTotal(); ?>
+							<div>
+								<a href="checkout.php" class="btn dark form-button">Checkout</a>
+							</div>
+						</div>
 					</div>
 				</div>
 				</div>
