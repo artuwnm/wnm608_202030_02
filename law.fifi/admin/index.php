@@ -135,8 +135,20 @@ $id = $_GET['id'];
 $addoredit = $id =='new' ? 'Add': 'Edit';
 $createorupdate= $id=='new'?'create':'update';
 $deletebutton = $id == 'new' ? "": "<a href='{$_SERVER['PHP_SELF']}?id=$id&action=delete' class='flex-none' style='padding-right:0;'>Delete</a>";
-$images = array_reduce(explode(",",$o->images),function($r,$o){return $r."<img src='images/$o'>";});
 
+$name = $id =='new' ? 'Scratching Meow Phone Case': $o->productName;
+$category = $id =='new' ? 'Phone Case': $o->category;
+$description = $id =='new' ? 'Cat Scratches the phone case': $o->description;
+$price = $id =='new' ? '30': $o->price;
+$quantity = $id =='new' ? '20': $o->quantity;
+$thumbnail = $id =='new' ? 'scratching_meow_phonecase.png': $o->thumbnail;
+$o->images = $id =='new' ? 'scratching_meow_phonecase.png,scratching_meow_phonecase_2.png,scratching_meow_phonecase_3.png,scratching_meow_phonecase_4.png': $o->images;
+$colors = $id =='new' ? 'white,yellow': $o->colors;
+$weight = $id =='new' ? '0.8': $o->weight;
+$suggestedProducts = $id =='new' ? 'Iconic Meow Phone Case,Warning Meowie Phone Case,Meowie Logo Phone Case': $o->suggestedProducts;
+$isactive = $id =='new' ? '1': $o->isactive;
+
+$images = array_reduce(explode(",",$o->images),function($r,$o){return $r."<img src='images/$o'>";});
 $data_show = $id=='new'?"":<<<HTML
 
 <div class="card flat" style="margin-top: 0;">
@@ -198,6 +210,8 @@ $data_show = $id=='new'?"":<<<HTML
 
 HTML;
 
+
+
 echo <<<HTML
 
 <div class="display-flex card transparent" style="margin-bottom: 0;">
@@ -216,47 +230,47 @@ echo <<<HTML
 		<form method="post" class="form" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
 			<div class="form-control">
 				<label for="product-productName" class="form-label">Product Name</label>
-				<input type="text" class="form-input" type="text" placeholder="Scratching Meow Phone Case" id="product-productName" name="product-productName" value="$o->productName">
+				<input type="text" class="form-input" type="text" placeholder="Scratching Meow Phone Case" id="product-productName" name="product-productName" value="{$name}">
 			</div>
 			<div class="form-control">
 				<label for="product-category" class="form-label">Category</label>
-				<input type="text" class="form-input" type="text" placeholder="Phone Case" id="product-category" name="product-category" value="$o->category">
+				<input type="text" class="form-input" type="text" placeholder="Phone Case" id="product-category" name="product-category" value="{$category}">
 			</div>
 			<div class="form-control">
 				<label for="product-description" class="form-label">Description</label>
-				<textarea class="form-input" type="text" placeholder="Cat Scratches the phone case" id="product-description" name="product-description">$o->description</textarea>
+				<textarea class="form-input" type="text" placeholder="Cat Scratches the phone case" id="product-description" name="product-description">{$description}</textarea>
 			</div>
 			<div class="form-control">
 				<label for="product-price" class="form-label">Price</label>
-				<input type="number" class="form-input" type="text" placeholder="30" id="product-price" name="product-price" value="$o->price">
+				<input type="number" class="form-input" type="text" placeholder="30" id="product-price" name="product-price" value="{$price}">
 			</div>
 			<div class="form-control">
 				<label for="product-quantity" class="form-label">Quantity</label>
-				<input type="number" class="form-input" type="text" placeholder="20" id="product-quantity" name="product-quantity" value="$o->quantity">
+				<input type="number" class="form-input" type="text" placeholder="20" id="product-quantity" name="product-quantity" value="{$quantity}">
 			</div>
 			<div class="form-control">
 				<label for="product-thumbnail" class="form-label">Thumbnail</label>
-				<input type="text" class="form-input" type="text" placeholder="scratching_meow_phonecase.png" id="product-thumbnail" name="product-thumbnail" value="$o->thumbnail">
+				<input type="text" class="form-input" type="text" placeholder="scratching_meow_phonecase.png" id="product-thumbnail" name="product-thumbnail" value="{$thumbnail}">
 			</div>
 			<div class="form-control">
 				<label for="product-images" class="form-label">Images</label>
-				<input type="text" class="form-input" type="text" placeholder="scratching_meow_phonecase.png,scratching_meow_phonecase_2.png,scratching_meow_phonecase_3.png,scratching_meow_phonecase_4.png" id="product-images" name="product-images" value="$o->images">
+				<input type="text" class="form-input" type="text" placeholder="" id="product-images" name="product-images" value="$o->images">
 			</div>
 			<div class="form-control">
 				<label for="product-colors" class="form-label">Colors</label>
-				<input type="text" class="form-input" type="text" placeholder="yellow,brown" id="product-colors" name="product-colors" value="$o->colors">
+				<input type="text" class="form-input" type="text" placeholder="" id="product-colors" name="product-colors" value="{$colors}">
 			</div>
 			<div class="form-control">
 				<label for="product-weight" class="form-label">Weight (kg)</label>
-				<input type="text" class="form-input" type="text" placeholder="0.8" id="product-weight" name="product-weight" value="$o->weight">
+				<input type="text" class="form-input" type="text" placeholder="0.8" id="product-weight" name="product-weight" value="{$weight}">
 			</div>
 			<div class="form-control">
 				<label for="product-suggestedProducts" class="form-label">Suggested Products</label>
-				<input type="text" class="form-input" type="text" placeholder="Iconic Meow Phone Case,Warning Meowie Phone Case,Meowie Logo Phone Case" id="product-suggestedProducts" name="product-suggestedProducts" value="$o->suggestedProducts">
+				<input type="text" class="form-input" type="text" placeholder="Iconic Meow Phone Case,Warning Meowie Phone Case,Meowie Logo Phone Case" id="product-suggestedProducts" name="product-suggestedProducts" value="{$suggestedProducts}">
 			</div>
 			<div class="form-control">
 				<label for="product-isactive" class="form-label">Active Product</label>
-				<input type="number" class="form-input" type="text" placeholder="1" id="product-isactive" name="product-isactive" value="$o->isactive">
+				<input type="number" class="form-input" type="text" placeholder="1" id="product-isactive" name="product-isactive" value="{$isactive}">
 			</div>
 
 			<div class="form-control">
