@@ -50,3 +50,47 @@ function cartListTemp($r,$o){
             </li>
 HTML;
 }
+
+
+
+
+function cartTotals() {
+    $cart = getCart();
+    $cartprice = array_reduce($cart,function($r,$o){return $r + ($o->amount);},0);
+
+    $pricefixed = number_format($cartprice,2,'.','');
+    $taxfixed = number_format($cartprice*0.0725,2,'.','');
+    $taxedfixed = number_format($cartprice*1.0725,2,'.','');
+
+    return <<<HTML
+<div class="card-section">
+	<h2>Totals</h2>
+	<div class="display-flex">
+		<div class="flex-stretch">
+			<strong>Sub Total</strong>
+		</div>
+		<div class="flex-none">
+			<span>&dollar;$pricefixed</span>
+		</div>
+	</div>
+	<div class="display-flex">
+		<div class="flex-stretch">
+			<strong>Tax</strong>
+		</div>
+		<div class="flex-none">
+			<span>&dollar;$taxfixed</span>
+		</div>
+	</div>
+</div>
+<div class="card-section">
+	<div class="display-flex">
+		<div class="flex-stretch">
+			<strong>Total</strong>
+		</div>
+		<div class="flex-none">
+			<span>&dollar;$taxedfixed</span>
+		</div>
+	</div>
+</div>
+HTML;
+}
