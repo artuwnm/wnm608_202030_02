@@ -152,23 +152,23 @@ echo <<<HTML
 		<h2>$addoredit Product</h2>
 		<div class="form-control">
 			<label for="product-name" class="form-label">name</label>
-			<input type="text" class="form-input" placeholder="Yoga Lesson" id="product-name" name="product-name" value="$o->name">
+			<input type="text" class="form-input" placeholder="A Product Name" id="product-name" name="product-name" value="$o->name">
 		</div>
 		<div class="form-control">
 			<label for="product-price" class="form-label">Price</label>
-			<input type="number" class="form-input" placeholder="$50" id="product-price" name="product-price" value="$o->price">
+			<input type="number" class="form-input" placeholder="A Product Price" id="product-price" name="product-price" value="$o->price">
 		</div>
 		<div class="form-control">
 			<label for="product-category" class="form-label">Category</label>
-			<input type="text" class="form-input" placeholder="Lesson" id="product-category" name="product-category" value="$o->category">
+			<input type="text" class="form-input" placeholder="A Product Category" id="product-category" name="product-category" value="$o->category">
 		</div>
 		<div class="form-control">
 			<label for="product-description" class="form-label">Description</label>
-			<textarea class="form-input" placeholder="One hour personal yoga lesson" id="product-description" name="product-description">$o->description</textarea>
+			<textarea class="form-input" placeholder="A Product Description" id="product-description" name="product-description">$o->description</textarea>
 		</div>
 		<div class="form-control">
 			<label for="product-thumbnail" class="form-label">Thumbnail</label>
-			<input type="text" class="form-input" placeholder="img/yoga_thumbnail.jpg" id="product-thumbnail" name="product-thumbnail" value="$o->thumbnail">
+			<input type="text" class="form-input" placeholder="A Product Image" id="product-thumbnail" name="product-thumbnail" value="$o->thumbnail">
 		</div>
 		<div class="form-control">
 			<label for="product-availability" class="form-label">Avaiability</label>
