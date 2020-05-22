@@ -1,7 +1,5 @@
 #Han Li
 
-Student Project
-
 ## Links
 
 - http://stumgist.com
