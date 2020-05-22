@@ -68,7 +68,7 @@ $empty_poduct=(object)[
 			<!-- </div> -->
 			
 			<div class="card soft home" >
-                <h3 style="color: white">Special Selections</h3>
+             
                 <h2 class="quote">"Beauty begins the moment you deside to treat yourself"</h2>
                 <p><a class="form-button shop" href="product_list.php">Shop</a></p>
 				

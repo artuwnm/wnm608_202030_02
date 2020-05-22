@@ -29,7 +29,7 @@ $selectAmount = selectAmount($o->amount);
 return $r.<<<HTML
 <div class="display-flex card-section">
 	<div class="flex-none product-thumbs">
-		<img src="/images/$o->thumbnail">
+		<img src="../li.han/$o->thumbnail">
 	</div>
 	<div class="flex-stretch">
 		<div class="display-flex">
@@ -44,7 +44,7 @@ return $r.<<<HTML
 			<form class="flex-none" method="get" action="data/form_actions.php">
 				<input type="hidden" name="action" value="delete-cart-item">
 				<input type="hidden" name="id" value="$o->id">
-				<button type="submit" class="form-button">Delete</button>
+				<button type="submit" class="form-button" style="background-color: white; color: grey">Delete</button>
 			</form>
 			<div class="flex-stretch"></div>
 			<form class="flex-none" method="get" action="data/form_actions.php" onchange="this.submit()">

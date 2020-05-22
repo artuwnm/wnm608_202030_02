@@ -92,7 +92,7 @@ section h2 {
 	color:var(--color-neutral-dark);
 }
 .product-price{
-	font-size: 0.8vw;
+	font-size: 1vw;
 	font-weight: 300;
 		color: #666699;
 
@@ -110,6 +110,9 @@ section h2 {
 	border-radius:0.5em;
 }
 .product-image {    position: relative;    /* display: flex; */    height: 0;    padding-top: 120%;    overflow: hidden;}
+.product-image :hover{
+	opacity: 0.7;
+}
 /*.search {*/
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;

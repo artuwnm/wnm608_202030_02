@@ -382,7 +382,7 @@ min-height: 100%;
     display: block;
     font-size: 0.7em;
     margin-top: 5em;
-    color: var(--color-neutral-medium);
+    color: grey;
 }
 .form-select select,
 .form-button {

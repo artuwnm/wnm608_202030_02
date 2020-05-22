@@ -18,6 +18,9 @@
 .col-xs-12.col-md-4{
 	padding-right: 5vw;
 }
+ a:hover{
+ 	text-orientation: none;
+ }
 
 .grid.gap.productlist {    padding: 1vw;}
 

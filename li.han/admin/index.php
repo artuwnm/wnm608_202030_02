@@ -4,14 +4,14 @@ include "../lib/php/functions.php";
 include "../parts/templates.php";
 
 $empty_product = (object) [
-	"name"=>"",
-	"price"=>"",
-	"category"=>"",
-	"description"=>"",
-	"thumbnail"=>"",
-	"images"=>"",
-	"size"=>"",
-	"quantity"=>""
+	"name"=>"Lancome Eye Gel",
+	"price"=>"28",
+	"category"=>"Eye Treatments",
+	"description"=>"Lancome Énergie de Vie Illuminating & Anti-Fatigue Cooling Eye Gel",
+	"thumbnail"=>"images/lancome_eye_thumbnail",
+	"images"=>"images/lancome_eye_1,images/lancome_eye_2",
+	"size"=>"0.5oz",
+	"quantity"=>"10"
 ];
 
 

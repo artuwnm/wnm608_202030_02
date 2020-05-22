@@ -39,14 +39,15 @@ $result = getCartItems();
 				<div class="card flat">
 					<?= cartTotals(); ?>
 					<div class="card-section">
-						<a href="product_checkout.php" class="form-button">Checkout</a>
+						<a href="product_checkout.php" class="form-button" style="color:#074476">Checkout</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</body>
 		<footer>
 		<?php include "parts/footer.php" ?>
 	</footer>
-</body>
+
 </html>
