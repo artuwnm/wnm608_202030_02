@@ -257,6 +257,5 @@ HTML;
 
 		?>
 	</div>
-	
 </body>
 </html>
