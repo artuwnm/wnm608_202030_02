@@ -31,6 +31,7 @@
 					<div >Locations</div>
 					<div>Nutrition Info</div>
 					<div>Customer service</div>
+					<a href="admin/index.php">Admin</a>
 				</div>
 			</div>
 		</div>
