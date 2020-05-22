@@ -9,7 +9,7 @@
 <div class="cart-detail clearfix">
     <div class="success-title">Fill in order information</div>
     <div class="cart-goods-list clearfix">
-        <form action="product_confirmation.php" method="post" class="fl order-submit-form">
+        <form class="fl order-submit-form">
             <ul>
                 <li>
                     <p class="p-title">Email Address:</p>
@@ -39,31 +39,13 @@
                     <input type="text" name="cvv" class="input-text input-name" placeholder="CVV" autocomplete="off" />
                 </li>
                 <li>
-<!--                    <input type="submit" value="Complete Payment" class="submit-btn J-submit-btn">-->
                     <a href="product_confirmation.php" class="submit-btn">Complete Payment</a>
                     <p class="error-tips"></p>
                 </li>
             </ul>
         </form>
         <div class="order-submit-goods">
-            <div class="order-submit-goods-list">
-                <?php
-                $result = getCartItems();
-                $totalprice = 0;
-                foreach ($result as $key=>$row){
-                    $totalprice += $row->amount;
-                    ?>
-                    <div class="product-one">
-                        <p class="img_p"><a href="detail.php?id=1"><img src="./img/<?=$row->thumb?>"/></a></p>
-                        <p><a href="detail.php?id=1"><?=$row->name?></a></p>
-                        <p>Quantity：<?=$row->quantity?></p>
-                        <p>Prices：$<?=$row->amount?></p>
-                    </div>
-                <?php }?>
-            </div>
-            <div class="order-submit-goods-price">
-                <span>The total price:</span><b>$ <i class="J-total-price" style="font-style: normal;"><?=$totalprice?></i></b>
-            </div>
+            <?= cartTotals()?>
         </div>
     </div>
 </div>
