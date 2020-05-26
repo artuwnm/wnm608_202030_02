@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# wnm608_202030_02
-
-WNM 608 2020 Spring 02
-=======
 #Heewon Moon
 
 ## Links
@@ -20,5 +15,4 @@ WNM 608 2020 Spring 02
 - git commit -m "[message]"
 - git push origin master
 
->>>>>>> 9db5f9f7677f0f50e81329021c1754816048f342
 
