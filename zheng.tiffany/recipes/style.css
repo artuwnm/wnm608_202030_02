@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+	font-weight: 700;
+    color: #ff7979;
+}
+
+h1, h3 {
+	font-weight: 300;
+}
+
+li {
+	line-height: 1.75rem;
+}
+
+hr {
+	background-color: #808080;
+	height: 2.5px;
+	margin-top: 2.5em;
+}
+
+.site-header {
+	padding: 0;
+    width: 100%;
+}
+
+.site-title {
+	font-family: 'Bebas Neue', cursive;
+	font-size: 2.75rem;
+	font-weight: 300;
+	letter-spacing: 0.05em;
+	text-align: center;
+}
+
+.site-subtitle {
+	font-size: 2rem;
+	color: #808080;
+}
+
+.accent-color {
+	color: #ff7979;
+}
+
+.section-title {
+	color: #333;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.05em;
+    text-align: left;
+}
+
+.banner-image {
+	background: url('images/tasty-banner.jpg') top center repeat;
+	background-size: contain;
+	height: 5rem;
+}
+
+.page-section {
+	padding: 1.2rem 0;
+}
+
+.wrapper {
+    overflow: hidden;
+    padding-left: 18px;
+    padding-right: 18px;
+    max-width: 1432px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site-footer {
+	padding: 0;
+	width: 100%;
+}
+
+.site-footer p {
+	text-align: center;
+	padding-bottom: 1.5em;
+}
+
+/* Recipes Overview */
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	margin-right: -45px;
+	padding-top: 80px;
+}
+
+.generic-content-container p {
+	font-weight: 300;
+	line-height: 1.75;
+	margin: 0 0 1.5rem 0;
+}
+
+.row-item {
+	width: 33.33%;
+	padding-right: 45px;
+}
+
+.recipe-box {
+	background-color: rgba(242, 241, 239, 1);
+	padding: 0 24px 1px 24px;
+    margin-bottom: 50px;
+}
+
+.recipe-box-last {
+	margin-bottom: 0;
+}
+
+.recipe-photo {
+	border-radius: 80px;
+	border: 6px solid rgba(242, 241, 239, 1);
+	overflow: hidden;
+	width: 160px;
+	height: 160px;
+	margin: 0 auto -80px auto;
+	position: relative;
+	top: -80px;
+}
+
+.recipe-title {
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: 500;
+	line-height: 3rem;
+	margin: 0;
+}
+
+.recipe-subtitle, .recipe-link {
+	text-align: center;
+	font-weight: 400;
+	font-size: 0.9375rem;
+	margin: 0.25rem 0 1rem 0;
+}
+
+.recipe-link a:hover {
+	color: #808080;
+}
+
+/* Recipe Step-by-Steps */
+
+.title {
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 3rem;
+	margin: 0;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.container figure img {
+	max-width: 500px;
+}
+
+.container figure figcaption {
+	text-align: right;
+	font-weight: 300;
+	font-size: 0.75rem;
+	margin: 0.5rem 0;
+}
+
+ol img {
+	max-width: 1000px;
+	padding: 1em 0;
+}
+
+ol li {
+	max-width: 1000px;
+	padding-left: 0.5em;
+}
