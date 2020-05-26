@@ -1,0 +1,104 @@
+header {
+    display: flex;
+    min-height: 80px;
+    min-width: 400px;
+    background: #fff;
+    /*padding: 40px 20px;*/
+    border-radius: 5px;
+    box-shadow: 5px 55px 50px -20px grey; 
+    width: 100%;
+    text-align: right;
+    font-family: rubik;
+    text-align: center;
+}
+h1{
+  text-align: center;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  /*background-color: #f1f1f1;*/
+  
+}
+.shop{
+float: right;
+}
+li a {
+  display: block;
+  color: #000;
+  padding: 18px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+.view-window {
+    height: 120vh;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-bottom: 10vh;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.flex-container > div {
+    flex: 1 1 30%;
+    max-width: 30%;
+    margin: 10px;
+    padding: 0px;
+}
+.game-item {
+    flex: 1 1 24%;
+    margin: 1px;
+    box-shadow: 1px 2px 5px #1c1c1c;
+    border-radius: 0.3em;
+}
+
+div {
+    display: block;
+}
+.footer {
+    background-color: #283240/*#C1D4D9*//*#6BB7B9*//*#FF5B5F*//*#4D5A73*/;
+    height: 200px;
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+    margin-left: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: left;
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: border-box;
+}
+* {
+    box-sizing: border-box;
+}

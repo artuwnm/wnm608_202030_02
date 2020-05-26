@@ -1,0 +1,48 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-neutral-dark: #333;
+    --color-neutral-medium: #999;
+    --color-neutral-light: #f9f9f9;
+    --header-height: 3rem;
+}
+
+body {
+    margin: 0;
+    font-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+/*.text {
+    box-shadow: 4px 4px 10px 10px rgba(39,43,38,0.1);
+    border-radius: 0.3em;
+    background-color: white;
+    padding: 1em;
+    overflow: hidden;
+    position: relative;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}*/
+.container {
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.card.soft {
+    box-shadow: 4px 4px 10px 10px rgba(39,43,38,0.1);
+    border-radius: 0.3em;
+}
+.card {
+    background-color: white;
+    padding: 1em;
+    overflow: hidden;
+    position: relative;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+line horizontal and vertical
+vertical line
