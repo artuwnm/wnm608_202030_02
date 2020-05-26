@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS style guide</title>
+	<meta charset="utf-8" >
+
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	 
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="../lib/css/styleguide.css">
+	<link rel="stylesheet" href="../css/storetheme.css">
+	<link rel="stylesheet" href="../lib/css/gridsystem.css">
+</head>
+<body>
+
+	<!-- CREATED BY FIFI LAW -->
+	<header class="container">
+		<nav class="navbar hamburger-nav">
+			<div class="hamburger-menu">
+				<div class="line line-1"></div>
+				<div class="line line-2"></div>
+				<div class="line line-3"></div>
+			</div>
+
+			<ul class="nav-list">
+				<li class="nav-item"><a href="#typography">Typography</a></li>
+				<ul class="sub-nav">
+					<li class="nav-item"><a href="#headings">Headings</a></li>
+					<li class="nav-item"><a href="#paragraphs">Paragraphs</a></li>
+				</ul>
+				<li class="nav-item"><a href="#images">Images</a></li>
+				<ul class="sub-nav">
+					<li class="nav-item"><a href="#images-decorations">Image Decorations</a>	</li>	
+					<li class="nav-item"><a href="#align-image">Image Alignment</a></li>
+				</ul>
+				<li class="nav-item" class="nav-item"><a href="#cards">Cards</a></li>
+				<li class="nav-item"><a href="#buttons">Buttons</a></li>
+				
+				<li class="nav-item"><a href="#navigations">Navigations</a></li>
+				<ul class="sub-nav">
+					<li class="nav-item"><a href="#navs">Navs</a></li>
+					<li class="nav-item"><a href="#navbar">Navbar</a></li>
+				</ul>
+				<li class="nav-item"><a href="#forms">Forms</a></li>
+				<li class="nav-item"><a href="#tables">Tables</a></li>
+				<li class="nav-item"><a href="#viewwindow">View Window</a></li>
+				<li class="nav-item"><a href="#checkboxes">Checkboxes</a></li>
+				<li class="nav-item"><a href="#figures">Figures</a></li>
+				<li class="nav-item"><a href="#grid">Grid System</a></li>
+				<li class="nav-item"><a href="#flex">Flex System</a></li>
+			</ul>
+		</nav>		
+		
+	</header>
+
+		<div class="container">
+			<div class="card">
+				<h1>CSS Style Guide</h1>
+			</div>
+		</div>
+
+	<section id="typography" class="container">
+		<h2>Typography</h2>
+		<div class="card">
+			<h3 id="headings">Headings</h3>
+			<h1>Heading 1</h1>
+			<h2>Heading 2</h2>
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+			<h5>Heading 5</h5>
+			<h6>Heading 6</h6>
+		</div>
+		<code>
+&lt;h1>Heading 1 &lt;/h1>
+&lt;h1>Heading 2 &lt;/h1>
+&lt;h1>Heading 3 &lt;/h1>
+&lt;h1>Heading 4 &lt;/h1>
+&lt;h1>Heading 5 &lt;/h1>
+&lt;h1>Heading 6 &lt;/h1>
+
+		</code>
+		<div class="container">
+			<div class="card">
+				<h3 id="paragraphs">Paragraphs</h3>
+				<div class="card dark">
+					<h4 class="text-align-left">Left-align</h4>
+					<code class="card code">class="text-align-left"</code>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus deserunt commodi iure quo soluta est eos tenetur, iusto officiis, rem.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero facere dolores quaerat consequuntur soluta dolor assumenda itaque, sed unde recusandae?</p>
+				</div>
+
+				<div class="card dark">
+					<h4 class="text-align-center">Center-align</h4>
+					<code class="card code">class="text-align-center"</code>
+					<p class="text-align-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus deserunt commodi iure quo soluta est eos tenetur, iusto officiis, rem.</p>
+					<p class="text-align-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero facere dolores quaerat consequuntur soluta dolor assumenda itaque, sed unde recusandae?</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="container">
+		<h2 id="images">Images</h2>
+			<h3>Image Decorations</h3>
+		<div class="card" id="images-decorations">
+			<h3>Basic Image</h3>
+			<code class="card code">class="image"</code>
+			<img class="image" src="https://via.placeholder.com/200?text=Placeholder" alt="">
+	
+			<h3>Rounded Image</h3>
+			<code class="card code">class="image round-border"</code>
+
+			<img class="image round-border"src="https://via.placeholder.com/200?text=Placeholder" alt="">
+	
+			<h3>Image with boxshadow</h3>
+			<code class="card code">class="image boxshadow"</code>
+
+			<img class="image boxshadow"src="https://via.placeholder.com/200?text=Placeholder" alt="">
+	
+			<h3>Image with border</h3>
+			<code class="card code">class="image border"</code>
+
+			<img class="image border"src="https://via.placeholder.com/200?text=Placeholder" alt="">
+
+		</div>
+
+		<div class="card">
+				<h3>Image Picker</h3>
+
+			<code class="card code">
+&lt;div class="image-picker">
+	&lt;div class="main-image">
+		&lt;img src="https://via.placeholder.com/600?text=1" alt="">
+	&lt;/div>
+	&lt;div class="thumbstrip ">
+		&lt;img  src="https://via.placeholder.com/600?text=1" alt="">
+		&lt;img  src="https://via.placeholder.com/600?text=2" alt="">
+		&lt;img  src="https://via.placeholder.com/600?text=3" alt="">
+		&lt;img  src="https://via.placeholder.com/600?text=4" alt="">
+	&lt;/div>
+&lt;/div>
+			</code>
+			<div class="image-picker">
+				<div class="main-image" style="    position: absolute;    left: 150px;">
+					<img src="https://via.placeholder.com/600?text=1" alt="">
+				</div>
+				<div class="thumbstrip right-150">
+					<img  src="https://via.placeholder.com/600?text=1" alt="">
+					<img  src="https://via.placeholder.com/600?text=2" alt="">
+					<img  src="https://via.placeholder.com/600?text=3" alt="">
+					<img  src="https://via.placeholder.com/600?text=4" alt="">
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+				<h3>Image Picker 2</h3>
+
+			<code class="card code">
+&lt;div class="">
+	&lt;div class="product-main">
+		&lt;img src="https://via.placeholder.com/600?text=1" alt="">
+	&lt;/div>
+	&lt;div class="product-thumbs ">
+		&lt;img  src="https://via.placeholder.com/600?text=1" alt="">
+		&lt;img  src="https://via.placeholder.com/600?text=2" alt="">
+		&lt;img  src="https://via.placeholder.com/600?text=3" alt="">
+		&lt;img  src="https://via.placeholder.com/600?text=4" alt="">go
+	&lt;/div>
+&lt;/div>
+			</code>
+			<div class="image-picker">
+				<div class="product-main">
+					<img src="https://via.placeholder.com/300?text=1" alt="">
+				</div>
+				<div class="product-thumbs">
+					<img  src="https://via.placeholder.com/300?text=1" alt="">
+					<img  src="https://via.placeholder.com/300?text=2" alt="">
+					<img  src="https://via.placeholder.com/300?text=3" alt="">
+					<img  src="https://via.placeholder.com/300?text=4" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="card" id="align-image">
+			<h3>Image Alignment</h3>
+			<h4>Left-Align</h4>
+			<code class="card code">class="image float-left"</code>
+
+			<img class="image float-left"src="https://via.placeholder.com/200?text=Placeholder" alt="">
+		</div>
+		<div class="card">
+			<h4>Right-Align</h4>
+			<code class="card code">class="image float-right"</code>
+
+			<div class="image"><img class="float-right"src="https://via.placeholder.com/200?text=Placeholder" alt=""></div>
+		</div>
+		<div class="card">
+			<h4>Center-Align</h4>
+			<code class="card code">class="image center"</code>
+
+			<img class="image center"src="https://via.placeholder.com/200?text=Placeholder" alt="">
+		</div>
+	</section>
+
+	<section class="container">
+			<h2 id="cards">Cards</h2>
+		<div class="card">
+			<div class="card soft">
+				<h3>Soft Card</h3>
+				<code class="card code">class="card soft"</code>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur earum, provident deserunt! Maxime, iusto, vero! Optio porro aliquid quidem corrupti rerum eos voluptatum sunt perspiciatis, in molestias voluptates illum illo.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur earum, provident deserunt! Maxime, iusto, vero! Optio porro aliquid quidem corrupti rerum eos voluptatum sunt perspiciatis, in molestias voluptates illum illo.</p>
+			</div>
+			<div class="card dark">
+				<h3>Dark Card</h3>
+				<code class="card code">class="card dark"</code>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur earum, provident deserunt! Maxime, iusto, vero! Optio porro aliquid quidem corrupti rerum eos voluptatum sunt perspiciatis, in molestias voluptates illum illo.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur earum, provident deserunt! Maxime, iusto, vero! Optio porro aliquid quidem corrupti rerum eos voluptatum sunt perspiciatis, in molestias voluptates illum illo.</p>
+			</div>
+			<div class="card flat">
+				<h3>Flat Card</h3>
+				<code class="card code">class="card flat"</code>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur earum, provident deserunt! Maxime, iusto, vero! Optio porro aliquid quidem corrupti rerum eos voluptatum sunt perspiciatis, in molestias voluptates illum illo.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur earum, provident deserunt! Maxime, iusto, vero! Optio porro aliquid quidem corrupti rerum eos voluptatum sunt perspiciatis, in molestias voluptates illum illo.</p>
+			</div>
+			<div class="card transparent">
+				<h3>Transparent Card</h3>
+				<code class="card code">class="card transparent"</code>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur earum, provident deserunt! Maxime, iusto, vero! Optio porro aliquid quidem corrupti rerum eos voluptatum sunt perspiciatis, in molestias voluptates illum illo.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur earum, provident deserunt! Maxime, iusto, vero! Optio porro aliquid quidem corrupti rerum eos voluptatum sunt perspiciatis, in molestias voluptates illum illo.</p>
+			</div>
+
+		</div>
+	</section>
+
+
+	<section class="container">
+		<h2 id="buttons">Buttons</h2>
+			<div class="card">
+			
+					<h3>Light button</h3>
+					<code class="card code">class="btn light"</code>
+
+					
+					<a href="#" class="btn light">Click Me</a>
+
+					<h3>Dark button</h3>
+					<code class="card code">class="btn dark"</code>
+					
+					<a href="#" class="btn dark">Click Me</a>
+
+					
+			</div>
+		
+	</section>
+
+	<section id="navigations" class="container">
+		<h2>Navigations</h2>
+		<h3 id="navs">Navs</h3>
+		<div class="card">
+			<h3 >Basic Nav</h3>
+			<code class="card code">class="nav"</code>
+			
+			<div class="nav" id="navigations">
+				<ul>
+					<li><a href="#">Link 1</a></li>
+					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="card">
+			<h3>Flex Nav</h3>
+			<code class="card code">class="nav-flex"</code>
+			
+			<div class="nav-flex" id="navigations">
+				<ul>
+					<li><a href="#">Link 1</a></li>
+					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="card">
+			<h3>Stretch Nav</h3>
+			<code class="card code">class="nav-stretch"</code>
+			
+			<div class="nav-stretch" id="navigations">
+				<ul>
+					<li><a href="#">Link 1</a></li>
+					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="card">
+			<h3>Breadcrumb Nav</h3>
+			<code class="card code">class="nav-breadcrumb"</code>
+			
+			<div class="nav-breadcrumb" id="navigations">
+				<ul>
+					<li><a href="#">Link 1</a></li>
+					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="card">
+			<h3>Breadcrumb Nav 2</h3>
+			<code class="card code">class="nav-breadcrumb2"</code>
+			
+			<div class="nav-breadcrumb2" id="navigations">
+				<ul>
+					<li><a href="#">Link 1</a></li>
+					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="card">
+			<h3>Pills Nav</h3>
+			<code class="card code">class="nav-pills"</code>
+			
+			<div class="nav-pills" id="navigations">
+				<ul>
+					<li><a href="#">Link 1</a></li>
+					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<h3 id="navbar">Navbars</h3>
+			
+			
+		<div class="card">
+			<h3>Basic Navbar</h3>
+			<code class="card code">
+				
+&lt;div class="navbar">
+	&lt;div class="container display-flex ">
+		&lt;div class="flex-stretch">
+			&lt;h1>Store Logo&lt;/h1>
+		&lt;/div>
+		&lt;nav class="nav-pills ">
+			&lt;ul class="display-flex flex-justify-center">
+				&lt;li>&lt;a href="#article1">Link 1&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#article2">Link 2&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#article3">Link 3&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#article4">Link 4&lt;/a>&lt;/li>
+			&lt;/ul>
+		&lt;/nav>
+	&lt;/div>
+&lt;/div>
+			
+			</code>
+			<div class="card soft">
+
+				<div class="navbar">
+					<div class="container display-flex ">
+						<div class="flex-stretch">
+							<h1>Store Logo</h1>
+						</div>
+						<nav class="nav-pills ">
+							<ul class="display-flex flex-justify-center">
+								<li><a href="#article1">Link 1</a></li>
+								<li><a href="#article2">Link 2</a></li>
+								<li><a href="#article3">Link 3</a></li>
+								<li><a href="#article4">Link 4</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<h3>Centered Navbar</h3>
+			<code class="card code">
+&lt;div class="navbar">
+	&lt;div class="container display-block ">
+		&lt;div class="flex-stretch text-align-center">
+			&lt;h1>Store Logo&lt;/h1>
+		&lt;/div>
+		&lt;nav class="nav-breadcrumb flex-none ">
+			&lt;ul class="display-flex flex-justify-center">
+				&lt;li>&lt;a href="#article1">Link 1&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#article2">Link 2&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#article3">Link 3&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#article4">Link 4&lt;/a>&lt;/li>
+			&lt;/ul>
+		&lt;/nav>
+	&lt;/div>
+&lt;/div>
+			</code>
+			<div class="card soft">
+				<div class="navbar">
+					<div class="container display-block ">
+						<div class="flex-stretch text-align-center">
+							<h1>Store Logo</h1>
+						</div>
+						<nav class="nav-breadcrumb flex-none ">
+							<ul class="display-flex flex-justify-center">
+								<li><a href="#article1">Link 1</a></li>
+								<li><a href="#article2">Link 2</a></li>
+								<li><a href="#article3">Link 3</a></li>
+								<li><a href="#article4">Link 4</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="card">
+			<h3>Reversed Navbar</h3>
+			<code class="card code">
+&lt;div class="navbar">
+	&lt;div class="container display-flex flex-justify-between">
+		&lt;nav class="nav-flex">
+			&lt;ul class="display-flex">
+				&lt;li>&lt;a href="#article1">Link 1&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#article2">Link 2&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#article3">Link 3&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#article4">Link 4&lt;/a>&lt;/li>
+			&lt;/ul>
+		&lt;/nav>
+		&lt;div class="flex-none">
+			&lt;h1>Store Logo&lt;/h1>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+			</code>
+			<div class="card soft">
+				<div class="navbar">
+					<div class="container display-flex flex-justify-between">
+						
+						<nav class="nav-flex">
+							<ul class="display-flex">
+								<li><a href="#article1">Link 1</a></li>
+								<li><a href="#article2">Link 2</a></li>
+								<li><a href="#article3">Link 3</a></li>
+								<li><a href="#article4">Link 4</a></li>
+							</ul>
+						</nav>
+						<div class="flex-none">
+							<h1>Store Logo</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<h3>Dropdown Navbar</h3>
+			<code class="card code">
+&lt;div class="navbar dropdown">
+	&lt;div class="container nav">
+		&lt;div class="logo">
+			&lt;h1>Store Logo&lt;/h1>
+		&lt;/div>
+			&lt;input type="checkbox" class="menu-btn" id="menu-btn">
+			&lt;label class="dropmenu-icon" for="menu-btn">&lt;span class="nav-icon">&lt;/span>&lt;/label>
+			&lt;ul class="drop-menu">
+				&lt;li>&lt;a href="#article1">Link 1&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#article2">Link 2&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#article3">Link 3&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#article4">Link 4&lt;/a>&lt;/li>
+			&lt;/ul>
+	&lt;/div>
+&lt;/div>
+			</code>
+			<div class="card soft">
+				<div class="navbar dropdown">
+					<div class="container nav">
+						<div class="logo">
+							<h1>Store Logo</h1>
+						</div>
+				
+							<input type="checkbox" class="menu-btn" id="menu-btn">
+							<label class="dropmenu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+
+							<ul class="drop-menu">
+								<li><a href="#article1">Link 1</a></li>
+								<li><a href="#article2">Link 2</a></li>
+								<li><a href="#article3">Link 3</a></li>
+								<li><a href="#article4">Link 4</a></li>
+							</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="forms" class="container">
+		<h2>Forms</h2>
+		<div class="card">
+			<h3>Basic Forms</h3>
+			<code class="card code">
+&lt;form class="form" action="">
+	&lt;input class="form-basic" type="text" placeholder="Input">
+	&lt;input class="form-basic" type="password" placeholder="Password">
+	&lt;input class="form-basic" type="number" placeholder="Number">
+	&lt;input class="form-basic" type="search" placeholder="Search">
+&lt;/form>
+			</code>
+			<form class="form" action="">
+				<input class="form-basic" type="text" placeholder="Input">
+				<input class="form-basic" type="password" placeholder="Password">
+				<input class="form-basic" type="number" placeholder="Number">
+				<input class="form-basic" type="search" placeholder="Search">
+				<button class="form-basic-button uppercase">Button</button>
+			</form>
+		</div>
+
+		<div class="card">
+			<h3>Input Forms</h3>
+<code class="card code">
+&lt;form class="form" action="">
+	&lt;input class="form-input" type="text" placeholder="Text">
+	&lt;input class="form-input" type="password" placeholder="Password">
+	&lt;input class="form-input" type="number" placeholder="Number">
+	&lt;input class="form-input" type="search" placeholder="Search">
+&lt;/form>
+</code>
+			<form class="form" action="">
+				<input class="form-input" type="text" placeholder="Text">
+				<input class="form-input" type="password" placeholder="Password">
+				<input class="form-input" type="number" placeholder="Number">
+				<input class="form-input" type="search" placeholder="Search">
+				
+			</form>
+		</div>
+
+		<div class="card">
+			<h3>Form Label with button</h3>
+			<code class="card code">
+&lt;form class="form" action="">
+	&lt;label for="input-example1" class="form-label">Example &lt;/label>
+	&lt;input class="form-input" type="text" placeholder="Text" id="input-example1">
+&lt;/form>
+&lt;form class="form" action="">
+	&lt;label for="input-example2" class="form-label">Example &lt;/label>
+	&lt;input class="form-input" type="text" placeholder="Text" id="input-example2">
+&lt;/form>
+&lt;form class="form" action="">
+	&lt;label for="input-example3" class="form-label">Example &lt;/label>
+	&lt;input class="form-input" type="text" placeholder="Text" id="input-example3">		
+	&lt;div class="form-control">
+		&lt;button type="submit" class="form-button">Button &lt;/button>
+	&lt;/div>
+&lt;/form>
+			</code>
+			<form class="form" action="">
+				<label for="input-example1" class="form-label">Example</label>
+				<input class="form-input" type="text" placeholder="Text" id="input-example1">
+			</form>
+			<form class="form" action="">
+
+				<label for="input-example2" class="form-label">Example</label>
+				<input class="form-input" type="text" placeholder="Text" id="input-example2">
+			</form>
+			<form class="form" action="">
+
+				<label for="input-example3" class="form-label">Example</label>
+				<input class="form-input" type="text" placeholder="Text" id="input-example3">		
+
+				<div class="form-control">
+					<button type="submit" class="form-button">Button</button>
+				</div>
+
+			</form>
+		</div>
+
+	<div class="card">
+		<h3>Form Control Label</h3>
+
+		<code class="card code">
+&lt;form class="form form-control" action="">
+	&lt;label for="control-input-example1" class="form-label">Example&lt;/label>
+	&lt;input class="form-input" type="text" placeholder="Text" id="control-input-example1">
+&lt;/form>
+&lt;form class="form form-control" action="">
+	&lt;label for="control-input-example2" class="form-label">Example&lt;/label>
+	&lt;input class="form-input" type="text" placeholder="Text" id="control-input-example2">
+&lt;/form>
+&lt;form class="form form-control" action="">
+	&lt;label for="control-input-example3" class="form-label">Example&lt;/label>
+	&lt;input class="form-input" type="text" placeholder="Text" id="control-input-example3">			
+&lt;/form>
+		</code>		
+			<form class="form form-control" action="">
+				<label for="control-input-example1" class="form-label">Example</label>
+				<input class="form-input" type="text" placeholder="Text" id="control-input-example1">
+			</form>
+			<form class="form form-control" action="">
+
+				<label for="control-input-example2" class="form-label">Example</label>
+				<input class="form-input" type="text" placeholder="Text" id="control-input-example2">
+			</form>
+			<form class="form form-control" action="">
+
+				<label for="control-input-example3" class="form-label">Example</label>
+				<input class="form-input" type="text" placeholder="Text" id="control-input-example3">			
+				
+			</form>
+		</div>
+
+	<div class="card">
+		<h3>Sign Up Form</h3>
+		<code class="card code">
+&lt;div class="display-flex">
+&lt;label for="" class="display-flex signup-label" >
+	&lt;input type="text" placeholder="Sign Up" class="signup-label-input flex-stretch">
+	&lt;button name="" class="signup-label-button flex-none">&#8594;&lt;/button>
+&lt;/label>
+&lt;/div>
+&lt;div class="flex-stretch">&lt;/div>
+		</code>
+		<div class="display-flex">
+			<label for="" class="display-flex signup-label" >
+				<input type="text" placeholder="Sign Up" class="signup-label-input flex-stretch">
+				<button name="" class="signup-label-button flex-none">&#8594;</button>
+			</label>
+
+		</div>
+		<div class="flex-stretch"></div>
+	</div>
+
+		<div class="card">
+			<h3>Promo Code Form</h3>
+			<code class="card code">
+&lt;div class="display-flex">
+	&lt;label for="" class="display-flex promo-label" >
+		&lt;input type="text" placeholder="Enter Text" class="promo-label-input flex-stretch">
+		&lt;button name="" class="promo-label-button flex-none">GO&lt;/button>
+	&lt;/label>
+&lt;/div>
+			</code>
+			<div class="display-flex">
+				<label for="" class="display-flex promo-label" >
+					<input type="text" placeholder="Enter Text" class="promo-label-input flex-stretch">
+					<button name="" class="promo-label-button flex-none">GO</button>
+				</label>
+			</div>
+		</div>
+
+		<div class="card">
+			<h3>Hotdog</h3> 
+			<code class="card code">
+&lt;div class="form-control">
+	&lt;label class="hotdog">
+		&lt;div class="flex-none">&clubs;&lt;/div>
+		&lt;div class="flex-scretch">
+			&lt;input type="search" placeholder="Search">
+		&lt;/div>
+	&lt;/label>
+&lt;/div>
+&lt;div class="form-control display-flex">
+	&lt;div class="flex-stretch">&lt;/div>
+	&lt;div class="flex-none">
+		&lt;input type="search" class="hotdog" placeholder="Search">
+	&lt;/div>
+&lt;/div>
+			</code>
+			<div class="form-control">
+				<label class="hotdog">
+					<div class="flex-none hotdog-icon"><img src="../images/search-icon.svg" alt=""></div>
+					<div class="flex-stretch">
+						<input type="search" placeholder="Search">
+					</div>
+				</label>
+			</div>
+		</div>
+
+			<div class="card">
+				<h3>Hotdog 2</h3>
+				<code class="card code">
+&lt;div class="form-control display-flex">
+	&lt;div class="flex-stretch">&lt;/div>			
+	&lt;label class="display-flex hotdog2">
+		&lt;input type="search" class="display-none" id="hotdog2" placeholder="Search">
+		&lt;div class="flex-none hotdog-icon2" for="hotdog2">
+			&lt;img src="../images/search-icon.svg" alt="">
+		&lt;/div>
+	&lt;/label>
+&lt;/div>
+
+				</code>
+				<div class="form-control display-flex padding-bottom-2">
+					<div class="flex-stretch"></div>
+					
+					<label class="display-flex display-none">
+						<input type="search" class="hotdog2 " id="hotdog2" placeholder="Search">
+						<div class="flex-none hotdog-icon2" for="hotdog2"><img src="../images/search-icon.svg" alt=""></div>
+					</label>
+				</div>
+			</div>
+
+
+	</section>
+
+	<section class="container" id="tables">
+		<h2>Tables</h2>
+		<div class="card">
+			<h3>Basic Table</h3>
+		<code class="card code">
+&lt;table class="table">
+&lt;/table>
+			</code>
+			<table class="table">
+				<tr>
+					<th>ID</th>
+					<th>Office</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Phone</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+			</table>
+
+
+		</div>
+
+
+		<div class="card">
+			<h3>Striped Table</h3>
+			<code class="card code">
+&lt;table class="table striped">
+&lt;/table>
+			</code>
+			<table class="table striped">
+				<tr>
+					<th>ID</th>
+					<th>Office</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Phone</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+			</table>
+		</div>
+		<div class="card">
+			<h3>Lined Table</h3>
+			<code class="card code">
+&lt;table class="table lined">
+&lt;/table>
+			</code>
+			<table class="table lined">
+				<tr>
+					<th>ID</th>
+					<th>Office</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Phone</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>522</td>
+					<td>Hamilton Cline</td>
+					<td>hcline@academyart.edu</td>
+					<td>555-2424</td>
+				</tr>
+			</table>
+	
+		</div>
+	</section>
+
+	<section class="container">
+		<h2 id="viewwindow">View-Window</h2>
+		<div class="card">
+			<code class="card code">
+&lt;div class="view-window" style="background-image: url(https://via.placeholder.com/800?text=Hello);">
+	&lt;div class="container">
+		&lt;div class="view-window-img">
+			&lt;img src="https://via.placeholder.com/500?text=Product+image" alt="">
+		&lt;/div>
+		&lt;div class="card center text-align-left ">
+			&lt;h1 class="uppercase margin-bottom-5">Lorem ipsum dolor &lt;/h1>
+			&lt;p class=" window-msg ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ratione 
+			totam est libero architecto cupiditate ad repudiandae dicta repellendus commodi! &lt;/p>
+			&lt;a class="btn CTA " href="#">Shop Now &lt;/a> 
+		&lt;/div>
+	&lt;/div>	
+&lt;/div>
+			</code>
+		</div>
+	</section>
+
+			<div class="view-window" style="background-image: url(https://via.placeholder.com/800?text=Hello);">
+		<div class="container ">
+			<div class="view-window-img">
+				<img src="https://via.placeholder.com/500?text=Product+image" alt="">
+			</div>
+		<div class="card center text-align-left ">
+			<h1 class="uppercase margin-bottom-5">Lorem ipsum dolor</h1>
+			<p class=" window-msg ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ratione totam est libero architecto cupiditate ad repudiandae dicta repellendus commodi!</p>
+			<a class="btn CTA " href="#">Shop Now</a> 
+			
+		</div>
+		</div>	
+	</div>
+
+	<section id="checkboxes" class="container">
+		<h2>Checkboxes</h2>
+		<div class="card">
+			<h3>Basic Checkbox</h3>
+			<code class="card code">
+&lt;div class="form-control">
+	&lt;label for="check-example1" class="checkbox">
+		&lt;input type="checkbox" id="check-example1" >
+		&lt;span class="checkmark">&lt;/span>
+		&lt;label for="check-example1" class="form-content">Text&lt;/label>
+	&lt;/label>
+&lt;/div>
+			</code>
+			<div class="form-control">
+				<label for="check-example1" class="checkbox">
+					<input type="checkbox" id="check-example1" >
+					<span class="checkmark"></span>
+					<label for="check-example1" class="form-content">Text</label>
+				</label>
+			</div>
+		</div>
+			<!-- <div class="form-control">
+				<div class="heart-toggle ">
+					<input type="checkbox" id="heart-example1" class="hidden">
+					<label for="heart-example1">Label &hearts; </label>
+					
+				</div>
+			</div> -->
+			
+			<div class="card">
+				<h3>Toggle</h3>
+				<code class="card code">
+&lt;div class="form-control">
+	&lt;div class="toggle ">
+		&lt;input type="checkbox" id="toggle1" class="hidden">
+		&lt;label for="toggle1"> &lt;/label>
+	&lt;/div>
+&lt;/div>
+				</code>
+				<div class="form-control">
+					<div class="toggle ">
+						<input type="checkbox" id="toggle1" class="hidden">
+						<label for="toggle1"> </label>
+					</div>
+				</div>
+			</div>
+
+			<div class="card">
+				<h3>Radio</h3>
+				<code class="card code">
+&lt;div class="form-control">
+	&lt;label for="radio-example1" class="radiobox">
+		&lt;input type="radio" id="radio-example1" name="radio">
+		&lt;span class="radiomark">&lt;/span>
+		&lt;label for="radio-example1" class="form-content">Option 1&lt;/label>
+	&lt;/label>
+	&lt;label for="radio-example2" class="radiobox">
+		&lt;input type="radio" id="radio-example2" name="radio">
+		&lt;span class="radiomark">&lt;/span>
+		&lt;label for="radio-example2" class="form-content">Option 2&lt;/label>
+	&lt;/label>
+	&lt;label for="radio-example3" class="radiobox">
+		&lt;input type="radio" id="radio-example3" name="radio">
+		&lt;span class="radiomark">&lt;/span>
+		&lt;label for="radio-example3" class="form-content">Option 3&lt;/label>
+	&lt;/label>
+&lt;/div>
+				</code>
+
+				<div class="form-control">
+				<label for="radio-example1" class="radiobox">
+					<input type="radio" id="radio-example1" name="radio-example1">
+					<span class="radiomark"></span>
+					<label for="radio-example1" class="form-content">Option 1</label>
+				</label>
+				<label for="radio-example2" class="radiobox">
+					<input type="radio" id="radio-example2" name="radio-example1">
+					<span class="radiomark"></span>
+					<label for="radio-example2" class="form-content">Option 2</label>
+				</label>
+				<label for="radio-example3" class="radiobox">
+					<input type="radio" id="radio-example3" name="radio-example1">
+					<span class="radiomark"></span>
+					<label for="radio-example3" class="form-content">Option 3</label>
+				</label>
+				</div>
+			</div>
+		
+		<div class="card">
+			<h3>Accordion</h3>
+			<code class="card code">
+&lt;div class="accodion">
+	&lt;div class="display-flex accodion-header">
+		&lt;div class="accodion-section flex-stretch uppercase">Section 1&lt;/div>
+		&lt;div class="flex-none accodion-icon">+&lt;/div>
+	&lt;/div>
+	&lt;div class="nav nav-accodion">
+		&lt;ul>
+			&lt;li>&lt;a href="#">Link#&lt;/a>&lt;/li>
+			&lt;li>&lt;a href="#">Link#&lt;/a>&lt;/li>
+			&lt;li>&lt;a href="#">Link#&lt;/a>&lt;/li>
+		&lt;/ul>
+	&lt;/div>
+&lt;/div>
+&lt;div class="accodion">
+	&lt;div class="display-flex accodion-header">
+		&lt;div class="accodion-section flex-stretch uppercase">Section 2&lt;/div>
+		&lt;div class="flex-none accodion-icon">+&lt;/div>
+	&lt;/div>
+	&lt;div class="nav nav-accodion">
+		&lt;ul>
+			&lt;li>&lt;a href="#">Link#&lt;/a>&lt;/li>
+			&lt;li>&lt;a href="#">Link#&lt;/a>&lt;/li>
+			&lt;li>&lt;a href="#">Link#&lt;/a>&lt;/li>
+		&lt;/ul>
+	&lt;/div>
+&lt;/div>
+&lt;div class="accodion">
+	&lt;div class="display-flex accodion-header">
+		&lt;div class="accodion-section flex-stretch uppercase">Section 3&lt;/div>
+		&lt;div class="flex-none accodion-icon">+&lt;/div>
+	&lt;/div>
+	&lt;div class="nav nav-accodion">
+		&lt;ul>
+			&lt;li>&lt;a href="#">Link#&lt;/a>&lt;/li>
+			&lt;li>&lt;a href="#">Link#&lt;/a>&lt;/li>
+			&lt;li>&lt;a href="#">Link#&lt;/a>&lt;/li>
+		&lt;/ul>
+	&lt;/div>
+&lt;/div>
+			</code>
+			<div class="accordion">
+				<div class="display-flex accordion-header">
+					<div class="accordion-section flex-stretch uppercase">Section 1</div>
+					<div class="flex-none accordion-icon">+</div>
+				</div>
+				<div class="nav nav-accordion">
+					<ul>
+						<li><a href="#">Link#</a></li>
+						<li><a href="#">Link#</a></li>
+						<li><a href="#">Link#</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="accordion">
+				<div class="display-flex accordion-header">
+					<div class="accordion-section flex-stretch uppercase">Section 2</div>
+					<div class="flex-none accordion-icon">+</div>
+				</div>
+				<div class="nav nav-accordion">
+					<ul>
+						<li><a href="#">Link#</a></li>
+						<li><a href="#">Link#</a></li>
+						<li><a href="#">Link#</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="accordion">
+				<div class="display-flex accordion-header">
+					<div class="accordion-section flex-stretch uppercase">Section 3</div>
+					<div class="flex-none accordion-icon">+</div>
+				</div>
+				<div class="nav nav-accordion">
+					<ul>
+						<li><a href="#">Link#</a></li>
+						<li><a href="#">Link#</a></li>
+						<li><a href="#">Link#</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<h3>Drop Down Selection</h3>
+			<code class="card code">
+&lt;select name="dropdown-selection" id="dropdown-selection" class="dropdown-selection">
+	&lt;option  class="options"  value="option1">Option 1&lt;/option>
+	&lt;option  class="options" value="option2">Option 2&lt;/option>
+	&lt;option  class="options" value="option3">Option 3&lt;/option>
+	&lt;option  class="options" value="option4">Option 4&lt;/option>
+&lt;/select>
+			</code>
+			<div>
+				<select name="dropdown-selection" id="dropdown-selection" class="dropdown-selection">
+					<option  class="options"  value="option1">iPhone 11</option>
+					<option  class="options" value="option2">iPhone 11 Pro</option>
+					<option  class="options" value="option3">iPhone 11 Pro Max</option>
+					<option  class="options" value="option4">iPhone X</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="card">
+			<h3>Slider</h3>
+
+			<code class="card code">
+&lt;div class="number-slider-value">
+	&lt;input type="range" name="range" value="0" min="0" max="50" step="1"	class="number-slider-bar">
+&lt;/div>
+			</code>
+			<div class="number-slider-value">
+				<input type="range" name="range" value="0" min="0" max="50" step="1"
+				class="number-slider-bar">
+			</div>
+
+		</div>
+	</section>
+
+	<section id="figures" class="container">
+		<h2>Figures</h2>
+		<div class="card">
+			
+			<h3>Basic Figures</h3>
+				<code class="card code">
+&lt;figure class="product-figure">
+	&lt;img src="https://via.placeholder.com/300" alt="">
+				
+	&lt;figcaption>
+		&lt;h5>Products&lt;/h5>
+		&lt;p>price&lt;/p>
+	&lt;/figcaption>
+&lt;/figure>
+				</code>
+			<figure class="product-figure">
+				<img src="https://via.placeholder.com/300" alt="">
+				
+				<figcaption>
+					<h5>Products</h5>
+					<p>price</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="card">
+			<h3>Soft Figures</h3>
+			<code class="card code">
+&lt;figure class="product-figure soft">
+	&lt;img src="https://via.placeholder.com/300" alt="">
+	&lt;figcaption>
+		Products
+	&lt;/figcaption>
+&lt;/figure>
+			</code>
+			<figure class="product-figure soft">
+				<img src="https://via.placeholder.com/300" alt="">
+				
+				<figcaption>
+					Products
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="card">
+			<h3>Overlay Figures</h3>
+			<code class="card code">
+&lt;figure class="product-figure overlay">
+	&lt;img src="https://via.placeholder.com/300" alt="">
+	
+	&lt;figcaption>
+		&lt;h4>Products&lt;/h4>
+	&lt;/figcaption>
+&lt;/figure>
+			</code>
+
+			<figure class="product-figure overlay">
+				<img src="https://via.placeholder.com/300" alt="">
+				
+				<figcaption>
+					<h4>Products</h4>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="card">
+			<h3>Gridded Overlay Figures</h3>
+			<code class="card code">
+&lt;div class="grid gap">
+	&lt;figure class="product-figure overlay col-md-4">
+		&lt;img src="https://via.placeholder.com/300" alt="">
+						
+		&lt;figcaption>
+			&lt;h4>Products&lt;/h4>
+		&lt;/figcaption>
+	&lt;/figure>
+	&lt;figure class="product-figure overlay col-md-4">
+		&lt;img src="https://via.placeholder.com/300" alt="">
+						
+		&lt;figcaption>
+			&lt;h4>Products&lt;/h4>
+		&lt;/figcaption>
+	&lt;/figure>
+	&lt;figure class="product-figure overlay col-md-4">
+		&lt;img src="https://via.placeholder.com/300" alt="">
+						
+		&lt;figcaption>
+			&lt;h4>Products&lt;/h4>
+		&lt;/figcaption>
+	&lt;/figure>
+&lt;/div>
+			</code>
+
+			<div class="grid gap">
+				<figure class="product-figure overlay col-md-4">
+					<img src="https://via.placeholder.com/300" alt="">
+					
+					<figcaption>
+						<h4>Products</h4>
+					</figcaption>
+				</figure>
+				<figure class="product-figure overlay col-md-4">
+					<img src="https://via.placeholder.com/300" alt="">
+					
+					<figcaption>
+						<h4>Products</h4>
+					</figcaption>
+				</figure>
+				<figure class="product-figure overlay col-md-4">
+					<img src="https://via.placeholder.com/300" alt="">
+					
+					<figcaption>
+						<h4>Products</h4>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+
+	</section>
+	
+	<section class="container">
+		<h2 id="grid">Grid System</h2>
+		<div class="card">
+			<h3>Basic Grid</h3>
+
+			<code class="card code">
+&lt;div class="grid">
+	&lt;div class="card dark col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facere fugiat vero harum nam aspernatur officia debitis, laboriosam repudiandae sapiente.&lt;/div>
+	&lt;div class="card dark col-md-4">Totam dolores ex labore, delectus. Hic, odio necessitatibus, tempore dolore expedita error blanditiis enim nulla sit, sunt modi, assumenda non.&lt;/div>
+	&lt;div class="card dark col-md-4">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.&lt;/div>
+	&lt;div class="card dark col-md-6">Totam dolores ex labore, delectus. Hic, odio necessitatibus, tempore dolore expedita error blanditiis enim nulla sit, sunt modi, assumenda non.&lt;/div>
+	&lt;div class="card dark col-md-3">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.&lt;/div>
+	&lt;div class="card dark col-md-3">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.&lt;/div>
+&lt;/div>
+			</code>
+			<div class="grid">
+				<div class="card dark col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facere fugiat vero harum nam aspernatur officia debitis, laboriosam repudiandae sapiente.</div>
+				<div class="card dark col-md-4">Totam dolores ex labore, delectus. Hic, odio necessitatibus, tempore dolore expedita error blanditiis enim nulla sit, sunt modi, assumenda non.</div>
+				<div class="card dark col-md-4">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.</div>
+				<div class="card dark col-md-6">Totam dolores ex labore, delectus. Hic, odio necessitatibus, tempore dolore expedita error blanditiis enim nulla sit, sunt modi, assumenda non.</div>
+				<div class="card dark col-md-3">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.</div><div class="card dark col-md-3">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.</div>
+			</div>
+		</div>
+				<div class="card">
+			<h3>Basic Grid with Gap</h3>
+						<code class="card code">
+&lt;div class="grid gap">
+	&lt;div class="card dark col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facere fugiat vero harum nam aspernatur officia debitis, laboriosam repudiandae sapiente.&lt;/div>
+	&lt;div class="card dark col-md-4">Totam dolores ex labore, delectus. Hic, odio necessitatibus, tempore dolore expedita error blanditiis enim nulla sit, sunt modi, assumenda non.&lt;/div>
+	&lt;div class="card dark col-md-4">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.&lt;/div>
+	&lt;div class="card dark col-md-6">Totam dolores ex labore, delectus. Hic, odio necessitatibus, tempore dolore expedita error blanditiis enim nulla sit, sunt modi, assumenda non.&lt;/div>
+	&lt;div class="card dark col-md-3">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.&lt;/div>
+	&lt;div class="card dark col-md-3">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.&lt;/div>
+&lt;/div>
+			</code>
+			<div class="grid gap">
+				<div class="card dark col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facere fugiat vero harum nam aspernatur officia debitis, laboriosam repudiandae sapiente.</div>
+				<div class="card dark col-md-4">Totam dolores ex labore, delectus. Hic, odio necessitatibus, tempore dolore expedita error blanditiis enim nulla sit, sunt modi, assumenda non.</div>
+				<div class="card dark col-md-4">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.</div>
+				<div class="card dark col-md-6">Totam dolores ex labore, delectus. Hic, odio necessitatibus, tempore dolore expedita error blanditiis enim nulla sit, sunt modi, assumenda non.</div>
+				<div class="card transparent col-md-3"><img src="https://via.placeholder.com/200?text=Product+image" alt="">
+				</div>
+				<div class="card dark col-md-3">Rerum assumenda, dolores nostrum voluptatibus obcaecati eos, alias cupiditate ipsam mollitia. Excepturi totam corrupti similique saepe aliquid facere, adipisci provident.</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="container">
+		<h2 id="flex">Flex System</h2>
+		<div class="card">
+			<code class="card code">
+&lt;div class="card soft">
+	&lt;div class="display-flex added-to-cart margin-bottom-2">
+		&lt;div class="cart-img flex-none">
+			&lt;img  src="https://via.placeholder.com/200?text=1" alt="">
+		&lt;/div>
+		&lt;div class="flex-stretch">
+			&lt;div class="display-flex">
+				&lt;div class="flex-stretch">
+					&lt;h3 class="medium-color">Thank you! 1 qty of the product has been added to cart.&lt;/h3>
+				&lt;/div>
+				&lt;div class="flex-none" >
+					&lt;a href="product_list.php" class="btn dark">Continue Shopping&lt;/a>
+			
+					&lt;a href="product_cart.php" class="btn light">View Cart&lt;/a>
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+			</code>
+			<div class="card soft">
+				<div class="display-flex added-to-cart margin-bottom-2">
+					<div class="cart-img flex-none">
+						<img  src="https://via.placeholder.com/200?text=1" alt="">
+					</div>
+					<div class="flex-stretch">
+						<div class="display-flex">
+							<div class="flex-stretch">
+								<h3 class="medium-color">Thank you! 1 qty of the product has been added to cart.</h3>
+							</div>
+							<div class="flex-none" >
+								<a href="product_list.php" class="btn dark">Continue Shopping</a>
+						
+								<a href="product_cart.php" class="btn light">View Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="card soft">
+				<div class="display-flex">		
+					<div class="image flex-none cart-img">
+						<img  src="https://via.placeholder.com/200?text=1" alt="">
+					</div>
+					<div class="flex-stretch">
+						<div class="display-flex">
+							<div class="flex-stretch">
+								<h4>productName (2)</h4>										
+								<form method="get" action="">
+									<input type="hidden" name="action" value="delete-cart-item">
+									<input type="hidden" name="id" value="">
+									<button type="submit" class="btn delete">Delete</button>
+								</form>
+							</div>
+							<div class="flex-none">
+								<h5>$30</h5>
+								<div class="select-amount">
+									<div class="card-section">
+ 									
+ 									<select name="amount" class="dropdown-selection display-block">
+ 										<!-- option*10>{$} -->
+ 										<option>1</option>
+ 										<option>2</option>
+ 										<option>3</option>
+ 										<option>4</option>
+ 										<option>5</option>
+ 										<option>6</option>
+ 										<option>7</option>
+ 										<option>8</option>
+ 										<option>9</option>
+ 										<option>10</option>
+ 									</select>
+ 								</div>
+								</div>
+							</div>
+						</div>			
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+
+
+</body>
+</html>
+
+
+
+
+
+
