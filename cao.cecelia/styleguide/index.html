@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Styleguide</title>
+
+	<meta name="viewport" content="width=device-width">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="../lib/css/styleguide.css">
+	<link rel="stylesheet" href="../lib/css/gridsystem.css">
+	<link rel="stylesheet" href="../css/storetheme.css">
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Source+Sans+Pro&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+	<header class="container">
+		<div class="card">
+			<h1>CSS Style Guide</h1>
+		</div>
+	</header>
+
+	<div class="container">
+		<h2>Table of Contents</h2>
+
+		<ul>
+			<li><a href="#typography">Typography</a></li>
+			<ul>
+				<li><a href="#headings">Headings</a></li>
+				<li><a href="#paragraphs">Paragraphs</a></li>
+			</ul>
+			<li><a href="#images">Images</a></li>
+			<li><a href="#cards">Cards</a></li>
+			<li><a href="#viewwindow">View Window</a></li>
+			<li><a href="#navigations">Navigations</a></li>
+			<ul>
+				<li><a href="#navigations">Navs</a></li>
+				<li><a href="#navigations">Navbar</a></li>
+			</ul>
+			<li><a href="#tables">Tables</a></li>
+			<li><a href="#grid">Grid System</a></li>
+			<li><a href="#forms">Forms</a></li>
+			<li><a href="#button">Button</a></li>
+			<li><a href="#checkboxes">Checkboxes</a></li>
+			<li><a href="#accordion">Accordion</a></li>
+			<li><a href="#figures">Figures</a></li>
+			<li><a href="#flex">Flex System</a></li>
+		</ul>
+	</div>
+
+	<hr>
+
+	<section id="typography" class="container">
+		<h2>Typography</h2>
+
+		
+		<div class="card">
+			<h3 id="headings">Headings</h3>
+			<!-- h$*6>{Heading $} -->
+			<h1>Heading 1 ‘Crimson’</h1>
+			<h2>Heading 2 Crimson’</h2>
+			<h3>Heading 3 Crimson’</h3>
+			<h4>Heading 4 Crimson’</h4>
+			<h5>Heading 5 Crimson’</h5>
+			<h6>Heading 6 Crimson’</h6>
+		</div>
+
+		<code>
+&lt;h1>Heading 1&lt;/h1>
+&lt;h2>Heading 2&lt;/h2>
+&lt;h3>Heading 3&lt;/h3>
+&lt;h4>Heading 4&lt;/h4>
+&lt;h5>Heading 5&lt;/h5>
+&lt;h6>Heading 6&lt;/h6>
+		</code>
+
+
+		<div class="card">
+			<h3 id="paragraphs">Paragraphs ‘Source Sans Pro’</h3>
+			<!-- p*3>lorem40 -->
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum numquam, ullam quisquam maiores voluptas reiciendis libero temporibus esse nihil suscipit perspiciatis blanditiis error pariatur autem ea debitis aut vitae, aperiam quas. Odit ad laudantium, doloremque neque! Consequuntur, perspiciatis, modi.</p>
+		</div>
+	</section>
+
+	<section id="images" class="container">
+		<h2>Images</h2>
+		
+		<div class="card">
+			<h3>Image Right</h3>
+		<div class="grid gap large">
+			<div class="col-xs-12 col-xl-6">
+			<h3>Introduction</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore non quis similique, sit, doloremque hic excepturi dolorum odit explicabo mollitia?</p>
+			
+		</div>
+			<div class="col-xs-12 col-xl-6">
+			<div class="imagealign flex-end">
+			<img src="https://via.placeholder.com/500x400.png?text=shopping" >	
+		</div>
+			</div>
+			</div>
+			<p> * This Image Layout will be used in Home page & Read Page. </p>
+			</div>
+		
+		<div class="card">
+		<h3>Image left</h3>
+		<div class="grid gap large">
+			
+			<div class="col-xs-12 col-xl-6">
+			<div class="imagealign flex-start">
+			<img src="https://via.placeholder.com/500x400.png?text=shopping">	
+		</div>
+			</div>
+			<div class="col-xs-12 col-xl-6">
+			<h3>Introduction</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore non quis similique, sit, doloremque hic excepturi dolorum odit explicabo mollitia?</p>
+			
+		</div>
+			</div>
+			<p> * This Image Layout will be used in Home page & Read Page. </p>
+			</div>
+		
+		<div class="card">
+			<h3>Image Hover</h3>
+		<div class="grid gap large">
+			<!-- .col-xs-6*2>.card.soft>lorem30 -->
+			<div class="col-xs-12 col-lg-4">
+				<div id="rectangle" class="flex-align-center flex-justify-center">
+				<div class="imagedecorarion flex-align-center flex-justify-center">
+					
+				</div>	
+				</div>	
+					<!-- <div class="stylebookone">	 -->
+				
+				<div class="form-control display-flex">
+				<div class="flex-none">
+					<h4>Baby Earings</h4>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<h4>$98.00</h4>
+				</div>
+			</div>
+			</div>
+			
+				<div class="col-xs-12 col-xl-4">
+				<div id="rectangle" class="flex-align-center flex-justify-center">
+				<div class="imagedecorarion flex-align-center flex-justify-center">
+					
+				</div>	
+				</div>	
+					<!-- <div class="stylebookone">	 -->
+				
+				<div class="form-control display-flex">
+				<div class="flex-none">
+					<h4>Baby Earings</h4>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<h4>$98.00</h4>
+				</div>
+			</div>
+		</div>
+
+				<div class="col-xs-12 col-xl-4">
+				<div id="rectangle" class="flex-align-center flex-justify-center">
+				<div class="imagedecorarion flex-align-center flex-justify-center">
+					
+				</div>	
+			</div>
+					
+					<!-- <div class="stylebookone">	 -->
+				<div class="form-control display-flex">
+				<div class="flex-none">
+					<h4>Baby Earings</h4>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<h4>$98.00</h4>
+				</div>
+			</div>
+			</div>
+
+			</div>
+				<p> * This Image Layout will be used in Product List Page. </p>
+			<div class="card">
+			<h3>Image Filmstrip</h3>
+			<div class="film">
+	
+	<div class="thumb-images">
+		
+			<img class="thumbmain" src="https://via.placeholder.com/500.png?text=shopping">
+			<img class="thumbsecondary"src="https://via.placeholder.com/500.png?text=style">
+	
+	
+
+	</div>
+	<div class="big-image">
+		<img src="https://via.placeholder.com/500.png?text=shopping">
+		
+	</div>
+
+	</div>
+
+	<script>
+		let chosen = 0;
+let page = 0;
+
+function scrollDiv() {
+	$(".thumbs").animate({
+		scrollLeft:748*page
+	})
+}
+
+function showImage(){
+	let chose = $(".thumb-images img").eq(chosen);
+	$(".big-image img").attr({src:chose.attr("src")})
+	chose.addClass("active").siblings().removeClass("active")
+}
+
+$(".thumb-images img").on("click",function(){
+	chosen = $(this).index();
+	showImage();
+})
+
+
+	</script>
+			</div>
+		<p> * This Image Layout will be used in Product Detail Page. </p>
+		</div>
+
+	</section>
+	
+	<section id="cards" class="container">
+		<h2>Cards</h2>
+		<div class="card">
+			<h3>card soft</h3>
+			<div class="card soft">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo cupiditate quasi excepturi repellendus nostrum, minus enim itaque suscipit quaerat iste.</div>
+		</div>
+		<div class="card">
+			<h3>card half</h3>
+			<div class="card half">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi deleniti est repellat aspernatur quia voluptas laboriosam itaque ipsam magnam inventore.</div>
+		</div>
+		<div class="card">
+			<h3>card dark</h3>
+				<div class="card dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed maxime et a nostrum quisquam! Numquam dolore enim ex laborum facere.</div>
+		</div>
+		<div class="card">
+			<h3>card medium</h3>
+			<div class="card medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ullam, hic qui placeat odio temporibus atque aspernatur quae amet perferendis!</div>
+		</div>
+		<div class="card">
+			<h3>card flat</h3>
+			<div class="card flat">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos ipsa amet neque eius quia pariatur alias ex dolorum itaque temporibus.</div>
+			<p> * This Card will be used in Cart Page. </p>
+		</div>
+	</section>
+
+	<section id="viewwindow" class="container">
+		<h2>View Window</h2>
+			<div class="card half">
+		<div class="view-window display-flex flex-align-center flex-justify-center" style="background-image:url(https://via.placeholder.com/500x1000.png?text=shopping)">	
+		</div>
+		<p> * This View Window will be used in Home Page & Product Page. </p>
+		</div>
+	
+	</section>
+
+
+
+	<section id="navigations" class="container">
+		<h2>Navigations</h2>
+
+		<script>
+		const makeNav = (classes="") => {
+			const links = ["home","store","about"];
+			let ran = Math.floor(Math.random()*links.length);
+			return `
+			<div class="card soft">
+			<nav class="${classes}">
+				<ul>
+					${links.reduce((r,o,i)=>r+`<li ${i===ran?'class="active"':''}>
+						<a href="#">${o}</a>
+					</li>`,'')}
+					
+				</ul>
+			</nav>
+			</div>
+			`
+		}
+		</script>
+
+		<div class="card">
+			<h3>Basic Nav</h3>
+
+			<!-- nav.nav>ul>li*3>a[href=#]>{Link $} -->
+			<script>document.write(makeNav("nav"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Flex Nav</h3>
+
+			<script>document.write(makeNav("nav-flex"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Stretch Nav</h3>
+
+			<script>document.write(makeNav("nav-stretch"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Pills Nav</h3>
+
+			<script>document.write(makeNav("nav-pills"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Breadcrumb Nav</h3>
+
+			<script>document.write(makeNav("nav-crumbs"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Material Tab Nav</h3>
+
+			<script>document.write(makeNav("nav-material"))</script>
+		</div>
+
+		<div class="card">
+		<h3>Flex Right Nav</h3>
+
+			<script>document.write(makeNav("nav-right-flex"))</script>
+
+			<p> * This Nav will be used in whole website. </p>
+		</div>
+	</section>
+
+
+	<section id="tables" class="container">
+		<h2>Tables</h2>
+
+		<script>
+		// THIS IS JUST FOR EXAMPLES
+		const makeTable = (classes='') => {
+			const head = ["ID","Office","Name","Email","Phone"];
+			const body = [
+				["522","Hamilton Cline",	"hcline@academyart.edu",	"555-2424"],
+				["512","Fred McHale",		"fmchale@academyart.edu",	"555-2424"],
+				["522","Michael Catanzaro",	"jimmycats@academyart.edu",	"555-2424"],
+				["514","Andrea Pimentel",	"apimentel@academyart.edu",	"555-2424"],
+				["516","DC Scarpelli",		"dscarpelli@academyart.edu","555-2424"]
+			].sort(()=>Math.random()-.5);
+			return `
+			<div class="container">
+			<div class="card card-light">
+			<table class="${classes}">
+				<thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,"")}</tr></thead>
+				<tbody>${body.reduce((r,o,i)=>r+
+					`<tr>${
+						[i+1,...o].reduce((r,o)=>r+`<td>${o}</td>`,"")
+					}</tr>`
+				,"")}</tbody>
+			</table>
+			</div>
+			</div>
+			`;
+		}
+		</script>
+
+
+
+		<div class="card">
+			<h3>Basic Table</h3>
+
+			<script>document.write(makeTable("table"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Striped Table</h3>
+
+			<script>document.write(makeTable("table striped"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Horizontal Lined Table</h3>
+
+			<script>document.write(makeTable("table lined horizontal"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Vertical Lined Table</h3>
+
+			<script>document.write(makeTable("table lined vertical"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Outline Table</h3>
+
+			<script>document.write(makeTable("table lined outline"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Outlined striped vertical lined Table</h3>
+
+			<script>document.write(makeTable("table striped lined outline vertical"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Outlined striped vertical lined Table</h3>
+
+			<script>document.write(makeTable("table lined all"))</script>
+		</div>
+
+		<div class="card">
+			<h3>Checkout Table</h3>
+			
+			<script>document.write(makeTable("table simple lined outline horizontol"))</script>
+			<p> * This Table will be used in Cart Page. </p>
+		</div>
+
+	</section>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<script>
+	$("[class*='nav'] a").on("click",function(e){
+		e.preventDefault();
+		$(this).parent().addClass("active")
+			.siblings().removeClass("active")
+	})
+	</script>
+	
+	<section id="grid" class="container">
+		<h2>Grid System</h2>
+		<div class="card">
+			<div class="container">
+		<div class="grid gap">
+			<!-- .col-xs-6*2>.card.soft>lorem30 -->
+			<div class="col-xs-12 col-xl-4">
+				<div class="card half">
+					<img src="https://via.placeholder.com/200x200.png?text=stylebook">
+					<h3>Style One</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					
+					<!-- <div class="stylebookone">	 -->
+					
+				</div>
+			</div>
+			
+			<div class="col-xs-12 col-xl-4">
+				<div class="card half">
+					<img src="https://via.placeholder.com/200x200.png?text=stylebook">
+					<h3>Style Two</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+					<!-- <div class="stylebookone">	 -->
+					
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-xl-4">
+				<div class="card half">
+					<img src="https://via.placeholder.com/200x200.png?text=stylebook">
+					<h3>Style Three</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+					<!-- <div class="stylebookone">	 -->
+					
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-xl-6">
+				<figure class="product-figure soft">
+					<img src="https://via.placeholder.com/300" alt="">
+					<figcaption>
+						Product
+					</figcaption>
+				</figure>
+			</div>
+			
+			<div class="col-xs-12 col-xl-6">
+				<figure class="product-figure soft">
+					<img src="https://via.placeholder.com/300" alt="">
+					<figcaption>
+						Product
+					</figcaption>
+				</figure>
+			</div>
+			
+		</div>
+	</div>
+	<p> * This Grid Layout will be used in Home Page. </p>
+		</div>
+	</section>
+
+	<section id="forms" class="container">
+		<h2>Forms</h2>
+
+		<div class="card">
+			<h3>Form Input</h3>
+
+			<input type="text" class="form-input" placeholder="Text">
+			<input type="password" class="form-input" placeholder="Password">
+			<input type="number" class="form-input" placeholder="Number">
+			<input type="search" class="form-input" placeholder="Search">
+
+		</div>
+
+		<div class="card">
+			<h3>Form Label</h3>
+
+			<label for="input-example1" class="form-label">Example</label>
+			<input type="text" class="form-input" placeholder="Text" id="input-example1">
+
+			<label for="input-example2" class="form-label">Example</label>
+			<input type="text" class="form-input" placeholder="Text" id="input-example2">
+
+			<label for="input-example3" class="form-label">Example</label>
+			<input type="text" class="form-input" placeholder="Text" id="input-example3">
+		</div>
+
+		<div class="card">
+			<h3>Form Control</h3>
+
+			<div class="form-control">
+				<label for="input-example4" class="form-label">Example</label>
+				<input type="text" class="form-input" placeholder="Text" id="input-example4">
+			</div>
+
+			<div class="form-control">
+				<label for="input-example5" class="form-label">Example</label>
+				<input type="text" class="form-input" placeholder="Text" id="input-example5">
+			</div>
+
+			<div class="form-control">
+				<label for="input-example6" class="form-label">Example</label>
+				<input type="text" class="form-input" placeholder="Text" id="input-example6">
+			</div>
+
+		</div>
+
+		<div class="card">
+			<h3>Form Input Submit</h3>
+			<div class="form-control">
+    <input type="text" class="form-input" name="firstname" placeholder="First Name" id="input-example7">
+	<input type="text" class="form-input" name="firstname" placeholder="Last Name" id="input-example7">		
+			</div>
+			<p> * This Form will be used in Checkout Page. </p>
+		</div>
+
+		<div class="card">
+			<h3>Hotdog</h3>
+
+			<div class="form-control">
+				<input type="search" class="hotdog" placeholder="Search">
+			</div>
+
+			<div class="form-control">
+				<label class="hotdog">
+					<div class="flex-none">&#128269;</div>
+					<div class="flex-stretch">
+						<input type="search" placeholder="Search">
+					</div>
+				</label>
+			</div>
+
+			<div class="form-control display-flex">
+				<div class="flex-stretch"></div>
+				<input type="search" class="hotdog" placeholder="Search">
+			</div>
+
+			<div class="animated-search-form">
+			<input type="text" name="search" placeholder="Search">
+			<p> * This Search Animation Form will be used in whole website. </p>
+		</div>
+	</div>
+
+		<!-- <div class="selectbox">
+			 -->
+
+			<div class="card">
+			<h3>Select Box</h3>
+			<div class="selectbox display-flex flex-direction-rowreverce">
+			<div class="dropdown-container">
+    <select class="js-sort">
+      <option value="">Filter By</option>
+      <option value="1">Newest</option>
+	  <option value="2">Oldest</option>
+	  <option value="3">Most Expensive</option>
+	  <option value="4">Least Expensive</option>
+    </select>
+    <div class="select-icon">
+    	<svg  width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="icon">
+    	<path d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z"/>
+    	</svg>
+     </div>
+    </div>
+		</div>
+		<p> * This Select Box will be used in Product List Page. </p>
+</div>
+	</section>
+  
+
+  <section  id="button" class="container">
+  	<h2>Button</h2>
+  	
+  	<div class="card">
+			<h3>Form Button</h3>
+
+			<div class="form-control">
+				<button type="button" class="form-button">Button</button>
+			</div>
+
+			<div class="form-control">
+				<input type="submit" class="form-button" value="Submit">
+			</div>
+
+			<div class="form-control">
+				<a href="#" class="form-button">Button</a>
+			</div>
+
+			<div class="form-control display-flex">
+				<div class="flex-none">
+					<a href="#" class="form-button">Prev</a>
+				</div>
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<a href="#" class="form-button">Next</a>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="card">
+			<h3>Link Button</h3>
+			<a href="#" class="linkbutton">SHOP NOW</a>
+		<p> * This Button will be used in whole website. </p>
+	</div>
+
+  </section>
+
+	<section id="checkboxes" class="container">
+		<h2>Checkboxes</h2>
+
+		<div class="card">
+			<h3>Basic Checkbox</h3>
+
+			<div class="form-control">
+				<label for="check-example1">Label</label>
+				<label>
+					<input type="checkbox" id="check-example1">
+					Label
+				</label>
+			</div>
+
+			<h3>Heart Trick</h3>
+
+			<div class="form-control">
+				<div class="heart-toggle">
+					<input type="checkbox" id="heart-example1" class="hidden">
+					<label for="heart-example1">&hearts;</label>
+				</div>
+			</div>
+
+			<h3>Toggle</h3>
+
+			<div class="form-control">
+				<div class="toggle ">
+					<input type="checkbox" id="toggle1" class="hidden">
+					<label for="toggle1"></label>
+				</div>
+				<div class="toggle" style="font-size:2em">
+					<input type="checkbox" id="toggle2" class="hidden">
+					<label for="toggle2"></label>
+				</div>
+			</div>
+			
+			<h3>Number Input</h3>
+			<div class="quantity">
+		<label style="font-size: 14px; color: light grey;">Qty</label>
+			<form class="flex-none" method="get" >
+				<input type="hidden" name="action" >
+				<input type="hidden" name="id" >
+				<input id="number" type="number">
+			</form>
+			 <div class="amount-icon">
+    	<svg  width="24" height="24" viewBox="0 0 20 45" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="icon">
+    	<path d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z"/>
+    	</svg>
+     </div>
+		</div>
+			
+			<p> * This Number Input Box will be used in Cart Page. </p>
+		</div>
+	</section>
+
+	
+	<section id="accordion" class="container">
+		<h2>Accordion</h2>
+		<div class="card">
+			<ul class="a-container">
+  <!-- item01 -->
+  <li class="a-items">
+    <input type="radio" name="ac" id="a1" class="hidden" />
+    <label for="a1">About Us</label>
+    <div class="a-content">
+      
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam beatae maiores possimus sequi non quidem ad necessitatibus fugiat consectetur veritatis laboriosam ut soluta quis deleniti deserunt! Voluptate qui excepturi architecto.</p>
+    </div>
+  </li>
+  
+    <!-- item02 -->
+    <li class="a-items">
+    <input type="radio" name="ac" id="a2" class="hidden"/>
+    <label for="a2">Our Services</label>
+    <div class="a-content">
+      
+      <p>Lorem ipsum dolor sit amet, quidem ad necessitatibus fugiat consectetur veritatis laboriosam ut soluta quis deleniti deserunt! Voluptate qui excepturi architecto.</p>
+    </div>
+  </li>
+  
+    <!-- item03 -->  
+    <li class="a-items">
+    <input type="radio" name="ac" id="a3" class="hidden"/>
+    <label for="a3">Keep In Touch</label>
+    <div class="a-content">
+     
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam beatae maiores possimus sequi non quidem ad necessitatibus fugiat consectetur veritatis laboriosam ut soluta.</p>
+    </div>
+  </li>
+</ul>
+<p> * This Accordion will be used in Product Detail Page. </p>
+		</div>
+	</section>
+
+	<section id="figures" class="container">
+		<h2>Figures</h2>
+
+		<div class="card">
+			<h3>Basic Figure</h3>
+
+			<figure class="product-figure">
+				<img src="https://via.placeholder.com/300" alt="">
+				<figcaption>
+					Product
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="card">
+			<h3>Soft Figure</h3>
+
+			<figure class="product-figure soft">
+				<img src="https://via.placeholder.com/300" alt="">
+				<figcaption>
+					Product
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="card">
+			<h3>Overlay Figure</h3>
+
+			<figure class="product-figure overlay">
+				<img src="https://via.placeholder.com/300" alt="">
+				<figcaption>
+					Product
+				</figcaption>
+			</figure>
+		</div>
+
+		<h3>Gridded Figure</h3>
+		<div class="grid gap">
+			<div class="col-xs-12 col-md-4">
+
+				<figure class="product-figure overlay">
+					<img src="https://via.placeholder.com/300" alt="">
+					<figcaption>
+						Product
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<figure class="product-figure soft">
+					<img src="https://via.placeholder.com/300" alt="">
+					<figcaption>
+						Product
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<figure class="product-figure">
+					<img src="https://via.placeholder.com/300" alt="">
+					<figcaption>
+						Product
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+
+	</section>
+
+	<section id="flex" class="container">
+		<h2>Flex System</h2>
+		<div class="card">
+		<h3>Flex Direction</h3>
+		<div class="display-flex flexbox">
+          <div>One</div>
+          <div>Two</div>
+          <div>Three</div>
+        </div>
+	
+		
+
+
+		<h3>Flex Direction Row</h3>
+		<div class="display-flex flex-direction-row flexbox">
+          <div>One</div>
+          <div>Two</div>
+          <div>Three</div>
+        </div>
+		
+
+		<h3>Flex Direction Row-Reverce</h3>
+		<div class="display-flex flex-direction-rowreverce flexbox">
+          <div>One</div>
+          <div>Two</div>
+          <div>Three</div>
+        </div>
+		
+
+		<h3>Flex Direction Colum</h3>
+		<div class="display-flex flex-direction-column flexbox">
+          <div>One</div>
+          <div>Two</div>
+          <div>Three</div>
+        </div>
+
+        <h3>Flex Direction Colum Reverce</h3>
+		<div class="display-flex flex-direction-columnreverce flexbox">
+          <div>One</div>
+          <div>Two</div>
+          <div>Three</div>
+        </div>
+		
+
+		<h3>Flex Direction Justify Content Start</h3>
+		<div class="display-flex flex-justify-start flexbox">
+          <div>One</div>
+          <div>Two</div>
+          <div>Three</div>
+        </div>
+
+        <h3>Flex Direction Justify Content End</h3>
+		<div class="display-flex flex-justify-end flexbox">
+          <div>One</div>
+          <div>Two</div>
+          <div>Three</div>
+        </div>
+		
+		<h3>Flex Direction Justify Content Center</h3>
+		<div class="display-flex flex-justify-center flexbox">
+          <div>One</div>
+          <div>Two</div>
+          <div>Three</div>
+        </div>
+
+        <h3>Flex Direction Justify Content Center</h3>
+		
+          <ul class="flex-container display-flex">
+		  <li class="flex-item flex-start">One</li>
+		  <li class="flex-item flex-end">Two</li>
+		  <li class="flex-item center">Three</li>
+		  <li class="flex-item baseline">Four</li>
+		  <li class="flex-item stretch">Five</li>
+		</ul>
+       
+
+		</div>
+	</div>	
+	</section>
+
+
+</body>
+</html>
