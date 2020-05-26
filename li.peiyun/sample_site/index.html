@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample Site</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/grid.css">
+	<link rel="stylesheet" type="text/css" href="styles/storetheme.css">
+</head>
+<body>
+
+<!--navbar-->
+<header id="navbar">
+	<div class="container">
+
+		<img id="logo" src="img/logo.png">
+
+		<ul>
+			<li><a href="">Product</a></li>
+			<li><a href="">About</a></li>
+			<li><a href="">Connect</a></li>
+		</ul>
+
+	</div>
+</header>
+
+<main>
+
+<!--slideshow-->
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="img/1.jpg">
+    <div class="text"><a href="">Shop Now</a></div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img/2.jpg">
+    <div class="text"><a href="">Shop Now</a></div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img/3.jpg">
+    <div class="text"><a href="">Shop Now</a></div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<!--card-->
+<div class="card-container">
+<h1> Our Product </h1>
+<div class="grid gap">
+	<div class="col-xs-12 col-md-6 col-lg-4">
+	<div class="card">
+		<img src="img/product1.jpg">
+		<div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore non quis similique, sit, doloremque hic excepturi dolorum odit explicabo.</div>
+		<div class="card-button"><a href="">Buy Now</a></div>
+	</div>
+	</div>
+
+	<div class="col-xs-12 col-md-6 col-lg-4">
+	<div class="card">
+		<img src="img/product2.jpg">
+		<div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore non quis similique, sit, doloremque hic excepturi dolorum odit explicabo.</div>
+		<div class="card-button"><a href="">Buy Now</a></div>
+	</div>
+	</div>
+
+	<div class="col-xs-12 col-md-6 col-lg-4">
+	<div class="card">
+		<img src="img/product3.png">
+		<div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore non quis similique, sit, doloremque hic excepturi dolorum odit explicabo.</div>
+		<div class="card-button"><a href="">Buy Now</a></div>
+	</div>
+	</div>
+
+	<div class="col-xs-12 col-md-6 col-lg-4">
+	<div class="card">
+		<img src="img/product4.jpg">
+		<div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore non quis similique, sit, doloremque hic excepturi dolorum odit explicabo.</div>
+		<div class="card-button"><a href="">Buy Now</a></div>
+	</div>
+	</div>
+
+	<div class="col-xs-12 col-md-6 col-lg-4">
+	<div class="card">
+		<img src="img/product5.jpg">
+		<div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore non quis similique, sit, doloremque hic excepturi dolorum odit explicabo.</div>
+		<div class="card-button"><a href="">Buy Now</a></div>
+	</div>
+	</div>
+
+	<div class="col-xs-12 col-md-6 col-lg-4">
+	<div class="card">
+		<img src="img/product6.png">
+		<div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore non quis similique, sit, doloremque hic excepturi dolorum odit explicabo.</div>
+		<div class="card-button"><a href="">Buy Now</a></div>
+	</div>
+	</div>
+
+</div>
+</div>
+
+</main>
+
+<footer>
+	<ul>
+		<li>(123)-456-7890</li>
+		<li>1234567@gmail.com</li>
+		<li>1234 56th Ave. San Francisco, CA 94321</li>
+	</ul>
+</footer>
+
+<script src="js/slide.js"></script>
+</body>
+</html>

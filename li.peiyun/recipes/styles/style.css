@@ -1,0 +1,132 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing:border-box
+}
+
+body{
+	font-family: sans-serif;
+	background-color: pink; 
+}
+
+header{
+	width: 100vw;
+	height: 150px;
+	background-color: pink;
+	color: white;
+	text-align: center;
+	padding-top: 35px;
+	margin-bottom: 5px;
+	font-family: 'Architects Daughter';
+	font-size: 28px;
+	animation: fadein 0.6s 1 ease-in-out backwards;
+}
+
+.container{
+	width: 80vw;
+	margin: 0 auto;
+}
+
+
+.button{
+	display: inline-block;
+	text-decoration: none;
+	border: solid;
+	border-color: pink;
+	color: pink;
+	Padding: 0.5em 1.5em;
+}
+
+
+.button:hover,
+.button:focus {
+	background-color: pink;
+	color: white;
+}
+
+.dish{
+	position: relative;
+	overflow: hidden;
+	width: 49%;
+	float: left;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.dish img{
+	width: 100%;
+	animation: fadein 0.6s 1 ease-in-out backwards;
+}
+
+.dish-name{
+	position: absolute;
+	z-index: 100;
+	padding-top: 1.2em;
+	padding-bottom: 1.8em;
+	left: 0;
+	right: 0;
+	bottom: 5px;
+	color: white;
+	text-align: center;
+	font-size: 1.4em;
+	font-family: 'Source Sans Pro';
+	background-color:rgba(0,0,0,0.7);
+	transform: translateY(150%);
+	transition: all ease-in-out 0.5s;
+	animation: fadein 0.6s 0.6s 1 ease-in-out backwards;
+}
+
+.dish-name p{
+	padding-bottom: 0.8em;
+}
+
+.dish:hover .dish-name{
+	transform: translateY(0);
+}
+
+.recipe img{
+	width: 40vw;
+	float: left;
+	animation: fadein 0.8s 1 ease-in-out backwards;
+}
+
+.recipe ol{
+	width: 35%;
+	margin-left: 45vw;
+	line-height: 2em;
+	animation: jumpin 0.8s 1 ease-in-out backwards;
+}
+
+.recipe li{
+	padding-bottom: 1em;
+	color: #222;
+	font-size: 1.1em;
+}
+
+@keyframes fadein {
+  0%{
+    opacity: 0;
+   
+  }
+
+  100%{
+    opacity: 1;
+   
+
+  }
+
+}
+
+@keyframes jumpin {
+  0%{
+    opacity: 0;
+    padding-top: 60px;
+  }
+
+  100%{
+    opacity: 1;
+    padding-top: 0;
+
+  }
+
+}
